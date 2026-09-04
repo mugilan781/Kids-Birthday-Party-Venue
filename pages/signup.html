@@ -1,82 +1,179 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Create your free LittleLux parent account to book luxury birthday party experiences, manage events and unlock exclusive member perks." />
   <title>Create Account — LittleLux Parent Portal</title>
-  <link rel="stylesheet" href="../css/variables.css" /><link rel="stylesheet" href="../css/base.css" /><link rel="stylesheet" href="../css/components.css" /><link rel="stylesheet" href="../css/auth.css" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/auth.css" />
 </head>
-<body class="auth-body">
-  <div class="auth-layout">
-    <div class="auth-hero-col">
-      <img src="../images/hero-hall.jpg" alt="LittleLux grand ballroom" class="auth-hero-img" />
-      <div class="auth-hero-overlay"></div>
-      <div class="auth-hero-content">
-        <a href="../index.html" class="navbar-logo"><div class="logo-icon"><svg class="svg-icon icon-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4"/><path d="m12 6-8 7h16z"/><path d="M4 13v8h16v-8"/><path d="M12 13v8"/><path d="M8 21v-4a4 4 0 0 1 8 0v4"/><path d="M12 2c1.5 0 2.5 1 2.5 2"/></svg></div><div class="logo-text"><span class="logo-name">LittleLux</span><span class="logo-tagline">Luxury Birthday Venue</span></div></a>
-        <div class="auth-hero-quote">
-          <blockquote>"Creating an account takes 30 seconds. Creating magical memories takes our entire team's heart."</blockquote>
-          <cite>— LittleLux Team</cite>
-        </div>
-        <div class="auth-hero-stats">
-          <div class="auth-stat"><div class="auth-stat-num">Free</div><div class="auth-stat-label">To Register</div></div>
-          <div class="auth-stat"><div class="auth-stat-num">24hr</div><div class="auth-stat-label">Response Time</div></div>
-          <div class="auth-stat"><div class="auth-stat-num">100%</div><div class="auth-stat-label">Secure</div></div>
-        </div>
+<body class="signup-page">
+
+  <main class="signup-container" role="main">
+    <div class="signup-card" role="region" aria-labelledby="signup-title">
+
+      <!-- Brand -->
+      <div class="signup-brand">
+        <a href="../index.html" class="navbar-logo" aria-label="LittleLux Home" style="text-decoration:none">
+          <div class="logo-icon" aria-hidden="true"><svg class="svg-icon icon-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4"/><path d="m12 6-8 7h16z"/><path d="M4 13v8h16v-8"/><path d="M12 13v8"/><path d="M8 21v-4a4 4 0 0 1 8 0v4"/><path d="M12 2c1.5 0 2.5 1 2.5 2"/></svg></div>
+          <div class="logo-text">
+            <span class="logo-name">LittleLux</span>
+            <span class="logo-tagline">Luxury Birthday Venue</span>
+          </div>
+        </a>
       </div>
+
+      <!-- Heading -->
+      <div class="signup-header">
+        <h1 id="signup-title" class="signup-title">Create <em class="italic-heading">Account</em></h1>
+        <p class="signup-subtitle">Create an account to get started.</p>
+      </div>
+
+      <!-- Form -->
+      <form class="signup-form" data-validate data-on-success="onSignupSuccess" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="su-fname">Full Name</label>
+          <input id="su-fname" name="firstName" type="text" class="form-control" placeholder="Enter your full name" autocomplete="name" data-validate="required" aria-required="true" />
+          <span class="form-error" aria-live="polite"></span>
+          <input type="hidden" id="su-lname" name="lastName" value="" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="su-email">Email Address</label>
+          <input id="su-email" name="email" type="email" class="form-control" placeholder="you@example.com" autocomplete="email" data-validate="required|email" aria-required="true" />
+          <span class="form-error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="su-phone">Phone Number</label>
+          <input id="su-phone" name="phone" type="tel" class="form-control" placeholder="+91 98765 43210" autocomplete="tel" data-validate="required|phone" aria-required="true" />
+          <span class="form-error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="su-password">Password</label>
+          <div class="password-wrap">
+            <input id="su-password" name="password" type="password" class="form-control" placeholder="Create a strong password" autocomplete="new-password" data-validate="required|minLength:8" aria-required="true" />
+            <button type="button" class="password-toggle" data-password-toggle="su-password" aria-label="Show password" aria-pressed="false">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <span class="form-error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="su-confirm">Confirm Password</label>
+          <div class="password-wrap">
+            <input id="su-confirm" name="confirmPassword" type="password" class="form-control" placeholder="Re-enter your password" autocomplete="new-password" data-validate="required" aria-required="true" />
+            <button type="button" class="password-toggle" data-password-toggle="su-confirm" aria-label="Show password" aria-pressed="false">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <span class="form-error" aria-live="polite"></span>
+        </div>
+
+        <label class="signup-terms" for="signup-terms">
+          <input id="signup-terms" name="terms" type="checkbox" required aria-required="true" />
+          <span>I agree to the <a href="terms.html">Terms & Conditions</a> and <a href="privacy.html">Privacy Policy</a></span>
+        </label>
+
+        <button type="submit" class="btn btn-primary signup-submit">Create Account</button>
+      </form>
+
+      <!-- Divider -->
+      <div class="signup-divider" role="separator" aria-label="or sign up with">
+        <span>or sign up with</span>
+      </div>
+
+      <!-- Social -->
+      <div class="signup-social" role="group" aria-label="Social signup options">
+        <button type="button" class="signup-social-btn" aria-label="Continue with Google">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          <span>Google</span>
+        </button>
+        <button type="button" class="signup-social-btn" aria-label="Continue with Facebook">
+          <svg viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Facebook</span>
+        </button>
+      </div>
+
+      <!-- Login redirect -->
+      <p class="signup-switch">Already have an account? <a href="login.html">Sign In</a></p>
+
     </div>
-    <div class="auth-form-col">
-      <div style="position:absolute;top:var(--space-6);right:var(--space-6);display:flex;align-items:center;gap:var(--space-3);z-index:10">
-        <a href="../index.html" class="btn btn-ghost btn-sm">← Back to Home</a>
-        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
-      </div>
-      <div class="auth-form-inner">
-        <div class="auth-form-header">
-          <div class="section-tag">Join LittleLux</div>
-          <h1 class="auth-form-title">Create Your <em class="italic-heading">Account</em></h1>
-          <p class="auth-form-desc">Join 2,400+ happy families who plan magical celebrations with LittleLux.</p>
-        </div>
-        <div class="auth-benefits">
-          <div class="auth-benefit"><span class="auth-benefit-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></span>Real-time availability checker and instant booking</div>
-          <div class="auth-benefit"><span class="auth-benefit-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span>Event countdown notifications and reminders</div>
-          <div class="auth-benefit"><span class="auth-benefit-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v12"/></svg></span>Exclusive member discounts and early access offers</div>
-          <div class="auth-benefit"><span class="auth-benefit-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span>Private online photo gallery after each event</div>
-        </div>
-        <div class="auth-social-btns">
-          <button class="auth-social-btn"><span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span> Sign up with Google</button>
-        </div>
-        <div class="auth-divider"><span>or sign up with email</span></div>
-        <form class="auth-form" data-validate data-on-success="onSignupSuccess" novalidate>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
-            <div class="form-group"><label class="form-label" for="su-fname">First Name *</label><input id="su-fname" type="text" class="form-control" placeholder="First name" data-validate="required" /><span class="form-error"></span></div>
-            <div class="form-group"><label class="form-label" for="su-lname">Last Name *</label><input id="su-lname" type="text" class="form-control" placeholder="Last name" data-validate="required" /><span class="form-error"></span></div>
-          </div>
-          <div class="form-group"><label class="form-label" for="su-email">Email Address *</label><input id="su-email" type="email" class="form-control" placeholder="you@example.com" data-validate="required|email" /><span class="form-error"></span></div>
-          <div class="form-group"><label class="form-label" for="su-phone">Phone Number *</label><input id="su-phone" type="tel" class="form-control" placeholder="+91 98765 43210" data-validate="required|phone" /><span class="form-error"></span></div>
-          <div class="form-group"><label class="form-label" for="su-password">Password *</label>
-            <div class="password-wrap"><input id="su-password" type="password" class="form-control" placeholder="Minimum 8 characters" data-validate="required|minLength:8" /><button type="button" class="password-toggle" data-password-toggle><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
-            <span class="form-error"></span>
-          </div>
-          <div class="form-group"><label class="form-label" for="su-confirm">Confirm Password *</label>
-            <div class="password-wrap"><input id="su-confirm" type="password" class="form-control" placeholder="Repeat your password" data-validate="required" /></div>
-          </div>
-          <label style="display:flex;align-items:flex-start;gap:0.75rem;cursor:pointer;font-size:var(--text-sm);color:var(--text-muted)"><input type="checkbox" style="margin-top:3px;accent-color:var(--color-royal-lilac)" required /> I agree to LittleLux's <a href="privacy.html" style="color:var(--color-royal-lilac)">Privacy Policy</a> and <a href="terms.html" style="color:var(--color-royal-lilac)">Terms of Service</a></label>
-          <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Create Account →</button>
-        </form>
-        <p class="auth-switch-text">Already have an account? <a href="login.html">Sign in →</a></p>
-      </div>
-    </div>
-  </div>
+  </main>
+
   <script src="../js/main.js"></script>
   <script>
+    // Preserve original validation + add confirm password match
+    (function() {
+      const form = document.querySelector('.signup-form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          const pwd = document.getElementById('su-password');
+          const confirm = document.getElementById('su-confirm');
+          const confirmGroup = confirm.closest('.form-group');
+          const errorEl = confirmGroup ? confirmGroup.querySelector('.form-error') : null;
+          if (pwd && confirm && pwd.value !== confirm.value) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            if (errorEl) errorEl.textContent = 'Passwords do not match';
+            confirm.classList.add('error');
+            confirm.focus();
+            return false;
+          } else {
+            if (errorEl) errorEl.textContent = '';
+            confirm.classList.remove('error');
+          }
+          // Handle Full Name -> split to first/last for original fields if needed
+          const fullName = document.getElementById('su-fname');
+          const lname = document.getElementById('su-lname');
+          if (fullName && lname) {
+            const parts = fullName.value.trim().split(' ');
+            if (parts.length > 1 && !lname.value) {
+              lname.value = parts.pop();
+              fullName.value = parts.join(' ');
+            }
+          }
+        }, true);
+      }
+    })();
+
     window.onSignupSuccess = function() {
       window.LittleLux.Toast.show('Account created! Welcome to LittleLux!', 'success');
       setTimeout(() => { window.location.href = 'dashboard.html'; }, 1500);
     };
-    document.querySelector('[data-password-toggle]')?.addEventListener('click', function() {
-      const input = document.getElementById('su-password');
-      input.type = input.type === 'password' ? 'text' : 'password';
-      this.innerHTML = input.type === 'password' ? '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>' : '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>';
+
+    // Password toggles for both fields
+    document.querySelectorAll('[data-password-toggle]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-password-toggle');
+        const input = document.getElementById(targetId);
+        if (!input) return;
+        const isPassword = input.type === 'password';
+        input.type = isPassword ? 'text' : 'password';
+        this.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+        this.setAttribute('aria-pressed', isPassword ? 'true' : 'false');
+        this.innerHTML = isPassword
+          ? '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>'
+          : '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>';
+      });
     });
+
+    // Handle Full Name sync for hidden last name field
+    const fullNameInput = document.getElementById('su-fname');
+    const lastNameInput = document.getElementById('su-lname');
+    if (fullNameInput && lastNameInput) {
+      fullNameInput.addEventListener('input', function() {
+        const parts = this.value.trim().split(' ');
+        if (parts.length > 1) {
+          lastNameInput.value = parts.slice(1).join(' ');
+        }
+      });
+    }
   </script>
 </body>
 </html>
