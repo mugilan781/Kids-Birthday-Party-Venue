@@ -167,7 +167,7 @@
 }
 
 .cal-nav-btn:hover {
-  background: var(--gradient-magic);
+  background: var(--color-lavender-primary);
   color: white;
   border-color: transparent;
 }
@@ -215,8 +215,8 @@
 .cal-day.partial { color: var(--color-gold-dark); background: rgba(216,181,106,0.15); }
 .cal-day.partial:hover { background: var(--color-champagne-gold); color: var(--color-deep-berry); transform: scale(1.08); }
 .cal-day.booked { color: var(--text-light); background: rgba(243,168,143,0.15); cursor: not-allowed; }
-.cal-day.today { outline: 2px solid var(--color-royal-lilac); outline-offset: 1px; }
-.cal-day.selected { background: var(--gradient-magic) !important; color: white !important; box-shadow: var(--shadow-lilac); }
+.cal-day.today { outline: 2px solid var(--color-lavender-primary); outline-offset: 1px; }
+.cal-day.selected { background: var(--color-lavender-primary) !important; color: white !important; box-shadow: var(--shadow-lavender); }
 
 .cal-legend {
   display: flex;
@@ -278,10 +278,10 @@
   transition: all var(--transition-spring);
 }
 
-.time-slot.available { border-color: rgba(168,216,200,0.5); }
+.time-slot.available { border-color: rgba(157,203,191,0.5); }
 .time-slot.available:hover { background: var(--color-mint-mist); border-color: var(--color-mint-dark); transform: scale(1.04); }
 .time-slot.booked { opacity: 0.4; cursor: not-allowed; }
-.time-slot.selected { background: var(--gradient-magic); border-color: transparent; color: white; }
+.time-slot.selected { background: var(--color-lavender-primary); border-color: transparent; color: white; }
 
 .slot-time {
   font-family: var(--font-display);
@@ -317,7 +317,7 @@
 .offer-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 
 .offer-card.offer-card-featured {
-  background: var(--gradient-berry);
+  background: var(--color-lavender-dark);
   border-color: transparent;
 }
 
@@ -382,7 +382,7 @@
 }
 
 .filter-btn:hover, .filter-btn.active {
-  background: var(--gradient-magic);
+  background: var(--color-lavender-primary);
   border-color: transparent;
   color: white;
   transform: translateY(-2px);
@@ -441,8 +441,8 @@
   position: absolute;
   top: var(--space-5);
   right: var(--space-5);
-  background: var(--gradient-gold);
-  color: var(--color-deep-berry);
+  background: var(--color-champagne-gold);
+  color: white;
   padding: var(--space-4) var(--space-5);
   border-radius: var(--border-radius-lg);
   text-align: center;

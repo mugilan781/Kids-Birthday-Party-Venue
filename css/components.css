@@ -41,19 +41,20 @@
 .logo-icon {
   width: 44px;
   height: 44px;
-  background: var(--gradient-magic);
+  background: var(--color-lavender-primary);
+  color: white;
   border-radius: var(--border-radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.4rem;
-  box-shadow: var(--shadow-lilac);
+  box-shadow: var(--shadow-lavender);
   transition: all var(--transition-spring);
 }
 
 .navbar-logo:hover .logo-icon {
-  transform: rotate(-5deg) scale(1.1);
-  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  transform: rotate(-5deg) scale(1.08);
+  box-shadow: var(--shadow-lg);
 }
 
 .logo-text {
@@ -68,10 +69,7 @@
   font-weight: 800;
   letter-spacing: var(--tracking-tight);
   line-height: 1;
-  background: var(--gradient-magic);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-lavender-dark);
 }
 
 .logo-tagline {
@@ -114,14 +112,14 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: var(--gradient-gold);
+  background: var(--color-lavender-primary);
   border-radius: 1px;
   transition: width var(--transition-base);
 }
 
 .nav-link:hover {
-  color: var(--color-royal-lilac);
-  background: var(--bg-glass-dark);
+  color: var(--color-lavender-primary);
+  background: var(--color-lavender-soft);
 }
 
 .nav-link:hover::after, .nav-link.active::after {
@@ -129,8 +127,8 @@
 }
 
 .nav-link.active {
-  color: var(--color-royal-lilac);
-  background: var(--bg-glass-dark);
+  color: var(--color-lavender-primary);
+  background: var(--color-lavender-soft);
 }
 
 /* ===== DROPDOWN ===== */
@@ -353,10 +351,7 @@
 }
 
 .footer-logo .logo-name {
-  background: linear-gradient(135deg, #EDD28C, #D8B56A);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-champagne-gold);
 }
 
 .footer-desc {
@@ -388,9 +383,9 @@
 }
 
 .social-btn:hover {
-  background: var(--gradient-gold);
+  background: var(--color-lavender-primary);
   border-color: transparent;
-  color: var(--color-deep-berry);
+  color: white;
   transform: translateY(-4px) scale(1.1);
 }
 
@@ -408,7 +403,7 @@
   display: block;
   width: 30px;
   height: 2px;
-  background: var(--gradient-gold);
+  background: var(--color-champagne-gold);
   border-radius: 1px;
   margin-top: var(--space-2);
 }

@@ -49,7 +49,7 @@
 .slide-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(74,25,66,0.82) 0%, rgba(45,14,40,0.6) 50%, rgba(74,25,66,0.4) 100%);
+  background: rgba(36, 26, 50, 0.65);
 }
 
 .slide-content {
@@ -188,9 +188,9 @@
 .hero-next { right: var(--space-5); }
 
 .hero-prev:hover, .hero-next:hover {
-  background: var(--gradient-gold);
+  background: var(--color-champagne-gold);
   border-color: transparent;
-  color: var(--color-deep-berry);
+  color: white;
   transform: translateY(-50%) scale(1.08);
 }
 
@@ -341,8 +341,8 @@
   position: absolute;
   top: var(--space-3);
   right: var(--space-3);
-  background: var(--gradient-gold);
-  color: var(--color-deep-berry);
+  background: var(--color-champagne-gold);
+  color: white;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: var(--tracking-wider);
@@ -373,7 +373,7 @@
 .package-img-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(74,25,66,0.6);
+  background: rgba(36, 26, 50, 0.65);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -488,7 +488,7 @@
 .theme-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 30%, rgba(74,25,66,0.9) 100%);
+  background: rgba(36, 26, 50, 0.78);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -497,7 +497,7 @@
 }
 
 .theme-card:hover .theme-overlay {
-  background: linear-gradient(180deg, rgba(74,25,66,0.3) 0%, rgba(74,25,66,0.95) 100%);
+  background: rgba(36, 26, 50, 0.88);
 }
 
 .theme-icon {
@@ -706,8 +706,8 @@
   position: absolute;
   bottom: var(--space-4);
   right: var(--space-4);
-  background: var(--gradient-gold);
-  color: var(--color-deep-berry);
+  background: var(--color-champagne-gold);
+  color: white;
   padding: 0.6rem 1rem;
   border-radius: var(--border-radius-lg);
   text-align: center;
@@ -762,7 +762,7 @@
 }
 
 .testimonial-card.featured-testimonial {
-  background: var(--gradient-berry);
+  background: var(--color-lavender-dark);
   border-color: transparent;
 }
 
@@ -807,7 +807,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--gradient-magic);
+  background: var(--color-lavender-primary);
   color: white;
   display: flex;
   align-items: center;
@@ -874,7 +874,7 @@
 .gi-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(74,25,66,0.85) 100%);
+  background: rgba(36, 26, 50, 0.82);
   display: flex;
   align-items: flex-end;
   padding: var(--space-4);
@@ -991,7 +991,7 @@
 .cta-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(74,25,66,0.92) 0%, rgba(142,107,199,0.7) 100%);
+  background: rgba(42, 30, 58, 0.88);
 }
 
 .cta-inner { max-width: 620px; margin: 0 auto; text-align: center; }

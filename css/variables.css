@@ -2,67 +2,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Manrope:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* ===== BRAND PALETTE ===== */
-  --color-deep-berry: #4A1942;
-  --color-royal-lilac: #8E6BC7;
-  --color-peach-sorbet: #F3A88F;
-  --color-champagne-gold: #D8B56A;
-  --color-mint-mist: #A8D8C8;
-  --color-vanilla-cream: #FFF8ED;
+  /* ===== BRAND PALETTE (SUBTLE LAVENDER LUXURY) ===== */
+  --color-lavender-primary: #8E7DBE;
+  --color-lavender-hover: #7B69AC;
+  --color-lavender-dark: #3E2E56;
+  --color-lavender-deep: #2A1D3D;
+  --color-lavender-light: #B8A8D8;
+  --color-lavender-soft: #EDE8F5;
+  --color-lavender-mist: #F5F1FA;
+  
+  --color-deep-berry: #3E2E56;
+  --color-royal-lilac: #8E7DBE;
+  --color-peach-sorbet: #E5A493;
+  --color-champagne-gold: #C4A468;
+  --color-mint-mist: #9DCBBF;
+  --color-vanilla-cream: #FAF8F5;
   
   /* ===== EXTENDED PALETTE ===== */
-  --color-berry-light: #6B2960;
-  --color-berry-dark: #2D0E28;
-  --color-lilac-light: #B89EE0;
-  --color-lilac-dark: #5E3D9A;
-  --color-peach-light: #FBCDB8;
-  --color-peach-dark: #E07A5F;
-  --color-gold-light: #EDD28C;
-  --color-gold-dark: #A87E3A;
-  --color-mint-light: #C8EDE3;
-  --color-mint-dark: #6ABBA8;
-  --color-cream-dark: #F5E8D0;
+  --color-berry-light: #523E6E;
+  --color-berry-dark: #2A1D3D;
+  --color-lilac-light: #B8A8D8;
+  --color-lilac-dark: #6D5A9E;
+  --color-peach-light: #F4D5CC;
+  --color-peach-dark: #C67966;
+  --color-gold-light: #E0C797;
+  --color-gold-dark: #A58348;
+  --color-mint-light: #CCEAE1;
+  --color-mint-dark: #72A99B;
+  --color-cream-dark: #F0ECE4;
   
   /* ===== SEMANTIC COLORS - LIGHT MODE ===== */
-  --bg-primary: #FFF8ED;
-  --bg-secondary: #FAF0E4;
-  --bg-tertiary: #F3E8D8;
+  --bg-primary: #FAF8F5;
+  --bg-secondary: #F4F0F9;
+  --bg-tertiary: #EBE5F3;
   --bg-surface: #FFFFFF;
-  --bg-glass: rgba(255,248,237,0.85);
-  --bg-glass-dark: rgba(74,25,66,0.08);
+  --bg-glass: rgba(250, 248, 245, 0.92);
+  --bg-glass-dark: rgba(142, 125, 190, 0.08);
   
-  --text-primary: #1A0A18;
-  --text-secondary: #4A1942;
-  --text-muted: #7A5A72;
-  --text-light: #AE8EA6;
-  --text-inverse: #FFF8ED;
+  --text-primary: #281D38;
+  --text-secondary: #3E2E56;
+  --text-muted: #6E5F82;
+  --text-light: #9B8DAF;
+  --text-inverse: #FAF8F5;
   
-  --border-primary: rgba(142,107,199,0.2);
-  --border-secondary: rgba(216,181,106,0.3);
-  --border-light: rgba(168,216,200,0.3);
+  --border-primary: rgba(142, 125, 190, 0.22);
+  --border-secondary: rgba(196, 164, 104, 0.3);
+  --border-light: rgba(142, 125, 190, 0.15);
   
-  /* ===== GRADIENTS ===== */
-  --gradient-hero: linear-gradient(135deg, #4A1942 0%, #6B2960 30%, #8E6BC7 70%, #B89EE0 100%);
-  --gradient-magic: linear-gradient(135deg, #4A1942 0%, #8E6BC7 50%, #F3A88F 100%);
-  --gradient-gold: linear-gradient(135deg, #D8B56A 0%, #EDD28C 50%, #D8B56A 100%);
-  --gradient-peach: linear-gradient(135deg, #F3A88F 0%, #FBCDB8 100%);
-  --gradient-mint: linear-gradient(135deg, #A8D8C8 0%, #C8EDE3 100%);
-  --gradient-berry: linear-gradient(135deg, #2D0E28 0%, #4A1942 100%);
-  --gradient-card: linear-gradient(135deg, rgba(255,248,237,0.9) 0%, rgba(255,255,255,0.95) 100%);
-  --gradient-overlay: linear-gradient(180deg, transparent 0%, rgba(74,25,66,0.8) 100%);
-  --gradient-shimmer: linear-gradient(90deg, transparent 0%, rgba(216,181,106,0.3) 50%, transparent 100%);
+  /* ===== SINGLE BRAND COLORS (NO MULTI-COLOR GRADIENTS) ===== */
+  --gradient-hero: #3E2E56;
+  --gradient-magic: #8E7DBE;
+  --gradient-gold: #C4A468;
+  --gradient-peach: #E5A493;
+  --gradient-mint: #9DCBBF;
+  --gradient-berry: #3E2E56;
+  --gradient-card: #FFFFFF;
+  --gradient-overlay: rgba(40, 28, 56, 0.72);
+  --gradient-shimmer: transparent;
   
   /* ===== SHADOWS ===== */
-  --shadow-sm: 0 2px 8px rgba(74,25,66,0.08);
-  --shadow-md: 0 4px 20px rgba(74,25,66,0.12);
-  --shadow-lg: 0 8px 40px rgba(74,25,66,0.16);
-  --shadow-xl: 0 16px 60px rgba(74,25,66,0.24);
-  --shadow-2xl: 0 24px 80px rgba(74,25,66,0.32);
-  --shadow-gold: 0 4px 20px rgba(216,181,106,0.4);
-  --shadow-lilac: 0 4px 20px rgba(142,107,199,0.3);
-  --shadow-peach: 0 4px 20px rgba(243,168,143,0.3);
-  --shadow-inset: inset 0 2px 8px rgba(74,25,66,0.08);
-  --shadow-glow: 0 0 30px rgba(142,107,199,0.4);
+  --shadow-sm: 0 2px 8px rgba(42, 29, 61, 0.06);
+  --shadow-md: 0 4px 20px rgba(42, 29, 61, 0.09);
+  --shadow-lg: 0 8px 36px rgba(42, 29, 61, 0.12);
+  --shadow-xl: 0 16px 50px rgba(42, 29, 61, 0.16);
+  --shadow-2xl: 0 24px 70px rgba(42, 29, 61, 0.2);
+  --shadow-gold: 0 4px 18px rgba(196, 164, 104, 0.25);
+  --shadow-lilac: 0 4px 18px rgba(142, 125, 190, 0.25);
+  --shadow-lavender: 0 4px 18px rgba(142, 125, 190, 0.25);
+  --shadow-peach: 0 4px 18px rgba(229, 164, 147, 0.22);
+  --shadow-inset: inset 0 2px 8px rgba(42, 29, 61, 0.05);
+  --shadow-glow: 0 0 25px rgba(142, 125, 190, 0.3);
   
   /* ===== TYPOGRAPHY ===== */
   --font-display: 'Fraunces', Georgia, serif;
@@ -149,22 +158,22 @@
 
 /* ===== DARK MODE ===== */
 [data-theme="dark"] {
-  --bg-primary: #0F0812;
-  --bg-secondary: #1A0E1A;
-  --bg-tertiary: #24162A;
-  --bg-surface: #1E1226;
-  --bg-glass: rgba(15,8,18,0.85);
-  --bg-glass-dark: rgba(142,107,199,0.1);
+  --bg-primary: #140E1D;
+  --bg-secondary: #1B1327;
+  --bg-tertiary: #231932;
+  --bg-surface: #1E162B;
+  --bg-glass: rgba(20, 14, 29, 0.9);
+  --bg-glass-dark: rgba(142, 125, 190, 0.12);
   
-  --text-primary: #FFF8ED;
-  --text-secondary: #E8D5E0;
-  --text-muted: #C4A8B8;
-  --text-light: #8A6E80;
-  --text-inverse: #1A0A18;
+  --text-primary: #FAF8F5;
+  --text-secondary: #DDD5E8;
+  --text-muted: #AFA4BE;
+  --text-light: #7E728E;
+  --text-inverse: #140E1D;
   
-  --border-primary: rgba(142,107,199,0.25);
-  --border-secondary: rgba(216,181,106,0.2);
-  --border-light: rgba(168,216,200,0.2);
+  --border-primary: rgba(142, 125, 190, 0.25);
+  --border-secondary: rgba(196, 164, 104, 0.22);
+  --border-light: rgba(142, 125, 190, 0.18);
   
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
   --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
@@ -173,5 +182,5 @@
   --shadow-2xl: 0 24px 80px rgba(0,0,0,0.7);
   --shadow-inset: inset 0 2px 8px rgba(0,0,0,0.3);
   
-  --gradient-card: linear-gradient(135deg, rgba(30,18,38,0.9) 0%, rgba(36,22,42,0.95) 100%);
+  --gradient-card: #1E162B;
 }

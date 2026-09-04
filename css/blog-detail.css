@@ -24,7 +24,7 @@
 .article-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(74,25,66,0.4) 0%, rgba(74,25,66,0.88) 70%, rgba(74,25,66,0.98) 100%);
+  background: rgba(36, 26, 50, 0.78);
 }
 
 .article-hero-content {
@@ -155,7 +155,7 @@
 
 /* ARTICLE CTA */
 .article-cta-block {
-  background: var(--gradient-magic);
+  background: var(--color-lavender-primary);
   border-radius: var(--border-radius-2xl);
   padding: var(--space-8);
   text-align: center;

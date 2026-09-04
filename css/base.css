@@ -129,19 +129,17 @@ input, textarea, select {
 .text-lilac { color: var(--color-royal-lilac); }
 .text-peach { color: var(--color-peach-sorbet); }
 
-/* ===== GRADIENT TEXT ===== */
+/* ===== GRADIENT & ACCENT TEXT ===== */
 .gradient-text {
-  background: var(--gradient-magic);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-lavender-primary);
+  background: none;
+  -webkit-text-fill-color: initial;
 }
 
 .gradient-text-gold {
-  background: var(--gradient-gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-champagne-gold);
+  background: none;
+  -webkit-text-fill-color: initial;
 }
 
 /* ===== SECTION HEADERS ===== */
@@ -154,12 +152,11 @@ input, textarea, select {
   font-weight: 700;
   letter-spacing: var(--tracking-ultra);
   text-transform: uppercase;
-  color: var(--color-royal-lilac);
+  color: var(--color-lavender-primary);
   padding: 0.35rem 0.85rem;
   border: 1px solid var(--border-primary);
   border-radius: var(--border-radius-full);
-  background: var(--bg-glass-dark);
-  backdrop-filter: blur(10px);
+  background: var(--color-lavender-soft);
   margin-bottom: var(--space-3);
 }
 
@@ -215,49 +212,42 @@ input, textarea, select {
   white-space: nowrap;
 }
 
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 0; left: -100%;
-  width: 100%; height: 100%;
-  background: var(--gradient-shimmer);
-  transition: left var(--transition-slow);
-}
-
-.btn:hover::before { left: 100%; }
-
 .btn-primary {
-  background: var(--gradient-magic);
-  color: white;
-  box-shadow: var(--shadow-lilac);
+  background: var(--color-lavender-primary);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-lavender);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  background: var(--color-lavender-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-gold {
-  background: var(--gradient-gold);
-  color: var(--color-deep-berry);
+  background: var(--color-champagne-gold);
+  color: #FFFFFF;
   box-shadow: var(--shadow-gold);
 }
 
 .btn-gold:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(216,181,106,0.4);
+  background: var(--color-gold-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--color-royal-lilac);
+  color: var(--color-lavender-primary);
   border: 1.5px solid var(--border-primary);
   box-shadow: none;
 }
 
 .btn-outline:hover {
-  background: var(--bg-glass-dark);
-  border-color: var(--color-royal-lilac);
+  background: var(--color-lavender-soft);
+  border-color: var(--color-lavender-primary);
+  color: var(--color-lavender-primary);
+}
   transform: translateY(-2px);
 }
 
@@ -368,21 +358,24 @@ input, textarea, select {
 
 .floating-shape-1 {
   width: 300px; height: 300px;
-  background: var(--gradient-magic);
+  background: var(--color-lavender-primary);
+  opacity: 0.08;
   animation-delay: 0s;
   animation-duration: 8s;
 }
 
 .floating-shape-2 {
   width: 200px; height: 200px;
-  background: var(--gradient-gold);
+  background: var(--color-champagne-gold);
+  opacity: 0.07;
   animation-delay: -2s;
   animation-duration: 10s;
 }
 
 .floating-shape-3 {
   width: 150px; height: 150px;
-  background: var(--gradient-peach);
+  background: var(--color-lavender-light);
+  opacity: 0.08;
   animation-delay: -4s;
   animation-duration: 7s;
 }
@@ -445,9 +438,9 @@ input, textarea, select {
 
 /* ===== DIVIDERS ===== */
 .divider {
-  width: 80px;
+  width: 60px;
   height: 3px;
-  background: var(--gradient-gold);
+  background: var(--color-lavender-primary);
   border-radius: 2px;
   margin: var(--space-4) auto;
 }
@@ -457,16 +450,13 @@ input, textarea, select {
 }
 
 /* ===== BACKGROUNDS ===== */
-.bg-berry { background-color: var(--color-deep-berry); }
+.bg-berry { background-color: var(--color-lavender-dark); }
 .bg-cream { background-color: var(--color-vanilla-cream); }
 .bg-surface { background-color: var(--bg-surface); }
-.bg-gradient-hero { background: var(--gradient-hero); }
-.bg-gradient-magic { background: var(--gradient-magic); }
+.bg-gradient-hero { background-color: var(--color-lavender-dark); }
+.bg-gradient-magic { background-color: var(--color-lavender-primary); }
 .bg-pattern {
   background-color: var(--bg-secondary);
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(142,107,199,0.05) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(243,168,143,0.05) 0%, transparent 50%);
 }
 
 /* ===== OVERLAYS ===== */
@@ -482,7 +472,7 @@ input, textarea, select {
 
 .overlay-blur {
   backdrop-filter: blur(8px);
-  background: rgba(74,25,66,0.4);
+  background: rgba(38, 28, 52, 0.4);
 }
 
 /* ===== ASPECT RATIOS ===== */
@@ -581,15 +571,15 @@ input, textarea, select {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-secondary); }
 ::-webkit-scrollbar-thumb {
-  background: var(--gradient-magic);
+  background: var(--color-lavender-primary);
   border-radius: 3px;
 }
-::-webkit-scrollbar-thumb:hover { background: var(--color-royal-lilac); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-lavender-hover); }
 
 /* ===== SELECTION ===== */
 ::selection {
-  background: rgba(142,107,199,0.3);
-  color: var(--color-deep-berry);
+  background: var(--color-lavender-soft);
+  color: var(--text-primary);
 }
 
 /* ===== BACK TO TOP ===== */
@@ -597,9 +587,9 @@ input, textarea, select {
   position: fixed;
   bottom: var(--space-8);
   right: var(--space-8);
-  width: 52px;
-  height: 52px;
-  background: var(--gradient-magic);
+  width: 50px;
+  height: 50px;
+  background: var(--color-lavender-primary);
   color: white;
   border-radius: var(--border-radius-full);
   display: flex;
@@ -611,7 +601,7 @@ input, textarea, select {
   transform: translateY(20px) scale(0.8);
   transition: all var(--transition-spring);
   z-index: var(--z-toast);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lavender);
   border: none;
 }
 
@@ -621,8 +611,9 @@ input, textarea, select {
 }
 
 .back-to-top:hover {
-  transform: translateY(-4px) scale(1.1);
-  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  background: var(--color-lavender-hover);
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: var(--shadow-lg);
 }
 
 /* ===== PAGE TRANSITION ===== */

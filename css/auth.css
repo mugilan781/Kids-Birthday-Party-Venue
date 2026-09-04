@@ -30,7 +30,7 @@
 .auth-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(74,25,66,0.85) 0%, rgba(142,107,199,0.5) 100%);
+  background: rgba(36, 26, 50, 0.75);
 }
 
 .auth-hero-content {

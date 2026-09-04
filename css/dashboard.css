@@ -63,7 +63,7 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--gradient-magic);
+  background: var(--color-lavender-primary);
   color: white;
   display: flex;
   align-items: center;
@@ -120,7 +120,7 @@
 }
 
 .dash-nav-link.active {
-  background: linear-gradient(90deg, rgba(142,107,199,0.15) 0%, transparent 100%);
+  background: rgba(142,125,190,0.12);
   color: var(--color-royal-lilac);
   border-left: 3px solid var(--color-royal-lilac);
 }
@@ -289,7 +289,7 @@
 }
 
 .dash-stat-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-.dash-stat-card.accent { background: var(--gradient-magic); border-color: transparent; }
+.dash-stat-card.accent { background: var(--color-lavender-primary); border-color: transparent; }
 .dash-stat-card.accent .dash-stat-num, .dash-stat-card.accent .dash-stat-label { color: white; }
 
 .dash-stat-icon { font-size: 1.8rem; flex-shrink: 0; }
@@ -483,10 +483,10 @@
 }
 
 .booking-step.active .step-circle {
-  background: var(--gradient-magic);
+  background: var(--color-lavender-primary);
   border-color: transparent;
   color: white;
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-lavender);
 }
 
 .booking-step.completed .step-circle {
@@ -539,7 +539,7 @@
   top: -11px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--gradient-magic);
+  background: var(--color-lavender-primary);
   color: white;
   font-size: 0.68rem;
   font-weight: 800;
@@ -568,7 +568,7 @@
   transition: all var(--transition-base);
 }
 
-.booking-pkg-card.selected .pkg-select-indicator { background: var(--gradient-magic); color: white; border-color: transparent; }
+.booking-pkg-card.selected .pkg-select-indicator { background: var(--color-lavender-primary); color: white; border-color: transparent; }
 
 /* THEME CARDS (BOOKING) */
 .booking-themes-grid {
@@ -593,7 +593,7 @@
 .theme-card-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(74,25,66,0.5);
+  background: rgba(36, 26, 50, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -620,7 +620,7 @@
   position: absolute;
   bottom: 0;
   left: 0; right: 0;
-  background: linear-gradient(0deg, rgba(74,25,66,0.9), transparent);
+  background: rgba(36, 26, 50, 0.85);
   color: white;
   font-weight: 700;
   padding: var(--space-3) var(--space-4);
@@ -671,16 +671,14 @@
 }
 
 .addon-card:hover { border-color: var(--color-royal-lilac); box-shadow: var(--shadow-sm); }
-.addon-card.selected { border-color: var(--color-royal-lilac); background: rgba(142,107,199,0.05); }
-
-.addon-check {
+.addon-card.selected { border-color: var(--color-royal-lilac); background: rgba(142,107,199,0.05); }.addon-check {
   position: absolute;
   top: var(--space-2);
   right: var(--space-2);
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: var(--gradient-magic);
+  background: var(--color-lavender-primary);
   color: white;
   font-size: 0.7rem;
   display: flex;
@@ -773,7 +771,7 @@
 
 .progress-label { display: flex; justify-content: space-between; font-size: 0.72rem; font-weight: 700; margin-bottom: 2px; }
 .progress-bar { height: 6px; background: var(--bg-secondary); border-radius: 3px; overflow: hidden; }
-.progress-fill { height: 100%; background: var(--gradient-magic); border-radius: 3px; transition: width 1s ease; }
+.progress-fill { height: 100%; background: var(--color-lavender-primary); border-radius: 3px; transition: width 1s ease; }
 
 .booking-list-actions { display: flex; flex-direction: column; gap: var(--space-2); flex-shrink: 0; }
 
@@ -846,7 +844,7 @@
 }
 
 .timeline-dot.active { background: var(--color-royal-lilac); }
-.timeline-dot.active-event { background: var(--gradient-gold); border-color: var(--color-champagne-gold); width: 18px; height: 18px; box-shadow: var(--shadow-gold); }
+.timeline-dot.active-event { background: var(--color-champagne-gold); border-color: var(--color-champagne-gold); width: 18px; height: 18px; box-shadow: var(--shadow-gold); }
 
 .timeline-content { flex: 1; background: var(--bg-surface); border: 1px solid var(--border-primary); border-radius: var(--border-radius-lg); padding: var(--space-4) var(--space-5); }
 .timeline-content h4 { font-family: var(--font-display); font-size: var(--text-base); font-weight: 700; color: var(--text-primary); margin-bottom: 2px; }
