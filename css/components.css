@@ -8,6 +8,17 @@
   z-index: var(--z-sticky);
   transition: all var(--transition-base);
   padding: 0 var(--space-6);
+  background: rgba(250, 248, 245, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 2px 16px rgba(40, 29, 61, 0.05);
+}
+
+[data-theme="dark"] .navbar {
+  background: rgba(20, 14, 29, 0.94);
+  border-bottom: 1px solid rgba(184, 165, 228, 0.18);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
 .navbar.scrolled {
@@ -20,9 +31,9 @@
 }
 
 [data-theme="dark"] .navbar.scrolled {
-  background: rgba(20, 14, 29, 0.94);
-  border-bottom: 1px solid rgba(184, 165, 228, 0.2);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6), inset 0 -1px 0 rgba(184, 165, 228, 0.12);
+  background: rgba(20, 14, 29, 0.97);
+  border-bottom: 1px solid rgba(184, 165, 228, 0.22);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.65), inset 0 -1px 0 rgba(184, 165, 228, 0.12);
 }
 
 .navbar-container {
@@ -244,6 +255,14 @@
   transform: rotate(10deg);
 }
 
+.nav-toggle-btn[data-rtl-toggle],
+.rtl-toggle-btn {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  font-family: var(--font-body);
+}
+
 [data-theme="dark"] .nav-toggle-btn {
   background: rgba(184, 165, 228, 0.12);
   border-color: rgba(184, 165, 228, 0.28);
@@ -254,6 +273,42 @@
   background: rgba(184, 165, 228, 0.24);
   color: #FFFFFF;
   border-color: var(--color-royal-lilac);
+}
+
+/* ===== PROFILE DROPDOWN ===== */
+.nav-profile-dropdown {
+  position: relative;
+}
+
+.profile-toggle-btn {
+  cursor: pointer;
+}
+
+.profile-menu {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  right: 0;
+  left: auto;
+  min-width: 200px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-2);
+  box-shadow: var(--shadow-xl);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all var(--transition-base);
+  z-index: var(--z-dropdown);
+}
+
+.nav-profile-dropdown:hover .profile-menu,
+.nav-profile-dropdown.open .profile-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 [data-theme="dark"] .dropdown-menu {

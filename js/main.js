@@ -107,16 +107,15 @@ const Navbar = (() => {
 
   const setActiveLink = () => {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const allLinks = document.querySelectorAll('.nav-link, .mobile-nav-link, .dropdown-item');
+    const allLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
     allLinks.forEach(link => {
       const href = link.getAttribute('href');
       if (!href) return;
       const cleanHref = href.split('#')[0].split('?')[0].split('/').pop();
-      if (cleanHref === currentPath) {
-        link.classList.add('active');
-      } else if (currentPath === 'blog-details.html' && cleanHref === 'blog.html') {
-        link.classList.add('active');
-      }
+      const isActive = cleanHref === currentPath ||
+        (cleanHref === 'index.html' && (currentPath === '' || currentPath === 'index.html')) ||
+        (currentPath === 'blog-details.html' && cleanHref === 'blog.html');
+      link.classList.toggle('active', isActive);
     });
   };
 
@@ -140,8 +139,32 @@ const Navbar = (() => {
       });
     }
 
+    // Profile Dropdown Toggle
+    const profileWrap = document.querySelector('.nav-profile-dropdown');
+    const profileBtn = document.querySelector('.profile-toggle-btn');
+    if (profileWrap && profileBtn) {
+      profileBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = profileWrap.classList.toggle('open');
+        profileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!profileWrap.contains(e.target)) {
+          profileWrap.classList.remove('open');
+          profileBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeMobile();
+      if (e.key === 'Escape') {
+        closeMobile();
+        if (profileWrap && profileBtn) {
+          profileWrap.classList.remove('open');
+          profileBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
     });
 
     setActiveLink();
