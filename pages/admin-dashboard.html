@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LittleLux Venue Admin Portal — Comprehensive operations management for bookings, venue halls, catering, themes and customer enquiries." />
+  <title>Venue Admin Portal — LittleLux Luxury Birthday Venue</title>
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body class="dashboard-body">
+
+  <!-- ===== ADMIN SIDEBAR ===== -->
+  <aside class="dash-sidebar" id="dash-sidebar" role="navigation" aria-label="Admin navigation">
+    <div class="dash-sidebar-header">
+      <a href="../index.html" class="navbar-logo" style="text-decoration:none">
+        <div class="logo-icon" aria-hidden="true">
+          <svg class="svg-icon icon-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m12 6-8 7h16z"/><path d="M4 13v8h16v-8"/><path d="M12 13v8"/><path d="M8 21v-4a4 4 0 0 1 8 0v4"/><path d="M12 2c1.5 0 2.5 1 2.5 2"/></svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">LittleLux</span>
+          <span class="logo-tagline">Venue Admin</span>
+        </div>
+      </a>
+      <button class="dash-sidebar-close" id="dash-sidebar-close" aria-label="Close sidebar">
+        <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- ADMIN USER PROFILE CARD -->
+    <div class="dash-user-card" style="border-left: 3px solid var(--color-royal-lilac);">
+      <div class="dash-user-avatar" style="background: var(--gradient-magic)">AD</div>
+      <div class="dash-user-info">
+        <div class="dash-user-name" style="display:flex;align-items:center;gap:0.35rem">
+          Aarav Sharma
+        </div>
+        <div class="dash-user-email">admin@littlelux.in</div>
+        <div style="margin-top:0.25rem"><span class="admin-badge">👑 Super Admin</span></div>
+      </div>
+    </div>
+
+    <!-- NAVIGATION LINKS -->
+    <nav class="dash-nav">
+      <div class="dash-nav-section">
+        <div class="dash-nav-label">Core Operations</div>
+        <a href="#overview" class="dash-nav-link active" data-section="overview">
+          <span class="dash-nav-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+          </span>
+          Overview
+        </a>
+        <a href="#bookings" class="dash-nav-link" data-section="bookings">
+          <span class="dash-nav-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+          </span>
+          Bookings <span class="dash-badge" id="sidebar-bookings-badge">24</span>
+        </a>
+        <a href="#calendar" class="dash-nav-link" data-section="calendar">
+          <span class="dash-nav-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+          </span>
+          Slots &amp; Calendar
+        </a>
+      </div>
+
+      <div class="dash-nav-section">
+        <div class="dash-nav-label">Venue &amp; Services</div>
+        <a href="#themes-halls" class="dash-nav-link" data-section="themes-halls">
+          <span class="dash-nav-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+          </span>
+          Themes &amp; Halls
+        </a>
+        <a href="#catering" class="dash-nav-link" data-section="catering">
+          <span class="dash-nav-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" x2="6" y1="1" y2="4"/><line x1="10" x2="10" y1="1" y2="4"/><line x1="14" x2="14" y1="1" y2="4"/></svg>
+          </span>
+          Catering &amp; Bakery <span class="dash-badge" style="background:var(--color-royal-lilac)">4 Today</span>
+        </a>
+        <a href="#enquiries" class="dash-nav-link" data-section="enquiries">
+          <span class="dash-nav-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          Enquiries <span class="dash-badge" style="background:var(--color-peach-dark)">3 New</span>
+        </a>
+      </div>
+
+      <div class="dash-nav-section">
+        <div class="dash-nav-label">Administration</div>
+        <a href="#financials" class="dash-nav-link" data-section="financials">
+          <span class="dash-nav-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v12"/></svg>
+          </span>
+          Financials &amp; Reports
+        </a>
+        <a href="#staff" class="dash-nav-link" data-section="staff">
+          <span class="dash-nav-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          Staff Roster
+        </a>
+        <a href="#settings" class="dash-nav-link" data-section="settings">
+          <span class="dash-nav-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          Venue Settings
+        </a>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR FOOTER -->
+    <div class="dash-sidebar-footer">
+      <a href="dashboard.html" class="btn btn-outline btn-sm" style="width:100%;margin-bottom:0.65rem;gap:0.4rem">
+        <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Switch to Parent Portal
+      </a>
+      <div style="display:flex;gap:0.5rem;width:100%">
+        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" style="flex:1;border-radius:var(--border-radius-md);font-size:0.75rem;padding:0.4rem">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg> Theme
+        </button>
+        <a href="login.html" class="btn btn-ghost btn-sm" style="color:var(--text-muted);font-size:0.75rem;padding:0.4rem 0.8rem">Sign Out</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="dash-main" id="dash-main">
+
+    <!-- TOP BAR -->
+    <header class="dash-topbar">
+      <div class="dash-topbar-left">
+        <button class="dash-menu-btn" id="dash-menu-btn" aria-label="Open sidebar" aria-expanded="false">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+        <h1 class="dash-page-title" id="current-section-title">Venue Overview</h1>
+        <span class="status-badge confirmed" style="margin-left:0.5rem">● Venue Live (3 Events Active)</span>
+      </div>
+
+      <div class="dash-topbar-right">
+        <button class="btn btn-primary btn-sm" onclick="openNewBookingModal()">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+          New Booking
+        </button>
+
+        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <button class="nav-toggle-btn" onclick="openNotificationsModal()" style="position:relative;cursor:pointer" aria-label="View notifications">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+          <span class="notif-badge" id="topbar-notif-count">4</span>
+        </button>
+
+        <div class="dash-topbar-user" onclick="showSection('settings')" style="cursor:pointer" title="Venue Director Profile">
+          <div class="dash-user-avatar" style="width:36px;height:36px;font-size:0.8rem;background:var(--gradient-magic)">AD</div>
+          <span class="dash-topbar-name">Aarav (Admin)</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="dash-content">
+
+      <!-- ============================================== -->
+      <!-- 1. OVERVIEW SECTION                            -->
+      <!-- ============================================== -->
+      <section id="overview" class="dash-section active" aria-labelledby="overview-title">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+          <div>
+            <h2 class="dash-section-title" id="overview-title" style="margin-bottom:0.25rem">
+              Welcome to <em class="italic-heading">Venue Operations</em>
+            </h2>
+            <p style="color:var(--text-muted);font-size:var(--text-sm)">Live operational pulse of LittleLux Birthday Venue, Jubilee Hills.</p>
+          </div>
+          <div style="display:flex;gap:0.75rem">
+            <button class="btn btn-outline btn-sm" onclick="showSection('calendar')">📅 View Today's Slots</button>
+            <button class="btn btn-primary btn-sm" onclick="exportOverviewReport()">📊 Export Daily Briefing</button>
+          </div>
+        </div>
+
+        <!-- 4 TOP STATS -->
+        <div class="dash-stats-row">
+          <div class="dash-stat-card accent">
+            <div class="dash-stat-icon" style="color:white">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v12"/></svg>
+            </div>
+            <div class="dash-stat-body">
+              <div class="dash-stat-num">₹18,45,000</div>
+              <div class="dash-stat-label" style="color:rgba(255,255,255,0.9)">Monthly Gross Revenue (+18.4%)</div>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+            </div>
+            <div class="dash-stat-body">
+              <div class="dash-stat-num" id="overview-active-count">24</div>
+              <div class="dash-stat-label">Active Bookings (4 Today)</div>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="color:var(--color-champagne-gold)">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="dash-stat-body">
+              <div class="dash-stat-num">88%</div>
+              <div class="dash-stat-label">Weekend Hall Occupancy</div>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="color:var(--color-peach-dark)">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="dash-stat-body">
+              <div class="dash-stat-num">5</div>
+              <div class="dash-stat-label">Action Pending (Deposits &amp; Leads)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUICK OPERATIONS BAR -->
+        <div class="dash-info-card" style="margin-bottom:1.5rem">
+          <h3 class="dash-subsection-title" style="margin-bottom:0.75rem">⚡ Quick Operational Shortcuts</h3>
+          <div class="quick-actions-grid" style="margin-top:0">
+            <div class="quick-action-card" onclick="openNewBookingModal()">
+              <span class="qa-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg></span>
+              <span class="qa-label">Create Booking</span>
+            </div>
+            <div class="quick-action-card" onclick="showSection('calendar')">
+              <span class="qa-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></span>
+              <span class="qa-label">Slot Matrix</span>
+            </div>
+            <div class="quick-action-card" onclick="showSection('catering')">
+              <span class="qa-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></span>
+              <span class="qa-label">Kitchen Tracker</span>
+            </div>
+            <div class="quick-action-card" onclick="showSection('enquiries')">
+              <span class="qa-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+              <span class="qa-label">Client Leads</span>
+            </div>
+            <div class="quick-action-card" onclick="broadcastMessagePrompt()">
+              <span class="qa-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>
+              <span class="qa-label">Parent Broadcast</span>
+            </div>
+            <div class="quick-action-card" onclick="showSection('financials')">
+              <span class="qa-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg></span>
+              <span class="qa-label">Invoicing Log</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TODAY'S SCHEDULE -->
+        <div class="dash-upcoming-party" style="margin-bottom:1.5rem">
+          <div class="party-card-header">
+            <div>
+              <div class="party-card-tag">Today's Live Schedule</div>
+              <h3 class="party-card-title">4 Celebrations Booked for Today</h3>
+              <p style="color:var(--text-muted);font-size:var(--text-sm)">Grand Ballroom &amp; Fairy Tale Pavilion operations are running smoothly.</p>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="showSection('staff')">Check Staff on Duty →</button>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1rem">
+            <!-- Event 1 -->
+            <div style="background:var(--bg-secondary);padding:1rem;border-radius:var(--border-radius-lg);border-left:4px solid var(--color-mint-dark)">
+              <div style="display:flex;justify-content:space-between;margin-bottom:0.25rem">
+                <span style="font-weight:700;font-size:var(--text-xs);color:var(--color-mint-dark)">● MORNING (9:30 AM – 1:30 PM)</span>
+                <span class="status-badge confirmed">In Progress</span>
+              </div>
+              <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.25rem">Ananya's 5th Birthday — Princess Theme</div>
+              <div style="font-size:var(--text-xs);color:var(--text-muted)">Grand Ballroom · 45 Guests · Host: Maya · Cake Ready</div>
+            </div>
+
+            <!-- Event 2 -->
+            <div style="background:var(--bg-secondary);padding:1rem;border-radius:var(--border-radius-lg);border-left:4px solid var(--color-royal-lilac)">
+              <div style="display:flex;justify-content:space-between;margin-bottom:0.25rem">
+                <span style="font-weight:700;font-size:var(--text-xs);color:var(--color-royal-lilac)">● AFTERNOON (2:30 PM – 6:30 PM)</span>
+                <span class="status-badge pending">Setup in Progress</span>
+              </div>
+              <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.25rem">Reyansh's 7th Birthday — Superhero Theme</div>
+              <div style="font-size:var(--text-xs);color:var(--text-muted)">Starlight Pavilion · 60 Guests · Magician Arriving 3 PM</div>
+            </div>
+
+            <!-- Event 3 -->
+            <div style="background:var(--bg-secondary);padding:1rem;border-radius:var(--border-radius-lg);border-left:4px solid var(--color-champagne-gold)">
+              <div style="display:flex;justify-content:space-between;margin-bottom:0.25rem">
+                <span style="font-weight:700;font-size:var(--text-xs);color:var(--color-gold-text)">● EVENING (7:00 PM – 11:00 PM)</span>
+                <span class="status-badge confirmed">Confirmed</span>
+              </div>
+              <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.25rem">Kabir's 1st Milestone — Royal Safari</div>
+              <div style="font-size:var(--text-xs);color:var(--text-muted)">Grand Ballroom · 120 Guests · Buffet Setup 5:30 PM</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RECENT BOOKINGS PREVIEW -->
+        <div class="dash-info-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:0.5rem">
+            <h3 class="dash-subsection-title" style="margin:0">Recent Bookings Activity</h3>
+            <button class="btn btn-outline btn-sm" onclick="showSection('bookings')">View All 24 Bookings →</button>
+          </div>
+          <div class="admin-table-wrap" style="margin-bottom:0">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Parent / Client</th>
+                  <th>Child &amp; Age</th>
+                  <th>Date &amp; Hall</th>
+                  <th>Package</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="overview-recent-tbody">
+                <!-- Populated dynamically via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ============================================== -->
+      <!-- 2. BOOKINGS MANAGEMENT SECTION                 -->
+      <!-- ============================================== -->
+      <section id="bookings" class="dash-section" aria-labelledby="bookings-title">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+          <div>
+            <h2 class="dash-section-title" id="bookings-title" style="margin-bottom:0.25rem">
+              Bookings <em class="italic-heading">Directory</em>
+            </h2>
+            <p style="color:var(--text-muted);font-size:var(--text-sm)">Manage, confirm, edit and track every kid's birthday celebration.</p>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="openNewBookingModal()">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+            Add New Booking
+          </button>
+        </div>
+
+        <!-- FILTER & SEARCH BAR -->
+        <div class="admin-filter-bar">
+          <div class="admin-tabs" id="booking-tabs">
+            <button class="admin-tab-btn active" data-filter="all" onclick="filterBookings('all', this)">All <span class="admin-tab-count" id="count-all">10</span></button>
+            <button class="admin-tab-btn" data-filter="confirmed" onclick="filterBookings('confirmed', this)">Confirmed <span class="admin-tab-count" id="count-confirmed">6</span></button>
+            <button class="admin-tab-btn" data-filter="pending" onclick="filterBookings('pending', this)">Pending Deposit <span class="admin-tab-count" id="count-pending">2</span></button>
+            <button class="admin-tab-btn" data-filter="completed" onclick="filterBookings('completed', this)">Completed <span class="admin-tab-count" id="count-completed">1</span></button>
+            <button class="admin-tab-btn" data-filter="cancelled" onclick="filterBookings('cancelled', this)">Cancelled <span class="admin-tab-count" id="count-cancelled">1</span></button>
+          </div>
+
+          <div style="display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap">
+            <div class="admin-search-box">
+              <span class="admin-search-icon">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></svg>
+              </span>
+              <input type="text" id="booking-search-input" class="admin-search-input" placeholder="Search child, parent, phone..." oninput="searchBookings(this.value)" />
+            </div>
+
+            <select id="booking-hall-filter" class="form-control" style="font-size:var(--text-xs);padding:0.45rem 1rem;width:auto" onchange="filterByHall(this.value)">
+              <option value="all">All Halls</option>
+              <option value="Grand Ballroom">Grand Ballroom</option>
+              <option value="Fairy Tale Pavilion">Fairy Tale Pavilion</option>
+              <option value="Starlight Terrace">Starlight Terrace</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- MAIN BOOKINGS TABLE -->
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Parent Contact</th>
+                <th>Child &amp; Age</th>
+                <th>Event Date &amp; Slot</th>
+                <th>Venue Hall</th>
+                <th>Package</th>
+                <th>Billing (Total / Paid)</th>
+                <th>Status</th>
+                <th style="text-align:right">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="bookings-tbody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <!-- ============================================== -->
+      <!-- 3. SLOTS & CALENDAR SECTION                   -->
+      <!-- ============================================== -->
+      <section id="calendar" class="dash-section" aria-labelledby="calendar-title">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+          <div>
+            <h2 class="dash-section-title" id="calendar-title" style="margin-bottom:0.25rem">
+              Venue Slots &amp; <em class="italic-heading">Calendar</em>
+            </h2>
+            <p style="color:var(--text-muted);font-size:var(--text-sm)">Click on any slot to toggle its booking or maintenance lock status.</p>
+          </div>
+          <div style="display:flex;gap:0.75rem">
+            <button class="btn btn-outline btn-sm" onclick="LittleLux.Toast.show('Syncing with live Google Calendar and WhatsApp bookings...', 'info')">🔄 Sync Calendar</button>
+            <button class="btn btn-primary btn-sm" onclick="lockAllWeekendSlots()">🔒 Lock Maintenance Slots</button>
+          </div>
+        </div>
+
+        <!-- DATE SELECTOR -->
+        <div class="dash-info-card" style="margin-bottom:1.5rem">
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+            <div style="display:flex;align-items:center;gap:0.75rem">
+              <button class="btn btn-action" onclick="changeCalendarDay(-1)">← Prev Day</button>
+              <span id="current-calendar-date" style="font-family:var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary)">
+                Saturday, September 27, 2026 (Peak Weekend)
+              </span>
+              <button class="btn btn-action" onclick="changeCalendarDay(1)">Next Day →</button>
+            </div>
+            <div style="display:flex;gap:0.5rem">
+              <span class="status-badge available">● Available (Click to Book)</span>
+              <span class="status-badge confirmed">● Booked (Click to View)</span>
+              <span class="status-badge blocked">● Maintenance / Blocked</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLOTS GRID BY HALL -->
+        <div style="display:flex;flex-direction:column;gap:2rem">
+          <!-- Hall 1 -->
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem">
+              <h3 style="font-family:var(--font-display);font-weight:700;color:var(--text-primary);font-size:var(--text-lg)">
+                🏛️ Grand Ballroom (Capacity: Up to 150 Guests)
+              </h3>
+              <span style="font-size:var(--text-xs);color:var(--text-muted)">Stage, 4K Projector, Private Dining Wing</span>
+            </div>
+            <div class="admin-slots-grid">
+              <div class="slot-card booked" onclick="toggleSlotStatus(this, 'Grand Ballroom', 'Morning')">
+                <div class="slot-card-header">
+                  <span class="slot-time">Morning (9:00 AM – 1:00 PM)</span>
+                  <span class="status-badge confirmed">Booked</span>
+                </div>
+                <div class="slot-party-info"><strong>Ananya's 5th Birthday</strong> · Princess Royal Theme (45 Guests)</div>
+                <div class="slot-toggle-hint">Click to toggle status</div>
+              </div>
+
+              <div class="slot-card booked" onclick="toggleSlotStatus(this, 'Grand Ballroom', 'Afternoon')">
+                <div class="slot-card-header">
+                  <span class="slot-time">Afternoon (2:00 PM – 6:00 PM)</span>
+                  <span class="status-badge confirmed">Booked</span>
+                </div>
+                <div class="slot-party-info"><strong>Arya's 6th Birthday</strong> · Princess Grand Royale (60 Guests)</div>
+                <div class="slot-toggle-hint">Click to toggle status</div>
+              </div>
+
+              <div class="slot-card available" onclick="toggleSlotStatus(this, 'Grand Ballroom', 'Evening')">
+                <div class="slot-card-header">
+                  <span class="slot-time">Evening (7:00 PM – 11:00 PM)</span>
+                  <span class="status-badge available">Available</span>
+                </div>
+                <div class="slot-party-info">Open for immediate online or phone reservation</div>
+                <div class="slot-toggle-hint">Click to toggle status</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hall 2 -->
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem">
+              <h3 style="font-family:var(--font-display);font-weight:700;color:var(--text-primary);font-size:var(--text-lg)">
+                🎪 Fairy Tale Pavilion (Capacity: Up to 80 Guests)
+              </h3>
+              <span style="font-size:var(--text-xs);color:var(--text-muted)">Interactive LED Floor, Soft Play Area</span>
+            </div>
+            <div class="admin-slots-grid">
+              <div class="slot-card available" onclick="toggleSlotStatus(this, 'Fairy Tale Pavilion', 'Morning')">
+                <div class="slot-card-header">
+                  <span class="slot-time">Morning (9:00 AM – 1:00 PM)</span>
+                  <span class="status-badge available">Available</span>
+                </div>
+                <div class="slot-party-info">Open for reservations</div>
+                <div class="slot-toggle-hint">Click to toggle status</div>
+              </div>
+
+              <div class="slot-card booked" onclick="toggleSlotStatus(this, 'Fairy Tale Pavilion', 'Afternoon')">
+                <div class="slot-card-header">
+                  <span class="slot-time">Afternoon (2:00 PM – 6:00 PM)</span>
+                  <span class="status-badge confirmed">Booked</span>
+                </div>
+                <div class="slot-party-info"><strong>Vihaan's 3rd Milestone</strong> · Jungle Safari Theme (35 Guests)</div>
+                <div class="slot-toggle-hint">Click to toggle status</div>
+              </div>
+
+              <div class="slot-card blocked" onclick="toggleSlotStatus(this, 'Fairy Tale Pavilion', 'Evening')">
+                <div class="slot-card-header">
+                  <span class="slot-time">Evening (7:00 PM – 11:00 PM)</span>
+                  <span class="status-badge blocked">Maintenance Block</span>
+                </div>
+                <div class="slot-party-info">Scheduled audio system calibration &amp; deep sanitization</div>
+                <div class="slot-toggle-hint">Click to toggle status</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hall 3 -->
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem">
+              <h3 style="font-family:var(--font-display);font-weight:700;color:var(--text-primary);font-size:var(--text-lg)">
+                ✨ Starlight Terrace (Capacity: Up to 100 Guests)
+              </h3>
+              <span style="font-size:var(--text-xs);color:var(--text-muted)">Panoramic View, Retractable Glass Canopy, Mocktail Bar</span>
+            </div>
+            <div class="admin-slots-grid">
+              <div class="slot-card available" onclick="toggleSlotStatus(this, 'Starlight Terrace', 'Morning')">
+                <div class="slot-card-header">
+                  <span class="slot-time">Morning (9:00 AM – 1:00 PM)</span>
+                  <span class="status-badge available">Available</span>
+                </div>
+                <div class="slot-party-info">Open for bookings</div>
+                <div class="slot-toggle-hint">Click to toggle status</div>
+              </div>
+
+              <div class="slot-card booked" onclick="toggleSlotStatus(this, 'Starlight Terrace', 'Afternoon')">
+                <div class="slot-card-header">
+                  <span class="slot-time">Afternoon (2:00 PM – 6:00 PM)</span>
+                  <span class="status-badge confirmed">Booked</span>
+                </div>
+                <div class="slot-party-info"><strong>Reyansh's 7th Birthday</strong> · Superhero Galaxy (60 Guests)</div>
+                <div class="slot-toggle-hint">Click to toggle status</div>
+              </div>
+
+              <div class="slot-card available" onclick="toggleSlotStatus(this, 'Starlight Terrace', 'Evening')">
+                <div class="slot-card-header">
+                  <span class="slot-time">Evening (7:00 PM – 11:00 PM)</span>
+                  <span class="status-badge available">Available</span>
+                </div>
+                <div class="slot-party-info">Open for bookings</div>
+                <div class="slot-toggle-hint">Click to toggle status</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ============================================== -->
+      <!-- 4. THEMES & HALLS INVENTORY                    -->
+      <!-- ============================================== -->
+      <section id="themes-halls" class="dash-section" aria-labelledby="themes-title">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+          <div>
+            <h2 class="dash-section-title" id="themes-title" style="margin-bottom:0.25rem">
+              Themes &amp; <em class="italic-heading">Halls Inventory</em>
+            </h2>
+            <p style="color:var(--text-muted);font-size:var(--text-sm)">Manage signature party themes, hall capacities, and custom prop sets.</p>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="openAddThemeModal()">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+            Add New Theme
+          </button>
+        </div>
+
+        <h3 class="dash-subsection-title" style="margin-bottom:1rem">Signature Party Themes (5 Active)</h3>
+        <div class="admin-cards-grid" id="themes-grid">
+          <!-- Theme 1 -->
+          <div class="admin-card">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <span style="font-size:1.8rem">👑</span>
+              <span class="status-badge confirmed">Active</span>
+            </div>
+            <div>
+              <h4 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin-bottom:0.25rem">Princess Royal Palace</h4>
+              <p style="font-size:var(--text-xs);color:var(--text-muted)">Cinderella carriage backdrop, crystal chandeliers, tiara coronation ceremony.</p>
+            </div>
+            <div style="font-size:var(--text-xs);color:var(--text-primary);display:flex;justify-content:space-between;border-top:1px solid var(--border-light);padding-top:0.5rem">
+              <span>Upgrade Fee: <strong>₹15,000</strong></span>
+              <span>Bookings: <strong>14 this mo.</strong></span>
+            </div>
+            <button class="btn btn-outline btn-sm" style="width:100%" onclick="editThemePrompt('Princess Royal Palace')">Edit Theme Props</button>
+          </div>
+
+          <!-- Theme 2 -->
+          <div class="admin-card">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <span style="font-size:1.8rem">🦸‍♂️</span>
+              <span class="status-badge confirmed">Active</span>
+            </div>
+            <div>
+              <h4 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin-bottom:0.25rem">Superhero Galaxy</h4>
+              <p style="font-size:var(--text-xs);color:var(--text-muted)">Avenger skyline arch, neon laser lights, superhero obstacle training course.</p>
+            </div>
+            <div style="font-size:var(--text-xs);color:var(--text-primary);display:flex;justify-content:space-between;border-top:1px solid var(--border-light);padding-top:0.5rem">
+              <span>Upgrade Fee: <strong>₹15,000</strong></span>
+              <span>Bookings: <strong>11 this mo.</strong></span>
+            </div>
+            <button class="btn btn-outline btn-sm" style="width:100%" onclick="editThemePrompt('Superhero Galaxy')">Edit Theme Props</button>
+          </div>
+
+          <!-- Theme 3 -->
+          <div class="admin-card">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <span style="font-size:1.8rem">🦁</span>
+              <span class="status-badge confirmed">Active</span>
+            </div>
+            <div>
+              <h4 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin-bottom:0.25rem">Jungle Wild Safari</h4>
+              <p style="font-size:var(--text-xs);color:var(--text-muted)">Life-sized plush animals, tropical jungle foliage, wooden safari photo truck.</p>
+            </div>
+            <div style="font-size:var(--text-xs);color:var(--text-primary);display:flex;justify-content:space-between;border-top:1px solid var(--border-light);padding-top:0.5rem">
+              <span>Upgrade Fee: <strong>₹12,000</strong></span>
+              <span>Bookings: <strong>9 this mo.</strong></span>
+            </div>
+            <button class="btn btn-outline btn-sm" style="width:100%" onclick="editThemePrompt('Jungle Wild Safari')">Edit Theme Props</button>
+          </div>
+
+          <!-- Theme 4 -->
+          <div class="admin-card">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <span style="font-size:1.8rem">🧜‍♀️</span>
+              <span class="status-badge confirmed">Active</span>
+            </div>
+            <div>
+              <h4 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin-bottom:0.25rem">Underwater Mermaid</h4>
+              <p style="font-size:var(--text-xs);color:var(--text-muted)">Giant clam shell photo throne, pearlescent balloon arches, bubble machines.</p>
+            </div>
+            <div style="font-size:var(--text-xs);color:var(--text-primary);display:flex;justify-content:space-between;border-top:1px solid var(--border-light);padding-top:0.5rem">
+              <span>Upgrade Fee: <strong>₹18,000</strong></span>
+              <span>Bookings: <strong>7 this mo.</strong></span>
+            </div>
+            <button class="btn btn-outline btn-sm" style="width:100%" onclick="editThemePrompt('Underwater Mermaid')">Edit Theme Props</button>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ============================================== -->
+      <!-- 5. CATERING & BAKERY OPERATIONS               -->
+      <!-- ============================================== -->
+      <section id="catering" class="dash-section" aria-labelledby="catering-title">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+          <div>
+            <h2 class="dash-section-title" id="catering-title" style="margin-bottom:0.25rem">
+              Catering &amp; <em class="italic-heading">Bakery Kitchen</em>
+            </h2>
+            <p style="color:var(--text-muted);font-size:var(--text-sm)">Real-time culinary dispatch, custom designer cakes, and live food station status.</p>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="LittleLux.Toast.show('Chef Suresh alerted: Kitchen order slip generated!', 'success')">
+            👨‍🍳 Dispatch All Kitchen Slips
+          </button>
+        </div>
+
+        <h3 class="dash-subsection-title" style="margin-bottom:1rem">🎂 Custom Designer Cake Orders (Today)</h3>
+        <div class="admin-cards-grid" style="margin-bottom:2rem">
+          <div class="admin-card" id="cake-order-1">
+            <div style="display:flex;justify-content:space-between">
+              <span style="font-weight:700;color:var(--text-primary)">Arya's 6th B'day</span>
+              <span class="status-badge pending" id="cake-status-1">Decorating (Fondant)</span>
+            </div>
+            <p style="font-size:var(--text-xs);color:var(--text-muted)">5-Tier Cinderella Castle Fondant Cake with Belgian Dark Chocolate Truffle &amp; Edible Gold Foil.</p>
+            <div style="display:flex;justify-content:space-between;font-size:var(--text-xs)">
+              <span>Delivery Time: <strong>1:30 PM</strong></span>
+              <span>Weight: <strong>5.5 kg</strong></span>
+            </div>
+            <button class="btn btn-action-success" onclick="advanceCakeStatus(1)">Mark as Ready for Cut</button>
+          </div>
+
+          <div class="admin-card" id="cake-order-2">
+            <div style="display:flex;justify-content:space-between">
+              <span style="font-weight:700;color:var(--text-primary)">Reyansh's 7th B'day</span>
+              <span class="status-badge pending" id="cake-status-2">Baked &amp; Cooling</span>
+            </div>
+            <p style="font-size:var(--text-xs);color:var(--text-muted)">3-Tier Iron Man &amp; Spider-Man 3D Sculpted Cake with Red Velvet &amp; Cream Cheese.</p>
+            <div style="display:flex;justify-content:space-between;font-size:var(--text-xs)">
+              <span>Delivery Time: <strong>3:00 PM</strong></span>
+              <span>Weight: <strong>4.0 kg</strong></span>
+            </div>
+            <button class="btn btn-action-success" onclick="advanceCakeStatus(2)">Advance to Decorating</button>
+          </div>
+
+          <div class="admin-card" id="cake-order-3">
+            <div style="display:flex;justify-content:space-between">
+              <span style="font-weight:700;color:var(--text-primary)">Ananya's 5th B'day</span>
+              <span class="status-badge confirmed" id="cake-status-3">Ready in Chiller</span>
+            </div>
+            <p style="font-size:var(--text-xs);color:var(--text-muted)">3-Tier Enchanted Forest Tiered Cake with White Chocolate Raspberry &amp; Sugar Roses.</p>
+            <div style="display:flex;justify-content:space-between;font-size:var(--text-xs)">
+              <span>Delivery Time: <strong>11:00 AM</strong></span>
+              <span>Weight: <strong>3.5 kg</strong></span>
+            </div>
+            <button class="btn btn-action" disabled style="opacity:0.7">✓ Delivered to Grand Hall</button>
+          </div>
+        </div>
+
+        <h3 class="dash-subsection-title" style="margin-bottom:1rem">🍽️ Catering Spreads &amp; Live Counters</h3>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Event / Child</th>
+                <th>Menu Type</th>
+                <th>Guest Count</th>
+                <th>Live Counters</th>
+                <th>Dietary Notes</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Ananya Rao</strong> (Grand Ballroom)</td>
+                <td>Gourmet Royal Buffet</td>
+                <td>45 Pax</td>
+                <td>Mini Sliders, Dimsum &amp; Mocktail Bar</td>
+                <td>12 Jain, 5 Nut-Free</td>
+                <td><span class="status-badge confirmed">Live on Floor</span></td>
+                <td><button class="btn btn-action" onclick="LittleLux.Toast.show('Refill alert sent to kitchen steward team', 'info')">Request Refill</button></td>
+              </tr>
+              <tr>
+                <td><strong>Reyansh Varma</strong> (Starlight)</td>
+                <td>Italian &amp; Continental Feast</td>
+                <td>60 Pax</td>
+                <td>Wood-fired Mini Pizzas, Gelato Bar</td>
+                <td>Pure Veg Kitchen required</td>
+                <td><span class="status-badge pending">Prepping in Kitchen</span></td>
+                <td><button class="btn btn-action-success" onclick="LittleLux.Toast.show('Spread marked Ready for Service!', 'success')">Mark Ready</button></td>
+              </tr>
+              <tr>
+                <td><strong>Vihaan N</strong> (Pavilion)</td>
+                <td>Kids Finger Food &amp; High Tea</td>
+                <td>35 Pax</td>
+                <td>Cotton Candy Cart, Popcorn Stand</td>
+                <td>Standard Menu</td>
+                <td><span class="status-badge confirmed">Staged at Pavilion</span></td>
+                <td><button class="btn btn-action" onclick="LittleLux.Toast.show('Live carts powered and active', 'info')">Check Carts</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <!-- ============================================== -->
+      <!-- 6. CUSTOMER ENQUIRIES SECTION                 -->
+      <!-- ============================================== -->
+      <section id="enquiries" class="dash-section" aria-labelledby="enquiries-title">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+          <div>
+            <h2 class="dash-section-title" id="enquiries-title" style="margin-bottom:0.25rem">
+              Customer <em class="italic-heading">Enquiries &amp; Leads</em>
+            </h2>
+            <p style="color:var(--text-muted);font-size:var(--text-sm)">Inbound enquiries from Contact page, website forms, and consultation requests.</p>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="exportEnquiriesCSV()">
+            📥 Export All Leads CSV
+          </button>
+        </div>
+
+        <div class="admin-cards-grid" id="enquiries-list">
+          <!-- Enquiry 1 -->
+          <div class="admin-card" id="enquiry-card-1">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <div>
+                <h4 style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--text-primary)">Dr. Rajeshwari Patel</h4>
+                <div style="font-size:var(--text-xs);color:var(--text-muted)">+91 98490 12345 · rajeshwari.p@gmail.com</div>
+              </div>
+              <span class="status-badge pending">New Lead</span>
+            </div>
+            <p style="font-size:var(--text-xs);color:var(--text-primary);background:var(--bg-secondary);padding:0.6rem;border-radius:var(--border-radius-md)">
+              "Planning a 1st birthday milestone for our twins in November. We expect around 80 guests. Interested in the Grand Royale package with Jungle theme."
+            </p>
+            <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--text-light)">
+              <span>Received: Today, 10:15 AM</span>
+              <span>Preferred: Nov 15, 2026</span>
+            </div>
+            <div class="btn-action-group" style="justify-content:flex-end">
+              <button class="btn btn-action-primary" onclick="openReplyModal('Dr. Rajeshwari Patel', 'rajeshwari.p@gmail.com', 'Booking Enquiry for Twins 1st Birthday')">Reply</button>
+              <button class="btn btn-action" onclick="convertToBookingPrompt('Dr. Rajeshwari Patel', '80 Guests')">Convert to Booking</button>
+              <button class="btn btn-action-danger" onclick="resolveEnquiry(1)">Resolve</button>
+            </div>
+          </div>
+
+          <!-- Enquiry 2 -->
+          <div class="admin-card" id="enquiry-card-2">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <div>
+                <h4 style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--text-primary)">Vikram Singhania</h4>
+                <div style="font-size:var(--text-xs);color:var(--text-muted)">+91 99887 76655 · vikram.s@singhania.co</div>
+              </div>
+              <span class="status-badge confirmed">Responded</span>
+            </div>
+            <p style="font-size:var(--text-xs);color:var(--text-primary);background:var(--bg-secondary);padding:0.6rem;border-radius:var(--border-radius-md)">
+              "Need full venue buyout for Sunday afternoon. Can we bring a celebrity guest performer and external videography team?"
+            </p>
+            <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--text-light)">
+              <span>Received: Yesterday, 4:40 PM</span>
+              <span>Preferred: Oct 12, 2026</span>
+            </div>
+            <div class="btn-action-group" style="justify-content:flex-end">
+              <button class="btn btn-action-primary" onclick="openReplyModal('Vikram Singhania', 'vikram.s@singhania.co', 'Re: Full Venue Buyout Query')">Follow Up</button>
+              <button class="btn btn-action" onclick="convertToBookingPrompt('Vikram Singhania', '120 Guests')">Convert</button>
+              <button class="btn btn-action-danger" onclick="resolveEnquiry(2)">Resolve</button>
+            </div>
+          </div>
+
+          <!-- Enquiry 3 -->
+          <div class="admin-card" id="enquiry-card-3">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <div>
+                <h4 style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--text-primary)">Anupama Nair</h4>
+                <div style="font-size:var(--text-xs);color:var(--text-muted)">+91 94455 66778 · anupama.nair@hotmail.com</div>
+              </div>
+              <span class="status-badge pending">New Lead</span>
+            </div>
+            <p style="font-size:var(--text-xs);color:var(--text-primary);background:var(--bg-secondary);padding:0.6rem;border-radius:var(--border-radius-md)">
+              "Would love to schedule an in-person showroom visit this Friday evening around 5:30 PM. Daughter loves Princess theme."
+            </p>
+            <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--text-light)">
+              <span>Received: 3 hours ago</span>
+              <span>Visit Request: Friday 5:30 PM</span>
+            </div>
+            <div class="btn-action-group" style="justify-content:flex-end">
+              <button class="btn btn-action-primary" onclick="openReplyModal('Anupama Nair', 'anupama.nair@hotmail.com', 'Confirming Friday Showroom Tour')">Confirm Tour</button>
+              <button class="btn btn-action-danger" onclick="resolveEnquiry(3)">Resolve</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ============================================== -->
+      <!-- 7. FINANCIALS & REPORTS                       -->
+      <!-- ============================================== -->
+      <section id="financials" class="dash-section" aria-labelledby="financials-title">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+          <div>
+            <h2 class="dash-section-title" id="financials-title" style="margin-bottom:0.25rem">
+              Financials &amp; <em class="italic-heading">Revenue Reports</em>
+            </h2>
+            <p style="color:var(--text-muted);font-size:var(--text-sm)">Payment gateways reconciliation, invoice logs and revenue streams.</p>
+          </div>
+          <div style="display:flex;gap:0.75rem">
+            <button class="btn btn-outline btn-sm" onclick="exportFinancialsCSV()">📊 Download Ledger CSV</button>
+            <button class="btn btn-primary btn-sm" onclick="LittleLux.Toast.show('Generating GST Audit Package...', 'info')">🧾 GST Invoices Zip</button>
+          </div>
+        </div>
+
+        <div class="dash-stats-row">
+          <div class="dash-stat-card">
+            <div class="dash-stat-body">
+              <div class="dash-stat-label">Core Package Sales</div>
+              <div class="dash-stat-num" style="font-size:var(--text-xl);margin-top:0.35rem">₹12,40,000</div>
+              <div style="font-size:0.72rem;color:var(--color-mint-dark);font-weight:700">67.2% of Total</div>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-body">
+              <div class="dash-stat-label">Gourmet Catering &amp; Cakes</div>
+              <div class="dash-stat-num" style="font-size:var(--text-xl);margin-top:0.35rem">₹3,85,000</div>
+              <div style="font-size:0.72rem;color:var(--color-royal-lilac);font-weight:700">20.8% of Total</div>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-body">
+              <div class="dash-stat-label">Add-ons, Photo &amp; Magicians</div>
+              <div class="dash-stat-num" style="font-size:var(--text-xl);margin-top:0.35rem">₹2,20,000</div>
+              <div style="font-size:0.72rem;color:var(--color-champagne-gold);font-weight:700">12.0% of Total</div>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-body">
+              <div class="dash-stat-label">Outstanding Balance Due</div>
+              <div class="dash-stat-num" style="font-size:var(--text-xl);margin-top:0.35rem;color:var(--color-peach-dark)">₹1,65,000</div>
+              <div style="font-size:0.72rem;color:var(--text-muted)">Due at Day-of-Event</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="dash-subsection-title" style="margin-bottom:1rem">Recent Transactions &amp; Receipts</h3>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Receipt ID</th>
+                <th>Date &amp; Time</th>
+                <th>Client</th>
+                <th>Method</th>
+                <th>Amount</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Invoice</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>#REC-9082</strong></td>
+                <td>Today, 11:20 AM</td>
+                <td>Sunita Arjun</td>
+                <td>Razorpay UPI</td>
+                <td><strong>₹22,499</strong></td>
+                <td>50% Advance</td>
+                <td><span class="status-badge confirmed">Settled</span></td>
+                <td><button class="btn btn-action" onclick="LittleLux.Toast.show('Downloading Tax Invoice #REC-9082.pdf', 'success')">Download</button></td>
+              </tr>
+              <tr>
+                <td><strong>#REC-9081</strong></td>
+                <td>Yesterday, 6:15 PM</td>
+                <td>Lalitha Rao</td>
+                <td>HDFC Bank Transfer</td>
+                <td><strong>₹89,999</strong></td>
+                <td>Full Payment</td>
+                <td><span class="status-badge confirmed">Settled</span></td>
+                <td><button class="btn btn-action" onclick="LittleLux.Toast.show('Downloading Tax Invoice #REC-9081.pdf', 'success')">Download</button></td>
+              </tr>
+              <tr>
+                <td><strong>#REC-9080</strong></td>
+                <td>Yesterday, 2:30 PM</td>
+                <td>Vijay &amp; Kamala</td>
+                <td>Credit Card (Axis)</td>
+                <td><strong>₹44,999</strong></td>
+                <td>Full Payment</td>
+                <td><span class="status-badge confirmed">Settled</span></td>
+                <td><button class="btn btn-action" onclick="LittleLux.Toast.show('Downloading Tax Invoice #REC-9080.pdf', 'success')">Download</button></td>
+              </tr>
+              <tr>
+                <td><strong>#REC-9079</strong></td>
+                <td>Sep 24, 2026</td>
+                <td>Kavita Menon</td>
+                <td>Google Pay</td>
+                <td><strong>₹12,500</strong></td>
+                <td>50% Advance</td>
+                <td><span class="status-badge confirmed">Settled</span></td>
+                <td><button class="btn btn-action" onclick="LittleLux.Toast.show('Downloading Tax Invoice #REC-9079.pdf', 'success')">Download</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <!-- ============================================== -->
+      <!-- 8. STAFF ROSTER SECTION                       -->
+      <!-- ============================================== -->
+      <section id="staff" class="dash-section" aria-labelledby="staff-title">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+          <div>
+            <h2 class="dash-section-title" id="staff-title" style="margin-bottom:0.25rem">
+              Staff &amp; <em class="italic-heading">Crew Roster</em>
+            </h2>
+            <p style="color:var(--text-muted);font-size:var(--text-sm)">Duty shifts, venue floor leads, chefs, and entertainment hosts.</p>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="LittleLux.Toast.show('Shift reminder sent via SMS to all 12 on-duty staff', 'success')">
+            📲 Send Shift SMS Alert
+          </button>
+        </div>
+
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Staff Member</th>
+                <th>Role</th>
+                <th>Assigned Hall / Station</th>
+                <th>Shift Hours</th>
+                <th>Contact</th>
+                <th>Duty Status</th>
+                <th>Toggle Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Priyanka Rao</strong></td>
+                <td>Lead Event Coordinator</td>
+                <td>Grand Ballroom</td>
+                <td>9:00 AM – 7:00 PM</td>
+                <td>+91 98765 11223</td>
+                <td><span class="status-badge confirmed" id="staff-badge-1">On Duty</span></td>
+                <td>
+                  <button class="btn btn-action" onclick="toggleStaffDuty(1)">Toggle Off-Duty</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Chef Suresh Reddy</strong></td>
+                <td>Executive Pastry &amp; Culinary Chef</td>
+                <td>Main Kitchen &amp; Bakery</td>
+                <td>8:00 AM – 8:00 PM</td>
+                <td>+91 98765 22334</td>
+                <td><span class="status-badge confirmed" id="staff-badge-2">On Duty</span></td>
+                <td>
+                  <button class="btn btn-action" onclick="toggleStaffDuty(2)">Toggle Off-Duty</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Karthik Natarajan</strong></td>
+                <td>Audio, Visual &amp; Laser Tech</td>
+                <td>Starlight Terrace</td>
+                <td>1:00 PM – 10:00 PM</td>
+                <td>+91 98765 33445</td>
+                <td><span class="status-badge pending" id="staff-badge-3">Standby</span></td>
+                <td>
+                  <button class="btn btn-action-success" onclick="toggleStaffDuty(3)">Set On Duty</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Maya Swaminathan</strong></td>
+                <td>Emcee &amp; Kids Entertainment Host</td>
+                <td>Fairy Tale Pavilion</td>
+                <td>10:00 AM – 6:00 PM</td>
+                <td>+91 98765 44556</td>
+                <td><span class="status-badge confirmed" id="staff-badge-4">On Duty</span></td>
+                <td>
+                  <button class="btn btn-action" onclick="toggleStaffDuty(4)">Toggle Off-Duty</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Rohit Sharma</strong></td>
+                <td>Cinematic Video &amp; Drone Pilot</td>
+                <td>All Halls</td>
+                <td>2:00 PM – 10:00 PM</td>
+                <td>+91 98765 55667</td>
+                <td><span class="status-badge confirmed" id="staff-badge-5">On Duty</span></td>
+                <td>
+                  <button class="btn btn-action" onclick="toggleStaffDuty(5)">Toggle Off-Duty</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <!-- ============================================== -->
+      <!-- 9. VENUE SETTINGS SECTION                     -->
+      <!-- ============================================== -->
+      <section id="settings" class="dash-section" aria-labelledby="settings-title">
+        <h2 class="dash-section-title" id="settings-title">
+          Venue <em class="italic-heading">Settings</em>
+        </h2>
+        <p style="color:var(--text-muted);margin-bottom:2rem">Configure operating hours, automated notification triggers, and default booking parameters.</p>
+
+        <div style="max-width:800px">
+          <form onsubmit="saveVenueSettings(event)">
+            <div class="dash-info-card" style="margin-bottom:1.5rem">
+              <h3 class="dash-subsection-title">General Venue Information</h3>
+              <div class="dash-form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="st-venue-name">Venue Name</label>
+                  <input type="text" id="st-venue-name" class="form-control" value="LittleLux Luxury Kids Birthday Venue" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="st-location">Location Address</label>
+                  <input type="text" id="st-location" class="form-control" value="12 Celebration Avenue, Jubilee Hills, Hyderabad" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="st-phone">Primary Booking Phone</label>
+                  <input type="tel" id="st-phone" class="form-control" value="+91 98765 43210" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="st-email">Operations Email</label>
+                  <input type="email" id="st-email" class="form-control" value="bookings@littlelux.in" />
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-info-card" style="margin-bottom:1.5rem">
+              <h3 class="dash-subsection-title">Booking Rules &amp; Advance Deposits</h3>
+              <div class="dash-form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="st-advance-pct">Required Advance Deposit (%)</label>
+                  <input type="number" id="st-advance-pct" class="form-control" value="50" min="10" max="100" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="st-cancel-window">Free Cancellation Window (Days)</label>
+                  <input type="number" id="st-cancel-window" class="form-control" value="14" min="1" max="60" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="st-open-time">Opening Time</label>
+                  <input type="time" id="st-open-time" class="form-control" value="09:00" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="st-close-time">Closing Time</label>
+                  <input type="time" id="st-close-time" class="form-control" value="23:00" />
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-info-card" style="margin-bottom:2rem">
+              <h3 class="dash-subsection-title">Automated Communication Triggers</h3>
+              <div style="display:flex;flex-direction:column;gap:1rem">
+                <label style="display:flex;align-items:center;justify-content:space-between;cursor:pointer">
+                  <div>
+                    <strong style="color:var(--text-primary);font-size:var(--text-sm)">Instant WhatsApp Booking Confirmation</strong>
+                    <div style="font-size:var(--text-xs);color:var(--text-muted)">Send parents automated confirmation with venue guidelines upon deposit payment.</div>
+                  </div>
+                  <input type="checkbox" checked style="accent-color:var(--color-royal-lilac);width:20px;height:20px" />
+                </label>
+
+                <label style="display:flex;align-items:center;justify-content:space-between;cursor:pointer">
+                  <div>
+                    <strong style="color:var(--text-primary);font-size:var(--text-sm)">48-Hour Menu &amp; Guest Count Finalization Reminder</strong>
+                    <div style="font-size:var(--text-xs);color:var(--text-muted)">Alert kitchen and parents 2 days prior to party date.</div>
+                  </div>
+                  <input type="checkbox" checked style="accent-color:var(--color-royal-lilac);width:20px;height:20px" />
+                </label>
+
+                <label style="display:flex;align-items:center;justify-content:space-between;cursor:pointer">
+                  <div>
+                    <strong style="color:var(--text-primary);font-size:var(--text-sm)">Day-of Event Ops Dispatch SMS</strong>
+                    <div style="font-size:var(--text-xs);color:var(--text-muted)">Send parents the direct mobile number of their allocated Event Director.</div>
+                  </div>
+                  <input type="checkbox" checked style="accent-color:var(--color-royal-lilac);width:20px;height:20px" />
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">💾 Save Venue Settings</button>
+          </form>
+        </div>
+      </section>
+
+    </div><!-- /dash-content -->
+  </main>
+
+
+  <!-- ============================================== -->
+  <!-- MODAL 1: ADD NEW BOOKING                       -->
+  <!-- ============================================== -->
+  <div class="dash-modal" id="modal-new-booking" style="display:none">
+    <div class="dash-modal-overlay" onclick="closeModal('modal-new-booking')"></div>
+    <div class="dash-modal-content wide">
+      <div class="dash-modal-header">
+        <h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin:0">
+          Create New Party Booking
+        </h3>
+        <button class="btn btn-action" onclick="closeModal('modal-new-booking')">✕</button>
+      </div>
+      <form onsubmit="handleCreateBooking(event)">
+        <div class="dash-modal-body">
+          <div class="dash-form-grid">
+            <div class="form-group">
+              <label class="form-label" for="nb-child-name">Child's Name *</label>
+              <input type="text" id="nb-child-name" class="form-control" placeholder="e.g. Kiara Sharma" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nb-child-age">Turning Age *</label>
+              <input type="number" id="nb-child-age" class="form-control" placeholder="e.g. 6" min="1" max="16" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nb-parent-name">Parent Name *</label>
+              <input type="text" id="nb-parent-name" class="form-control" placeholder="e.g. Rohit Sharma" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nb-phone">Phone Number *</label>
+              <input type="tel" id="nb-phone" class="form-control" placeholder="+91 98765 43210" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nb-date">Event Date *</label>
+              <input type="date" id="nb-date" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nb-slot">Time Slot *</label>
+              <select id="nb-slot" class="form-control" required>
+                <option value="Morning (9:30 AM - 1:30 PM)">Morning (9:30 AM – 1:30 PM)</option>
+                <option value="Afternoon (2:30 PM - 6:30 PM)">Afternoon (2:30 PM – 6:30 PM)</option>
+                <option value="Evening (7:00 PM - 11:00 PM)">Evening (7:00 PM – 11:00 PM)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nb-hall">Venue Hall *</label>
+              <select id="nb-hall" class="form-control" required>
+                <option value="Grand Ballroom">Grand Ballroom (Up to 150 guests)</option>
+                <option value="Fairy Tale Pavilion">Fairy Tale Pavilion (Up to 80 guests)</option>
+                <option value="Starlight Terrace">Starlight Terrace (Up to 100 guests)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nb-package">Package *</label>
+              <select id="nb-package" class="form-control" required>
+                <option value="Magic Moments (₹44,999)">Magic Moments (₹44,999)</option>
+                <option value="Grand Royale (₹89,999)">Grand Royale (₹89,999)</option>
+                <option value="Sparkle Soirée (₹24,999)">Sparkle Soirée (₹24,999)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nb-theme">Theme Selection</label>
+              <select id="nb-theme" class="form-control">
+                <option value="Princess Royal Palace">Princess Royal Palace</option>
+                <option value="Superhero Galaxy">Superhero Galaxy</option>
+                <option value="Jungle Wild Safari">Jungle Wild Safari</option>
+                <option value="Underwater Mermaid">Underwater Mermaid</option>
+                <option value="Custom Bespoke Theme">Custom Bespoke Theme</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nb-guests">Guest Count</label>
+              <input type="number" id="nb-guests" class="form-control" placeholder="e.g. 50" min="10" max="250" value="50" />
+            </div>
+          </div>
+        </div>
+        <div class="dash-modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeModal('modal-new-booking')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Create &amp; Confirm Booking →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ============================================== -->
+  <!-- MODAL 2: VIEW BOOKING DETAILS                  -->
+  <!-- ============================================== -->
+  <div class="dash-modal" id="modal-view-booking" style="display:none">
+    <div class="dash-modal-overlay" onclick="closeModal('modal-view-booking')"></div>
+    <div class="dash-modal-content wide">
+      <div class="dash-modal-header">
+        <h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin:0" id="vb-title">
+          Booking Details #LL-2026-089
+        </h3>
+        <button class="btn btn-action" onclick="closeModal('modal-view-booking')">✕</button>
+      </div>
+      <div class="dash-modal-body" id="vb-body">
+        <!-- Injected via JS -->
+      </div>
+      <div class="dash-modal-footer">
+        <button type="button" class="btn btn-outline" onclick="printBookingSummary()">🖨️ Print Summary</button>
+        <button type="button" class="btn btn-primary" onclick="sendWhatsAppReminder()">📲 Send Parent Reminder</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================== -->
+  <!-- MODAL 3: REPLY TO ENQUIRY                      -->
+  <!-- ============================================== -->
+  <div class="dash-modal" id="modal-reply" style="display:none">
+    <div class="dash-modal-overlay" onclick="closeModal('modal-reply')"></div>
+    <div class="dash-modal-content">
+      <div class="dash-modal-header">
+        <h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin:0">
+          Send Client Response
+        </h3>
+        <button class="btn btn-action" onclick="closeModal('modal-reply')">✕</button>
+      </div>
+      <form onsubmit="handleSendReply(event)">
+        <div class="dash-modal-body">
+          <div class="form-group">
+            <label class="form-label" for="reply-to">Recipient</label>
+            <input type="text" id="reply-to" class="form-control" readonly />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reply-subject">Subject</label>
+            <input type="text" id="reply-subject" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reply-msg">Message</label>
+            <textarea id="reply-msg" class="form-control" rows="5" placeholder="Dear client, thank you for reaching out to LittleLux..."></textarea>
+          </div>
+        </div>
+        <div class="dash-modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeModal('modal-reply')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Send Email &amp; WhatsApp →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ============================================== -->
+  <!-- MODAL 4: ADD THEME MODAL                       -->
+  <!-- ============================================== -->
+  <div class="dash-modal" id="modal-add-theme" style="display:none">
+    <div class="dash-modal-overlay" onclick="closeModal('modal-add-theme')"></div>
+    <div class="dash-modal-content">
+      <div class="dash-modal-header">
+        <h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin:0">
+          Add New Signature Theme
+        </h3>
+        <button class="btn btn-action" onclick="closeModal('modal-add-theme')">✕</button>
+      </div>
+      <form onsubmit="handleAddTheme(event)">
+        <div class="dash-modal-body">
+          <div class="form-group">
+            <label class="form-label" for="nt-name">Theme Name *</label>
+            <input type="text" id="nt-name" class="form-control" placeholder="e.g. Dinosaur Jurassic Expedition" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="nt-emoji">Icon Emoji</label>
+            <input type="text" id="nt-emoji" class="form-control" value="🦖" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="nt-price">Upgrade Price (₹) *</label>
+            <input type="number" id="nt-price" class="form-control" value="15000" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="nt-desc">Description &amp; Key Props</label>
+            <textarea id="nt-desc" class="form-control" rows="3" placeholder="Fossil excavation sandbox, animatronic baby dino, jungle vine backdrop..." required></textarea>
+          </div>
+        </div>
+        <div class="dash-modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeModal('modal-add-theme')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Theme to Catalogue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ============================================== -->
+  <!-- MODAL 5: OPERATIONS NOTIFICATIONS DRAWER       -->
+  <!-- ============================================== -->
+  <div class="dash-modal" id="modal-notifications" style="display:none">
+    <div class="dash-modal-overlay" onclick="closeModal('modal-notifications')"></div>
+    <div class="dash-modal-content">
+      <div class="dash-modal-header">
+        <h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin:0">
+          Live Operational Alerts
+        </h3>
+        <button class="btn btn-action" onclick="closeModal('modal-notifications')">✕</button>
+      </div>
+      <div class="dash-modal-body">
+        <div class="notifications-list">
+          <div class="notif-item unread">
+            <div class="notif-icon payment">₹</div>
+            <div class="notif-body">
+              <div class="notif-title">Advance Payment Received</div>
+              <div class="notif-desc">Sunita Arjun paid ₹22,499 via UPI for Arya's 6th Birthday.</div>
+              <div class="notif-time">12 mins ago</div>
+            </div>
+          </div>
+          <div class="notif-item unread">
+            <div class="notif-icon cake">🎂</div>
+            <div class="notif-body">
+              <div class="notif-title">Bakery Chef Alert</div>
+              <div class="notif-desc">5-tier Cinderella Castle cake has entered the fondant finishing stage.</div>
+              <div class="notif-time">35 mins ago</div>
+            </div>
+          </div>
+          <div class="notif-item unread">
+            <div class="notif-icon new">💬</div>
+            <div class="notif-body">
+              <div class="notif-title">New Inbound Client Lead</div>
+              <div class="notif-desc">Dr. Rajeshwari Patel sent an enquiry for a 1st Birthday twin celebration.</div>
+              <div class="notif-time">2 hours ago</div>
+            </div>
+          </div>
+          <div class="notif-item">
+            <div class="notif-icon check">✓</div>
+            <div class="notif-body">
+              <div class="notif-title">Grand Ballroom Setup Complete</div>
+              <div class="notif-desc">Lighting and sound testing passed at 100% for morning event.</div>
+              <div class="notif-time">4 hours ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dash-modal-footer">
+        <button type="button" class="btn btn-outline btn-sm" onclick="markAllNotifsRead()">Mark All as Read</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="closeModal('modal-notifications')">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MAIN JS SCRIPTS -->
+  <script src="../js/main.js"></script>
+  <script>
+    // ==========================================
+    // INITIAL BOOKINGS DATA
+    // ==========================================
+    let bookingsData = [
+      {
+        id: '#LL-2026-089',
+        childName: 'Arya Arjun',
+        age: 6,
+        parentName: 'Sunita Arjun',
+        phone: '+91 98765 43210',
+        email: 'sunita@example.com',
+        date: '2026-09-27',
+        slot: 'Afternoon (2:00 PM - 6:00 PM)',
+        hall: 'Grand Ballroom',
+        package: 'Magic Moments (₹44,999)',
+        theme: 'Princess Royal Palace',
+        guests: 45,
+        total: 44999,
+        paid: 22499,
+        status: 'confirmed'
+      },
+      {
+        id: '#LL-2026-088',
+        childName: 'Reyansh Varma',
+        age: 7,
+        parentName: 'Suresh Varma',
+        phone: '+91 98123 45678',
+        email: 'suresh.v@gmail.com',
+        date: '2026-09-27',
+        slot: 'Afternoon (2:30 PM - 6:30 PM)',
+        hall: 'Starlight Terrace',
+        package: 'Grand Royale (₹89,999)',
+        theme: 'Superhero Galaxy',
+        guests: 60,
+        total: 89999,
+        paid: 89999,
+        status: 'confirmed'
+      },
+      {
+        id: '#LL-2026-087',
+        childName: 'Ananya Rao',
+        age: 5,
+        parentName: 'Lalitha Rao',
+        phone: '+91 98456 78901',
+        email: 'lalitha.rao@gmail.com',
+        date: '2026-09-27',
+        slot: 'Morning (9:30 AM - 1:30 PM)',
+        hall: 'Grand Ballroom',
+        package: 'Grand Royale (₹89,999)',
+        theme: 'Princess Royal Palace',
+        guests: 50,
+        total: 89999,
+        paid: 89999,
+        status: 'confirmed'
+      },
+      {
+        id: '#LL-2026-086',
+        childName: 'Vihaan Nair',
+        age: 3,
+        parentName: 'Rohan Nair',
+        phone: '+91 98765 00112',
+        email: 'rohan.nair@outlook.com',
+        date: '2026-09-27',
+        slot: 'Afternoon (2:00 PM - 6:00 PM)',
+        hall: 'Fairy Tale Pavilion',
+        package: 'Sparkle Soirée (₹24,999)',
+        theme: 'Jungle Wild Safari',
+        guests: 35,
+        total: 24999,
+        paid: 12500,
+        status: 'pending'
+      },
+      {
+        id: '#LL-2026-085',
+        childName: 'Kabir Singhania',
+        age: 1,
+        parentName: 'Pooja Singh',
+        phone: '+91 99123 99887',
+        email: 'pooja.s@gmail.com',
+        date: '2026-09-28',
+        slot: 'Evening (7:00 PM - 11:00 PM)',
+        hall: 'Grand Ballroom',
+        package: 'Grand Royale (₹89,999)',
+        theme: 'Royal Safari',
+        guests: 120,
+        total: 95000,
+        paid: 47500,
+        status: 'pending'
+      },
+      {
+        id: '#LL-2026-084',
+        childName: 'Meera Chawla',
+        age: 8,
+        parentName: 'Deepak Chawla',
+        phone: '+91 97654 32109',
+        email: 'deepak.c@yahoo.com',
+        date: '2026-10-03',
+        slot: 'Evening (7:00 PM - 11:00 PM)',
+        hall: 'Starlight Terrace',
+        package: 'Magic Moments (₹44,999)',
+        theme: 'Underwater Mermaid',
+        guests: 40,
+        total: 44999,
+        paid: 44999,
+        status: 'confirmed'
+      },
+      {
+        id: '#LL-2026-083',
+        childName: 'Aarush Reddy',
+        age: 4,
+        parentName: 'Kavita Menon',
+        phone: '+91 98321 65498',
+        email: 'kavita.m@gmail.com',
+        date: '2026-10-04',
+        slot: 'Morning (9:30 AM - 1:30 PM)',
+        hall: 'Fairy Tale Pavilion',
+        package: 'Sparkle Soirée (₹24,999)',
+        theme: 'Superhero Galaxy',
+        guests: 30,
+        total: 24999,
+        paid: 24999,
+        status: 'confirmed'
+      },
+      {
+        id: '#LL-2026-082',
+        childName: 'Rhea Patel',
+        age: 10,
+        parentName: 'Nitin Patel',
+        phone: '+91 98111 22334',
+        email: 'nitin.patel@patel.co',
+        date: '2026-10-10',
+        slot: 'Afternoon (2:00 PM - 6:00 PM)',
+        hall: 'Grand Ballroom',
+        package: 'Grand Royale (₹89,999)',
+        theme: 'Princess Royal Palace',
+        guests: 80,
+        total: 89999,
+        paid: 89999,
+        status: 'confirmed'
+      },
+      {
+        id: '#LL-2026-081',
+        childName: 'Zoya Khan',
+        age: 5,
+        parentName: 'Farhan Khan',
+        phone: '+91 97000 88990',
+        email: 'farhan.k@gmail.com',
+        date: '2026-09-20',
+        slot: 'Morning (9:30 AM - 1:30 PM)',
+        hall: 'Fairy Tale Pavilion',
+        package: 'Sparkle Soirée (₹24,999)',
+        theme: 'Princess Royal Palace',
+        guests: 35,
+        total: 24999,
+        paid: 24999,
+        status: 'completed'
+      },
+      {
+        id: '#LL-2026-080',
+        childName: 'Advait Joshi',
+        age: 6,
+        parentName: 'Manish Joshi',
+        phone: '+91 98888 12121',
+        email: 'manish.j@gmail.com',
+        date: '2026-09-18',
+        slot: 'Evening (7:00 PM - 11:00 PM)',
+        hall: 'Starlight Terrace',
+        package: 'Magic Moments (₹44,999)',
+        theme: 'Superhero Galaxy',
+        guests: 50,
+        total: 44999,
+        paid: 0,
+        status: 'cancelled'
+      }
+    ];
+
+    // ==========================================
+    // RENDER FUNCTIONS
+    // ==========================================
+    function renderBookingsTable(items) {
+      const tbody = document.getElementById('bookings-tbody');
+      if (!tbody) return;
+
+      if (!items || items.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="9" style="text-align:center;padding:2rem;color:var(--text-muted)">No bookings match your current filter.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = items.map(b => {
+        let statusClass = 'confirmed';
+        let statusLabel = 'Confirmed';
+        if (b.status === 'pending') { statusClass = 'pending'; statusLabel = 'Pending Deposit'; }
+        else if (b.status === 'completed') { statusClass = 'completed'; statusLabel = 'Completed'; }
+        else if (b.status === 'cancelled') { statusClass = 'cancelled'; statusLabel = 'Cancelled'; }
+
+        return `
+          <tr id="row-${b.id.replace('#', '')}">
+            <td><strong style="color:var(--color-royal-lilac)">${b.id}</strong></td>
+            <td>
+              <div style="font-weight:700">${b.parentName}</div>
+              <div style="font-size:0.72rem;color:var(--text-muted)">${b.phone}</div>
+            </td>
+            <td>
+              <div style="font-weight:700">${b.childName}</div>
+              <div style="font-size:0.72rem;color:var(--text-muted)">Turning ${b.age} yrs</div>
+            </td>
+            <td>
+              <div>${b.date}</div>
+              <div style="font-size:0.72rem;color:var(--text-muted)">${b.slot}</div>
+            </td>
+            <td><span style="font-weight:600">${b.hall}</span></td>
+            <td>
+              <div style="font-weight:600">${b.package.split('(')[0]}</div>
+              <div style="font-size:0.72rem;color:var(--color-royal-lilac)">${b.theme}</div>
+            </td>
+            <td>
+              <div><strong>₹${b.total.toLocaleString('en-IN')}</strong></div>
+              <div style="font-size:0.72rem;color:${b.paid >= b.total ? 'var(--color-mint-dark)' : 'var(--color-peach-dark)'}">
+                Paid: ₹${b.paid.toLocaleString('en-IN')}
+              </div>
+            </td>
+            <td><span class="status-badge ${statusClass}">${statusLabel}</span></td>
+            <td style="text-align:right">
+              <div class="btn-action-group">
+                <button class="btn-action" onclick="viewBookingDetails('${b.id}')" title="View Full Details">View</button>
+                ${b.status === 'pending' ? `<button class="btn-action-success" onclick="approveBooking('${b.id}')" title="Confirm Booking">Approve</button>` : ''}
+                ${b.paid < b.total && b.status !== 'cancelled' ? `<button class="btn-action" onclick="markBookingPaid('${b.id}')" title="Mark Paid">Mark Paid</button>` : ''}
+                ${b.status !== 'cancelled' ? `<button class="btn-action-danger" onclick="cancelBooking('${b.id}')" title="Cancel Booking">✕</button>` : ''}
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      // Update counter badges
+      updateCounts();
+    }
+
+    function renderOverviewRecent() {
+      const tbody = document.getElementById('overview-recent-tbody');
+      if (!tbody) return;
+
+      const recentItems = bookingsData.slice(0, 5);
+      tbody.innerHTML = recentItems.map(b => {
+        let statusClass = b.status === 'pending' ? 'pending' : (b.status === 'completed' ? 'completed' : (b.status === 'cancelled' ? 'cancelled' : 'confirmed'));
+        return `
+          <tr>
+            <td><strong style="color:var(--color-royal-lilac)">${b.id}</strong></td>
+            <td>${b.parentName}</td>
+            <td><strong>${b.childName}</strong> (${b.age}y)</td>
+            <td>${b.date} · ${b.hall}</td>
+            <td>${b.package.split('(')[0]}</td>
+            <td><span class="status-badge ${statusClass}">${b.status.toUpperCase()}</span></td>
+            <td><button class="btn btn-action" onclick="viewBookingDetails('${b.id}')">Details</button></td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function updateCounts() {
+      const total = bookingsData.length;
+      const confirmed = bookingsData.filter(b => b.status === 'confirmed').length;
+      const pending = bookingsData.filter(b => b.status === 'pending').length;
+      const completed = bookingsData.filter(b => b.status === 'completed').length;
+      const cancelled = bookingsData.filter(b => b.status === 'cancelled').length;
+
+      document.getElementById('count-all') && (document.getElementById('count-all').textContent = total);
+      document.getElementById('count-confirmed') && (document.getElementById('count-confirmed').textContent = confirmed);
+      document.getElementById('count-pending') && (document.getElementById('count-pending').textContent = pending);
+      document.getElementById('count-completed') && (document.getElementById('count-completed').textContent = completed);
+      document.getElementById('count-cancelled') && (document.getElementById('count-cancelled').textContent = cancelled);
+
+      document.getElementById('sidebar-bookings-badge') && (document.getElementById('sidebar-bookings-badge').textContent = confirmed + pending);
+      document.getElementById('overview-active-count') && (document.getElementById('overview-active-count').textContent = confirmed + pending);
+    }
+
+    // ==========================================
+    // FILTERING & SEARCH
+    // ==========================================
+    let currentFilter = 'all';
+    let currentSearchTerm = '';
+    let currentHallFilter = 'all';
+
+    function filterBookings(status, btn) {
+      currentFilter = status;
+      document.querySelectorAll('#booking-tabs .admin-tab-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      applyFilters();
+    }
+
+    function searchBookings(query) {
+      currentSearchTerm = query.toLowerCase().trim();
+      applyFilters();
+    }
+
+    function filterByHall(hall) {
+      currentHallFilter = hall;
+      applyFilters();
+    }
+
+    function applyFilters() {
+      let filtered = bookingsData.filter(b => {
+        const matchesStatus = currentFilter === 'all' || b.status === currentFilter;
+        const matchesHall = currentHallFilter === 'all' || b.hall === currentHallFilter;
+        const matchesSearch = !currentSearchTerm ||
+          b.childName.toLowerCase().includes(currentSearchTerm) ||
+          b.parentName.toLowerCase().includes(currentSearchTerm) ||
+          b.phone.includes(currentSearchTerm) ||
+          b.id.toLowerCase().includes(currentSearchTerm);
+
+        return matchesStatus && matchesHall && matchesSearch;
+      });
+
+      renderBookingsTable(filtered);
+    }
+
+    // ==========================================
+    // ACTIONS ON BOOKINGS
+    // ==========================================
+    function approveBooking(id) {
+      const item = bookingsData.find(b => b.id === id);
+      if (item) {
+        item.status = 'confirmed';
+        applyFilters();
+        renderOverviewRecent();
+        LittleLux.Toast.show(`Booking ${id} for ${item.childName} is now CONFIRMED! WhatsApp & Email sent to parent.`, 'success');
+      }
+    }
+
+    function markBookingPaid(id) {
+      const item = bookingsData.find(b => b.id === id);
+      if (item) {
+        item.paid = item.total;
+        applyFilters();
+        renderOverviewRecent();
+        LittleLux.Toast.show(`Payment of ₹${item.total.toLocaleString('en-IN')} fully cleared for ${item.childName}! Receipt generated.`, 'success');
+      }
+    }
+
+    function cancelBooking(id) {
+      const item = bookingsData.find(b => b.id === id);
+      if (item) {
+        if (confirm(`Are you sure you want to cancel booking ${id} for ${item.childName}?`)) {
+          item.status = 'cancelled';
+          applyFilters();
+          renderOverviewRecent();
+          LittleLux.Toast.show(`Booking ${id} marked as Cancelled. Slot released.`, 'info');
+        }
+      }
+    }
+
+    function viewBookingDetails(id) {
+      const b = bookingsData.find(item => item.id === id);
+      if (!b) return;
+
+      document.getElementById('vb-title').textContent = `Booking Details: ${b.childName}'s Birthday (${b.id})`;
+      document.getElementById('vb-body').innerHTML = `
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem">
+          <div>
+            <h4 style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--color-royal-lilac);margin-bottom:0.75rem">Child & Event Info</h4>
+            <div class="detail-row"><span>Child Name:</span><strong>${b.childName}</strong></div>
+            <div class="detail-row"><span>Age Milestone:</span><strong>Turning ${b.age} Years Old</strong></div>
+            <div class="detail-row"><span>Event Date:</span><strong>${b.date}</strong></div>
+            <div class="detail-row"><span>Time Slot:</span><strong>${b.slot}</strong></div>
+            <div class="detail-row"><span>Venue Hall:</span><strong>${b.hall}</strong></div>
+            <div class="detail-row"><span>Guest Count:</span><strong>${b.guests} Guests</strong></div>
+          </div>
+          <div>
+            <h4 style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--color-royal-lilac);margin-bottom:0.75rem">Parent & Billing Info</h4>
+            <div class="detail-row"><span>Parent Name:</span><strong>${b.parentName}</strong></div>
+            <div class="detail-row"><span>Contact Phone:</span><strong>${b.phone}</strong></div>
+            <div class="detail-row"><span>Email Address:</span><strong>${b.email}</strong></div>
+            <div class="detail-row"><span>Selected Package:</span><strong>${b.package}</strong></div>
+            <div class="detail-row"><span>Party Theme:</span><strong>${b.theme}</strong></div>
+            <div class="detail-row"><span>Total Amount:</span><strong>₹${b.total.toLocaleString('en-IN')}</strong></div>
+            <div class="detail-row"><span>Paid Deposit:</span><strong style="color:var(--color-mint-dark)">₹${b.paid.toLocaleString('en-IN')}</strong></div>
+            <div class="detail-row"><span>Balance Due:</span><strong style="color:var(--color-peach-dark)">₹${(b.total - b.paid).toLocaleString('en-IN')}</strong></div>
+          </div>
+        </div>
+        <div style="background:var(--bg-secondary);padding:1rem;border-radius:var(--border-radius-lg)">
+          <div style="font-weight:700;font-size:var(--text-xs);margin-bottom:0.25rem">Assigned Operations Team:</div>
+          <div style="font-size:var(--text-xs);color:var(--text-muted)">Event Lead: Priyanka Rao · Bakery: Chef Suresh (Cinderella Castle Cake) · Photo Crew: Rohit S</div>
+        </div>
+      `;
+
+      openModal('modal-view-booking');
+    }
+
+    function printBookingSummary() {
+      window.print();
+    }
+
+    function sendWhatsAppReminder() {
+      LittleLux.Toast.show('WhatsApp reminder dispatched with event timeline & GPS directions!', 'success');
+      closeModal('modal-view-booking');
+    }
+
+    // ==========================================
+    // CREATE NEW BOOKING
+    // ==========================================
+    function openNewBookingModal() {
+      // Set default date to upcoming Saturday
+      const d = new Date();
+      d.setDate(d.getDate() + ((6 - d.getDay() + 7) % 7 || 7));
+      document.getElementById('nb-date').value = d.toISOString().split('T')[0];
+      openModal('modal-new-booking');
+    }
+
+    function handleCreateBooking(e) {
+      e.preventDefault();
+      const childName = document.getElementById('nb-child-name').value.trim();
+      const age = parseInt(document.getElementById('nb-child-age').value) || 5;
+      const parentName = document.getElementById('nb-parent-name').value.trim();
+      const phone = document.getElementById('nb-phone').value.trim();
+      const date = document.getElementById('nb-date').value;
+      const slot = document.getElementById('nb-slot').value;
+      const hall = document.getElementById('nb-hall').value;
+      const pkg = document.getElementById('nb-package').value;
+      const theme = document.getElementById('nb-theme').value;
+      const guests = parseInt(document.getElementById('nb-guests').value) || 50;
+
+      let total = 44999;
+      if (pkg.includes('89,999')) total = 89999;
+      else if (pkg.includes('24,999')) total = 24999;
+
+      const newId = `#LL-2026-${String(bookingsData.length + 90).padStart(3, '0')}`;
+
+      const newBooking = {
+        id: newId,
+        childName,
+        age,
+        parentName,
+        phone,
+        email: `${parentName.toLowerCase().replace(/\s+/g, '.')}@example.com`,
+        date,
+        slot,
+        hall,
+        package: pkg,
+        theme,
+        guests,
+        total,
+        paid: Math.round(total / 2),
+        status: 'confirmed'
+      };
+
+      bookingsData.unshift(newBooking);
+      applyFilters();
+      renderOverviewRecent();
+      closeModal('modal-new-booking');
+      e.target.reset();
+
+      LittleLux.Toast.show(`🎉 New Booking ${newId} created for ${childName}! Slot secured.`, 'success');
+    }
+
+    // ==========================================
+    // CALENDAR SLOT TOGGLER
+    // ==========================================
+    function toggleSlotStatus(el, hall, slotName) {
+      const badge = el.querySelector('.status-badge');
+      const info = el.querySelector('.slot-party-info');
+
+      if (el.classList.contains('available')) {
+        el.classList.remove('available');
+        el.classList.add('booked');
+        badge.className = 'status-badge confirmed';
+        badge.textContent = 'Booked';
+        info.innerHTML = `<strong>Special VIP Booking</strong> · Reserved by Operations Desk`;
+        LittleLux.Toast.show(`${hall} (${slotName}) is now marked as BOOKED!`, 'success');
+      } else if (el.classList.contains('booked')) {
+        el.classList.remove('booked');
+        el.classList.add('blocked');
+        badge.className = 'status-badge blocked';
+        badge.textContent = 'Maintenance Block';
+        info.innerHTML = `Maintenance & deep sanitized block`;
+        LittleLux.Toast.show(`${hall} (${slotName}) is now BLOCKED for Maintenance.`, 'info');
+      } else {
+        el.classList.remove('blocked');
+        el.classList.add('available');
+        badge.className = 'status-badge available';
+        badge.textContent = 'Available';
+        info.innerHTML = `Open for immediate online or phone reservation`;
+        LittleLux.Toast.show(`${hall} (${slotName}) is now open and AVAILABLE!`, 'success');
+      }
+    }
+
+    let calDayOffset = 0;
+    function changeCalendarDay(delta) {
+      calDayOffset += delta;
+      const d = new Date(2026, 8, 27);
+      d.setDate(d.getDate() + calDayOffset);
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById('current-calendar-date').textContent = d.toLocaleDateString('en-US', options) + (d.getDay() === 0 || d.getDay() === 6 ? ' (Weekend Peak)' : ' (Weekday)');
+      LittleLux.Toast.show(`Loaded slots for ${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`, 'info');
+    }
+
+    function lockAllWeekendSlots() {
+      LittleLux.Toast.show('Maintenance safety locks updated across all venue halls.', 'info');
+    }
+
+    // ==========================================
+    // THEMES & HALLS
+    // ==========================================
+    function openAddThemeModal() {
+      openModal('modal-add-theme');
+    }
+
+    function handleAddTheme(e) {
+      e.preventDefault();
+      const name = document.getElementById('nt-name').value.trim();
+      const emoji = document.getElementById('nt-emoji').value.trim() || '✨';
+      const price = parseInt(document.getElementById('nt-price').value) || 15000;
+      const desc = document.getElementById('nt-desc').value.trim();
+
+      const grid = document.getElementById('themes-grid');
+      const newCard = document.createElement('div');
+      newCard.className = 'admin-card';
+      newCard.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <span style="font-size:1.8rem">${emoji}</span>
+          <span class="status-badge confirmed">Active</span>
+        </div>
+        <div>
+          <h4 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin-bottom:0.25rem">${name}</h4>
+          <p style="font-size:var(--text-xs);color:var(--text-muted)">${desc}</p>
+        </div>
+        <div style="font-size:var(--text-xs);color:var(--text-primary);display:flex;justify-content:space-between;border-top:1px solid var(--border-light);padding-top:0.5rem">
+          <span>Upgrade Fee: <strong>₹${price.toLocaleString('en-IN')}</strong></span>
+          <span>Bookings: <strong>New</strong></span>
+        </div>
+        <button class="btn btn-outline btn-sm" style="width:100%" onclick="editThemePrompt('${name}')">Edit Theme Props</button>
+      `;
+
+      grid.prepend(newCard);
+      closeModal('modal-add-theme');
+      e.target.reset();
+      LittleLux.Toast.show(`✨ Theme "${name}" added to signature catalogue!`, 'success');
+    }
+
+    function editThemePrompt(name) {
+      LittleLux.Toast.show(`Props and backdrop inventory opened for "${name}"`, 'info');
+    }
+
+    // ==========================================
+    // CATERING STAGES
+    // ==========================================
+    function advanceCakeStatus(id) {
+      const badge = document.getElementById(`cake-status-${id}`);
+      if (!badge) return;
+
+      if (id === 1) {
+        badge.className = 'status-badge confirmed';
+        badge.textContent = 'Ready for Cut';
+        LittleLux.Toast.show("Arya's 5-Tier Cinderella Castle cake is READY!", 'success');
+      } else if (id === 2) {
+        badge.className = 'status-badge pending';
+        badge.textContent = 'Decorating (Fondant)';
+        LittleLux.Toast.show("Reyansh's Superhero 3D Cake moved to Decorating table!", 'info');
+      }
+    }
+
+    // ==========================================
+    // ENQUIRIES CRM
+    // ==========================================
+    function openReplyModal(name, email, subject) {
+      document.getElementById('reply-to').value = `${name} (${email})`;
+      document.getElementById('reply-subject').value = subject;
+      document.getElementById('reply-msg').value = `Hi ${name},\n\nThank you for choosing LittleLux! We would love to make this celebration unforgettable. Our venue team is ready to reserve your preferred date.\n\nWarm regards,\nAarav Sharma\nVenue Director, LittleLux`;
+      openModal('modal-reply');
+    }
+
+    function handleSendReply(e) {
+      e.preventDefault();
+      closeModal('modal-reply');
+      LittleLux.Toast.show('Reply sent via Email & WhatsApp successfully!', 'success');
+    }
+
+    function convertToBookingPrompt(name, guests) {
+      openNewBookingModal();
+      document.getElementById('nb-parent-name').value = name;
+      document.getElementById('nb-child-name').value = `${name.split(' ')[0]}'s Child`;
+      LittleLux.Toast.show(`Pre-filled booking draft for ${name}!`, 'info');
+    }
+
+    function resolveEnquiry(id) {
+      const card = document.getElementById(`enquiry-card-${id}`);
+      if (card) {
+        card.style.opacity = '0.4';
+        card.style.pointerEvents = 'none';
+        LittleLux.Toast.show(`Enquiry marked as Resolved!`, 'info');
+      }
+    }
+
+    function exportEnquiriesCSV() {
+      LittleLux.Toast.show('Exporting customer leads as CSV...', 'success');
+    }
+
+    function exportFinancialsCSV() {
+      LittleLux.Toast.show('Downloading GST Financial Ledger (2026_Q3.csv)...', 'success');
+    }
+
+    function exportOverviewReport() {
+      LittleLux.Toast.show('Generating Daily Briefing PDF for Operations Team...', 'info');
+    }
+
+    function broadcastMessagePrompt() {
+      const msg = prompt('Enter message to broadcast to all parents with active bookings today:');
+      if (msg) {
+        LittleLux.Toast.show(`Broadcast sent to 4 active events: "${msg}"`, 'success');
+      }
+    }
+
+    // ==========================================
+    // STAFF ROSTER
+    // ==========================================
+    function toggleStaffDuty(id) {
+      const badge = document.getElementById(`staff-badge-${id}`);
+      if (badge) {
+        if (badge.textContent.includes('On Duty')) {
+          badge.className = 'status-badge pending';
+          badge.textContent = 'Off Duty / Break';
+          LittleLux.Toast.show('Staff status updated to Off-Duty.', 'info');
+        } else {
+          badge.className = 'status-badge confirmed';
+          badge.textContent = 'On Duty';
+          LittleLux.Toast.show('Staff member clocked in as ON DUTY!', 'success');
+        }
+      }
+    }
+
+    // ==========================================
+    // VENUE SETTINGS
+    // ==========================================
+    function saveVenueSettings(e) {
+      e.preventDefault();
+      LittleLux.Toast.show('Venue operational settings saved successfully!', 'success');
+    }
+
+    // ==========================================
+    // NOTIFICATIONS MODAL
+    // ==========================================
+    function openNotificationsModal() {
+      openModal('modal-notifications');
+    }
+
+    function markAllNotifsRead() {
+      document.querySelectorAll('#modal-notifications .notif-item').forEach(el => el.classList.remove('unread'));
+      document.getElementById('topbar-notif-count').textContent = '0';
+      LittleLux.Toast.show('All notifications marked as read.', 'info');
+      closeModal('modal-notifications');
+    }
+
+    // ==========================================
+    // MODAL HELPERS
+    // ==========================================
+    function openModal(id) {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'flex';
+    }
+
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'none';
+    }
+
+    // ==========================================
+    // SECTION SWITCHING
+    // ==========================================
+    function showSection(sectionId) {
+      document.querySelectorAll('.dash-section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('.dash-nav-link').forEach(link => link.classList.remove('active'));
+
+      const targetSec = document.getElementById(sectionId);
+      if (targetSec) {
+        targetSec.classList.add('active');
+      }
+
+      const activeLink = document.querySelector(`.dash-nav-link[data-section="${sectionId}"]`);
+      if (activeLink) {
+        activeLink.classList.add('active');
+        const titleEl = document.getElementById('current-section-title');
+        if (titleEl) {
+          titleEl.textContent = activeLink.textContent.trim().replace(/[0-9]+/g, '').trim();
+        }
+      }
+
+      // Close mobile sidebar if open
+      sidebar.classList.remove('open');
+      window.location.hash = sectionId;
+    }
+
+    // Sidebar Mobile
+    const sidebar = document.getElementById('dash-sidebar');
+    const menuBtn = document.getElementById('dash-menu-btn');
+    const closeBtn = document.getElementById('dash-sidebar-close');
+
+    menuBtn?.addEventListener('click', () => sidebar.classList.add('open'));
+    closeBtn?.addEventListener('click', () => sidebar.classList.remove('open'));
+
+    // Nav link click events
+    document.querySelectorAll('.dash-nav-link[data-section]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        showSection(link.dataset.section);
+      });
+    });
+
+    // Hash navigation
+    function handleHashNav() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && document.getElementById(hash)) {
+        showSection(hash);
+      }
+    }
+    window.addEventListener('hashchange', handleHashNav);
+
+    // ==========================================
+    // INITIALIZATION
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', () => {
+      renderBookingsTable(bookingsData);
+      renderOverviewRecent();
+      handleHashNav();
+    });
+  </script>
+</body>
+</html>

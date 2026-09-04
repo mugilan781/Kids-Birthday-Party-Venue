@@ -50,14 +50,22 @@
           <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Sign In →</button>
         </form>
         <p class="auth-switch-text">Don't have an account? <a href="signup.html">Create one free →</a></p>
-        <p style="font-size:var(--text-xs);color:var(--text-light);text-align:center;margin-top:1.5rem">By signing in you agree to our <a href="privacy.html" style="color:var(--color-royal-lilac)">Privacy Policy</a> and <a href="terms.html" style="color:var(--color-royal-lilac)">Terms of Service</a></p>
+        <div style="text-align:center;margin-top:1rem;padding-top:0.75rem;border-top:1px dashed var(--border-primary)">
+          <a href="admin-dashboard.html" style="font-size:var(--text-xs);color:var(--color-royal-lilac);font-weight:700">👑 Venue Staff &amp; Admin Portal →</a>
+        </div>
+        <p style="font-size:var(--text-xs);color:var(--text-light);text-align:center;margin-top:1rem">By signing in you agree to our <a href="privacy.html" style="color:var(--color-royal-lilac)">Privacy Policy</a> and <a href="terms.html" style="color:var(--color-royal-lilac)">Terms of Service</a></p>
       </div>
     </div>
   </div>
   <script src="../js/main.js"></script>
   <script>
     window.onLoginSuccess = function() {
-      window.location.href = 'dashboard.html';
+      const email = document.getElementById('login-email')?.value.toLowerCase() || '';
+      if (email.includes('admin')) {
+        window.location.href = 'admin-dashboard.html';
+      } else {
+        window.location.href = 'dashboard.html';
+      }
     };
     document.querySelector('[data-password-toggle]')?.addEventListener('click', function() {
       const input = document.getElementById('login-password');
