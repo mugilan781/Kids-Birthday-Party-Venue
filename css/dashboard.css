@@ -126,7 +126,13 @@
   border-left: 3px solid var(--color-royal-lilac);
 }
 
-.dash-nav-icon { font-size: 1.1rem; flex-shrink: 0; }
+.dash-nav-icon {
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .dash-badge {
   margin-left: auto;
@@ -296,9 +302,16 @@
   border: 1px solid rgba(255, 255, 255, 0.35);
   box-shadow: var(--shadow-gloss-btn);
 }
-.dash-stat-card.accent .dash-stat-num, .dash-stat-card.accent .dash-stat-label { color: white; }
+.dash-stat-card.accent .dash-stat-num, .dash-stat-card.accent .dash-stat-label, .dash-stat-card.accent .dash-stat-icon { color: white; }
 
-.dash-stat-icon { font-size: 1.8rem; flex-shrink: 0; }
+.dash-stat-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-royal-lilac);
+}
 .dash-stat-num { font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 800; color: var(--text-primary); line-height: 1; }
 .dash-stat-label { font-size: 0.74rem; color: var(--text-muted); font-weight: 600; margin-top: 2px; }
 
@@ -432,7 +445,13 @@
   background: #ffffff;
 }
 
-.qa-icon { font-size: 1.6rem; }
+.qa-icon {
+  font-size: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-royal-lilac);
+}
 .qa-label { font-size: 0.74rem; font-weight: 700; text-align: center; color: var(--text-muted); }
 
 /* AVAILABILITY LAYOUT */
@@ -705,7 +724,13 @@
 
 .addon-card.selected .addon-check { opacity: 1; }
 .addon-checkbox { display: none; }
-.addon-icon { font-size: 1.8rem; }
+.addon-icon {
+  font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-royal-lilac);
+}
 .addon-name { font-family: var(--font-display); font-weight: 700; color: var(--text-primary); font-size: var(--text-sm); }
 .addon-price { font-size: var(--text-lg); font-weight: 800; color: var(--color-royal-lilac); }
 .addon-desc { font-size: 0.72rem; color: var(--text-muted); }

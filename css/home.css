@@ -265,6 +265,10 @@
 .strip-icon {
   font-size: 1.5rem;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-royal-lilac);
 }
 
 .strip-label {
@@ -612,6 +616,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-royal-lilac);
 }
 
 .venue-feature-title {

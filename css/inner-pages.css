@@ -203,7 +203,10 @@
 .value-card-icon {
   font-size: 2.2rem;
   margin-bottom: var(--space-3);
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-royal-lilac);
 }
 
 .value-card-title {
@@ -263,7 +266,14 @@
 
 .team-role:hover { transform: translateY(-4px); box-shadow: var(--shadow-gloss-card-hover); border-color: rgba(142, 125, 190, 0.35); }
 
-.role-icon { font-size: 1.8rem; margin-bottom: var(--space-1); display: block; }
+.role-icon {
+  font-size: 1.8rem;
+  margin-bottom: var(--space-1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-royal-lilac);
+}
 .role-title { font-family: var(--font-display); font-weight: 700; font-size: var(--text-sm); color: var(--text-primary); margin-bottom: 2px; }
 .role-count { font-size: 0.74rem; color: var(--color-royal-lilac); font-weight: 700; }
 
@@ -289,7 +299,14 @@
 .award-card:hover { transform: translateY(-5px); background: rgba(255,248,237,0.1); }
 .award-card.featured-award { background: rgba(216,181,106,0.15); border-color: rgba(216,181,106,0.3); }
 
-.award-icon { font-size: 2rem; display: block; margin-bottom: var(--space-1); }
+.award-icon {
+  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-champagne-gold);
+  margin-bottom: var(--space-1);
+}
 .award-year { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; color: var(--color-champagne-gold); margin-bottom: 2px; }
 .award-title { font-family: var(--font-display); font-size: var(--text-sm); font-weight: 700; color: white; margin-bottom: 2px; }
 .award-org { font-size: 0.7rem; color: rgba(255,248,237,0.55); }
@@ -322,7 +339,14 @@
 
 .vision-stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-gloss-card-hover); }
 
-.vstat-emoji { font-size: 1.8rem; display: block; margin-bottom: var(--space-1); }
+.vstat-emoji {
+  font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-royal-lilac);
+  margin-bottom: var(--space-1);
+}
 .vstat-num { display: block; font-family: var(--font-display); font-size: var(--text-4xl); font-weight: 800; color: var(--color-royal-lilac); line-height: 1; }
 .vstat-label { font-size: 0.72rem; color: var(--text-muted); font-weight: 600; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.05em; }
 

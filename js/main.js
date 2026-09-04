@@ -22,8 +22,10 @@ const ThemeManager = (() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem(STORAGE_KEY, theme);
     const toggleBtns = document.querySelectorAll('[data-theme-toggle]');
+    const sunSvg = '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>';
+    const moonSvg = '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
     toggleBtns.forEach(btn => {
-      btn.innerHTML = theme === DARK ? '☀️' : '🌙';
+      btn.innerHTML = theme === DARK ? sunSvg : moonSvg;
       btn.setAttribute('title', theme === DARK ? 'Switch to Light Mode' : 'Switch to Dark Mode');
       btn.setAttribute('aria-label', theme === DARK ? 'Switch to Light Mode' : 'Switch to Dark Mode');
     });
@@ -510,7 +512,12 @@ const Toast = (() => {
     if (!container) createContainer();
 
     const toast = document.createElement('div');
-    const icons = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
+    const icons = {
+      success: '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>',
+      error: '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" x2="9" y1="9" y2="15"/><line x1="9" x2="15" y1="9" y2="15"/></svg>',
+      warning: '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>',
+      info: '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>'
+    };
     const colors = {
       success: 'rgba(168,216,200,0.95)',
       error: 'rgba(243,168,143,0.95)',
@@ -525,7 +532,7 @@ const Toast = (() => {
       font-family:var(--font-body);font-size:var(--text-sm);font-weight:600;color:var(--color-deep-berry);
       animation:slide-up 0.3s ease;border:1px solid rgba(255,255,255,0.4);
     `;
-    toast.innerHTML = `<span style="font-size:1.2rem">${icons[type]}</span>${message}`;
+    toast.innerHTML = `<span class="toast-icon-wrap" style="display:inline-flex;align-items:center">${icons[type]}</span><span>${message}</span>`;
     container.appendChild(toast);
 
     setTimeout(() => {
@@ -564,7 +571,7 @@ const PageTransitions = (() => {
 
 // ===== FLOATING PARTICLES =====
 const Particles = (() => {
-  const symbols = ['✨', '⭐', '🌟', '💫', '✦', '◆', '●'];
+  const symbols = ['✦', '✧', '★', '◆', '●', '✦'];
 
   const createParticle = (container) => {
     const particle = document.createElement('span');

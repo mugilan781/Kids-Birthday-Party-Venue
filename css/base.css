@@ -59,6 +59,39 @@ img {
 
 ul, ol { list-style: none; }
 
+/* ===== SVG ICON SYSTEM ===== */
+.svg-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: -0.15em;
+  width: 1.15em;
+  height: 1.15em;
+  stroke-width: 2;
+  stroke: currentColor;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), stroke var(--transition-fast), fill var(--transition-fast);
+}
+
+.svg-icon.fill-current {
+  fill: currentColor;
+  stroke: none;
+}
+
+.icon-xs { width: 14px; height: 14px; }
+.icon-sm { width: 16px; height: 16px; }
+.icon-md { width: 20px; height: 20px; }
+.icon-lg { width: 24px; height: 24px; }
+.icon-xl { width: 32px; height: 32px; }
+.icon-2xl { width: 42px; height: 42px; }
+.icon-gold { stroke: var(--color-champagne-gold); }
+.icon-gold.fill-current { fill: var(--color-champagne-gold); }
+.icon-lilac { stroke: var(--color-royal-lilac); }
+.icon-white { stroke: #FFFFFF; }
+
 button {
   cursor: pointer;
   border: none;
