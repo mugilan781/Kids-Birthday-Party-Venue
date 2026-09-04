@@ -342,21 +342,29 @@
   box-shadow: var(--shadow-gloss-card-hover), 0 0 25px rgba(142, 125, 190, 0.28);
 }
 
+.package-badge,
 .package-card-badge {
   position: absolute;
   top: var(--space-3);
   right: var(--space-3);
   background: var(--gradient-gold);
-  color: white;
+  color: #201530;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  padding: 0.3rem 0.75rem;
+  padding: 0.35rem 0.85rem;
   border-radius: var(--border-radius-full);
   z-index: 5;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 3px 10px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 3px 10px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] .package-badge,
+[data-theme="dark"] .package-card-badge {
+  color: #140E1D;
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
 }
 
 .package-img-wrap {
@@ -839,8 +847,8 @@
 
 .author-detail {
   font-size: 0.75rem;
-  color: var(--color-champagne-gold);
-  font-weight: 600;
+  color: var(--color-gold-text);
+  font-weight: 700;
 }
 
 /* ===== GALLERY ===== */

@@ -235,7 +235,7 @@
   right: -3px;
   width: 16px;
   height: 16px;
-  background: var(--color-peach-sorbet);
+  background: var(--color-peach-dark);
   color: white;
   font-size: 0.6rem;
   font-weight: 800;
@@ -561,6 +561,11 @@
 
 .booking-pkg-card:hover { border-color: rgba(142, 125, 190, 0.45); box-shadow: var(--shadow-gloss-card-hover); }
 .booking-pkg-card.selected { border-color: var(--color-royal-lilac); background: linear-gradient(180deg, #FAF8FF 0%, #F5F0FF 100%); box-shadow: 0 8px 30px rgba(142, 125, 190, 0.22), inset 0 1px 2px rgba(255, 255, 255, 0.9); }
+[data-theme="dark"] .booking-pkg-card.selected {
+  background: rgba(184, 165, 228, 0.15);
+  border-color: var(--color-royal-lilac);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.15);
+}
 .booking-pkg-card.featured { border-color: var(--color-royal-lilac); }
 
 .booking-featured-badge {
@@ -704,6 +709,10 @@
 
 .addon-card:hover { border-color: rgba(142, 125, 190, 0.4); box-shadow: var(--shadow-gloss-card-hover); }
 .addon-card.selected { border-color: var(--color-royal-lilac); background: linear-gradient(180deg, #FAF8FF 0%, #F5F0FF 100%); }
+[data-theme="dark"] .addon-card.selected {
+  background: rgba(184, 165, 228, 0.15);
+  border-color: var(--color-royal-lilac);
+}
 .addon-check {
   position: absolute;
   top: var(--space-2);
@@ -807,7 +816,7 @@
 .booking-list-body { flex: 1; min-width: 0; }
 .booking-list-status { font-size: 0.72rem; font-weight: 800; margin-bottom: 2px; }
 .booking-list-status.confirmed { color: var(--color-mint-dark); }
-.booking-list-status.completed { color: var(--color-champagne-gold); }
+.booking-list-status.completed { color: var(--color-gold-text); }
 .booking-list-title { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-2); }
 .booking-list-meta { display: flex; flex-wrap: wrap; gap: var(--space-3); font-size: var(--text-xs); color: var(--text-muted); margin-bottom: var(--space-2); }
 
