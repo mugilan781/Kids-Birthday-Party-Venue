@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LittleLux Home 2 — Alternate homepage featuring our Availability Calendar, Special Offers, Gallery Filter, Team Meet and Booking Enquiry." />
+  <title>LittleLux — Magical Beginnings | Home 2</title>
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/home2.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-logo"><div class="logo-icon">🎪</div><div class="logo-text"><span class="logo-name">LittleLux</span><span class="logo-tagline">Luxury Birthday Venue</span></div></a>
+      <ul class="navbar-nav">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+        <button class="nav-toggle-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
+        <a href="login.html" class="btn btn-outline btn-sm">Sign In</a>
+        <a href="dashboard.html" class="btn btn-primary btn-sm">Book Now</a>
+      </div>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="../index.html" class="mobile-nav-link">🏠 Home</a>
+    <a href="about.html" class="mobile-nav-link">💜 About</a>
+    <a href="services.html" class="mobile-nav-link">🎁 Services</a>
+    <a href="blog.html" class="mobile-nav-link">📝 Blog</a>
+    <a href="contact.html" class="mobile-nav-link">📍 Contact</a>
+    <div class="mobile-nav-actions"><a href="login.html" class="btn btn-outline">Sign In</a><a href="dashboard.html" class="btn btn-primary">Book Now</a></div>
+  </div>
+
+  <!-- SECTION 1: SPLIT HERO -->
+  <section class="h2-hero" aria-label="Split hero">
+    <div class="h2-hero-left">
+      <div class="h2-hero-content">
+        <div class="section-tag" style="color:var(--color-champagne-gold);border-color:rgba(216,181,106,0.3)">New Bookings Open ✦</div>
+        <h1 class="h2-hero-title">Every <em>Child</em><br />Deserves<br />a <em>Kingdom</em></h1>
+        <p class="h2-hero-desc">LittleLux is more than a venue — it's a portal to enchantment. We orchestrate birthday celebrations that feel like the finest fairy tales.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem">
+          <a href="dashboard.html" class="btn btn-gold btn-lg">Check Availability →</a>
+          <a href="services.html" class="btn btn-outline btn-lg">Our Packages</a>
+        </div>
+        <div class="h2-awards">
+          <div class="award-chip">🏆 Best Kids Venue 2025</div>
+          <div class="award-chip">⭐ 4.9/5 Rating</div>
+          <div class="award-chip">🎉 2400+ Events</div>
+        </div>
+      </div>
+    </div>
+    <div class="h2-hero-right">
+      <img src="../images/princess-theme.jpg" alt="Princess birthday theme at LittleLux" class="h2-hero-img" />
+      <div class="h2-hero-float-card">
+        <span class="float-card-emoji">👑</span>
+        <div>
+          <div class="float-card-title">Princess Royal Theme</div>
+          <div class="float-card-sub">From ₹44,999 · Book Today</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: AVAILABILITY CALENDAR -->
+  <section class="section h2-avail-section" id="availability" aria-labelledby="avail-title">
+    <div class="container">
+      <div class="h2-avail-layout">
+        <div class="h2-avail-info reveal-left">
+          <div class="section-tag">Real-Time Availability</div>
+          <h2 class="section-title" id="avail-title">Check Your <em class="italic-heading">Dream Date</em></h2>
+          <p class="section-subtitle" style="margin:0;max-width:40ch">See live availability across our three halls. Select your date to view open time slots instantly.</p>
+          <div class="avail-legend reveal" style="margin-top:1.5rem">
+            <div class="legend-row"><span class="leg-dot available"></span> Available Dates</div>
+            <div class="legend-row"><span class="leg-dot partial"></span> Partially Booked</div>
+            <div class="legend-row"><span class="leg-dot booked"></span> Fully Booked</div>
+          </div>
+          <a href="dashboard.html" class="btn btn-primary" style="margin-top:2rem">Book Selected Date →</a>
+        </div>
+        <div class="h2-avail-calendar reveal-right">
+          <div class="availability-calendar"></div>
+          <div class="time-slots-container">
+            <p style="color:var(--text-muted);font-size:var(--text-sm);text-align:center;padding:2rem">Select a date to view available time slots</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SPECIAL OFFER BANNER -->
+  <section class="h2-offers-section" aria-labelledby="offers-title">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:3rem">
+        <div class="section-tag">Limited Time</div>
+        <h2 class="section-title" id="offers-title">Exclusive <em class="italic-heading">Seasonal</em> Offers</h2>
+      </div>
+      <div class="h2-offers-grid">
+        <div class="offer-card offer-card-featured reveal" data-delay="0.1">
+          <div class="offer-badge">🎉 Save ₹8,000</div>
+          <h3 class="offer-title">September Birthday Special</h3>
+          <p class="offer-desc">Book any Magic Moments or Grand Royale package for September 2026 and receive complimentary balloon arch upgrade worth ₹8,000.</p>
+          <div class="offer-validity">Valid till 30 September 2026</div>
+          <a href="dashboard.html" class="btn btn-gold">Claim Offer →</a>
+        </div>
+        <div class="offer-card reveal" data-delay="0.2">
+          <div class="offer-badge">📸 Free Add-on</div>
+          <h3 class="offer-title">Photography Bundle</h3>
+          <p class="offer-desc">Book now and receive a complimentary 2-hour photo booth session with unlimited prints (value ₹5,500).</p>
+          <div class="offer-validity">While slots last</div>
+          <a href="dashboard.html" class="btn btn-primary">Book Now →</a>
+        </div>
+        <div class="offer-card reveal" data-delay="0.3">
+          <div class="offer-badge">👥 Group Savings</div>
+          <h3 class="offer-title">Twin Birthday Package</h3>
+          <p class="offer-desc">Celebrating twins? Get 15% off any package for double birthday celebrations with a custom dual-theme setup.</p>
+          <div class="offer-validity">Ongoing offer</div>
+          <a href="contact.html" class="btn btn-outline">Enquire Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: GALLERY WITH FILTER -->
+  <section class="section h2-gallery-section bg-pattern" aria-labelledby="gallery2-title">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:3rem">
+        <div class="section-tag">Visual Gallery</div>
+        <h2 class="section-title" id="gallery2-title">Every Moment <em class="italic-heading">Captured</em></h2>
+        <div class="h2-filter-btns">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="venue">Venue</button>
+          <button class="filter-btn" data-filter="themes">Themes</button>
+          <button class="filter-btn" data-filter="food">Food</button>
+          <button class="filter-btn" data-filter="activities">Activities</button>
+        </div>
+      </div>
+      <div class="h2-gallery-grid">
+        <div class="h2-gallery-item gallery-item reveal" data-delay="0.1" data-category="venue"><img src="../images/hero-hall.jpg" alt="Grand ballroom" data-zoom /><div class="gi-overlay"><span>Grand Ballroom</span></div></div>
+        <div class="h2-gallery-item gallery-item reveal" data-delay="0.15" data-category="themes"><img src="../images/princess-theme.jpg" alt="Princess theme" data-zoom /><div class="gi-overlay"><span>Princess Royal</span></div></div>
+        <div class="h2-gallery-item gallery-item reveal" data-delay="0.2" data-category="themes"><img src="../images/superhero-theme.jpg" alt="Superhero theme" data-zoom /><div class="gi-overlay"><span>Superhero League</span></div></div>
+        <div class="h2-gallery-item gallery-item reveal" data-delay="0.25" data-category="food"><img src="../images/catering-spread.jpg" alt="Catering" data-zoom /><div class="gi-overlay"><span>Gourmet Spread</span></div></div>
+        <div class="h2-gallery-item gallery-item reveal" data-delay="0.3" data-category="themes"><img src="../images/jungle-theme.jpg" alt="Jungle theme" data-zoom /><div class="gi-overlay"><span>Jungle Explorer</span></div></div>
+        <div class="h2-gallery-item gallery-item reveal" data-delay="0.35" data-category="activities"><img src="../images/party-activities.jpg" alt="Activities" data-zoom /><div class="gi-overlay"><span>Activity Zones</span></div></div>
+        <div class="h2-gallery-item gallery-item reveal" data-delay="0.4" data-category="food"><img src="../images/birthday-cake.jpg" alt="Birthday cake" data-zoom /><div class="gi-overlay"><span>Signature Cakes</span></div></div>
+        <div class="h2-gallery-item gallery-item reveal" data-delay="0.45" data-category="venue"><img src="../images/balloon-decor.jpg" alt="Balloon decor" data-zoom /><div class="gi-overlay"><span>Balloon Art</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: TEAM SECTION -->
+  <section class="section h2-team-section" aria-labelledby="team-title">
+    <div class="container">
+      <div class="h2-team-layout">
+        <div class="h2-team-img-wrap reveal-left">
+          <img src="../images/about-team.jpg" alt="LittleLux expert team" class="h2-team-img" data-zoom />
+          <div class="h2-team-badge">
+            <div class="team-badge-stat">
+              <span class="team-stat-num" data-counter data-target="8" data-suffix="+">0</span>
+              <span class="team-stat-label">Years of Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="h2-team-content reveal-right">
+          <div class="section-tag">Our Expert Team</div>
+          <h2 class="section-title" id="team-title">Passionate <em class="italic-heading">Creators</em> of Joy</h2>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem">Our dedicated team of event designers, culinary artists, entertainers and logistics experts work in perfect harmony to transform your vision into an extraordinary reality.</p>
+          <div class="h2-team-stats">
+            <div class="team-mini-stat"><span class="mini-num" data-counter data-target="25">0</span><span class="mini-label">Event Experts</span></div>
+            <div class="team-mini-stat"><span class="mini-num" data-counter data-target="12">0</span><span class="mini-label">Master Chefs</span></div>
+            <div class="team-mini-stat"><span class="mini-num" data-counter data-target="8">0</span><span class="mini-label">Photographers</span></div>
+          </div>
+          <div class="h2-values">
+            <div class="value-item"><span class="value-icon">💎</span><div><strong>Luxury Standard</strong><p>Every element curated to perfection</p></div></div>
+            <div class="value-item"><span class="value-icon">❤️</span><div><strong>Heartfelt Service</strong><p>Your celebration is our passion</p></div></div>
+            <div class="value-item"><span class="value-icon">🌟</span><div><strong>Magical Experiences</strong><p>Memories that last a lifetime</p></div></div>
+          </div>
+          <a href="about.html" class="btn btn-primary" style="margin-top:2rem">Meet Our Team →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: BOOKING ENQUIRY FORM -->
+  <section class="section h2-enquiry-section" aria-labelledby="enquiry-title" style="background:var(--gradient-hero);color:white;position:relative;overflow:hidden">
+    <div class="h2-enquiry-bg-decor" aria-hidden="true">
+      <div class="floating-shape floating-shape-1" style="top:-100px;right:-100px;opacity:0.08"></div>
+      <div class="floating-shape floating-shape-2" style="bottom:-50px;left:-50px;opacity:0.06"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:1">
+      <div class="h2-enquiry-layout">
+        <div class="h2-enquiry-text reveal-left">
+          <div class="section-tag" style="color:var(--color-champagne-gold);border-color:rgba(216,181,106,0.3)">Get in Touch</div>
+          <h2 class="section-title" style="color:white" id="enquiry-title">Start Planning Your <em class="italic-heading" style="color:var(--color-peach-sorbet)">Magic</em> Today</h2>
+          <p style="color:rgba(255,248,237,0.7);line-height:1.8;max-width:40ch">Share your vision and our event specialists will craft a personalized proposal within 24 hours.</p>
+          <div class="h2-contact-details">
+            <div class="h2-contact-item"><span>📞</span> +91 98765 43210</div>
+            <div class="h2-contact-item"><span>✉️</span> hello@littlelux.in</div>
+            <div class="h2-contact-item"><span>📍</span> Jubilee Hills, Hyderabad</div>
+          </div>
+        </div>
+        <div class="h2-enquiry-form-wrap reveal-right">
+          <form class="h2-enquiry-form" data-validate data-on-success="onEnquirySuccess" novalidate>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="eq-name">Parent's Name *</label><input id="eq-name" type="text" class="form-control" placeholder="Your full name" data-validate="required" /><span class="form-error"></span></div>
+              <div class="form-group"><label class="form-label" for="eq-phone">Phone Number *</label><input id="eq-phone" type="tel" class="form-control" placeholder="+91 98765 43210" data-validate="required|phone" /><span class="form-error"></span></div>
+            </div>
+            <div class="form-group"><label class="form-label" for="eq-email">Email Address *</label><input id="eq-email" type="email" class="form-control" placeholder="you@example.com" data-validate="required|email" /><span class="form-error"></span></div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="eq-date">Preferred Date *</label><input id="eq-date" type="date" class="form-control" data-validate="required" /></div>
+              <div class="form-group"><label class="form-label" for="eq-package">Package Interest</label>
+                <select id="eq-package" class="form-control">
+                  <option value="">Select a package</option>
+                  <option>Sparkle Soirée (₹24,999)</option>
+                  <option>Magic Moments (₹44,999)</option>
+                  <option>Grand Royale (₹89,999)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group"><label class="form-label" for="eq-msg">Tell Us About Your Dream Party</label><textarea id="eq-msg" class="form-control" rows="3" placeholder="Child's name, age, theme preferences, guest count..."></textarea></div>
+            <button type="submit" class="btn btn-gold btn-lg" style="width:100%">Send Enquiry →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top"><div class="container"><div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo"><div class="logo-icon">🎪</div><div class="logo-text"><span class="logo-name">LittleLux</span><span class="logo-tagline" style="color:var(--color-champagne-gold)">Luxury Birthday Venue</span></div></div><p class="footer-desc">Crafting extraordinary birthday celebrations for extraordinary children.</p><div class="footer-social"><a href="#" class="social-btn" aria-label="Instagram">📸</a><a href="#" class="social-btn" aria-label="Facebook">📘</a><a href="#" class="social-btn" aria-label="YouTube">▶️</a></div></div>
+      <div class="footer-col"><h3 class="footer-col-title">Explore</h3><ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h3 class="footer-col-title">Services</h3><ul class="footer-links"><li><a href="services.html#packages">Party Packages</a></li><li><a href="services.html#themes">Themes</a></li><li><a href="services.html#catering">Catering</a></li><li><a href="services.html#photography">Photography</a></li><li><a href="dashboard.html">Dashboard</a></li></ul></div>
+      <div class="footer-col"><h3 class="footer-col-title">Contact</h3><div class="footer-contact-item"><div class="footer-contact-icon">📍</div><span>12 Celebration Ave, Jubilee Hills, Hyderabad</span></div><div class="footer-contact-item"><div class="footer-contact-icon">📞</div><span>+91 98765 43210</span></div><div class="footer-contact-item"><div class="footer-contact-icon">✉️</div><span>hello@littlelux.in</span></div></div>
+    </div></div></div>
+    <div class="footer-bottom"><div class="container"><div class="footer-bottom-inner"><p class="footer-copyright">© 2026 LittleLux. All rights reserved.</p><ul class="footer-bottom-links"><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div></div></div>
+  </footer>
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+  <script>
+    window.onEnquirySuccess = function() {
+      window.LittleLux.Toast.show('🎉 Thank you! We\'ll contact you within 24 hours.', 'success');
+    };
+  </script>
+</body>
+</html>

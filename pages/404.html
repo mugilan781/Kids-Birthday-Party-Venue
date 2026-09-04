@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Page not found — Return to LittleLux and rediscover the magic of luxury kids birthday celebrations." />
+  <meta name="robots" content="noindex" />
+  <title>404 — Page Not Found | LittleLux</title>
+  <link rel="stylesheet" href="../css/variables.css" /><link rel="stylesheet" href="../css/base.css" /><link rel="stylesheet" href="../css/components.css" />
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: var(--gradient-hero);
+      padding: var(--space-6) var(--space-4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .error-floating-decor { position: absolute; inset: 0; pointer-events: none; }
+    .error-float { position: absolute; font-size: 2rem; opacity: 0.15; animation: float 8s ease-in-out infinite; }
+    .ef-1 { top: 10%; left: 8%; animation-delay: 0s; }
+    .ef-2 { top: 20%; right: 12%; animation-delay: 1s; font-size: 1.5rem; }
+    .ef-3 { bottom: 20%; left: 15%; animation-delay: 2s; font-size: 1.8rem; }
+    .ef-4 { bottom: 15%; right: 10%; animation-delay: 3s; }
+    .ef-5 { top: 50%; left: 5%; animation-delay: 1.5s; font-size: 1.4rem; }
+    .ef-6 { top: 40%; right: 5%; animation-delay: 2.5s; font-size: 1.3rem; }
+
+    .error-404-num {
+      font-family: var(--font-display);
+      font-size: clamp(4.5rem, 12vw, 8rem);
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--color-champagne-gold), var(--color-peach-sorbet), var(--color-champagne-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.25rem;
+    }
+
+    .error-emoji { font-size: 2.5rem; margin-bottom: 0.5rem; display: block; animation: float 4s ease-in-out infinite; }
+    .error-title { font-family: var(--font-display); font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 700; color: white; margin-bottom: 0.5rem; }
+    .error-desc { font-size: var(--text-base); color: rgba(255,248,237,0.75); max-width: 48ch; margin: 0 auto 1.5rem; line-height: 1.6; }
+    .error-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+    .error-suggestions { background: rgba(255,248,237,0.08); backdrop-filter: blur(15px); border: 1px solid rgba(255,248,237,0.15); border-radius: var(--border-radius-xl); padding: 1.25rem; max-width: 500px; width: 100%; }
+    .error-suggestions h3 { font-family: var(--font-display); color: var(--color-champagne-gold); font-size: 1rem; margin-bottom: 0.75rem; }
+    .error-links { display: flex; flex-direction: column; gap: 0.35rem; }
+    .error-link { display: flex; align-items: center; gap: 0.5rem; color: rgba(255,248,237,0.75); font-size: var(--text-xs); text-decoration: none; padding: 0.35rem 0.5rem; border-radius: var(--border-radius-sm); transition: all 0.2s; }
+    .error-link:hover { background: rgba(255,248,237,0.1); color: white; }
+    .error-logo { margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+  <div class="error-page" role="main">
+    <div class="error-floating-decor" aria-hidden="true">
+      <span class="error-float ef-1">🎉</span>
+      <span class="error-float ef-2">⭐</span>
+      <span class="error-float ef-3">🎈</span>
+      <span class="error-float ef-4">👑</span>
+      <span class="error-float ef-5">🎂</span>
+      <span class="error-float ef-6">✨</span>
+    </div>
+    <div class="error-logo">
+      <a href="../index.html" class="navbar-logo"><div class="logo-icon">🎪</div><div class="logo-text"><span class="logo-name" style="color:white">LittleLux</span><span class="logo-tagline" style="color:var(--color-champagne-gold)">Luxury Birthday Venue</span></div></a>
+    </div>
+    <span class="error-emoji">🔍</span>
+    <div class="error-404-num">404</div>
+    <h1 class="error-title">Oops! This Page Is Playing <em class="italic-heading" style="color:var(--color-peach-sorbet)">Hide & Seek</em></h1>
+    <p class="error-desc">Looks like this page wandered off to a birthday party and forgot to tell us where it went. Let's guide you back to the magic!</p>
+    <div class="error-actions">
+      <a href="../index.html" class="btn btn-gold btn-lg">🏠 Back to Home</a>
+      <a href="services.html" class="btn btn-ghost btn-lg" style="border-color:rgba(255,255,255,0.3);color:white">🎁 View Services</a>
+    </div>
+    <div class="error-suggestions">
+      <h3>Perhaps you were looking for...</h3>
+      <div class="error-links">
+        <a href="../index.html" class="error-link"><span>🏠</span>Home — Our main landing page</a>
+        <a href="services.html" class="error-link"><span>🎁</span>Services — Party packages and themes</a>
+        <a href="dashboard.html" class="error-link"><span>📅</span>Dashboard — Check availability and book</a>
+        <a href="blog.html" class="error-link"><span>📝</span>Blog — Party planning tips and ideas</a>
+        <a href="contact.html" class="error-link"><span>📍</span>Contact — Get in touch with our team</a>
+        <a href="sitemap.html" class="error-link"><span>🗺️</span>Sitemap — Complete page directory</a>
+      </div>
+    </div>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

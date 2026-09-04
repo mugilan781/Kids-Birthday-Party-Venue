@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sign in to your LittleLux parent account to manage bookings, view party details and track your celebration planning." />
+  <title>Sign In — LittleLux Parent Portal</title>
+  <link rel="stylesheet" href="../css/variables.css" /><link rel="stylesheet" href="../css/base.css" /><link rel="stylesheet" href="../css/components.css" /><link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body class="auth-body">
+  <div class="auth-layout">
+    <div class="auth-hero-col">
+      <img src="../images/princess-theme.jpg" alt="Magical LittleLux venue" class="auth-hero-img" />
+      <div class="auth-hero-overlay"></div>
+      <div class="auth-hero-content">
+        <a href="../index.html" class="navbar-logo"><div class="logo-icon">🎪</div><div class="logo-text"><span class="logo-name">LittleLux</span><span class="logo-tagline">Luxury Birthday Venue</span></div></a>
+        <div class="auth-hero-quote">
+          <blockquote>"Every child deserves a day that feels like the most magical dream come true."</blockquote>
+          <cite>— Preethi Arora, Founder</cite>
+        </div>
+        <div class="auth-hero-stats">
+          <div class="auth-stat"><div class="auth-stat-num">2400+</div><div class="auth-stat-label">Parties Hosted</div></div>
+          <div class="auth-stat"><div class="auth-stat-num">4.9★</div><div class="auth-stat-label">Rating</div></div>
+          <div class="auth-stat"><div class="auth-stat-num">98%</div><div class="auth-stat-label">Satisfied</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="auth-form-col">
+      <div style="position:absolute;top:var(--space-6);right:var(--space-6);display:flex;align-items:center;gap:var(--space-3);z-index:10">
+        <a href="../index.html" class="btn btn-ghost btn-sm">← Back to Home</a>
+        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+      </div>
+      <div class="auth-form-inner">
+        <div class="auth-form-header">
+          <div class="section-tag">Parent Portal</div>
+          <h1 class="auth-form-title">Welcome <em class="italic-heading">Back!</em></h1>
+          <p class="auth-form-desc">Sign in to manage your bookings and plan your child's magical celebration.</p>
+        </div>
+        <div class="auth-social-btns">
+          <button class="auth-social-btn"><span>🔍</span> Continue with Google</button>
+          <button class="auth-social-btn"><span>📘</span> Continue with Facebook</button>
+        </div>
+        <div class="auth-divider"><span>or sign in with email</span></div>
+        <form class="auth-form" data-validate data-on-success="onLoginSuccess" novalidate>
+          <div class="form-group"><label class="form-label" for="login-email">Email Address *</label><input id="login-email" type="email" class="form-control" placeholder="you@example.com" data-validate="required|email" /><span class="form-error"></span></div>
+          <div class="form-group"><label class="form-label" for="login-password">Password *</label>
+            <div class="password-wrap"><input id="login-password" type="password" class="form-control" placeholder="Your password" data-validate="required" /><button type="button" class="password-toggle" data-password-toggle>👁</button></div>
+            <span class="form-error"></span>
+          </div>
+          <div class="auth-form-options"><label style="display:flex;align-items:center;gap:0.5rem;font-size:var(--text-sm);color:var(--text-muted);cursor:pointer"><input type="checkbox" style="accent-color:var(--color-royal-lilac)" /> Remember me</label><a href="#" style="font-size:var(--text-sm);color:var(--color-royal-lilac);font-weight:600">Forgot password?</a></div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Sign In →</button>
+        </form>
+        <p class="auth-switch-text">Don't have an account? <a href="signup.html">Create one free →</a></p>
+        <p style="font-size:var(--text-xs);color:var(--text-light);text-align:center;margin-top:1.5rem">By signing in you agree to our <a href="privacy.html" style="color:var(--color-royal-lilac)">Privacy Policy</a> and <a href="terms.html" style="color:var(--color-royal-lilac)">Terms of Service</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="../js/main.js"></script>
+  <script>
+    window.onLoginSuccess = function() {
+      window.location.href = 'dashboard.html';
+    };
+    document.querySelector('[data-password-toggle]')?.addEventListener('click', function() {
+      const input = document.getElementById('login-password');
+      input.type = input.type === 'password' ? 'text' : 'password';
+      this.textContent = input.type === 'password' ? '👁' : '🙈';
+    });
+  </script>
+</body>
+</html>

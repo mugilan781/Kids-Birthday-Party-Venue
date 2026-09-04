@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LittleLux Sitemap — Complete directory and navigation index of all 15 pages on the LittleLux luxury kids birthday party venue platform." />
+  <title>Sitemap &amp; Site Directory — LittleLux | Luxury Kids Birthday Venue</title>
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/inner-pages.css" />
+  <style>
+    .sitemap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-8);
+      margin-top: var(--space-8);
+    }
+    .sitemap-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-primary);
+      border-radius: var(--border-radius-2xl);
+      padding: var(--space-8);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: all var(--transition-elegant);
+    }
+    .sitemap-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--color-royal-lilac);
+    }
+    .sitemap-card-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-5);
+      padding-bottom: var(--space-4);
+      border-bottom: 2px solid var(--border-primary);
+    }
+    .sitemap-card-icon {
+      font-size: 1.8rem;
+    }
+    .sitemap-card-title {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .sitemap-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      flex: 1;
+    }
+    .sitemap-link-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-4);
+      background: var(--bg-glass-dark);
+      border: 1px solid var(--border-light);
+      border-radius: var(--border-radius-lg);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: var(--text-sm);
+      transition: all var(--transition-fast);
+    }
+    .sitemap-link-item:hover {
+      background: var(--bg-glass);
+      border-color: var(--color-royal-lilac);
+      color: var(--color-royal-lilac);
+      transform: translateX(6px);
+    }
+    .sitemap-link-item .s-icon {
+      font-size: 1.1rem;
+    }
+    .sitemap-link-item .s-meta {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      margin-left: auto;
+      font-weight: 500;
+    }
+    @media (max-width: 960px) {
+      .sitemap-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .sitemap-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-logo" aria-label="LittleLux Home">
+        <div class="logo-icon" aria-hidden="true">🎪</div>
+        <div class="logo-text">
+          <span class="logo-name">LittleLux</span>
+          <span class="logo-tagline">Luxury Birthday Venue</span>
+        </div>
+      </a>
+
+      <ul class="navbar-nav" role="list">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+        <button class="nav-toggle-btn" data-rtl-toggle aria-label="Toggle RTL mode" title="Toggle RTL/LTR">RTL</button>
+        <a href="login.html" class="btn btn-outline btn-sm">Sign In</a>
+        <a href="dashboard.html" class="btn btn-primary btn-sm">Book Now</a>
+      </div>
+
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" id="hamburger-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE NAV ===== -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <a href="../index.html" class="mobile-nav-link">🏠 Home</a>
+    <a href="about.html" class="mobile-nav-link">💜 About</a>
+    <a href="services.html" class="mobile-nav-link">🎁 Services</a>
+    <a href="blog.html" class="mobile-nav-link">📝 Blog</a>
+    <a href="contact.html" class="mobile-nav-link">📍 Contact</a>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-outline">Sign In</a>
+      <a href="dashboard.html" class="btn btn-primary">Book Now</a>
+    </div>
+  </div>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero" style="background:var(--gradient-hero)" aria-label="Page header">
+    <div class="container">
+      <div class="page-hero-content text-center reveal">
+        <div class="section-tag" style="color:var(--color-champagne-gold);border-color:rgba(216,181,106,0.3)">Site Directory</div>
+        <h1 class="page-hero-title" style="color:white">Complete <em class="italic-heading" style="color:var(--color-peach-sorbet)">Sitemap</em></h1>
+        <p class="page-hero-desc">Navigate directly to all 15 pages and interactive experiences across the LittleLux platform.</p>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>›</span>
+          <span>Sitemap</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SITEMAP SECTION ===== -->
+  <main class="section">
+    <div class="container">
+      <div class="sitemap-grid">
+        
+        <!-- Column 1: Main Pages -->
+        <div class="sitemap-card reveal" data-delay="0.1">
+          <div class="sitemap-card-header">
+            <span class="sitemap-card-icon">🏠</span>
+            <h2 class="sitemap-card-title">Main Pages</h2>
+          </div>
+          <ul class="sitemap-list">
+            <li><a href="../index.html" class="sitemap-link-item"><span class="s-icon">🎪</span><span>Home (Showcase)</span><span class="s-meta">Main</span></a></li>
+            <li><a href="home2.html" class="sitemap-link-item"><span class="s-icon">🏡</span><span>Home 2 (Alternate)</span><span class="s-meta">Calendar</span></a></li>
+            <li><a href="about.html" class="sitemap-link-item"><span class="s-icon">💜</span><span>About Us</span><span class="s-meta">Story &amp; Team</span></a></li>
+            <li><a href="services.html" class="sitemap-link-item"><span class="s-icon">🎁</span><span>Services &amp; Packages</span><span class="s-meta">Tiers &amp; Décor</span></a></li>
+            <li><a href="contact.html" class="sitemap-link-item"><span class="s-icon">📍</span><span>Contact Us</span><span class="s-meta">Inquiries</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Blog & Account Pages -->
+        <div class="sitemap-card reveal" data-delay="0.2">
+          <div class="sitemap-card-header">
+            <span class="sitemap-card-icon">✨</span>
+            <h2 class="sitemap-card-title">Portal &amp; Blog</h2>
+          </div>
+          <ul class="sitemap-list">
+            <li><a href="blog.html" class="sitemap-link-item"><span class="s-icon">📝</span><span>Blog &amp; Inspiration</span><span class="s-meta">Articles</span></a></li>
+            <li><a href="blog-details.html" class="sitemap-link-item"><span class="s-icon">📖</span><span>Blog Article Detail</span><span class="s-meta">Featured</span></a></li>
+            <li><a href="dashboard.html" class="sitemap-link-item"><span class="s-icon">📊</span><span>Parent Dashboard</span><span class="s-meta">9 Sub-tabs</span></a></li>
+            <li><a href="login.html" class="sitemap-link-item"><span class="s-icon">🔐</span><span>Parent Sign In</span><span class="s-meta">Portal</span></a></li>
+            <li><a href="signup.html" class="sitemap-link-item"><span class="s-icon">✉️</span><span>Create Account</span><span class="s-meta">Register</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Legal & Utility Pages -->
+        <div class="sitemap-card reveal" data-delay="0.3">
+          <div class="sitemap-card-header">
+            <span class="sitemap-card-icon">📜</span>
+            <h2 class="sitemap-card-title">Legal &amp; System</h2>
+          </div>
+          <ul class="sitemap-list">
+            <li><a href="privacy.html" class="sitemap-link-item"><span class="s-icon">🔒</span><span>Privacy Policy</span><span class="s-meta">Data Safety</span></a></li>
+            <li><a href="terms.html" class="sitemap-link-item"><span class="s-icon">📋</span><span>Terms &amp; Conditions</span><span class="s-meta">Policies</span></a></li>
+            <li><a href="sitemap.html" class="sitemap-link-item"><span class="s-icon">🗺️</span><span>Sitemap Index</span><span class="s-meta">Active</span></a></li>
+            <li><a href="404.html" class="sitemap-link-item"><span class="s-icon">❌</span><span>404 Error Page</span><span class="s-meta">Utility</span></a></li>
+            <li><a href="maintenance.html" class="sitemap-link-item"><span class="s-icon">🔧</span><span>Maintenance Mode</span><span class="s-meta">Live Timer</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Assistance Banner -->
+      <div class="reveal" style="margin-top:var(--space-12);background:var(--gradient-magic);border-radius:var(--border-radius-2xl);padding:var(--space-10);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-6);box-shadow:var(--shadow-xl)">
+        <div style="max-width:560px">
+          <div class="section-tag" style="background:rgba(255,248,237,0.15);border-color:rgba(255,248,237,0.25);color:var(--color-champagne-gold)">Need Personal Assistance?</div>
+          <h3 style="font-family:var(--font-display);font-size:var(--text-3xl);color:white;margin:var(--space-2) 0">Looking for a Customized Birthday Experience?</h3>
+          <p style="color:rgba(255,248,237,0.8);font-size:var(--text-base);line-height:1.7">Our master party concierges are available 7 days a week to design a bespoke package tailored exclusively for your child.</p>
+        </div>
+        <div style="display:flex;gap:var(--space-4);flex-wrap:wrap">
+          <a href="contact.html" class="btn btn-gold btn-lg">Speak with a Planner →</a>
+          <a href="dashboard.html" class="btn btn-ghost btn-lg" style="color:white;border-color:rgba(255,255,255,0.4)">Book Online Now</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="logo-icon" aria-hidden="true">🎪</div>
+              <div class="logo-text">
+                <span class="logo-name">LittleLux</span>
+                <span class="logo-tagline" style="color:var(--color-champagne-gold)">Luxury Birthday Venue</span>
+              </div>
+            </div>
+            <p class="footer-desc">Crafting extraordinary, fairy-tale birthday celebrations with bespoke themes, gourmet catering, and world-class hospitality.</p>
+            <div class="footer-social">
+              <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+              <a href="#" class="social-btn" aria-label="Facebook">📘</a>
+              <a href="#" class="social-btn" aria-label="YouTube">▶️</a>
+              <a href="#" class="social-btn" aria-label="Pinterest">📌</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-col-title">Explore</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services &amp; Packages</a></li>
+              <li><a href="blog.html">Blog &amp; Inspiration</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-col-title">Experiences</h3>
+            <ul class="footer-links">
+              <li><a href="services.html#packages">Royal Packages</a></li>
+              <li><a href="services.html#themes">Enchanted Themes</a></li>
+              <li><a href="services.html#catering">Gourmet Menus</a></li>
+              <li><a href="services.html#photography">Cinematography</a></li>
+              <li><a href="dashboard.html">Parent Dashboard</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-col-title">Visit &amp; Connect</h3>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">📍</div>
+              <span>12 Celebration Ave, Jubilee Hills, Hyderabad</span>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">📞</div>
+              <span>+91 98765 43210</span>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">✉️</div>
+              <span>hello@littlelux.in</span>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">⏰</div>
+              <span>Mon–Sun: 9:00 AM – 9:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copyright">© 2026 LittleLux Luxury Events Pvt. Ltd. All rights reserved.</p>
+          <ul class="footer-bottom-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

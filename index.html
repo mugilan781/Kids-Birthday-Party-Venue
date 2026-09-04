@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LittleLux — The most magical luxury kids birthday party venue. Breathtaking themed halls, gourmet catering, professional photography & unforgettable experiences." />
+  <meta name="keywords" content="kids birthday party venue, luxury children's party, themed birthday parties, princess party, superhero party, jungle theme party" />
+  <meta property="og:title" content="LittleLux — Luxury Kids Birthday Venue" />
+  <meta property="og:description" content="Where magic meets luxury. Create extraordinary birthday memories at LittleLux." />
+  <meta property="og:type" content="website" />
+  <title>LittleLux — Luxury Kids Birthday Party Venue</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo" aria-label="LittleLux Home">
+        <div class="logo-icon" aria-hidden="true">🎪</div>
+        <div class="logo-text">
+          <span class="logo-name">LittleLux</span>
+          <span class="logo-tagline">Luxury Birthday Venue</span>
+        </div>
+      </a>
+
+      <ul class="navbar-nav" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="pages/about.html" class="nav-link">About</a></li>
+        <li class="nav-item-dropdown">
+          <a href="pages/services.html" class="nav-link">Services ▾</a>
+          <div class="dropdown-menu" role="menu">
+            <a href="pages/services.html#packages" class="dropdown-item" role="menuitem">
+              <span class="item-icon">🎁</span>Party Packages
+            </a>
+            <a href="pages/services.html#themes" class="dropdown-item" role="menuitem">
+              <span class="item-icon">👑</span>Theme Collections
+            </a>
+            <a href="pages/services.html#catering" class="dropdown-item" role="menuitem">
+              <span class="item-icon">🍰</span>Food & Catering
+            </a>
+            <a href="pages/services.html#photography" class="dropdown-item" role="menuitem">
+              <span class="item-icon">📸</span>Photography
+            </a>
+            <a href="pages/services.html#addons" class="dropdown-item" role="menuitem">
+              <span class="item-icon">✨</span>Add-On Services
+            </a>
+          </div>
+        </li>
+        <li><a href="pages/blog.html" class="nav-link">Blog</a></li>
+        <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+        <button class="nav-toggle-btn" data-rtl-toggle aria-label="Toggle RTL mode" title="Toggle RTL/LTR">RTL</button>
+        <a href="pages/login.html" class="btn btn-outline btn-sm">Sign In</a>
+        <a href="pages/dashboard.html" class="btn btn-primary btn-sm">Book Now</a>
+      </div>
+
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" id="hamburger-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE NAV ===== -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <a href="index.html" class="mobile-nav-link">🏠 Home</a>
+    <a href="pages/home2.html" class="mobile-nav-link">🏡 Home 2</a>
+    <a href="pages/about.html" class="mobile-nav-link">💜 About</a>
+    <a href="pages/services.html" class="mobile-nav-link">🎁 Services</a>
+    <a href="pages/blog.html" class="mobile-nav-link">📝 Blog</a>
+    <a href="pages/contact.html" class="mobile-nav-link">📍 Contact</a>
+    <div class="mobile-nav-actions">
+      <a href="pages/login.html" class="btn btn-outline">Sign In</a>
+      <a href="pages/dashboard.html" class="btn btn-primary">Book Your Party</a>
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-slider" role="region" aria-label="Featured content slider">
+      <!-- Slide 1 -->
+      <div class="hero-slide slide-1 active">
+        <div class="slide-media">
+          <img src="images/hero-hall.jpg" alt="LittleLux Grand Ballroom decorated for birthday celebration" class="slide-img" />
+          <div class="slide-overlay"></div>
+        </div>
+        <div class="slide-content">
+          <div class="container">
+            <div class="slide-inner">
+              <div class="hero-tag reveal">
+                <span>✦</span> Where Magic Begins <span>✦</span>
+              </div>
+              <h1 class="hero-title reveal" data-delay="0.1">
+                Crafting <span class="title-italic">Extraordinary</span><br />Birthday Dreams
+              </h1>
+              <p class="hero-desc reveal" data-delay="0.2">
+                Immerse your child in a world of enchantment. LittleLux transforms birthdays into legendary celebrations with breathtaking themes, world-class catering & unforgettable memories.
+              </p>
+              <div class="hero-cta reveal" data-delay="0.3">
+                <a href="pages/dashboard.html" class="btn btn-gold btn-lg">
+                  <span>Reserve Your Date</span> →
+                </a>
+                <a href="pages/services.html" class="btn btn-ghost btn-lg">
+                  Explore Packages
+                </a>
+              </div>
+              <div class="hero-stats reveal" data-delay="0.4">
+                <div class="hero-stat">
+                  <span class="stat-number" data-counter data-target="2400" data-suffix="+">0</span>
+                  <span class="stat-label">Happy Celebrations</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                  <span class="stat-number" data-counter data-target="15" data-suffix="+">0</span>
+                  <span class="stat-label">Unique Themes</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                  <span class="stat-number" data-counter data-target="4.9" data-suffix="★">0</span>
+                  <span class="stat-label">Parent Rating</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide slide-2">
+        <div class="slide-media">
+          <img src="images/princess-theme.jpg" alt="Enchanting princess birthday theme with gold chandeliers" class="slide-img" />
+          <div class="slide-overlay"></div>
+        </div>
+        <div class="slide-content">
+          <div class="container">
+            <div class="slide-inner slide-inner-center">
+              <div class="hero-tag">
+                <span>👑</span> Signature Theme
+              </div>
+              <h1 class="hero-title">
+                Once Upon a <span class="title-italic">Royal</span><br />Birthday
+              </h1>
+              <p class="hero-desc">
+                Step into a fairytale world of pink and gold. Our Princess Experience features a royal throne, chandelier hall, floral arch & customized crown cake.
+              </p>
+              <a href="pages/services.html#themes" class="btn btn-gold btn-lg">
+                Discover Princess Theme →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide slide-3">
+        <div class="slide-media">
+          <img src="images/jungle-theme.jpg" alt="Wild jungle adventure birthday party setup" class="slide-img" />
+          <div class="slide-overlay" style="background:linear-gradient(135deg, rgba(0,40,20,0.7) 0%, rgba(168,216,200,0.2) 100%)"></div>
+        </div>
+        <div class="slide-content">
+          <div class="container">
+            <div class="slide-inner">
+              <div class="hero-tag">
+                <span>🌿</span> Adventure Theme
+              </div>
+              <h1 class="hero-title">
+                Wild & <span class="title-italic">Free</span><br />Jungle Adventure
+              </h1>
+              <p class="hero-desc">
+                Trek into a lush tropical paradise. Our Jungle Adventure theme transforms our hall into a breathtaking wilderness with exotic animals, fairy lights & island feasts.
+              </p>
+              <div class="hero-cta">
+                <a href="pages/services.html#themes" class="btn btn-primary btn-lg">
+                  Explore Jungle Theme →
+                </a>
+                <a href="pages/contact.html" class="btn btn-ghost btn-lg">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Controls -->
+    <button class="hero-prev" aria-label="Previous slide">‹</button>
+    <button class="hero-next" aria-label="Next slide">›</button>
+    <div class="hero-dots" role="tablist" aria-label="Slide navigation">
+      <button class="hero-dot" role="tab" aria-label="Go to slide 1" aria-selected="true"></button>
+      <button class="hero-dot" role="tab" aria-label="Go to slide 2" aria-selected="false"></button>
+      <button class="hero-dot" role="tab" aria-label="Go to slide 3" aria-selected="false"></button>
+    </div>
+
+    <!-- Floating Decor -->
+    <div class="hero-floating-decor" aria-hidden="true">
+      <div class="floating-star star-1">⭐</div>
+      <div class="floating-star star-2">✨</div>
+      <div class="floating-star star-3">💫</div>
+      <div class="floating-star star-4">✦</div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO STRIP ===== -->
+  <section class="intro-strip">
+    <div class="container">
+      <div class="intro-strip-inner">
+        <div class="intro-strip-item reveal">
+          <div class="strip-icon">🏆</div>
+          <div>
+            <span class="strip-label">Award-Winning Venue</span>
+            <span class="strip-text">Best Kids Party Venue 2025</span>
+          </div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="intro-strip-item reveal" data-delay="0.1">
+          <div class="strip-icon">🎨</div>
+          <div>
+            <span class="strip-label">15+ Unique Themes</span>
+            <span class="strip-text">Fully Customizable Setups</span>
+          </div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="intro-strip-item reveal" data-delay="0.2">
+          <div class="strip-icon">👨‍🍳</div>
+          <div>
+            <span class="strip-label">Premium Catering</span>
+            <span class="strip-text">World-Class Chef Menus</span>
+          </div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="intro-strip-item reveal" data-delay="0.3">
+          <div class="strip-icon">📸</div>
+          <div>
+            <span class="strip-label">Pro Photography</span>
+            <span class="strip-text">Cinematic Memories</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIGNATURE PACKAGES ===== -->
+  <section class="section packages-section" id="packages" aria-labelledby="packages-title">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag">Our Collections</div>
+        <h2 class="section-title" id="packages-title">
+          Luxury <em class="italic-heading">Party</em> Packages
+        </h2>
+        <p class="section-subtitle">
+          Curated experiences designed to create extraordinary memories. Every detail considered, every moment magical.
+        </p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Package 1 -->
+        <div class="package-card reveal" data-delay="0.1" data-package="sparkle">
+          <div class="package-badge">Most Popular</div>
+          <div class="package-img-wrap">
+            <img src="images/catering-spread.jpg" alt="Sparkle Soirée package" class="package-img" data-zoom />
+            <div class="package-img-overlay">
+              <a href="pages/dashboard.html" class="btn btn-gold btn-sm">Select Package</a>
+            </div>
+          </div>
+          <div class="package-body">
+            <div class="package-tier">Sparkle Soirée</div>
+            <div class="package-price">
+              <span class="price-currency">₹</span>
+              <span class="price-amount">24,999</span>
+              <span class="price-unit">/ event</span>
+            </div>
+            <ul class="package-features">
+              <li>✦ 3-Hour Venue Rental</li>
+              <li>✦ Up to 30 Guests</li>
+              <li>✦ Basic Decoration Package</li>
+              <li>✦ Welcome Mocktail Bar</li>
+              <li>✦ 3-Tier Birthday Cake</li>
+              <li>✦ Digital Photo Album</li>
+            </ul>
+            <a href="pages/dashboard.html" class="btn btn-outline" style="width:100%;margin-top:auto">Book Now</a>
+          </div>
+        </div>
+
+        <!-- Package 2 — Featured -->
+        <div class="package-card featured reveal" data-delay="0.2" data-package="magic">
+          <div class="package-badge">Best Value</div>
+          <div class="package-img-wrap">
+            <img src="images/balloon-decor.jpg" alt="Magic Moments package" class="package-img" data-zoom />
+            <div class="package-img-overlay">
+              <a href="pages/dashboard.html" class="btn btn-gold btn-sm">Select Package</a>
+            </div>
+          </div>
+          <div class="package-body">
+            <div class="package-tier">Magic Moments</div>
+            <div class="package-price">
+              <span class="price-currency">₹</span>
+              <span class="price-amount">44,999</span>
+              <span class="price-unit">/ event</span>
+            </div>
+            <ul class="package-features">
+              <li>✦ 5-Hour Venue Rental</li>
+              <li>✦ Up to 60 Guests</li>
+              <li>✦ Premium Décor + Theme</li>
+              <li>✦ Gourmet Buffet Catering</li>
+              <li>✦ 5-Tier Signature Cake</li>
+              <li>✦ Professional Photographer</li>
+              <li>✦ Entertainment Host</li>
+              <li>✦ Return Gift Bags (×60)</li>
+            </ul>
+            <a href="pages/dashboard.html" class="btn btn-primary" style="width:100%;margin-top:auto">Book Now</a>
+          </div>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="package-card reveal" data-delay="0.3" data-package="royale">
+          <div class="package-badge">Ultra Premium</div>
+          <div class="package-img-wrap">
+            <img src="images/hero-hall.jpg" alt="Grand Royale package" class="package-img" data-zoom />
+            <div class="package-img-overlay">
+              <a href="pages/dashboard.html" class="btn btn-gold btn-sm">Select Package</a>
+            </div>
+          </div>
+          <div class="package-body">
+            <div class="package-tier">Grand Royale</div>
+            <div class="package-price">
+              <span class="price-currency">₹</span>
+              <span class="price-amount">89,999</span>
+              <span class="price-unit">/ event</span>
+            </div>
+            <ul class="package-features">
+              <li>✦ 8-Hour Venue Rental</li>
+              <li>✦ Up to 150 Guests</li>
+              <li>✦ Full Luxury Theme Takeover</li>
+              <li>✦ Premium Chef-Curated Feast</li>
+              <li>✦ Custom 7-Tier Cake</li>
+              <li>✦ Cinematic Videography</li>
+              <li>✦ Live Entertainment</li>
+              <li>✦ Personalized Return Gifts</li>
+              <li>✦ Dedicated Event Manager</li>
+            </ul>
+            <a href="pages/dashboard.html" class="btn btn-gold" style="width:100%;margin-top:auto">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THEME SHOWCASE ===== -->
+  <section class="section themes-section bg-pattern" id="themes" aria-labelledby="themes-title">
+    <div class="container">
+      <div class="themes-layout">
+        <div class="themes-header reveal-left">
+          <div class="section-tag">Theme Collections</div>
+          <h2 class="section-title" id="themes-title">
+            Magical <em class="italic-heading">Worlds</em> Await
+          </h2>
+          <p class="section-subtitle" style="max-width:40ch; margin:0">
+            From royal kingdoms to wild jungles, our 15+ signature themes are meticulously crafted to transport your child into a world of pure imagination.
+          </p>
+          <a href="pages/services.html#themes" class="btn btn-primary" style="margin-top:2rem">View All Themes →</a>
+        </div>
+
+        <div class="themes-grid reveal-right">
+          <a href="pages/services.html#themes" class="theme-card theme-princess">
+            <img src="images/princess-theme.jpg" alt="Princess birthday theme" class="theme-img" />
+            <div class="theme-overlay">
+              <span class="theme-icon">👑</span>
+              <h3 class="theme-name">Princess Royal</h3>
+              <p class="theme-tag">Luxury · Elegant · Dreamy</p>
+            </div>
+          </a>
+          <a href="pages/services.html#themes" class="theme-card theme-superhero">
+            <img src="images/superhero-theme.jpg" alt="Superhero birthday theme" class="theme-img" />
+            <div class="theme-overlay">
+              <span class="theme-icon">⚡</span>
+              <h3 class="theme-name">Superhero League</h3>
+              <p class="theme-tag">Bold · Action · Epic</p>
+            </div>
+          </a>
+          <a href="pages/services.html#themes" class="theme-card theme-jungle">
+            <img src="images/jungle-theme.jpg" alt="Jungle birthday theme" class="theme-img" />
+            <div class="theme-overlay">
+              <span class="theme-icon">🌿</span>
+              <h3 class="theme-name">Jungle Explorer</h3>
+              <p class="theme-tag">Wild · Adventure · Exotic</p>
+            </div>
+          </a>
+          <a href="pages/services.html#themes" class="theme-card theme-cake">
+            <img src="images/birthday-cake.jpg" alt="Classic birthday party theme" class="theme-img" />
+            <div class="theme-overlay">
+              <span class="theme-icon">🎂</span>
+              <h3 class="theme-name">Sweet Dreams</h3>
+              <p class="theme-tag">Classic · Pastel · Magical</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VENUE SHOWCASE ===== -->
+  <section class="section venue-section" id="venue" aria-labelledby="venue-title">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag">Our Spaces</div>
+        <h2 class="section-title" id="venue-title">
+          The Perfect <em class="italic-heading">Stage</em> for Magic
+        </h2>
+        <p class="section-subtitle">
+          Three distinct celebration halls, each a canvas for your child's perfect birthday story.
+        </p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="venue-showcase">
+        <div class="venue-main reveal-left">
+          <img src="images/venue-exterior.jpg" alt="LittleLux venue exterior" class="venue-main-img" data-zoom />
+          <div class="venue-main-label">
+            <span>🏰</span> The Wonder Hall Estate
+          </div>
+        </div>
+
+        <div class="venue-details reveal-right">
+          <div class="venue-feature-card">
+            <div class="venue-feature-icon">🎪</div>
+            <div>
+              <h4 class="venue-feature-title">Grand Ballroom</h4>
+              <p class="venue-feature-desc">Our flagship hall accommodating 50–200 guests with 5000+ sq ft of event space, crystal chandeliers & marble floors.</p>
+              <div class="venue-spec-row">
+                <span class="spec-badge">200 Guests</span>
+                <span class="spec-badge">5000 sq.ft</span>
+                <span class="spec-badge">AC + Sound</span>
+              </div>
+            </div>
+          </div>
+          <div class="venue-feature-card">
+            <div class="venue-feature-icon">🌸</div>
+            <div>
+              <h4 class="venue-feature-title">Garden Pavilion</h4>
+              <p class="venue-feature-desc">An enchanting semi-outdoor space with lush landscaping, fairy lights & a magical fountain for intimate celebrations.</p>
+              <div class="venue-spec-row">
+                <span class="spec-badge">80 Guests</span>
+                <span class="spec-badge">Semi-Outdoor</span>
+                <span class="spec-badge">Garden View</span>
+              </div>
+            </div>
+          </div>
+          <div class="venue-feature-card">
+            <div class="venue-feature-icon">✨</div>
+            <div>
+              <h4 class="venue-feature-title">Sky Lounge</h4>
+              <p class="venue-feature-desc">Rooftop luxury with panoramic views, starlit evenings & a private bar for premium celebrations under the stars.</p>
+              <div class="venue-spec-row">
+                <span class="spec-badge">60 Guests</span>
+                <span class="spec-badge">Rooftop</span>
+                <span class="spec-badge">City View</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE & ACTIVITIES ===== -->
+  <section class="section activities-section" aria-labelledby="activities-title" style="background: var(--gradient-hero); color: white; position:relative; overflow:hidden;">
+    <div class="activities-particles particles-container" aria-hidden="true"></div>
+    <div class="container" style="position:relative;z-index:1">
+      <div class="activities-layout">
+        <div class="activities-content reveal-left">
+          <div class="section-tag" style="color:var(--color-champagne-gold);border-color:rgba(216,181,106,0.3)">Party Experiences</div>
+          <h2 class="section-title" style="color:white" id="activities-title">
+            Every Moment, <em class="italic-heading" style="color:var(--color-peach-sorbet)">Pure Joy</em>
+          </h2>
+          <p style="color:rgba(255,248,237,0.7);line-height:1.7;max-width:40ch;margin-bottom:2rem">
+            From face painting and magic shows to cooking classes and dance performances — we craft an immersive entertainment universe tailored to your child.
+          </p>
+          <div class="activities-list">
+            <div class="activity-chip">🎭 Magic Shows</div>
+            <div class="activity-chip">🎨 Art & Crafts</div>
+            <div class="activity-chip">🎪 Face Painting</div>
+            <div class="activity-chip">🕺 Dance Floors</div>
+            <div class="activity-chip">🎯 Games Zone</div>
+            <div class="activity-chip">🧁 Cooking Class</div>
+            <div class="activity-chip">🎬 Puppet Shows</div>
+            <div class="activity-chip">🎸 Live Bands</div>
+          </div>
+          <a href="pages/services.html" class="btn btn-gold btn-lg" style="margin-top:2rem">Explore Activities →</a>
+        </div>
+        <div class="activities-img-wrap reveal-right">
+          <img src="images/party-activities.jpg" alt="Kids party activity zones at LittleLux" class="activities-img" data-zoom />
+          <div class="activities-img-badge">
+            <span class="badge-number">50+</span>
+            <span class="badge-text">Activities Available</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials-section" aria-labelledby="testimonials-title">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag">Parent Stories</div>
+        <h2 class="section-title" id="testimonials-title">
+          Memories Made <em class="italic-heading">Forever</em>
+        </h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal" data-delay="0.1">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="testimonial-quote">
+            "LittleLux didn't just throw a party — they created an entire world for my daughter. The Princess theme was beyond anything we imagined. The décor was genuinely breathtaking."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">PS</div>
+            <div>
+              <div class="author-name">Priya Sharma</div>
+              <div class="author-detail">Princess Theme · 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card featured-testimonial reveal" data-delay="0.2">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="testimonial-quote">
+            "From the first enquiry to the final goodbye, LittleLux was flawless. Our son's Superhero party had every child screaming with joy. The photography was cinematic quality."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">RK</div>
+            <div>
+              <div class="author-name">Rahul & Kavitha</div>
+              <div class="author-detail">Superhero Theme · 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal" data-delay="0.3">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="testimonial-quote">
+            "The Jungle Adventure was absolutely magical. My twins had the time of their lives! The attention to detail — from the animal-print plates to the live drumming — was phenomenal."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">AM</div>
+            <div>
+              <div class="author-name">Ananya Mehta</div>
+              <div class="author-detail">Jungle Theme · 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY PREVIEW ===== -->
+  <section class="section gallery-section bg-pattern" aria-labelledby="gallery-title">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag">Our Gallery</div>
+        <h2 class="section-title" id="gallery-title">
+          A Glimpse of <em class="italic-heading">Wonder</em>
+        </h2>
+        <p class="section-subtitle">Each photograph a testament to the magic we create together.</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="gallery-mosaic reveal">
+        <div class="gallery-item gi-tall" data-category="venue">
+          <img src="images/hero-hall.jpg" alt="Grand ballroom birthday setup" data-zoom />
+          <div class="gi-overlay"><span>Grand Ballroom</span></div>
+        </div>
+        <div class="gallery-item" data-category="themes">
+          <img src="images/princess-theme.jpg" alt="Princess party theme" data-zoom />
+          <div class="gi-overlay"><span>Princess Royal</span></div>
+        </div>
+        <div class="gallery-item" data-category="food">
+          <img src="images/catering-spread.jpg" alt="Luxury catering spread" data-zoom />
+          <div class="gi-overlay"><span>Gourmet Catering</span></div>
+        </div>
+        <div class="gallery-item gi-wide" data-category="activities">
+          <img src="images/party-activities.jpg" alt="Party activities zone" data-zoom />
+          <div class="gi-overlay"><span>Activity Zones</span></div>
+        </div>
+        <div class="gallery-item" data-category="decor">
+          <img src="images/balloon-decor.jpg" alt="Balloon decoration" data-zoom />
+          <div class="gi-overlay"><span>Balloon Art</span></div>
+        </div>
+        <div class="gallery-item" data-category="food">
+          <img src="images/birthday-cake.jpg" alt="Luxury birthday cake" data-zoom />
+          <div class="gi-overlay"><span>Signature Cakes</span></div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:3rem">
+        <a href="pages/services.html" class="btn btn-primary btn-lg">View Full Gallery →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section faq-section" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="faq-layout">
+        <div class="faq-header reveal-left">
+          <div class="section-tag">FAQ</div>
+          <h2 class="section-title" id="faq-title">
+            Questions <em class="italic-heading">Answered</em>
+          </h2>
+          <p style="color:var(--text-muted);line-height:1.7;max-width:35ch">
+            Everything you need to know to plan the perfect celebration with LittleLux.
+          </p>
+          <a href="pages/contact.html" class="btn btn-primary" style="margin-top:2rem">Still have questions? →</a>
+        </div>
+
+        <div class="faq-list reveal-right">
+          <div class="faq-item" id="faq-1">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+              <span>How far in advance should I book?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-1" role="region">
+              <p>We recommend booking at least 4–6 weeks in advance, especially for weekend dates. Our most popular themes (Princess, Superhero) and the Grand Ballroom are in high demand. For peak seasons (May–July), 8–10 weeks is ideal.</p>
+            </div>
+          </div>
+          <div class="faq-item" id="faq-2">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+              <span>Can I bring my own cake or decorations?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-2" role="region">
+              <p>External cakes are welcome with prior approval. For decorations, our packages include all décor — adding external items may incur a small setup fee. We encourage using our in-house bakers who create extraordinary themed cakes.</p>
+            </div>
+          </div>
+          <div class="faq-item" id="faq-3">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+              <span>What age group is the venue best suited for?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-3" role="region">
+              <p>LittleLux is designed for children aged 1–12, with different packages tailored for toddlers, young children, and pre-teens. Our event team customizes activities, entertainment, and food menus based on the age group.</p>
+            </div>
+          </div>
+          <div class="faq-item" id="faq-4">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+              <span>What is your cancellation policy?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-4" role="region">
+              <p>Cancellations 30+ days before the event receive a full refund. 15–29 days: 50% refund. Within 14 days: non-refundable, but we offer a one-time reschedule option within 6 months.</p>
+            </div>
+          </div>
+          <div class="faq-item" id="faq-5">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+              <span>Is parking available?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-5" role="region">
+              <p>Yes! We offer complimentary parking for 50+ vehicles. Valet parking service is available for Premium & Royale packages. For larger events, additional parking coordination can be arranged.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section" aria-labelledby="cta-title">
+    <div class="cta-bg">
+      <img src="images/hero-hall.jpg" alt="" role="presentation" class="cta-bg-img" />
+      <div class="cta-bg-overlay"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:1">
+      <div class="cta-inner text-center reveal">
+        <div class="section-tag" style="color:var(--color-champagne-gold);border-color:rgba(216,181,106,0.3);margin-bottom:1.5rem">
+          Ready to Celebrate?
+        </div>
+        <h2 class="cta-title" id="cta-title">
+          Reserve Your Magical <em class="italic-heading">Date</em>
+        </h2>
+        <p class="cta-subtitle">
+          Check availability, choose your perfect theme & start planning the birthday celebration your child will cherish forever.
+        </p>
+        <div class="cta-actions">
+          <a href="pages/dashboard.html" class="btn btn-gold btn-lg">
+            Book Your Date Now →
+          </a>
+          <a href="pages/contact.html" class="btn btn-ghost btn-lg" style="border-color:rgba(255,255,255,0.3);color:white">
+            Talk to Our Team
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="logo-icon" aria-hidden="true">🎪</div>
+              <div class="logo-text">
+                <span class="logo-name">LittleLux</span>
+                <span class="logo-tagline" style="color:var(--color-champagne-gold)">Luxury Birthday Venue</span>
+              </div>
+            </div>
+            <p class="footer-desc">
+              Crafting extraordinary birthday celebrations for extraordinary children. Where every detail is magic and every moment is unforgettable.
+            </p>
+            <div class="footer-social" role="list">
+              <a href="#" class="social-btn" role="listitem" aria-label="Follow on Instagram">📸</a>
+              <a href="#" class="social-btn" role="listitem" aria-label="Follow on Facebook">📘</a>
+              <a href="#" class="social-btn" role="listitem" aria-label="Follow on YouTube">▶️</a>
+              <a href="#" class="social-btn" role="listitem" aria-label="Follow on Pinterest">📌</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-col-title">Explore</h3>
+            <ul class="footer-links" role="list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pages/about.html">About LittleLux</a></li>
+              <li><a href="pages/services.html">Party Packages</a></li>
+              <li><a href="pages/services.html#themes">Theme Collections</a></li>
+              <li><a href="pages/blog.html">Blog & Ideas</a></li>
+              <li><a href="pages/contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-col-title">Services</h3>
+            <ul class="footer-links" role="list">
+              <li><a href="pages/services.html#catering">Gourmet Catering</a></li>
+              <li><a href="pages/services.html#photography">Photography</a></li>
+              <li><a href="pages/services.html#decor">Decoration</a></li>
+              <li><a href="pages/services.html#activities">Entertainment</a></li>
+              <li><a href="pages/services.html#addons">Add-On Services</a></li>
+              <li><a href="pages/dashboard.html">Parent Dashboard</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-col-title">Contact</h3>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">📍</div>
+              <span>12 Celebration Avenue, Jubilee Hills, Hyderabad, TS 500033</span>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">📞</div>
+              <span>+91 98765 43210</span>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">✉️</div>
+              <span>hello@littlelux.in</span>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">🕐</div>
+              <span>Mon–Sun: 9:00 AM – 9:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copyright">© 2026 LittleLux. All rights reserved. Crafting magic since 2018.</p>
+          <ul class="footer-bottom-links" role="list">
+            <li><a href="pages/privacy.html">Privacy Policy</a></li>
+            <li><a href="pages/terms.html">Terms & Conditions</a></li>
+            <li><a href="pages/sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" aria-label="Scroll back to top" title="Back to top">↑</button>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/main.js"></script>
+  <script>
+    // Page-specific FAQ enhancement
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const isOpen = this.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
+        
+        if (!isOpen) {
+          this.setAttribute('aria-expanded', 'true');
+          this.querySelector('.faq-icon').textContent = '−';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

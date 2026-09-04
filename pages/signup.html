@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Create your free LittleLux parent account to book luxury birthday party experiences, manage events and unlock exclusive member perks." />
+  <title>Create Account — LittleLux Parent Portal</title>
+  <link rel="stylesheet" href="../css/variables.css" /><link rel="stylesheet" href="../css/base.css" /><link rel="stylesheet" href="../css/components.css" /><link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body class="auth-body">
+  <div class="auth-layout">
+    <div class="auth-hero-col">
+      <img src="../images/hero-hall.jpg" alt="LittleLux grand ballroom" class="auth-hero-img" />
+      <div class="auth-hero-overlay"></div>
+      <div class="auth-hero-content">
+        <a href="../index.html" class="navbar-logo"><div class="logo-icon">🎪</div><div class="logo-text"><span class="logo-name">LittleLux</span><span class="logo-tagline">Luxury Birthday Venue</span></div></a>
+        <div class="auth-hero-quote">
+          <blockquote>"Creating an account takes 30 seconds. Creating magical memories takes our entire team's heart."</blockquote>
+          <cite>— LittleLux Team</cite>
+        </div>
+        <div class="auth-hero-stats">
+          <div class="auth-stat"><div class="auth-stat-num">Free</div><div class="auth-stat-label">To Register</div></div>
+          <div class="auth-stat"><div class="auth-stat-num">24hr</div><div class="auth-stat-label">Response Time</div></div>
+          <div class="auth-stat"><div class="auth-stat-num">100%</div><div class="auth-stat-label">Secure</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="auth-form-col">
+      <div style="position:absolute;top:var(--space-6);right:var(--space-6);display:flex;align-items:center;gap:var(--space-3);z-index:10">
+        <a href="../index.html" class="btn btn-ghost btn-sm">← Back to Home</a>
+        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+      </div>
+      <div class="auth-form-inner">
+        <div class="auth-form-header">
+          <div class="section-tag">Join LittleLux</div>
+          <h1 class="auth-form-title">Create Your <em class="italic-heading">Account</em></h1>
+          <p class="auth-form-desc">Join 2,400+ happy families who plan magical celebrations with LittleLux.</p>
+        </div>
+        <div class="auth-benefits">
+          <div class="auth-benefit"><span class="auth-benefit-icon">📅</span>Real-time availability checker and instant booking</div>
+          <div class="auth-benefit"><span class="auth-benefit-icon">🔔</span>Event countdown notifications and reminders</div>
+          <div class="auth-benefit"><span class="auth-benefit-icon">💰</span>Exclusive member discounts and early access offers</div>
+          <div class="auth-benefit"><span class="auth-benefit-icon">📸</span>Private online photo gallery after each event</div>
+        </div>
+        <div class="auth-social-btns">
+          <button class="auth-social-btn"><span>🔍</span> Sign up with Google</button>
+        </div>
+        <div class="auth-divider"><span>or sign up with email</span></div>
+        <form class="auth-form" data-validate data-on-success="onSignupSuccess" novalidate>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="form-group"><label class="form-label" for="su-fname">First Name *</label><input id="su-fname" type="text" class="form-control" placeholder="First name" data-validate="required" /><span class="form-error"></span></div>
+            <div class="form-group"><label class="form-label" for="su-lname">Last Name *</label><input id="su-lname" type="text" class="form-control" placeholder="Last name" data-validate="required" /><span class="form-error"></span></div>
+          </div>
+          <div class="form-group"><label class="form-label" for="su-email">Email Address *</label><input id="su-email" type="email" class="form-control" placeholder="you@example.com" data-validate="required|email" /><span class="form-error"></span></div>
+          <div class="form-group"><label class="form-label" for="su-phone">Phone Number *</label><input id="su-phone" type="tel" class="form-control" placeholder="+91 98765 43210" data-validate="required|phone" /><span class="form-error"></span></div>
+          <div class="form-group"><label class="form-label" for="su-password">Password *</label>
+            <div class="password-wrap"><input id="su-password" type="password" class="form-control" placeholder="Minimum 8 characters" data-validate="required|minLength:8" /><button type="button" class="password-toggle" data-password-toggle>👁</button></div>
+            <span class="form-error"></span>
+          </div>
+          <div class="form-group"><label class="form-label" for="su-confirm">Confirm Password *</label>
+            <div class="password-wrap"><input id="su-confirm" type="password" class="form-control" placeholder="Repeat your password" data-validate="required" /></div>
+          </div>
+          <label style="display:flex;align-items:flex-start;gap:0.75rem;cursor:pointer;font-size:var(--text-sm);color:var(--text-muted)"><input type="checkbox" style="margin-top:3px;accent-color:var(--color-royal-lilac)" required /> I agree to LittleLux's <a href="privacy.html" style="color:var(--color-royal-lilac)">Privacy Policy</a> and <a href="terms.html" style="color:var(--color-royal-lilac)">Terms of Service</a></label>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Create Account →</button>
+        </form>
+        <p class="auth-switch-text">Already have an account? <a href="login.html">Sign in →</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="../js/main.js"></script>
+  <script>
+    window.onSignupSuccess = function() {
+      window.LittleLux.Toast.show('🎉 Account created! Welcome to LittleLux!', 'success');
+      setTimeout(() => { window.location.href = 'dashboard.html'; }, 1500);
+    };
+    document.querySelector('[data-password-toggle]')?.addEventListener('click', function() {
+      const input = document.getElementById('su-password');
+      input.type = input.type === 'password' ? 'text' : 'password';
+      this.textContent = input.type === 'password' ? '👁' : '🙈';
+    });
+  </script>
+</body>
+</html>
