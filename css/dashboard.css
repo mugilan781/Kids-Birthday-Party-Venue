@@ -63,7 +63,7 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--color-lavender-primary);
+  background: var(--gradient-magic);
   color: white;
   display: flex;
   align-items: center;
@@ -72,6 +72,7 @@
   font-weight: 700;
   font-size: 0.85rem;
   flex-shrink: 0;
+  box-shadow: var(--shadow-gloss-pill);
 }
 
 .dash-user-name {
@@ -278,18 +279,23 @@
 }
 
 .dash-stat-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-5);
   display: flex;
   align-items: center;
   gap: var(--space-4);
   transition: all var(--transition-base);
+  box-shadow: var(--shadow-gloss-card);
 }
 
-.dash-stat-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-.dash-stat-card.accent { background: var(--color-lavender-primary); border-color: transparent; }
+.dash-stat-card:hover { box-shadow: var(--shadow-gloss-card-hover); transform: translateY(-2px); }
+.dash-stat-card.accent {
+  background: var(--gradient-magic);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: var(--shadow-gloss-btn);
+}
 .dash-stat-card.accent .dash-stat-num, .dash-stat-card.accent .dash-stat-label { color: white; }
 
 .dash-stat-icon { font-size: 1.8rem; flex-shrink: 0; }
@@ -298,11 +304,12 @@
 
 /* UPCOMING PARTY */
 .dash-upcoming-party {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-2xl);
   padding: var(--space-6);
   margin-bottom: var(--space-6);
+  box-shadow: var(--shadow-gloss-card);
 }
 
 .party-card-header {
@@ -402,8 +409,8 @@
 }
 
 .quick-action-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-5) var(--space-3);
   display: flex;
@@ -415,13 +422,14 @@
   text-decoration: none;
   font-family: var(--font-body);
   color: var(--text-primary);
+  box-shadow: var(--shadow-gloss-card);
 }
 
 .quick-action-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-royal-lilac);
-  background: var(--bg-glass-dark);
+  box-shadow: var(--shadow-gloss-card-hover);
+  border-color: rgba(142, 125, 190, 0.4);
+  background: #ffffff;
 }
 
 .qa-icon { font-size: 1.6rem; }
@@ -440,10 +448,11 @@
 .dash-avail-info { display: flex; flex-direction: column; gap: var(--space-4); }
 
 .dash-info-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-5);
+  box-shadow: var(--shadow-gloss-card);
 }
 
 .dash-info-card h4 { font-family: var(--font-display); font-size: var(--text-base); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-2); }
@@ -483,10 +492,10 @@
 }
 
 .booking-step.active .step-circle {
-  background: var(--color-lavender-primary);
+  background: var(--gradient-magic);
   border-color: transparent;
   color: white;
-  box-shadow: var(--shadow-lavender);
+  box-shadow: var(--shadow-gloss-btn);
 }
 
 .booking-step.completed .step-circle {
@@ -519,8 +528,8 @@
 }
 
 .booking-pkg-card {
-  background: var(--bg-surface);
-  border: 2px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-6);
   cursor: pointer;
@@ -528,10 +537,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow-gloss-card);
 }
 
-.booking-pkg-card:hover { border-color: var(--color-royal-lilac); box-shadow: var(--shadow-md); }
-.booking-pkg-card.selected { border-color: var(--color-royal-lilac); background: rgba(142,107,199,0.05); box-shadow: var(--shadow-lilac); }
+.booking-pkg-card:hover { border-color: rgba(142, 125, 190, 0.45); box-shadow: var(--shadow-gloss-card-hover); }
+.booking-pkg-card.selected { border-color: var(--color-royal-lilac); background: linear-gradient(180deg, #FAF8FF 0%, #F5F0FF 100%); box-shadow: 0 8px 30px rgba(142, 125, 190, 0.22), inset 0 1px 2px rgba(255, 255, 255, 0.9); }
 .booking-pkg-card.featured { border-color: var(--color-royal-lilac); }
 
 .booking-featured-badge {
@@ -539,13 +549,15 @@
   top: -11px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--color-lavender-primary);
+  background: var(--gradient-magic);
   color: white;
   font-size: 0.68rem;
   font-weight: 800;
-  padding: 0.15rem 0.65rem;
+  padding: 0.2rem 0.75rem;
   border-radius: var(--border-radius-full);
   white-space: nowrap;
+  box-shadow: var(--shadow-gloss-pill);
+  border: 1px solid rgba(255, 255, 255, 0.45);
 }
 
 .pkg-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-3); }
@@ -568,7 +580,7 @@
   transition: all var(--transition-base);
 }
 
-.booking-pkg-card.selected .pkg-select-indicator { background: var(--color-lavender-primary); color: white; border-color: transparent; }
+.booking-pkg-card.selected .pkg-select-indicator { background: var(--gradient-magic); color: white; border-color: transparent; box-shadow: var(--shadow-gloss-btn); }
 
 /* THEME CARDS (BOOKING) */
 .booking-themes-grid {
@@ -656,8 +668,8 @@
 }
 
 .addon-card {
-  background: var(--bg-surface);
-  border: 2px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-4);
   cursor: pointer;
@@ -668,17 +680,19 @@
   align-items: center;
   gap: var(--space-1);
   position: relative;
+  box-shadow: var(--shadow-gloss-card);
 }
 
-.addon-card:hover { border-color: var(--color-royal-lilac); box-shadow: var(--shadow-sm); }
-.addon-card.selected { border-color: var(--color-royal-lilac); background: rgba(142,107,199,0.05); }.addon-check {
+.addon-card:hover { border-color: rgba(142, 125, 190, 0.4); box-shadow: var(--shadow-gloss-card-hover); }
+.addon-card.selected { border-color: var(--color-royal-lilac); background: linear-gradient(180deg, #FAF8FF 0%, #F5F0FF 100%); }
+.addon-check {
   position: absolute;
   top: var(--space-2);
   right: var(--space-2);
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: var(--color-lavender-primary);
+  background: var(--gradient-magic);
   color: white;
   font-size: 0.7rem;
   display: flex;
@@ -686,6 +700,7 @@
   justify-content: center;
   opacity: 0;
   transition: opacity var(--transition-base);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.6);
 }
 
 .addon-card.selected .addon-check { opacity: 1; }
@@ -697,10 +712,11 @@
 
 /* BOOKING SUMMARY */
 .booking-summary {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-6);
+  box-shadow: var(--shadow-gloss-card);
 }
 
 .booking-summary h4 { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-4); }
@@ -728,11 +744,12 @@
   align-items: center;
   gap: var(--space-3);
   padding: var(--space-4);
-  background: var(--bg-surface);
-  border: 2px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-lg);
   cursor: pointer;
   transition: all var(--transition-base);
+  box-shadow: var(--shadow-gloss-card);
 }
 
 .payment-option input { display: none; }
@@ -783,14 +800,15 @@
 }
 
 .party-detail-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-5);
   transition: all var(--transition-base);
+  box-shadow: var(--shadow-gloss-card);
 }
 
-.party-detail-card:hover { box-shadow: var(--shadow-sm); }
+.party-detail-card:hover { box-shadow: var(--shadow-gloss-card-hover); }
 .party-detail-card h4 { font-family: var(--font-display); font-size: var(--text-base); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-3); padding-bottom: var(--space-2); border-bottom: 1px solid var(--border-primary); }
 
 .detail-row {

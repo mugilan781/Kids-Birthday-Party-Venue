@@ -130,11 +130,12 @@
 
 /* Calendar Styles */
 .availability-calendar {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-6);
   margin-bottom: var(--space-5);
+  box-shadow: var(--shadow-gloss-card);
 }
 
 .cal-header {
@@ -167,9 +168,10 @@
 }
 
 .cal-nav-btn:hover {
-  background: var(--color-lavender-primary);
+  background: var(--gradient-magic);
   color: white;
   border-color: transparent;
+  box-shadow: var(--shadow-gloss-btn);
 }
 
 .cal-weekdays {
@@ -216,7 +218,7 @@
 .cal-day.partial:hover { background: var(--color-champagne-gold); color: var(--color-deep-berry); transform: scale(1.08); }
 .cal-day.booked { color: var(--text-light); background: rgba(243,168,143,0.15); cursor: not-allowed; }
 .cal-day.today { outline: 2px solid var(--color-lavender-primary); outline-offset: 1px; }
-.cal-day.selected { background: var(--color-lavender-primary) !important; color: white !important; box-shadow: var(--shadow-lavender); }
+.cal-day.selected { background: var(--gradient-magic) !important; color: white !important; box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.6), 0 4px 14px rgba(142, 125, 190, 0.35) !important; border: 1px solid rgba(255, 255, 255, 0.35) !important; }
 
 .cal-legend {
   display: flex;
@@ -246,10 +248,11 @@
 
 /* Time Slots */
 .time-slots-container {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-5);
+  box-shadow: var(--shadow-gloss-card);
 }
 
 .slots-title {
@@ -281,7 +284,7 @@
 .time-slot.available { border-color: rgba(157,203,191,0.5); }
 .time-slot.available:hover { background: var(--color-mint-mist); border-color: var(--color-mint-dark); transform: scale(1.04); }
 .time-slot.booked { opacity: 0.4; cursor: not-allowed; }
-.time-slot.selected { background: var(--color-lavender-primary); border-color: transparent; color: white; }
+.time-slot.selected { background: var(--gradient-magic); border-color: rgba(255, 255, 255, 0.35); color: white; box-shadow: var(--shadow-gloss-btn); }
 
 .slot-time {
   font-family: var(--font-display);
@@ -303,8 +306,8 @@
 }
 
 .offer-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-8);
   display: flex;
@@ -312,13 +315,15 @@
   gap: var(--space-4);
   transition: all var(--transition-elegant);
   height: 100%;
+  box-shadow: var(--shadow-gloss-card);
 }
 
-.offer-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.offer-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-gloss-card-hover); }
 
 .offer-card.offer-card-featured {
-  background: var(--color-lavender-dark);
-  border-color: transparent;
+  background: var(--gradient-berry);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.25), 0 8px 30px rgba(40, 29, 61, 0.25);
 }
 
 .offer-badge {
@@ -382,10 +387,11 @@
 }
 
 .filter-btn:hover, .filter-btn.active {
-  background: var(--color-lavender-primary);
-  border-color: transparent;
+  background: var(--gradient-magic);
+  border-color: rgba(255, 255, 255, 0.35);
   color: white;
   transform: translateY(-2px);
+  box-shadow: var(--shadow-gloss-btn);
 }
 
 .h2-gallery-grid {
@@ -441,11 +447,13 @@
   position: absolute;
   top: var(--space-5);
   right: var(--space-5);
-  background: var(--color-champagne-gold);
+  background: var(--gradient-gold);
   color: white;
   padding: var(--space-4) var(--space-5);
   border-radius: var(--border-radius-lg);
   text-align: center;
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.6), 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 .team-stat-num {

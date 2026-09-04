@@ -12,10 +12,11 @@
 .legal-sidebar {
   position: sticky;
   top: 90px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-6);
+  box-shadow: var(--shadow-gloss-card);
 }
 
 .legal-sidebar h3 {

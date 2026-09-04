@@ -308,8 +308,8 @@
 }
 
 .package-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   overflow: hidden;
   transition: all var(--transition-elegant);
@@ -317,39 +317,42 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  box-shadow: var(--shadow-gloss-card);
 }
 
 .package-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-royal-lilac);
+  box-shadow: var(--shadow-gloss-card-hover);
+  border-color: rgba(142, 125, 190, 0.45);
 }
 
 .package-card.featured {
-  border-color: var(--color-royal-lilac);
+  border-color: var(--color-lavender-primary);
   border-width: 2px;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-gloss-card), 0 0 20px rgba(142, 125, 190, 0.18);
   z-index: 2;
 }
 
 .package-card.featured:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  box-shadow: var(--shadow-gloss-card-hover), 0 0 25px rgba(142, 125, 190, 0.28);
 }
 
 .package-card-badge {
   position: absolute;
   top: var(--space-3);
   right: var(--space-3);
-  background: var(--color-champagne-gold);
+  background: var(--gradient-gold);
   color: white;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  padding: 0.25rem 0.7rem;
+  padding: 0.3rem 0.75rem;
   border-radius: var(--border-radius-full);
   z-index: 5;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 3px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 .package-img-wrap {
@@ -706,12 +709,13 @@
   position: absolute;
   bottom: var(--space-4);
   right: var(--space-4);
-  background: var(--color-champagne-gold);
+  background: var(--gradient-gold);
   color: white;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.1rem;
   border-radius: var(--border-radius-lg);
   text-align: center;
-  box-shadow: var(--shadow-md);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.6), 0 6px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 .badge-number {
@@ -744,8 +748,8 @@
 }
 
 .testimonial-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-6);
   transition: all var(--transition-elegant);
@@ -753,22 +757,24 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  box-shadow: var(--shadow-gloss-card);
 }
 
 .testimonial-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-royal-lilac);
+  box-shadow: var(--shadow-gloss-card-hover);
+  border-color: rgba(142, 125, 190, 0.4);
 }
 
 .testimonial-card.featured-testimonial {
-  background: var(--color-lavender-dark);
-  border-color: transparent;
+  background: var(--gradient-berry);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.25), 0 8px 30px rgba(40, 29, 61, 0.25);
 }
 
 .testimonial-card.featured-testimonial:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.35), 0 14px 40px rgba(40, 29, 61, 0.35);
 }
 
 .testimonial-card.featured-testimonial .testimonial-quote,
@@ -807,7 +813,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--color-lavender-primary);
+  background: var(--gradient-magic);
   color: white;
   display: flex;
   align-items: center;
@@ -816,6 +822,8 @@
   font-weight: 700;
   font-size: 0.82rem;
   flex-shrink: 0;
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.6), 0 3px 10px rgba(142, 125, 190, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .author-name {
@@ -912,15 +920,17 @@
 }
 
 .faq-item {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-md);
   overflow: hidden;
-  transition: border-color var(--transition-base);
+  box-shadow: var(--shadow-gloss-card);
+  transition: all var(--transition-base);
 }
 
 .faq-item.open {
-  border-color: var(--color-royal-lilac);
+  border-color: rgba(142, 125, 190, 0.45);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 1), 0 8px 24px rgba(142, 125, 190, 0.12);
 }
 
 .faq-question {

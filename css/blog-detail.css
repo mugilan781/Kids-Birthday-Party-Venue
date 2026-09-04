@@ -142,10 +142,11 @@
 }
 
 .menu-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-5);
+  box-shadow: var(--shadow-gloss-card);
 }
 
 .menu-card h4 { font-family: var(--font-display); font-size: var(--text-base); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-2); }
@@ -155,25 +156,43 @@
 
 /* ARTICLE CTA */
 .article-cta-block {
-  background: var(--color-lavender-primary);
+  background: var(--gradient-magic);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: var(--border-radius-2xl);
   padding: var(--space-8);
   text-align: center;
   margin: var(--space-8) 0;
+  box-shadow: var(--shadow-gloss-btn);
+  position: relative;
+  overflow: hidden;
 }
 
-.article-cta-block h3 { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; color: white; margin-bottom: var(--space-2); }
-.article-cta-block p { color: rgba(255,248,237,0.85); margin-bottom: var(--space-5); font-size: var(--text-base); }
+.article-cta-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: var(--border-radius-2xl) var(--border-radius-2xl) 100% 100% / var(--border-radius-2xl) var(--border-radius-2xl) 20px 20px;
+  pointer-events: none;
+}
+
+.article-cta-block h3 { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; color: white; margin-bottom: var(--space-2); position: relative; z-index: 1; }
+.article-cta-block p { color: rgba(255,248,237,0.9); margin-bottom: var(--space-5); font-size: var(--text-base); position: relative; z-index: 1; }
+.article-cta-block .btn { position: relative; z-index: 1; }
 
 /* SIDEBAR */
 .article-sidebar { position: sticky; top: 90px; }
 
 .article-sidebar-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-primary);
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
   padding: var(--space-5);
   margin-bottom: var(--space-4);
+  box-shadow: var(--shadow-gloss-card);
 }
 
 .article-sidebar-card h3 {

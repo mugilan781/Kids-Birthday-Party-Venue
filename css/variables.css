@@ -49,18 +49,18 @@
   --border-secondary: rgba(196, 164, 104, 0.3);
   --border-light: rgba(142, 125, 190, 0.15);
   
-  /* ===== SINGLE BRAND COLORS (NO MULTI-COLOR GRADIENTS) ===== */
-  --gradient-hero: #3E2E56;
-  --gradient-magic: #8E7DBE;
-  --gradient-gold: #C4A468;
-  --gradient-peach: #E5A493;
-  --gradient-mint: #9DCBBF;
-  --gradient-berry: #3E2E56;
-  --gradient-card: #FFFFFF;
+  /* ===== GLOSSY SUBTLE LUXURY COLORS ===== */
+  --gradient-hero: linear-gradient(180deg, #463461 0%, #3E2E56 60%, #37284E 100%);
+  --gradient-magic: linear-gradient(180deg, #9D8DC7 0%, #8E7DBE 45%, #8270B3 100%);
+  --gradient-gold: linear-gradient(180deg, #D6B97E 0%, #C4A468 45%, #B79555 100%);
+  --gradient-peach: linear-gradient(180deg, #EDB3A3 0%, #E5A493 50%, #D89280 100%);
+  --gradient-mint: linear-gradient(180deg, #A8D5CA 0%, #9DCBBF 50%, #8EBFA3 100%);
+  --gradient-berry: linear-gradient(180deg, #463461 0%, #3E2E56 60%, #37284E 100%);
+  --gradient-card: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(252, 249, 255, 0.92) 100%);
   --gradient-overlay: rgba(40, 28, 56, 0.72);
   --gradient-shimmer: transparent;
   
-  /* ===== SHADOWS ===== */
+  /* ===== SHADOWS & GLOSS REFLECTIONS ===== */
   --shadow-sm: 0 2px 8px rgba(42, 29, 61, 0.06);
   --shadow-md: 0 4px 20px rgba(42, 29, 61, 0.09);
   --shadow-lg: 0 8px 36px rgba(42, 29, 61, 0.12);
@@ -72,6 +72,14 @@
   --shadow-peach: 0 4px 18px rgba(229, 164, 147, 0.22);
   --shadow-inset: inset 0 2px 8px rgba(42, 29, 61, 0.05);
   --shadow-glow: 0 0 25px rgba(142, 125, 190, 0.3);
+  
+  /* Specular Gloss Tokens */
+  --shadow-gloss-btn: inset 0 1px 1.5px rgba(255, 255, 255, 0.55), inset 0 -1.5px 2px rgba(40, 29, 61, 0.18), 0 4px 16px rgba(142, 125, 190, 0.32);
+  --shadow-gloss-btn-hover: inset 0 1px 1.5px rgba(255, 255, 255, 0.75), inset 0 -1px 2px rgba(40, 29, 61, 0.25), 0 8px 24px rgba(142, 125, 190, 0.42);
+  --shadow-gloss-gold: inset 0 1px 1.5px rgba(255, 255, 255, 0.6), inset 0 -1.5px 2px rgba(80, 50, 20, 0.2), 0 4px 16px rgba(196, 164, 104, 0.35);
+  --shadow-gloss-card: inset 0 1px 1.5px rgba(255, 255, 255, 0.9), 0 8px 32px rgba(40, 29, 61, 0.07);
+  --shadow-gloss-card-hover: inset 0 1px 2px rgba(255, 255, 255, 1), 0 14px 40px rgba(142, 125, 190, 0.18);
+  --shadow-gloss-pill: inset 0 1px 1.5px rgba(255, 255, 255, 0.9), 0 3px 12px rgba(142, 125, 190, 0.12);
   
   /* ===== TYPOGRAPHY ===== */
   --font-display: 'Fraunces', Georgia, serif;
