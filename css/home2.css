@@ -1,12 +1,19 @@
 /* ===== HOME 2 STYLES ===== */
 
-/* SPLIT HERO */
+/* SPLIT HERO - fixed viewport fit & no overlap */
 .h2-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 85vh;
-  max-height: 720px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: auto;
+  max-height: none;
   padding-top: var(--nav-height);
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  background: var(--bg-primary);
+  box-sizing: border-box;
 }
 
 .h2-hero-left {
@@ -98,8 +105,16 @@
 
 .float-card-sub { font-size: 0.76rem; color: var(--color-gold-text); font-weight: 700; }
 
-/* AVAILABILITY SECTION */
-.h2-avail-section { background: var(--bg-secondary); }
+/* AVAILABILITY SECTION - fixed placement below hero, no overlap */
+.h2-avail-section {
+  background: var(--bg-secondary);
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+  clear: both;
+}
 
 .h2-avail-layout {
   display: grid;
