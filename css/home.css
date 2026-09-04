@@ -239,6 +239,102 @@
 .star-3 { top: 35%; right: 25%; animation: float 7s ease-in-out infinite 4s; }
 .star-4 { top: 75%; right: 20%; animation: float 5s ease-in-out infinite 1s; }
 
+/* ===== STATS STANDALONE (moved from hero) ===== */
+.stats-standalone-section {
+  background: var(--bg-surface);
+  padding: var(--space-12) 0;
+  border-top: 1px solid var(--border-primary);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.stats-standalone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  align-items: stretch;
+}
+
+.stat-standalone-card {
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  box-shadow: var(--shadow-gloss-card);
+  transition: all var(--transition-elegant);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-standalone-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gloss-card-hover);
+  border-color: rgba(142, 125, 190, 0.4);
+}
+
+.stat-standalone-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto var(--space-3);
+  background: var(--bg-glass-dark);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-royal-lilac);
+  flex-shrink: 0;
+}
+
+.stat-standalone-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.stat-standalone-number {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  color: var(--color-royal-lilac);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.stat-standalone-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .stats-standalone-grid {
+    gap: var(--space-4);
+  }
+  .stat-standalone-number {
+    font-size: var(--text-3xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-standalone-section {
+    padding: var(--space-8) 0;
+  }
+  .stats-standalone-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
 /* ===== INTRO STRIP ===== */
 .intro-strip {
   background: var(--bg-surface);
