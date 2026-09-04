@@ -716,7 +716,7 @@
             <div class="footer-social" role="list">
               <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" role="listitem" aria-label="Follow us on Instagram"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" role="listitem" aria-label="Follow us on Facebook"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn" role="listitem" aria-label="Follow us on X"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16"/><path d="M20 4L4 20"/></svg></a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn" role="listitem" aria-label="Follow us on X"><svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
               <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" role="listitem" aria-label="Follow us on YouTube"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
             </div>
           </div>
@@ -762,14 +762,11 @@
             <h3 class="footer-col-title">Newsletter</h3>
             <p class="footer-newsletter-desc">Subscribe to receive the latest updates, news, offers and insights from LittleLux.</p>
             <form class="footer-newsletter-form" data-validate novalidate data-on-success="onFooterNewsletterSuccess">
-              <label for="footer-email-index" class="sr-only">Email address</label>
               <div class="footer-newsletter-field">
-                <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:0.25rem">
-                  <input type="email" id="footer-email-index" class="footer-newsletter-input" placeholder="Your email address" aria-label="Email address for newsletter" data-validate="required|email">
-                  <span class="form-error" style="color:#FECACA; font-size:0.78rem; min-height:1em; display:block;"></span>
-                </div>
-                <button type="submit" class="btn btn-gold footer-newsletter-btn">Subscribe</button>
+                <input type="email" id="footer-email-index" class="footer-newsletter-input" placeholder="Enter your email address" aria-label="Email address for newsletter" data-validate="required|email">
+                <button type="submit" class="footer-newsletter-btn">Subscribe</button>
               </div>
+              <span class="form-error" aria-live="polite"></span>
               <p class="footer-newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
             </form>
           </div>

@@ -478,7 +478,7 @@ const FormValidator = (() => {
       }
     }
 
-    const errorEl = input.parentElement.querySelector('.form-error');
+    const errorEl = input.parentElement.querySelector('.form-error') || (input.closest('form') ? input.closest('form').querySelector('.form-error') : null);
     if (!isValid) {
       input.classList.add('error');
       if (errorEl) errorEl.textContent = message;
