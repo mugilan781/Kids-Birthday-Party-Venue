@@ -1,11 +1,11 @@
 /* ===== INNER PAGES SHARED STYLES ===== */
 
-/* PAGE HERO - increased height, unique bg per page, lighter overlay, even padding */
+/* PAGE HERO - increased height, unique bg per page, slightly lighter overlay, even padding */
 .page-hero {
   padding: calc(var(--nav-height) + var(--space-16)) 0 var(--space-16);
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(42,30,58,0.58) 0%, rgba(42,30,58,0.62) 100%), var(--page-hero-image, url('../images/hero-hall.jpg')) center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(42,30,58,0.70) 0%, rgba(42,30,58,0.74) 100%), var(--page-hero-image, url('../images/hero-hall.jpg')) center/cover no-repeat;
   min-height: 420px;
   display: flex;
   align-items: center;

@@ -24,7 +24,7 @@
 .article-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(36, 26, 50, 0.55) 0%, rgba(36, 26, 50, 0.60) 100%);
+  background: rgba(36, 26, 50, 0.70);
 }
 
 .article-hero-content {
