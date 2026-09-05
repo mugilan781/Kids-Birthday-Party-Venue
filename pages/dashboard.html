@@ -506,6 +506,10 @@
       const titles = { overview:'Dashboard Overview', availability:'Hall Availability', booking:'New Booking', 'my-bookings':'My Bookings', 'party-details':'Party Details', 'day-logistics':'Day of Event', notifications:'Notifications', profile:'My Profile', settings:'Settings' };
       document.getElementById('current-section-title').textContent = titles[sectionId] || 'Dashboard';
       
+      if (sectionId === 'booking') {
+        goToStep(1);
+      }
+      
       if (sectionId === 'availability') {
         const cal = document.querySelector('.availability-calendar');
         if (cal && !cal.querySelector('.cal-header') && window.LittleLux && window.LittleLux.AvailabilityCalendar) {
@@ -521,23 +525,50 @@
     let currentStep = 1;
     const totalSteps = 5;
 
+    function goToStep(step) {
+      if (step < 1 || step > totalSteps) return;
+      currentStep = step;
+      for (let i = 1; i <= totalSteps; i++) {
+        const content = document.getElementById(`step-${i}`);
+        const stepEl = document.querySelector(`.booking-step[data-step="${i}"]`);
+        if (content) {
+          content.classList.toggle('active', i === step);
+        }
+        if (stepEl) {
+          stepEl.classList.toggle('active', i === step);
+          stepEl.classList.toggle('completed', i < step);
+        }
+      }
+    }
+
     function nextStep() {
       if (currentStep < totalSteps) {
-        document.getElementById(`step-${currentStep}`).classList.remove('active');
-        document.querySelector(`[data-step="${currentStep}"]`)?.classList.add('completed');
-        currentStep++;
-        document.getElementById(`step-${currentStep}`).classList.add('active');
-        document.querySelector(`[data-step="${currentStep}"]`)?.classList.add('active');
+        goToStep(currentStep + 1);
       }
     }
 
     function prevStep() {
       if (currentStep > 1) {
-        document.getElementById(`step-${currentStep}`).classList.remove('active');
-        document.querySelector(`[data-step="${currentStep}"]`)?.classList.remove('active');
-        currentStep--;
-        document.getElementById(`step-${currentStep}`).classList.add('active');
-        document.querySelector(`[data-step="${currentStep}"]`)?.classList.remove('completed');
+        goToStep(currentStep - 1);
+      }
+    }
+
+    function selectBookingPackage(pkgKey) {
+      if (!pkgKey) return;
+      const normalized = pkgKey.toLowerCase().trim();
+      // Map aliases if needed (e.g. enchanted -> sparkle)
+      const aliasMap = {
+        'enchanted': 'sparkle',
+        'enchanted-beginnings': 'sparkle',
+        'sparkle-soiree': 'sparkle',
+        'magic-moments': 'magic',
+        'grand-royale': 'royale'
+      };
+      const targetPkg = aliasMap[normalized] || normalized;
+      const card = document.querySelector(`.booking-pkg-card[data-package="${targetPkg}"]`);
+      if (card) {
+        document.querySelectorAll('.booking-pkg-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
       }
     }
 
@@ -583,8 +614,8 @@
     const menuBtn = document.getElementById('dash-menu-btn');
     const closeBtn = document.getElementById('dash-sidebar-close');
 
-    function openSidebar() { sidebar.classList.add('open'); menuBtn.setAttribute('aria-expanded','true'); }
-    function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }
+    function openSidebar() { sidebar.classList.add('open'); menuBtn?.setAttribute('aria-expanded','true'); }
+    function closeSidebar() { sidebar.classList.remove('open'); menuBtn?.setAttribute('aria-expanded','false'); }
 
     menuBtn?.addEventListener('click', openSidebar);
     closeBtn?.addEventListener('click', closeSidebar);
@@ -653,15 +684,50 @@
       });
     });
 
-    // Hash navigation handler
+    // Hash & URL routing navigation handler
     function handleHashNav() {
-      const hash = window.location.hash.replace('#', '');
-      if (hash && document.getElementById(hash)) {
-        showSection(hash);
+      const urlParams = new URLSearchParams(window.location.search);
+      let targetSection = urlParams.get('section');
+      let targetPackage = urlParams.get('pkg') || urlParams.get('package');
+
+      const rawHash = window.location.hash.replace(/^#/, '');
+      if (rawHash) {
+        let hashSection = rawHash;
+        let hashParamsString = '';
+        if (rawHash.includes('?')) {
+          [hashSection, hashParamsString] = rawHash.split('?');
+        } else if (rawHash.includes('&')) {
+          const parts = rawHash.split('&');
+          hashSection = parts[0];
+          hashParamsString = parts.slice(1).join('&');
+        }
+
+        if (hashSection) {
+          targetSection = hashSection;
+        }
+
+        if (hashParamsString) {
+          const hashParams = new URLSearchParams(hashParamsString);
+          if (hashParams.get('pkg')) targetPackage = hashParams.get('pkg');
+          if (hashParams.get('package')) targetPackage = hashParams.get('package');
+        }
+      }
+
+      if (targetSection && document.getElementById(targetSection)) {
+        showSection(targetSection);
+      }
+
+      if (targetPackage) {
+        selectBookingPackage(targetPackage);
       }
     }
+
     window.addEventListener('hashchange', handleHashNav);
-    handleHashNav();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', handleHashNav);
+    } else {
+      handleHashNav();
+    }
   </script>
 </body>
 </html>
