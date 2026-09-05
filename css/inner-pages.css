@@ -699,6 +699,16 @@
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.service-card-title span {
+  white-space: nowrap;
+  margin-left: auto;
+  text-align: right;
 }
 
 .service-card-desc {
@@ -748,15 +758,19 @@
 .decor-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(36, 26, 50, 0.82);
+  background: linear-gradient(180deg, rgba(36,26,50,0.06) 0%, rgba(36,26,50,0.22) 50%, rgba(36,26,50,0.55) 100%);
   display: flex;
   align-items: flex-end;
   padding: var(--space-4);
   opacity: 0;
-  transition: opacity var(--transition-base);
+  transition: opacity var(--transition-base), background var(--transition-base);
+  pointer-events: none;
 }
 
-.decor-card:hover .decor-overlay { opacity: 1; }
+.decor-card:hover .decor-overlay {
+  opacity: 1;
+  background: linear-gradient(180deg, rgba(36,26,50,0.10) 0%, rgba(36,26,50,0.32) 50%, rgba(36,26,50,0.65) 100%);
+}
 .decor-overlay span { color: white; font-weight: 700; font-family: var(--font-display); font-size: var(--text-sm); }
 
 /* ===== BLOG PAGE ===== */
