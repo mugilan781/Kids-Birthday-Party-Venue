@@ -1991,3 +1991,89 @@
   .admin-filter-bar { flex-direction: column; align-items: stretch; }
 }
 
+/* ===== BOOKING STEP VALIDATION & DYNAMIC SUMMARY ===== */
+.booking-step-error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0.85rem 1.15rem;
+  background: rgba(224, 122, 95, 0.12);
+  border: 1.5px solid rgba(224, 122, 95, 0.45);
+  border-radius: var(--border-radius-lg);
+  color: var(--color-peach-dark);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  animation: slide-up 0.3s ease;
+}
+
+.booking-step-error svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  stroke: var(--color-peach-dark);
+}
+
+.form-error {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-peach-dark);
+  font-weight: 600;
+  margin-top: 0.35rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.form-control.is-invalid {
+  border-color: var(--color-peach-dark) !important;
+  box-shadow: 0 0 0 3px rgba(224, 122, 95, 0.18) !important;
+}
+
+.booking-summary-meta {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.meta-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-full);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.summary-line.addon-item {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--color-royal-lilac);
+  margin: 0.25rem 0;
+}
+
+@keyframes fieldShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.field-shake {
+  animation: fieldShake 0.35s ease;
+}
+
+

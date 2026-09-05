@@ -79,23 +79,23 @@
 
         <!-- Stats Row -->
         <div class="dash-stats-row">
-          <div class="dash-stat-card"><div class="dash-stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s2-1 4-1 4 1 4 1 2-1 4-1 4 1 4 1"/><path d="M2 21h20"/><path d="M7 8v3"/><path d="M12 8v3"/><path d="M17 8v3"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg></div><div class="dash-stat-body"><div class="dash-stat-num">1</div><div class="dash-stat-label">Upcoming Booking</div></div></div>
-          <div class="dash-stat-card"><div class="dash-stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></div><div class="dash-stat-body"><div class="dash-stat-num">23</div><div class="dash-stat-label">Days Until Party</div></div></div>
-          <div class="dash-stat-card accent"><div class="dash-stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v12"/></svg></div><div class="dash-stat-body"><div class="dash-stat-num">₹44,999</div><div class="dash-stat-label">Total Package Value</div></div></div>
-          <div class="dash-stat-card"><div class="dash-stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-mint-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="dash-stat-body"><div class="dash-stat-num">₹22,499</div><div class="dash-stat-label">Amount Paid</div></div></div>
+          <div class="dash-stat-card"><div class="dash-stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s2-1 4-1 4 1 4 1 2-1 4-1 4 1 4 1"/><path d="M2 21h20"/><path d="M7 8v3"/><path d="M12 8v3"/><path d="M17 8v3"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg></div><div class="dash-stat-body"><div class="dash-stat-num" id="stat-upcoming-count">1</div><div class="dash-stat-label">Upcoming Booking</div></div></div>
+          <div class="dash-stat-card"><div class="dash-stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></div><div class="dash-stat-body"><div class="dash-stat-num" id="stat-days-until">23</div><div class="dash-stat-label">Days Until Party</div></div></div>
+          <div class="dash-stat-card accent"><div class="dash-stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v12"/></svg></div><div class="dash-stat-body"><div class="dash-stat-num" id="stat-pkg-value">₹44,999</div><div class="dash-stat-label">Total Package Value</div></div></div>
+          <div class="dash-stat-card"><div class="dash-stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-mint-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="dash-stat-body"><div class="dash-stat-num" id="stat-amount-paid">₹22,499</div><div class="dash-stat-label">Amount Paid</div></div></div>
         </div>
 
         <!-- Upcoming Party Card -->
-        <div class="dash-upcoming-party">
+        <div class="dash-upcoming-party" id="overview-upcoming-card">
           <div class="party-card-header">
             <div>
               <div class="party-card-tag">Upcoming Celebration</div>
-              <h3 class="party-card-title">Arya's 6th Birthday — Princess Royal Theme</h3>
-              <div class="party-card-meta">
-                <span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> September 27, 2026</span>
-                <span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2:00 PM – 7:00 PM</span>
-                <span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l2-2 2 2v2h2V7l2-2 2 2v2h2V7l2-2 2 2v14"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/><path d="M9 11h1"/><path d="M14 11h1"/></svg> Grand Ballroom</span>
-                <span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 45 Guests</span>
+              <h3 class="party-card-title" id="overview-party-title">Arya's 6th Birthday — Princess Royal Theme</h3>
+              <div class="party-card-meta" id="overview-party-meta">
+                <span id="overview-party-date"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> September 27, 2026</span>
+                <span id="overview-party-time"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2:00 PM – 7:00 PM</span>
+                <span id="overview-party-hall"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l2-2 2 2v2h2V7l2-2 2 2v2h2V7l2-2 2 2v14"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/><path d="M9 11h1"/><path d="M14 11h1"/></svg> Grand Ballroom</span>
+                <span id="overview-party-guests"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 45 Guests</span>
               </div>
             </div>
             <div class="party-status confirmed">Confirmed <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -207,7 +207,7 @@
           <div class="booking-step active" data-step="1"><div class="step-circle">1</div><div class="step-label">Package</div></div>
           <div class="booking-step-line"></div>
           <div class="booking-step" data-step="2"><div class="step-circle">2</div><div class="step-label">Theme</div></div>
-          <div class="booking-step-line"></div>
+        <div class="booking-step-line"></div>
           <div class="booking-step" data-step="3"><div class="step-circle">3</div><div class="step-label">Guests</div></div>
           <div class="booking-step-line"></div>
           <div class="booking-step" data-step="4"><div class="step-circle">4</div><div class="step-label">Add-Ons</div></div>
@@ -218,94 +218,166 @@
         <!-- Step 1: Package Selection -->
         <div class="booking-step-content active" id="step-1">
           <h3 class="dash-subsection-title">Choose Your Package</h3>
-          <div class="booking-packages-grid">
-            <div class="booking-pkg-card" data-package="sparkle"><div class="pkg-card-header"><div class="pkg-name"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg> Sparkle Soirée</div><div class="pkg-price">₹24,999</div></div><ul class="pkg-features"><li>3-Hour Venue · Up to 30 Guests</li><li>Basic Decoration Package</li><li>3-Tier Birthday Cake</li><li>Digital Photo Album</li></ul><div class="pkg-select-indicator">Select</div></div>
-            <div class="booking-pkg-card featured" data-package="magic"><div class="booking-featured-badge">Recommended</div><div class="pkg-card-header"><div class="pkg-name"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><line x1="12" x2="12" y1="22" y2="24"/><line x1="12" x2="12" y1="0" y2="2"/><line x1="2" x2="0" y1="12" y2="12"/><line x1="24" x2="22" y1="12" y2="12"/></svg> Magic Moments</div><div class="pkg-price">₹44,999</div></div><ul class="pkg-features"><li>5-Hour Venue · Up to 60 Guests</li><li>Premium Décor + Theme</li><li>Gourmet Buffet Catering</li><li>Photographer + Entertainment</li><li>Return Gift Bags</li></ul><div class="pkg-select-indicator">Select</div></div>
-            <div class="booking-pkg-card" data-package="royale"><div class="pkg-card-header"><div class="pkg-name"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5z"/></svg> Grand Royale</div><div class="pkg-price">₹89,999</div></div><ul class="pkg-features"><li>8-Hour Venue · Up to 150 Guests</li><li>Full Luxury Theme Takeover</li><li>Chef's Feast + Custom 7-Tier Cake</li><li>Cinematic Videography</li><li>Dedicated Event Manager</li></ul><div class="pkg-select-indicator">Select</div></div>
+          <div class="booking-step-error" id="step-1-error" style="display:none">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span id="step-1-error-text">Please select a celebration package to continue.</span>
           </div>
-          <div class="step-actions"><button class="btn btn-primary" onclick="nextStep()">Next: Choose Theme →</button></div>
+          <div class="booking-packages-grid">
+            <div class="booking-pkg-card" data-package="sparkle" data-name="Sparkle Soirée" data-price="24999"><div class="pkg-card-header"><div class="pkg-name"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg> Sparkle Soirée</div><div class="pkg-price">₹24,999</div></div><ul class="pkg-features"><li>3-Hour Venue · Up to 30 Guests</li><li>Basic Decoration Package</li><li>3-Tier Birthday Cake</li><li>Digital Photo Album</li></ul><div class="pkg-select-indicator">Select</div></div>
+            <div class="booking-pkg-card featured" data-package="magic" data-name="Magic Moments" data-price="44999"><div class="booking-featured-badge">Recommended</div><div class="pkg-card-header"><div class="pkg-name"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><line x1="12" x2="12" y1="22" y2="24"/><line x1="12" x2="12" y1="0" y2="2"/><line x1="2" x2="0" y1="12" y2="12"/><line x1="24" x2="22" y1="12" y2="12"/></svg> Magic Moments</div><div class="pkg-price">₹44,999</div></div><ul class="pkg-features"><li>5-Hour Venue · Up to 60 Guests</li><li>Premium Décor + Theme</li><li>Gourmet Buffet Catering</li><li>Photographer + Entertainment</li><li>Return Gift Bags</li></ul><div class="pkg-select-indicator">Select</div></div>
+            <div class="booking-pkg-card" data-package="royale" data-name="Grand Royale" data-price="89999"><div class="pkg-card-header"><div class="pkg-name"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5z"/></svg> Grand Royale</div><div class="pkg-price">₹89,999</div></div><ul class="pkg-features"><li>8-Hour Venue · Up to 150 Guests</li><li>Full Luxury Theme Takeover</li><li>Chef's Feast + Custom 7-Tier Cake</li><li>Cinematic Videography</li><li>Dedicated Event Manager</li></ul><div class="pkg-select-indicator">Select</div></div>
+          </div>
+          <div class="step-actions"><button type="button" class="btn btn-primary" onclick="nextStep()">Next: Choose Theme →</button></div>
         </div>
 
         <!-- Step 2: Theme Selection -->
         <div class="booking-step-content" id="step-2">
           <h3 class="dash-subsection-title">Select Your Theme</h3>
+          <div class="booking-step-error" id="step-2-error" style="display:none">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span id="step-2-error-text">Please select a theme or describe your custom theme to proceed.</span>
+          </div>
           <div class="booking-themes-grid">
-            <div class="booking-theme-card" data-theme="princess"><img src="../images/princess-theme.jpg" alt="Princess theme" /><div class="theme-card-overlay"><span class="theme-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></div><div class="theme-card-label"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5z"/></svg> Princess Royal</div></div>
-            <div class="booking-theme-card" data-theme="superhero"><img src="../images/superhero-theme.jpg" alt="Superhero theme" /><div class="theme-card-overlay"><span class="theme-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></div><div class="theme-card-label"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Superhero League</div></div>
-            <div class="booking-theme-card" data-theme="jungle"><img src="../images/jungle-theme.jpg" alt="Jungle theme" /><div class="theme-card-overlay"><span class="theme-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></div><div class="theme-card-label"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Jungle Explorer</div></div>
-            <div class="booking-theme-card" data-theme="sweet-dreams"><img src="../images/birthday-cake.jpg" alt="Sweet Dreams theme" /><div class="theme-card-overlay"><span class="theme-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></div><div class="theme-card-label"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s2-1 4-1 4 1 4 1 2-1 4-1 4 1 4 1"/><path d="M2 21h20"/><path d="M7 8v3"/><path d="M12 8v3"/><path d="M17 8v3"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg> Sweet Dreams</div></div>
-            <div class="booking-theme-card" data-theme="balloons"><img src="../images/balloon-decor.jpg" alt="Balloon Carnival" /><div class="theme-card-overlay"><span class="theme-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></div><div class="theme-card-label"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a6 6 0 0 0-6 6c0 4.42 4 8 6 9 2-1 6-4.58 6-9a6 6 0 0 0-6-6Z"/><path d="M12 17l-1 2h2l-1-2"/><path d="M12 19c-1 2 1 4 0 5"/></svg> Balloon Carnival</div></div>
-            <div class="booking-theme-card" data-theme="royal-gala"><img src="../images/hero-hall.jpg" alt="Royal Gala theme" /><div class="theme-card-overlay"><span class="theme-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></div><div class="theme-card-label"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l2-2 2 2v2h2V7l2-2 2 2v2h2V7l2-2 2 2v14"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/><path d="M9 11h1"/><path d="M14 11h1"/></svg> Royal Gala</div></div>
+            <div class="booking-theme-card" data-theme="princess" data-name="Princess Royal"><img src="../images/princess-theme.jpg" alt="Princess theme" /><div class="theme-card-overlay"><span class="theme-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></div><div class="theme-card-label"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5z"/></svg> Princess Royal</div></div>
+            <div class="booking-theme-card" data-theme="superhero" data-name="Superhero League"><img src="../images/superhero-theme.jpg" alt="Superhero theme" /><div class="theme-card-overlay"><span class="theme-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></div><div class="theme-card-label"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Superhero League</div></div>
+            <div class="booking-theme-card" data-theme="jungle" data-name="Jungle Explorer"><img src="../images/jungle-theme.jpg" alt="Jungle theme" /><div class="theme-card-overlay"><span class="theme-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></div><div class="theme-card-label"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Jungle Explorer</div></div>
+            <div class="booking-theme-card" data-theme="sweet-dreams" data-name="Sweet Dreams"><img src="../images/birthday-cake.jpg" alt="Sweet Dreams theme" /><div class="theme-card-overlay"><span class="theme-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></div><div class="theme-card-label"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s2-1 4-1 4 1 4 1 2-1 4-1 4 1 4 1"/><path d="M2 21h20"/><path d="M7 8v3"/><path d="M12 8v3"/><path d="M17 8v3"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg> Sweet Dreams</div></div>
+            <div class="booking-theme-card" data-theme="balloons" data-name="Balloon Carnival"><img src="../images/balloon-decor.jpg" alt="Balloon Carnival" /><div class="theme-card-overlay"><span class="theme-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></div><div class="theme-card-label"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a6 6 0 0 0-6 6c0 4.42 4 8 6 9 2-1 6-4.58 6-9a6 6 0 0 0-6-6Z"/><path d="M12 17l-1 2h2l-1-2"/><path d="M12 19c-1 2 1 4 0 5"/></svg> Balloon Carnival</div></div>
+            <div class="booking-theme-card" data-theme="royal-gala" data-name="Royal Gala"><img src="../images/hero-hall.jpg" alt="Royal Gala theme" /><div class="theme-card-overlay"><span class="theme-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></div><div class="theme-card-label"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l2-2 2 2v2h2V7l2-2 2 2v2h2V7l2-2 2 2v14"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/><path d="M9 11h1"/><path d="M14 11h1"/></svg> Royal Gala</div></div>
           </div>
-          <div style="margin-top:1rem;padding:1rem;background:var(--bg-glass-dark);border-radius:var(--border-radius-md);border:1px solid var(--border-primary)">
-            <label class="form-label">Custom Theme Request</label>
-            <input type="text" class="form-control" placeholder="Describe your dream theme (e.g., Underwater Mermaid Kingdom)..." style="margin-top:0.5rem" />
+          <div style="margin-top:1rem;padding:1.25rem;background:var(--bg-glass-dark);border-radius:var(--border-radius-md);border:1px solid var(--border-primary)">
+            <label class="form-label" for="booking-custom-theme">Custom Theme Request (Optional if a theme card above is picked)</label>
+            <input type="text" class="form-control" id="booking-custom-theme" placeholder="Describe your dream theme (e.g., Underwater Mermaid Kingdom, Outer Space Adventure)..." style="margin-top:0.5rem" />
           </div>
-          <div class="step-actions"><button class="btn btn-outline" onclick="prevStep()">← Back</button><button class="btn btn-primary" onclick="nextStep()">Next: Guest Count →</button></div>
+          <div class="step-actions"><button type="button" class="btn btn-outline" onclick="prevStep()">← Back</button><button type="button" class="btn btn-primary" onclick="nextStep()">Next: Guest Count →</button></div>
         </div>
 
         <!-- Step 3: Guest Count -->
         <div class="booking-step-content" id="step-3">
-          <h3 class="dash-subsection-title">Guest Management</h3>
+          <h3 class="dash-subsection-title">Guest & Event Details</h3>
           <div class="dash-form-grid">
-            <div class="form-group"><label class="form-label">Birthday Child's Name *</label><input type="text" class="form-control" placeholder="e.g. Arya" /></div>
-            <div class="form-group"><label class="form-label">Child's Age *</label><input type="number" class="form-control" placeholder="e.g. 6" min="1" max="15" /></div>
-            <div class="form-group"><label class="form-label">Party Date *</label><input type="date" class="form-control" id="booking-date-input" /></div>
-            <div class="form-group"><label class="form-label">Time Slot *</label>
-              <select class="form-control" id="booking-time-select"><option>10:00 AM – 1:00 PM</option><option>2:00 PM – 5:00 PM</option><option>4:00 PM – 7:00 PM</option><option>6:00 PM – 9:00 PM</option></select>
+            <div class="form-group">
+              <label class="form-label" for="booking-child-name">Birthday Child's Name *</label>
+              <input type="text" class="form-control" id="booking-child-name" placeholder="e.g. Arya" autocomplete="off" />
+              <span class="form-error" id="err-booking-child-name" style="display:none">Please enter the birthday child's name (min 2 characters)</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="booking-child-age">Child's Age Turning *</label>
+              <input type="number" class="form-control" id="booking-child-age" placeholder="e.g. 6" min="1" max="18" />
+              <span class="form-error" id="err-booking-child-age" style="display:none">Please enter a valid age between 1 and 18</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="booking-date-input">Party Date *</label>
+              <input type="date" class="form-control" id="booking-date-input" />
+              <span class="form-error" id="err-booking-date" style="display:none">Please choose a valid upcoming party date</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="booking-time-select">Time Slot *</label>
+              <select class="form-control" id="booking-time-select">
+                <option value="">Choose a time slot...</option>
+                <option value="10:00 AM – 1:00 PM">10:00 AM – 1:00 PM (Morning Slot)</option>
+                <option value="2:00 PM – 5:00 PM">2:00 PM – 5:00 PM (Afternoon Slot)</option>
+                <option value="4:00 PM – 7:00 PM">4:00 PM – 7:00 PM (Evening Slot)</option>
+                <option value="6:00 PM – 9:00 PM">6:00 PM – 9:00 PM (Sunset / Twilight Slot)</option>
+              </select>
+              <span class="form-error" id="err-booking-time" style="display:none">Please choose a preferred time slot</span>
             </div>
           </div>
           <div class="guest-counter-section">
             <h4 style="margin-bottom:1rem">Guest Count</h4>
             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
-              <div><label class="form-label">Adult Guests</label><div class="guest-counter" data-min="1" data-max="200"><button class="counter-minus btn btn-outline btn-sm">−</button><span class="counter-value">20</span><button class="counter-plus btn btn-outline btn-sm">+</button></div></div>
-              <div><label class="form-label">Children Guests</label><div class="guest-counter" data-min="1" data-max="100"><button class="counter-minus btn btn-outline btn-sm">−</button><span class="counter-value">15</span><button class="counter-plus btn btn-outline btn-sm">+</button></div></div>
-              <div><label class="form-label">Infants (0-2 yrs)</label><div class="guest-counter" data-min="0" data-max="20"><button class="counter-minus btn btn-outline btn-sm">−</button><span class="counter-value">0</span><button class="counter-plus btn btn-outline btn-sm">+</button></div></div>
+              <div>
+                <label class="form-label">Adult Guests</label>
+                <div class="guest-counter" id="counter-adults" data-min="1" data-max="200">
+                  <button type="button" class="counter-minus btn btn-outline btn-sm">−</button>
+                  <span class="counter-value">20</span>
+                  <button type="button" class="counter-plus btn btn-outline btn-sm">+</button>
+                </div>
+              </div>
+              <div>
+                <label class="form-label">Children Guests</label>
+                <div class="guest-counter" id="counter-children" data-min="1" data-max="100">
+                  <button type="button" class="counter-minus btn btn-outline btn-sm">−</button>
+                  <span class="counter-value">15</span>
+                  <button type="button" class="counter-plus btn btn-outline btn-sm">+</button>
+                </div>
+              </div>
+              <div>
+                <label class="form-label">Infants (0-2 yrs)</label>
+                <div class="guest-counter" id="counter-infants" data-min="0" data-max="20">
+                  <button type="button" class="counter-minus btn btn-outline btn-sm">−</button>
+                  <span class="counter-value">0</span>
+                  <button type="button" class="counter-plus btn btn-outline btn-sm">+</button>
+                </div>
+              </div>
             </div>
+            <div id="capacity-warning" style="display:none;margin-top:1rem;font-size:0.8rem;color:var(--color-champagne-gold);font-weight:600"></div>
           </div>
-          <div class="step-actions"><button class="btn btn-outline" onclick="prevStep()">← Back</button><button class="btn btn-primary" onclick="nextStep()">Next: Add-Ons →</button></div>
+          <div class="step-actions"><button type="button" class="btn btn-outline" onclick="prevStep()">← Back</button><button type="button" class="btn btn-primary" onclick="nextStep()">Next: Add-Ons →</button></div>
         </div>
 
         <!-- Step 4: Add-Ons -->
         <div class="booking-step-content" id="step-4">
           <h3 class="dash-subsection-title">Optional Add-Ons</h3>
+          <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem">Customize your package with luxury extras. These are optional and can be updated anytime.</p>
           <div class="addons-grid">
-            <label class="addon-card"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div><div class="addon-name">Photo Booth</div><div class="addon-price">₹4,000</div><div class="addon-desc">Floral backdrop + instant prints (2 hrs)</div></label>
-            <label class="addon-card"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 10a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4v-2z"/><circle cx="6" cy="10" r="1" fill="currentColor"/><circle cx="10" cy="10" r="1" fill="currentColor"/><path d="M6 14s1-1 2-1 2 1 2 1"/><path d="M14 8h2a4 4 0 0 1 4 4v2a4 4 0 0 1-4 4h-2"/><circle cx="18" cy="12" r="1" fill="currentColor"/></svg></div><div class="addon-name">Magic Show</div><div class="addon-price">₹5,000</div><div class="addon-desc">45-min professional magic performance</div></label>
-            <label class="addon-card"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div><div class="addon-name">Face Painting</div><div class="addon-price">₹3,000</div><div class="addon-desc">Certified artist, 2-hour session</div></label>
-            <label class="addon-card selected"><input type="checkbox" class="addon-checkbox" checked /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></div><div class="addon-name">Return Gift Sets</div><div class="addon-price">₹150/pc</div><div class="addon-desc">Luxury personalized gift bags</div></label>
-            <label class="addon-card"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a6 6 0 0 0-6 6c0 4.42 4 8 6 9 2-1 6-4.58 6-9a6 6 0 0 0-6-6Z"/><path d="M12 17l-1 2h2l-1-2"/><path d="M12 19c-1 2 1 4 0 5"/></svg></div><div class="addon-name">Balloon Arch</div><div class="addon-price">₹6,000</div><div class="addon-desc">Organic premium balloon installation</div></label>
-            <label class="addon-card"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></svg></div><div class="addon-name">Videography</div><div class="addon-price">₹8,000</div><div class="addon-desc">4K cinematic highlight video</div></label>
-            <label class="addon-card"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="m9 20 3-6-3-4 5-2 3 4-2 3 3 5"/><path d="m6 12 3-2"/></svg></div><div class="addon-name">Dance Performance</div><div class="addon-price">₹7,000</div><div class="addon-desc">Professional themed dance troupe</div></label>
-            <label class="addon-card"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 19h20L12 4 2 19z"/><path d="M2 19v-4l10-8 10 8v4"/><circle cx="12" cy="3" r="1"/></svg></div><div class="addon-name">Cake Upgrade</div><div class="addon-price">₹3,500</div><div class="addon-desc">Custom sculpted themed cake tier</div></label>
+            <label class="addon-card" data-addon="photo-booth" data-name="Photo Booth" data-price="4000"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div><div class="addon-name">Photo Booth</div><div class="addon-price">₹4,000</div><div class="addon-desc">Floral backdrop + instant prints (2 hrs)</div></label>
+            <label class="addon-card" data-addon="magic-show" data-name="Magic Show" data-price="5000"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 10a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4v-2z"/><circle cx="6" cy="10" r="1" fill="currentColor"/><circle cx="10" cy="10" r="1" fill="currentColor"/><path d="M6 14s1-1 2-1 2 1 2 1"/><path d="M14 8h2a4 4 0 0 1 4 4v2a4 4 0 0 1-4 4h-2"/><circle cx="18" cy="12" r="1" fill="currentColor"/></svg></div><div class="addon-name">Magic Show</div><div class="addon-price">₹5,000</div><div class="addon-desc">45-min professional magic performance</div></label>
+            <label class="addon-card" data-addon="face-painting" data-name="Face Painting" data-price="3000"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div><div class="addon-name">Face Painting</div><div class="addon-price">₹3,000</div><div class="addon-desc">Certified artist, 2-hour session</div></label>
+            <label class="addon-card" data-addon="return-gifts" data-name="Return Gift Sets" data-price="2250"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></div><div class="addon-name">Return Gift Sets</div><div class="addon-price">₹150/pc</div><div class="addon-desc">Luxury personalized gift bags</div></label>
+            <label class="addon-card" data-addon="balloon-arch" data-name="Balloon Arch" data-price="6000"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a6 6 0 0 0-6 6c0 4.42 4 8 6 9 2-1 6-4.58 6-9a6 6 0 0 0-6-6Z"/><path d="M12 17l-1 2h2l-1-2"/><path d="M12 19c-1 2 1 4 0 5"/></svg></div><div class="addon-name">Balloon Arch</div><div class="addon-price">₹6,000</div><div class="addon-desc">Organic premium balloon installation</div></label>
+            <label class="addon-card" data-addon="videography" data-name="Videography" data-price="8000"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></svg></div><div class="addon-name">Videography</div><div class="addon-price">₹8,000</div><div class="addon-desc">4K cinematic highlight video</div></label>
+            <label class="addon-card" data-addon="dance-performance" data-name="Dance Performance" data-price="7000"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="m9 20 3-6-3-4 5-2 3 4-2 3 3 5"/><path d="m6 12 3-2"/></svg></div><div class="addon-name">Dance Performance</div><div class="addon-price">₹7,000</div><div class="addon-desc">Professional themed dance troupe</div></label>
+            <label class="addon-card" data-addon="cake-upgrade" data-name="Cake Upgrade" data-price="3500"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 19h20L12 4 2 19z"/><path d="M2 19v-4l10-8 10 8v4"/><circle cx="12" cy="3" r="1"/></svg></div><div class="addon-name">Cake Upgrade</div><div class="addon-price">₹3,500</div><div class="addon-desc">Custom sculpted themed cake tier</div></label>
           </div>
-          <div class="step-actions"><button class="btn btn-outline" onclick="prevStep()">← Back</button><button class="btn btn-primary" onclick="nextStep()">Next: Payment →</button></div>
+          <div class="step-actions"><button type="button" class="btn btn-outline" onclick="prevStep()">← Back</button><button type="button" class="btn btn-primary" onclick="nextStep()">Next: Review & Payment →</button></div>
         </div>
 
         <!-- Step 5: Payment -->
         <div class="booking-step-content" id="step-5">
-          <h3 class="dash-subsection-title">Advance Payment</h3>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start">
+          <h3 class="dash-subsection-title">Review & Advance Payment</h3>
+          <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:2rem;align-items:start">
             <div>
-              <div class="booking-summary">
-                <h4>Booking Summary</h4>
-                <div class="summary-line"><span>Magic Moments Package</span><span>₹44,999</span></div>
-                <div class="summary-line"><span>Return Gift Sets (45 pcs)</span><span>₹6,750</span></div>
-                <div class="summary-line"><span>GST (18%)</span><span>₹9,315</span></div>
-                <div class="summary-line total"><span>Total Amount</span><span>₹61,064</span></div>
-                <div class="summary-line advance"><span>50% Advance Due</span><span>₹30,532</span></div>
+              <div class="booking-summary" id="booking-live-summary">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+                  <h4 style="margin:0">Celebration Summary</h4>
+                  <span class="party-status confirmed" style="font-size:0.75rem">Step 5 of 5</span>
+                </div>
+                
+                <!-- Dynamic Metadata Card -->
+                <div class="booking-summary-meta" id="summary-meta-block">
+                  <div class="meta-chip-row" id="summary-chips">
+                    <span class="meta-chip" id="chip-child"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><circle cx="12" cy="7" r="4"/><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/></svg> <strong id="chip-child-text">Arya (Turning 6)</strong></span>
+                    <span class="meta-chip" id="chip-theme"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5z"/></svg> <strong id="chip-theme-text">Princess Royal</strong></span>
+                    <span class="meta-chip" id="chip-datetime"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> <strong id="chip-datetime-text">Sep 27, 2026 · 2:00 PM</strong></span>
+                    <span class="meta-chip" id="chip-guests"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg> <strong id="chip-guests-text">35 Guests</strong></span>
+                  </div>
+                </div>
+
+                <div class="summary-divider" style="margin:1.25rem 0;border-top:1px dashed var(--border-primary)"></div>
+
+                <!-- Price breakdown lines -->
+                <div id="summary-price-lines">
+                  <div class="summary-line" id="line-pkg"><span id="lbl-pkg-name">Magic Moments Package</span><span id="val-pkg-price">₹44,999</span></div>
+                  <div id="summary-addons-container"></div>
+                  <div class="summary-line" id="line-gst"><span>GST (18%)</span><span id="val-gst">₹8,100</span></div>
+                  <div class="summary-line total"><span>Total Amount</span><span id="val-total">₹53,099</span></div>
+                  <div class="summary-line advance"><span>50% Advance Due Now</span><span id="val-advance">₹26,550</span></div>
+                  <div class="summary-line" style="font-size:0.8rem;color:var(--text-muted);border:none;padding-top:0.25rem"><span>Balance Due at Venue</span><span id="val-balance">₹26,549</span></div>
+                </div>
               </div>
             </div>
             <div>
               <div class="payment-options">
                 <h4 style="margin-bottom:1rem">Select Payment Method</h4>
-                <label class="payment-option selected"><input type="radio" name="payment" value="upi" checked /><span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span><div><strong>UPI / QR Code</strong><p>Instant payment via any UPI app</p></div></label>
-                <label class="payment-option"><input type="radio" name="payment" value="card" /><span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></span><div><strong>Credit / Debit Card</strong><p>Visa, Mastercard, AmEx accepted</p></div></label>
-                <label class="payment-option"><input type="radio" name="payment" value="netbanking" /><span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span><div><strong>Net Banking</strong><p>All major banks supported</p></div></label>
-                <label class="payment-option"><input type="radio" name="payment" value="emi" /><span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg></span><div><strong>EMI (0% for 6 months)</strong><p>Available on select cards</p></div></label>
+                <label class="payment-option selected"><input type="radio" name="payment" value="UPI / QR Code" checked /><span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span><div><strong>UPI / QR Code</strong><p>Instant payment via any UPI app (GPay, PhonePe, Paytm)</p></div></label>
+                <label class="payment-option"><input type="radio" name="payment" value="Credit / Debit Card" /><span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></span><div><strong>Credit / Debit Card</strong><p>Visa, Mastercard, RuPay, AmEx accepted</p></div></label>
+                <label class="payment-option"><input type="radio" name="payment" value="Net Banking" /><span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span><div><strong>Net Banking</strong><p>All major Indian banks supported</p></div></label>
+                <label class="payment-option"><input type="radio" name="payment" value="EMI" /><span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg></span><div><strong>EMI (0% for 6 months)</strong><p>Available on select credit cards</p></div></label>
               </div>
-              <button class="btn btn-gold btn-lg" style="width:100%;margin-top:1.5rem" onclick="onPaymentSuccess()">Pay ₹30,532 Now →</button>
+              <button type="button" class="btn btn-gold btn-lg" id="booking-pay-btn" style="width:100%;margin-top:1.5rem" onclick="onPaymentSuccess()">Pay ₹26,550 Now →</button>
               <p style="font-size:var(--text-xs);color:var(--text-muted);text-align:center;margin-top:0.75rem"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> 256-bit SSL secured payment</p>
+              <div class="step-actions" style="margin-top:1.25rem"><button type="button" class="btn btn-outline" onclick="prevStep()">← Back to Add-Ons</button></div>
             </div>
           </div>
         </div>
@@ -314,11 +386,11 @@
       <!-- ===== MY BOOKINGS ===== -->
       <section id="my-bookings" class="dash-section" aria-labelledby="bookings-sec-title">
         <h2 class="dash-section-title" id="bookings-sec-title">My <em class="italic-heading">Bookings</em></h2>
-        <div class="bookings-list">
+        <div class="bookings-list" id="my-bookings-list">
           <div class="booking-list-item active-booking">
             <div class="booking-list-img"><img src="../images/princess-theme.jpg" alt="Princess theme" /></div>
             <div class="booking-list-body">
-              <div class="booking-list-status confirmed"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Confirmed</div>
+              <div class="booking-list-status confirmed"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Confirmed · LL-2026-09-4821</div>
               <h3 class="booking-list-title">Arya's 6th Birthday — Princess Royal Theme</h3>
               <div class="booking-list-meta"><span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> Sep 27, 2026</span><span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2:00–7:00 PM</span><span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l2-2 2 2v2h2V7l2-2 2 2v2h2V7l2-2 2 2v14"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/><path d="M9 11h1"/><path d="M14 11h1"/></svg> Grand Ballroom</span><span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 45 Guests</span></div>
               <div class="booking-list-progress"><div class="progress-label"><span>Payment Progress</span><span>50% Paid</span></div><div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div></div>
@@ -470,21 +542,26 @@
 
   <!-- BOOKING CONFIRMATION MODAL -->
   <div class="dash-modal" id="booking-success-modal" role="dialog" aria-modal="true" style="display:none">
-    <div class="dash-modal-overlay"></div>
+    <div class="dash-modal-overlay" onclick="closeModal()"></div>
     <div class="dash-modal-content">
-      <div style="text-align:center;padding:3rem">
-        <div style="font-size:4rem;margin-bottom:1rem"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 11 7 7-9 2z"/><path d="m15 4 5 5"/><path d="m11 2 1 3"/><path d="m18 11 3 1"/><path d="m14 10 6-6"/><path d="m7 17-3 3"/><path d="m17 7 2-2"/></svg></div>
-        <h2 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:800;color:var(--text-primary);margin-bottom:0.75rem">Booking Confirmed!</h2>
-        <p style="color:var(--text-muted);margin-bottom:2rem">Your advance payment has been received. Your party is officially booked! Booking ID: <strong>LL-2026-09-4822</strong></p>
-        <div style="background:var(--bg-glass-dark);border-radius:var(--border-radius-lg);padding:1.5rem;margin-bottom:2rem;text-align:left">
-          <div class="detail-row"><span>Package</span><strong>Magic Moments</strong></div>
-          <div class="detail-row"><span>Theme</span><strong>Princess Royal</strong></div>
-          <div class="detail-row"><span>Date</span><strong>To be confirmed</strong></div>
-          <div class="detail-row"><span>Amount Paid</span><strong>₹30,532</strong></div>
+      <div style="text-align:center;padding:2.5rem 2rem">
+        <div style="font-size:3.5rem;margin-bottom:0.75rem;color:var(--color-royal-lilac)"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:64px;height:64px"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <h2 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:800;color:var(--text-primary);margin-bottom:0.5rem">Booking Confirmed!</h2>
+        <p style="color:var(--text-muted);margin-bottom:1.75rem" id="modal-success-desc">Your 50% advance payment has been received. Your celebration is officially reserved! Booking ID: <strong id="modal-booking-id" style="color:var(--color-royal-lilac)">LL-2026-09-4822</strong></p>
+        
+        <div style="background:var(--bg-glass-dark);border:1px solid var(--border-primary);border-radius:var(--border-radius-lg);padding:1.5rem;margin-bottom:2rem;text-align:left">
+          <div class="detail-row"><span>Birthday Celebrant</span><strong id="modal-child-name">Arya (Turning 6)</strong></div>
+          <div class="detail-row"><span>Package</span><strong id="modal-pkg-name">Magic Moments</strong></div>
+          <div class="detail-row"><span>Theme</span><strong id="modal-theme-name">Princess Royal</strong></div>
+          <div class="detail-row"><span>Date & Time</span><strong id="modal-datetime">September 27, 2026 · 2:00 PM – 7:00 PM</strong></div>
+          <div class="detail-row"><span>Guest Count</span><strong id="modal-guests">35 Guests</strong></div>
+          <div class="detail-row" style="border-top:1px dashed var(--border-light);padding-top:0.75rem;margin-top:0.5rem"><span>50% Advance Paid</span><strong id="modal-paid-amount" style="color:var(--color-royal-lilac);font-size:1.1rem">₹26,550</strong></div>
+          <div class="detail-row"><span>Remaining Balance</span><strong id="modal-balance-amount" style="color:var(--text-muted)">₹26,549 (Due on event day)</strong></div>
         </div>
+        
         <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-          <button class="btn btn-primary" onclick="closeModal()">Go to Dashboard</button>
-          <button class="btn btn-outline" onclick="closeModal()">Download Receipt</button>
+          <button type="button" class="btn btn-primary" onclick="goToMyBookings()">View in My Bookings →</button>
+          <button type="button" class="btn btn-outline" onclick="closeModal()">Back to Dashboard Overview</button>
         </div>
       </div>
     </div>
@@ -521,9 +598,16 @@
       window.scrollTo(0,0);
     }
 
-    // Booking flow
+    // ===== BOOKING SYSTEM DATA & STATE =====
+    const PACKAGES = {
+      sparkle: { key: 'sparkle', name: 'Sparkle Soirée', price: 24999, capacity: 30, hall: 'Garden Pavilion' },
+      magic: { key: 'magic', name: 'Magic Moments', price: 44999, capacity: 60, hall: 'Grand Ballroom' },
+      royale: { key: 'royale', name: 'Grand Royale', price: 89999, capacity: 150, hall: 'Royal Palace Hall' }
+    };
+
     let currentStep = 1;
     const totalSteps = 5;
+    let currentBookingDetails = {};
 
     function goToStep(step) {
       if (step < 1 || step > totalSteps) return;
@@ -541,22 +625,283 @@
       }
     }
 
+    // Validation for each step
+    function validateCurrentStep(step) {
+      let isValid = true;
+
+      // STEP 1: Package Selection
+      if (step === 1) {
+        const selectedPkgEl = document.querySelector('.booking-pkg-card.selected');
+        const errEl = document.getElementById('step-1-error');
+        if (!selectedPkgEl) {
+          if (errEl) {
+            errEl.style.display = 'flex';
+            errEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          return false;
+        }
+        if (errEl) errEl.style.display = 'none';
+        return true;
+      }
+
+      // STEP 2: Theme Selection
+      if (step === 2) {
+        const selectedThemeEl = document.querySelector('.booking-theme-card.selected');
+        const customThemeInput = document.getElementById('booking-custom-theme');
+        const customVal = customThemeInput ? customThemeInput.value.trim() : '';
+        const errEl = document.getElementById('step-2-error');
+
+        if (!selectedThemeEl && !customVal) {
+          if (errEl) {
+            errEl.style.display = 'flex';
+            errEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          return false;
+        }
+        if (errEl) errEl.style.display = 'none';
+        return true;
+      }
+
+      // STEP 3: Guest & Event Details
+      if (step === 3) {
+        const nameInput = document.getElementById('booking-child-name');
+        const ageInput = document.getElementById('booking-child-age');
+        const dateInput = document.getElementById('booking-date-input');
+        const timeSelect = document.getElementById('booking-time-select');
+
+        const errName = document.getElementById('err-booking-child-name');
+        const errAge = document.getElementById('err-booking-child-age');
+        const errDate = document.getElementById('err-booking-date');
+        const errTime = document.getElementById('err-booking-time');
+
+        let firstInvalid = null;
+
+        // 1. Child Name
+        const nameVal = nameInput ? nameInput.value.trim() : '';
+        if (!nameVal || nameVal.length < 2) {
+          isValid = false;
+          if (nameInput) nameInput.classList.add('is-invalid');
+          if (errName) errName.style.display = 'block';
+          if (!firstInvalid) firstInvalid = nameInput;
+        } else {
+          if (nameInput) nameInput.classList.remove('is-invalid');
+          if (errName) errName.style.display = 'none';
+        }
+
+        // 2. Child Age
+        const ageVal = ageInput ? parseInt(ageInput.value) : NaN;
+        if (isNaN(ageVal) || ageVal < 1 || ageVal > 18) {
+          isValid = false;
+          if (ageInput) ageInput.classList.add('is-invalid');
+          if (errAge) errAge.style.display = 'block';
+          if (!firstInvalid) firstInvalid = ageInput;
+        } else {
+          if (ageInput) ageInput.classList.remove('is-invalid');
+          if (errAge) errAge.style.display = 'none';
+        }
+
+        // 3. Party Date
+        const dateVal = dateInput ? dateInput.value : '';
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const enteredDate = dateVal ? new Date(dateVal + 'T00:00:00') : null;
+
+        if (!dateVal || isNaN(enteredDate?.getTime()) || enteredDate < today) {
+          isValid = false;
+          if (dateInput) dateInput.classList.add('is-invalid');
+          if (errDate) errDate.style.display = 'block';
+          if (!firstInvalid) firstInvalid = dateInput;
+        } else {
+          if (dateInput) dateInput.classList.remove('is-invalid');
+          if (errDate) errDate.style.display = 'none';
+        }
+
+        // 4. Time Slot
+        const timeVal = timeSelect ? timeSelect.value : '';
+        if (!timeVal) {
+          isValid = false;
+          if (timeSelect) timeSelect.classList.add('is-invalid');
+          if (errTime) errTime.style.display = 'block';
+          if (!firstInvalid) firstInvalid = timeSelect;
+        } else {
+          if (timeSelect) timeSelect.classList.remove('is-invalid');
+          if (errTime) errTime.style.display = 'none';
+        }
+
+        if (!isValid && firstInvalid) {
+          firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstInvalid.focus();
+          firstInvalid.classList.add('field-shake');
+          setTimeout(() => firstInvalid.classList.remove('field-shake'), 400);
+        }
+
+        return isValid;
+      }
+
+      // STEP 4: Add-Ons (Optional)
+      return true;
+    }
+
     function nextStep() {
+      if (!validateCurrentStep(currentStep)) {
+        return;
+      }
+
       if (currentStep < totalSteps) {
+        if (currentStep + 1 === 5) {
+          renderBookingSummary();
+        }
         goToStep(currentStep + 1);
+        const bookingSec = document.getElementById('booking');
+        if (bookingSec) {
+          window.scrollTo({ top: bookingSec.offsetTop - 20, behavior: 'smooth' });
+        }
       }
     }
 
     function prevStep() {
       if (currentStep > 1) {
         goToStep(currentStep - 1);
+        const bookingSec = document.getElementById('booking');
+        if (bookingSec) {
+          window.scrollTo({ top: bookingSec.offsetTop - 20, behavior: 'smooth' });
+        }
       }
     }
 
+    // Dynamic Summary Calculation
+    function renderBookingSummary() {
+      const selectedPkgEl = document.querySelector('.booking-pkg-card.selected');
+      const pkgKey = selectedPkgEl ? selectedPkgEl.dataset.package : 'magic';
+      const pkg = PACKAGES[pkgKey] || PACKAGES.magic;
+      const pkgPrice = pkg.price;
+
+      const selectedThemeEl = document.querySelector('.booking-theme-card.selected');
+      const customVal = document.getElementById('booking-custom-theme')?.value?.trim();
+      let themeName = 'Princess Royal';
+      let themeId = 'princess';
+      if (selectedThemeEl) {
+        themeName = selectedThemeEl.dataset.name || selectedThemeEl.querySelector('.theme-card-label')?.textContent?.trim() || 'Princess Royal';
+        themeId = selectedThemeEl.dataset.theme || 'princess';
+      } else if (customVal) {
+        themeName = 'Custom: ' + customVal;
+        themeId = 'custom';
+      }
+
+      const childName = document.getElementById('booking-child-name')?.value?.trim() || 'Arya';
+      const childAge = document.getElementById('booking-child-age')?.value || '6';
+      const partyDate = document.getElementById('booking-date-input')?.value || '';
+      const timeSlot = document.getElementById('booking-time-select')?.value || '2:00 PM – 5:00 PM';
+
+      const adults = parseInt(document.querySelector('#counter-adults .counter-value')?.textContent) || 20;
+      const children = parseInt(document.querySelector('#counter-children .counter-value')?.textContent) || 15;
+      const infants = parseInt(document.querySelector('#counter-infants .counter-value')?.textContent) || 0;
+      const totalGuests = adults + children + infants;
+
+      // Add-ons calculation
+      let addonsTotal = 0;
+      const addonLines = [];
+      document.querySelectorAll('.addon-card').forEach(card => {
+        const checkbox = card.querySelector('input[type="checkbox"]');
+        if (checkbox && checkbox.checked) {
+          const addonKey = card.dataset.addon;
+          const addonName = card.dataset.name || card.querySelector('.addon-name')?.textContent?.trim() || 'Add-On';
+          let price = parseInt(card.dataset.price) || 0;
+          if (addonKey === 'return-gifts') {
+            price = 150 * children;
+          }
+          addonsTotal += price;
+          addonLines.push({ name: addonName + (addonKey === 'return-gifts' ? ` (${children} pcs)` : ''), price });
+        }
+      });
+
+      const subtotal = pkgPrice + addonsTotal;
+      const gst = Math.round(subtotal * 0.18);
+      const totalAmount = subtotal + gst;
+      const advanceDue = Math.round(totalAmount / 2);
+      const balanceDue = totalAmount - advanceDue;
+
+      // Format Date
+      let formattedDate = partyDate;
+      if (partyDate) {
+        const d = new Date(partyDate + 'T00:00:00');
+        if (!isNaN(d.getTime())) {
+          formattedDate = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+      }
+
+      // Update Summary Chips
+      const chipChild = document.getElementById('chip-child-text');
+      if (chipChild) chipChild.textContent = `${childName} (Turning ${childAge})`;
+      const chipTheme = document.getElementById('chip-theme-text');
+      if (chipTheme) chipTheme.textContent = themeName;
+      const chipDate = document.getElementById('chip-datetime-text');
+      if (chipDate) chipDate.textContent = `${formattedDate} · ${timeSlot.split('–')[0].trim()}`;
+      const chipGuests = document.getElementById('chip-guests-text');
+      if (chipGuests) chipGuests.textContent = `${totalGuests} Guests (${adults}A, ${children}C)`;
+
+      // Update Breakdown Lines
+      const lblPkg = document.getElementById('lbl-pkg-name');
+      if (lblPkg) lblPkg.textContent = `${pkg.name} Package`;
+      const valPkg = document.getElementById('val-pkg-price');
+      if (valPkg) valPkg.textContent = '₹' + pkgPrice.toLocaleString('en-IN');
+
+      const addonsContainer = document.getElementById('summary-addons-container');
+      if (addonsContainer) {
+        if (addonLines.length > 0) {
+          addonsContainer.innerHTML = addonLines.map(a => `
+            <div class="summary-line addon-item">
+              <span>✦ ${a.name}</span>
+              <span>₹${a.price.toLocaleString('en-IN')}</span>
+            </div>
+          `).join('');
+        } else {
+          addonsContainer.innerHTML = '';
+        }
+      }
+
+      const valGst = document.getElementById('val-gst');
+      if (valGst) valGst.textContent = '₹' + gst.toLocaleString('en-IN');
+      const valTotal = document.getElementById('val-total');
+      if (valTotal) valTotal.textContent = '₹' + totalAmount.toLocaleString('en-IN');
+      const valAdvance = document.getElementById('val-advance');
+      if (valAdvance) valAdvance.textContent = '₹' + advanceDue.toLocaleString('en-IN');
+      const valBalance = document.getElementById('val-balance');
+      if (valBalance) valBalance.textContent = '₹' + balanceDue.toLocaleString('en-IN');
+
+      const payBtn = document.getElementById('booking-pay-btn');
+      if (payBtn) payBtn.textContent = `Pay 50% Advance (₹${advanceDue.toLocaleString('en-IN')}) Now →`;
+
+      currentBookingDetails = {
+        pkg, themeName, themeId, childName, childAge, partyDate, formattedDate, timeSlot,
+        adults, children, infants, totalGuests,
+        addonLines, subtotal, gst, totalAmount, advanceDue, balanceDue
+      };
+    }
+
+    // Capacity checking helper
+    function checkCapacityWarning() {
+      const selectedPkgEl = document.querySelector('.booking-pkg-card.selected');
+      const pkgKey = selectedPkgEl ? selectedPkgEl.dataset.package : 'sparkle';
+      const pkg = PACKAGES[pkgKey] || PACKAGES.sparkle;
+      const adults = parseInt(document.querySelector('#counter-adults .counter-value')?.textContent) || 0;
+      const children = parseInt(document.querySelector('#counter-children .counter-value')?.textContent) || 0;
+      const total = adults + children;
+      const warnEl = document.getElementById('capacity-warning');
+      if (warnEl) {
+        if (total > pkg.capacity) {
+          warnEl.style.display = 'block';
+          warnEl.textContent = `💡 Note: Selected ${pkg.name} package includes up to ${pkg.capacity} guests. Extra guests (${total - pkg.capacity}) can be accommodated with additional catering.`;
+        } else {
+          warnEl.style.display = 'none';
+        }
+      }
+    }
+
+    // Package Selection
     function selectBookingPackage(pkgKey) {
       if (!pkgKey) return;
       const normalized = pkgKey.toLowerCase().trim();
-      // Map aliases if needed (e.g. enchanted -> sparkle)
       const aliasMap = {
         'enchanted': 'sparkle',
         'enchanted-beginnings': 'sparkle',
@@ -569,26 +914,33 @@
       if (card) {
         document.querySelectorAll('.booking-pkg-card').forEach(c => c.classList.remove('selected'));
         card.classList.add('selected');
+        const err = document.getElementById('step-1-error');
+        if (err) err.style.display = 'none';
+        checkCapacityWarning();
       }
     }
 
-    // Package selection
     document.querySelectorAll('.booking-pkg-card').forEach(card => {
       card.addEventListener('click', () => {
         document.querySelectorAll('.booking-pkg-card').forEach(c => c.classList.remove('selected'));
         card.classList.add('selected');
+        const err = document.getElementById('step-1-error');
+        if (err) err.style.display = 'none';
+        checkCapacityWarning();
       });
     });
 
-    // Theme selection
+    // Theme Selection
     document.querySelectorAll('.booking-theme-card').forEach(card => {
       card.addEventListener('click', () => {
         document.querySelectorAll('.booking-theme-card').forEach(c => c.classList.remove('selected'));
         card.classList.add('selected');
+        const err = document.getElementById('step-2-error');
+        if (err) err.style.display = 'none';
       });
     });
 
-    // Add-on selection
+    // Add-On Selection
     document.querySelectorAll('.addon-card').forEach(card => {
       card.addEventListener('click', (e) => {
         const checkbox = card.querySelector('input[type="checkbox"]');
@@ -599,9 +951,278 @@
       });
     });
 
-    // Payment
+    // Guest Counter Buttons
+    document.querySelectorAll('.guest-counter').forEach(counter => {
+      const minus = counter.querySelector('.counter-minus');
+      const plus = counter.querySelector('.counter-plus');
+      const valSpan = counter.querySelector('.counter-value');
+      const min = parseInt(counter.dataset.min) || 0;
+      const max = parseInt(counter.dataset.max) || 200;
+
+      minus?.addEventListener('click', (e) => {
+        e.preventDefault();
+        let val = parseInt(valSpan.textContent) || min;
+        if (val > min) {
+          val--;
+          valSpan.textContent = val;
+          checkCapacityWarning();
+        }
+      });
+
+      plus?.addEventListener('click', (e) => {
+        e.preventDefault();
+        let val = parseInt(valSpan.textContent) || min;
+        if (val < max) {
+          val++;
+          valSpan.textContent = val;
+          checkCapacityWarning();
+        }
+      });
+    });
+
+    // Real-Time Input Error Clearance
+    document.getElementById('booking-child-name')?.addEventListener('input', function() {
+      if (this.value.trim().length >= 2) {
+        this.classList.remove('is-invalid');
+        const err = document.getElementById('err-booking-child-name');
+        if (err) err.style.display = 'none';
+      }
+    });
+
+    document.getElementById('booking-child-age')?.addEventListener('input', function() {
+      const val = parseInt(this.value);
+      if (!isNaN(val) && val >= 1 && val <= 18) {
+        this.classList.remove('is-invalid');
+        const err = document.getElementById('err-booking-child-age');
+        if (err) err.style.display = 'none';
+      }
+    });
+
+    document.getElementById('booking-date-input')?.addEventListener('change', function() {
+      if (this.value) {
+        this.classList.remove('is-invalid');
+        const err = document.getElementById('err-booking-date');
+        if (err) err.style.display = 'none';
+      }
+    });
+
+    document.getElementById('booking-time-select')?.addEventListener('change', function() {
+      if (this.value) {
+        this.classList.remove('is-invalid');
+        const err = document.getElementById('err-booking-time');
+        if (err) err.style.display = 'none';
+      }
+    });
+
+    document.getElementById('booking-custom-theme')?.addEventListener('input', function() {
+      if (this.value.trim().length > 0) {
+        const err = document.getElementById('step-2-error');
+        if (err) err.style.display = 'none';
+      }
+    });
+
+    // Date Input minimum date (tomorrow)
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const minDateStr = tomorrow.toISOString().split('T')[0];
+    const dateInputEl = document.getElementById('booking-date-input');
+    if (dateInputEl) {
+      dateInputEl.min = minDateStr;
+    }
+
+    // Payment method selection
+    document.querySelectorAll('.payment-option').forEach(opt => {
+      opt.addEventListener('click', () => {
+        document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('selected'));
+        opt.classList.add('selected');
+        const radio = opt.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
+      });
+    });
+
+    // Payment Success & State Synchronization
     function onPaymentSuccess() {
+      if (!currentBookingDetails.pkg) {
+        renderBookingSummary();
+      }
+      const b = currentBookingDetails;
+      const bookingId = 'LL-2026-' + Math.floor(1000 + Math.random() * 9000);
+      const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value || 'UPI / QR Code';
+
+      const newBooking = {
+        id: bookingId,
+        childName: b.childName || 'Arya',
+        childAge: b.childAge || '6',
+        themeName: b.themeName || 'Princess Royal',
+        themeId: b.themeId || 'princess',
+        packageName: b.pkg?.name || 'Magic Moments',
+        hall: b.pkg?.hall || 'Grand Ballroom',
+        date: b.partyDate || minDateStr,
+        formattedDate: b.formattedDate || 'Upcoming Date',
+        timeSlot: b.timeSlot || '2:00 PM – 5:00 PM',
+        totalGuests: b.totalGuests || 35,
+        adults: b.adults || 20,
+        children: b.children || 15,
+        totalAmount: b.totalAmount || 53099,
+        advancePaid: b.advanceDue || 26550,
+        balanceDue: b.balanceDue || 26549,
+        paymentMethod: paymentMethod,
+        status: 'Confirmed',
+        timestamp: Date.now()
+      };
+
+      // Save to localStorage
+      let saved = [];
+      try {
+        saved = JSON.parse(localStorage.getItem('littlelux_user_bookings') || '[]');
+      } catch (e) { saved = []; }
+      saved.unshift(newBooking);
+      localStorage.setItem('littlelux_user_bookings', JSON.stringify(saved));
+
+      // Populate Success Modal
+      document.getElementById('modal-booking-id').textContent = bookingId;
+      document.getElementById('modal-child-name').textContent = `${newBooking.childName} (Turning ${newBooking.childAge})`;
+      document.getElementById('modal-pkg-name').textContent = newBooking.packageName;
+      document.getElementById('modal-theme-name').textContent = newBooking.themeName;
+      document.getElementById('modal-datetime').textContent = `${newBooking.formattedDate} · ${newBooking.timeSlot}`;
+      document.getElementById('modal-guests').textContent = `${newBooking.totalGuests} Guests`;
+      document.getElementById('modal-paid-amount').textContent = `₹${newBooking.advancePaid.toLocaleString('en-IN')}`;
+      document.getElementById('modal-balance-amount').textContent = `₹${newBooking.balanceDue.toLocaleString('en-IN')} (Due on event day)`;
+
+      // Show Modal
       document.getElementById('booking-success-modal').style.display = 'flex';
+
+      // Prepend to My Bookings UI
+      prependBookingCardToUI(newBooking);
+
+      // Update Overview stats & upcoming party card
+      updateOverviewWithBooking(newBooking, saved.length);
+
+      // Add Notification
+      addBookingNotification(newBooking);
+
+      // Toast notification
+      if (window.LittleLux && window.LittleLux.Toast) {
+        window.LittleLux.Toast.show(`🎉 Celebration Booked! Booking ID: ${bookingId}`, 'success');
+      }
+
+      // Reset form to step 1
+      resetBookingForm();
+    }
+
+    function prependBookingCardToUI(bk) {
+      const list = document.getElementById('my-bookings-list');
+      if (!list) return;
+
+      let imgUrl = '../images/princess-theme.jpg';
+      const thLower = bk.themeName.toLowerCase();
+      if (thLower.includes('superhero')) imgUrl = '../images/superhero-theme.jpg';
+      else if (thLower.includes('jungle')) imgUrl = '../images/jungle-theme.jpg';
+      else if (thLower.includes('balloon')) imgUrl = '../images/balloon-decor.jpg';
+      else if (thLower.includes('sweet') || thLower.includes('cake')) imgUrl = '../images/birthday-cake.jpg';
+      else if (thLower.includes('gala')) imgUrl = '../images/hero-hall.jpg';
+
+      const itemHtml = `
+        <div class="booking-list-item active-booking" style="border-left:4px solid var(--color-royal-lilac);animation:slide-up 0.4s ease">
+          <div class="booking-list-img"><img src="${imgUrl}" alt="${bk.themeName}" /></div>
+          <div class="booking-list-body">
+            <div class="booking-list-status confirmed"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Confirmed · ${bk.id}</div>
+            <h3 class="booking-list-title">${bk.childName}'s ${bk.childAge}th Birthday — ${bk.themeName}</h3>
+            <div class="booking-list-meta">
+              <span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> ${bk.formattedDate}</span>
+              <span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> ${bk.timeSlot}</span>
+              <span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l2-2 2 2v2h2V7l2-2 2 2v2h2V7l2-2 2 2v14"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/><path d="M9 11h1"/><path d="M14 11h1"/></svg> ${bk.hall}</span>
+              <span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> ${bk.totalGuests} Guests</span>
+            </div>
+            <div class="booking-list-progress"><div class="progress-label"><span>Payment Progress</span><span>50% Advance Paid (₹${bk.advancePaid.toLocaleString('en-IN')})</span></div><div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div></div>
+          </div>
+          <div class="booking-list-actions"><button type="button" class="btn btn-primary btn-sm" onclick="showSection('party-details')">View Details</button><button type="button" class="btn btn-outline btn-sm">Download Invoice</button></div>
+        </div>
+      `;
+      list.insertAdjacentHTML('afterbegin', itemHtml);
+    }
+
+    function updateOverviewWithBooking(bk, totalBookingsCount) {
+      const titleEl = document.getElementById('overview-party-title');
+      if (titleEl) titleEl.textContent = `${bk.childName}'s ${bk.childAge}th Birthday — ${bk.themeName}`;
+
+      const dateEl = document.getElementById('overview-party-date');
+      if (dateEl) dateEl.innerHTML = `<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> ${bk.formattedDate}`;
+
+      const timeEl = document.getElementById('overview-party-time');
+      if (timeEl) timeEl.innerHTML = `<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> ${bk.timeSlot}`;
+
+      const hallEl = document.getElementById('overview-party-hall');
+      if (hallEl) hallEl.innerHTML = `<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l2-2 2 2v2h2V7l2-2 2 2v2h2V7l2-2 2 2v14"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/><path d="M9 11h1"/><path d="M14 11h1"/></svg> ${bk.hall}`;
+
+      const guestsEl = document.getElementById('overview-party-guests');
+      if (guestsEl) guestsEl.innerHTML = `<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> ${bk.totalGuests} Guests`;
+
+      const countStat = document.getElementById('stat-upcoming-count');
+      if (countStat) countStat.textContent = Math.max(1, totalBookingsCount);
+
+      const pkgStat = document.getElementById('stat-pkg-value');
+      if (pkgStat) pkgStat.textContent = '₹' + bk.totalAmount.toLocaleString('en-IN');
+
+      const paidStat = document.getElementById('stat-amount-paid');
+      if (paidStat) paidStat.textContent = '₹' + bk.advancePaid.toLocaleString('en-IN');
+
+      if (bk.date) {
+        const partyD = new Date(bk.date + 'T00:00:00');
+        const now = new Date();
+        now.setHours(0, 0, 0, 0);
+        const diffTime = partyD.getTime() - now.getTime();
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        const daysStat = document.getElementById('stat-days-until');
+        if (daysStat) daysStat.textContent = diffDays > 0 ? diffDays : '0';
+      }
+    }
+
+    function addBookingNotification(bk) {
+      const notifList = document.querySelector('.notifications-list');
+      if (!notifList) return;
+      const notifItem = `
+        <div class="notif-item unread" style="animation:slide-up 0.3s ease">
+          <div class="notif-icon new"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 11 7 7-9 2z"/><path d="m15 4 5 5"/><path d="m11 2 1 3"/><path d="m18 11 3 1"/><path d="m14 10 6-6"/><path d="m7 17-3 3"/><path d="m17 7 2-2"/></svg></div>
+          <div class="notif-body">
+            <div class="notif-title">New Celebration Booked!</div>
+            <div class="notif-desc">${bk.childName}'s ${bk.childAge}th Birthday (${bk.themeName}) on ${bk.formattedDate} is confirmed. Booking ID: ${bk.id}. 50% advance received.</div>
+            <div class="notif-time">Just now</div>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" onclick="showSection('my-bookings')">View</button>
+        </div>
+      `;
+      notifList.insertAdjacentHTML('afterbegin', notifItem);
+    }
+
+    function resetBookingForm() {
+      // Clear inputs
+      const nameInput = document.getElementById('booking-child-name');
+      if (nameInput) nameInput.value = '';
+      const ageInput = document.getElementById('booking-child-age');
+      if (ageInput) ageInput.value = '';
+      const dateInput = document.getElementById('booking-date-input');
+      if (dateInput) dateInput.value = '';
+      const timeSelect = document.getElementById('booking-time-select');
+      if (timeSelect) timeSelect.value = '';
+      const customThemeInput = document.getElementById('booking-custom-theme');
+      if (customThemeInput) customThemeInput.value = '';
+
+      // Reset cards
+      document.querySelectorAll('.booking-pkg-card').forEach(c => c.classList.remove('selected'));
+      document.querySelectorAll('.booking-theme-card').forEach(c => c.classList.remove('selected'));
+      document.querySelectorAll('.addon-card').forEach(c => {
+        c.classList.remove('selected');
+        const chk = c.querySelector('input[type="checkbox"]');
+        if (chk) chk.checked = false;
+      });
+
+      // Default Magic Moments
+      selectBookingPackage('magic');
+      document.querySelector('.booking-theme-card[data-theme="princess"]')?.classList.add('selected');
+
+      // Reset Step
+      goToStep(1);
     }
 
     function closeModal() {
@@ -609,13 +1230,30 @@
       showSection('overview');
     }
 
+    function goToMyBookings() {
+      document.getElementById('booking-success-modal').style.display = 'none';
+      showSection('my-bookings');
+    }
+
+    function loadSavedBookings() {
+      try {
+        const saved = JSON.parse(localStorage.getItem('littlelux_user_bookings') || '[]');
+        if (Array.isArray(saved) && saved.length > 0) {
+          saved.slice().reverse().forEach(bk => prependBookingCardToUI(bk));
+          updateOverviewWithBooking(saved[0], saved.length + 1);
+        }
+      } catch (e) {
+        console.error('Error loading saved bookings:', e);
+      }
+    }
+
     // Sidebar mobile
     const sidebar = document.getElementById('dash-sidebar');
     const menuBtn = document.getElementById('dash-menu-btn');
     const closeBtn = document.getElementById('dash-sidebar-close');
 
-    function openSidebar() { sidebar.classList.add('open'); menuBtn?.setAttribute('aria-expanded','true'); }
-    function closeSidebar() { sidebar.classList.remove('open'); menuBtn?.setAttribute('aria-expanded','false'); }
+    function openSidebar() { sidebar?.classList.add('open'); menuBtn?.setAttribute('aria-expanded','true'); }
+    function closeSidebar() { sidebar?.classList.remove('open'); menuBtn?.setAttribute('aria-expanded','false'); }
 
     menuBtn?.addEventListener('click', openSidebar);
     closeBtn?.addEventListener('click', closeSidebar);
@@ -625,14 +1263,6 @@
       link.addEventListener('click', (e) => {
         e.preventDefault();
         showSection(link.dataset.section);
-      });
-    });
-
-    // Payment method selection
-    document.querySelectorAll('.payment-option').forEach(opt => {
-      opt.addEventListener('click', () => {
-        document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('selected'));
-        opt.classList.add('selected');
       });
     });
 
@@ -724,8 +1354,12 @@
 
     window.addEventListener('hashchange', handleHashNav);
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', handleHashNav);
+      document.addEventListener('DOMContentLoaded', () => {
+        loadSavedBookings();
+        handleHashNav();
+      });
     } else {
+      loadSavedBookings();
       handleHashNav();
     }
   </script>
