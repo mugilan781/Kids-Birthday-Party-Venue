@@ -77,30 +77,54 @@
 </div></div></section>
 
   <!-- SECTION 1: FEATURED POST -->
-  <section class="section">
+  <section class="section blog-featured-section">
     <div class="container">
-      <div class="text-center reveal" style="margin-bottom:2rem"><div class="section-tag">Featured Article</div><h2 class="section-title">Our Latest <em class="italic-heading">Story</em></h2></div>
-      <div class="reveal" style="display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center;background:var(--bg-surface);border:1px solid var(--border-primary);border-radius:var(--border-radius-2xl);overflow:hidden">
-        <div style="overflow:hidden"><img src="../images/princess-theme.jpg" alt="Featured article on princess theme parties" style="width:100%;height:100%;object-fit:cover;min-height:400px;transition:transform 0.6s ease;cursor:zoom-in" data-zoom /></div>
-        <div style="padding:3rem">
-          <div class="blog-card-cat" style="position:static;display:inline-flex;margin-bottom:1rem">Theme Inspiration</div>
-          <div class="blog-card-date">September 1, 2026</div>
-          <h2 style="font-family:var(--font-display);font-size:var(--text-4xl);font-weight:700;line-height:1.2;color:var(--text-primary);margin-bottom:1rem">The Ultimate Guide to Planning a Luxury Princess Birthday Party</h2>
-          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem">From royal throne selections to tiara place settings, we reveal the secrets behind crafting a truly extraordinary Princess Royal experience that leaves every guest breathless.</p>
-          <div class="blog-card-author">
-            <div class="blog-author-avatar">PA</div>
-            <div><div class="blog-author-name">Preethi Arora · Founder</div><div class="blog-read-time">8 min read</div></div>
-          </div>
-          <a href="blog-details.html" class="btn btn-primary" style="margin-top:1.5rem">Read Full Article →</a>
-        </div>
+      <div class="text-center reveal" style="margin-bottom:2.5rem">
+        <div class="section-tag">Featured Article</div>
+        <h2 class="section-title">Our Latest <em class="italic-heading">Story</em></h2>
       </div>
+      <article class="reveal blog-featured">
+        <div class="blog-featured-img-wrap">
+          <img src="../images/princess-theme.jpg" alt="Featured article on princess theme parties" class="blog-featured-img" />
+        </div>
+        <div class="blog-featured-content">
+          <div>
+            <div class="blog-featured-top">
+              <span class="blog-card-cat">Theme Inspiration</span>
+              <span class="blog-card-date">September 1, 2026</span>
+            </div>
+            <h2 class="blog-featured-title">
+              <a href="blog-details.html">The Ultimate Guide to Planning a Luxury Princess Birthday Party</a>
+            </h2>
+            <p class="blog-featured-excerpt">From royal throne selections to tiara place settings, we reveal the secrets behind crafting a truly extraordinary Princess Royal experience.</p>
+            <div class="blog-featured-highlights">
+              <span class="featured-tag"><svg class="svg-icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg> Royal Throne Décor</span>
+              <span class="featured-tag"><svg class="svg-icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Tiara Place Settings</span>
+              <span class="featured-tag"><svg class="svg-icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M2 21h20"/></svg> Castle Cakes</span>
+            </div>
+          </div>
+          <div class="blog-featured-footer">
+            <div class="blog-card-author">
+              <div class="blog-author-avatar">PA</div>
+              <div class="blog-author-info">
+                <div class="blog-author-name">Preethi Arora</div>
+                <div class="blog-read-time">Founder · 8 min read</div>
+              </div>
+            </div>
+            <a href="blog-details.html" class="btn btn-primary btn-sm blog-featured-btn">Read Full Article &rarr;</a>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
   <!-- SECTION 2: BLOG GRID -->
   <section class="section bg-pattern">
     <div class="container">
-      <div class="text-center reveal" style="margin-bottom:1rem"><div class="section-tag">All Articles</div><h2 class="section-title">More <em class="italic-heading">Stories</em></h2></div>
+      <div class="text-center reveal" style="margin-bottom:1rem">
+        <div class="section-tag">All Articles</div>
+        <h2 class="section-title">More <em class="italic-heading">Stories</em></h2>
+      </div>
       <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem">
         <button class="filter-btn active" data-filter="all">All Topics</button>
         <button class="filter-btn" data-filter="themes">Themes</button>
@@ -109,62 +133,145 @@
         <button class="filter-btn" data-filter="photo">Photography</button>
       </div>
       <div class="blog-grid">
+        <!-- Article 1 -->
         <article class="blog-card gallery-item reveal" data-delay="0.1" data-category="themes">
-          <div class="blog-card-img-wrap"><img src="../images/superhero-theme.jpg" alt="Superhero party guide" class="blog-card-img" /><span class="blog-card-cat">Themes</span></div>
+          <div class="blog-card-img-wrap">
+            <img src="../images/superhero-theme.jpg" alt="Superhero party guide" class="blog-card-img" />
+            <span class="blog-card-cat">Themes</span>
+          </div>
           <div class="blog-card-body">
             <div class="blog-card-date">August 28, 2026</div>
             <h3 class="blog-card-title"><a href="blog-details.html">How to Plan the Epic Superhero Birthday Party Your Child Deserves</a></h3>
             <p class="blog-card-excerpt">Capes, comic-art cakes and action-packed games — our superhero party playbook covers everything from invitations to farewell bags.</p>
-            <div class="blog-card-author"><div class="blog-author-avatar">RK</div><div><div class="blog-author-name">Riya Kapoor</div><div class="blog-read-time">6 min read</div></div></div>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div class="blog-author-avatar">RK</div>
+                <div class="blog-author-info">
+                  <div class="blog-author-name">Riya Kapoor</div>
+                  <div class="blog-read-time">Party Specialist · 6 min read</div>
+                </div>
+              </div>
+              <a href="blog-details.html" class="btn btn-outline btn-sm blog-card-btn">Read More &rarr;</a>
+            </div>
           </div>
         </article>
+
+        <!-- Article 2 -->
         <article class="blog-card gallery-item reveal" data-delay="0.2" data-category="food">
-          <div class="blog-card-img-wrap"><img src="../images/birthday-cake.jpg" alt="Birthday cake trends 2026" class="blog-card-img" /><span class="blog-card-cat">Food</span></div>
+          <div class="blog-card-img-wrap">
+            <img src="../images/birthday-cake.jpg" alt="Birthday cake trends 2026" class="blog-card-img" />
+            <span class="blog-card-cat">Food</span>
+          </div>
           <div class="blog-card-body">
             <div class="blog-card-date">August 20, 2026</div>
             <h3 class="blog-card-title"><a href="blog-details.html">10 Spectacular Birthday Cake Trends That Will Wow in 2026</a></h3>
             <p class="blog-card-excerpt">From gravity-defying tiered cakes to sculpted sugar masterpieces, our pastry team shares the cakes that are stealing every birthday spotlight.</p>
-            <div class="blog-card-author"><div class="blog-author-avatar">SM</div><div><div class="blog-author-name">Sanjana Mehta · Head Chef</div><div class="blog-read-time">5 min read</div></div></div>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div class="blog-author-avatar">SM</div>
+                <div class="blog-author-info">
+                  <div class="blog-author-name">Sanjana Mehta</div>
+                  <div class="blog-read-time">Head Chef · 5 min read</div>
+                </div>
+              </div>
+              <a href="blog-details.html" class="btn btn-outline btn-sm blog-card-btn">Read More &rarr;</a>
+            </div>
           </div>
         </article>
+
+        <!-- Article 3 -->
         <article class="blog-card gallery-item reveal" data-delay="0.3" data-category="planning">
-          <div class="blog-card-img-wrap"><img src="../images/catering-spread.jpg" alt="Planning timeline for birthday party" class="blog-card-img" /><span class="blog-card-cat">Planning</span></div>
+          <div class="blog-card-img-wrap">
+            <img src="../images/catering-spread.jpg" alt="Planning timeline for birthday party" class="blog-card-img" />
+            <span class="blog-card-cat">Planning</span>
+          </div>
           <div class="blog-card-body">
             <div class="blog-card-date">August 12, 2026</div>
             <h3 class="blog-card-title"><a href="blog-details.html">The 8-Week Birthday Party Planning Timeline Every Parent Needs</a></h3>
             <p class="blog-card-excerpt">Our expert event directors share the ultimate week-by-week countdown to ensure your child's birthday is stress-free and spectacular.</p>
-            <div class="blog-card-author"><div class="blog-author-avatar">VN</div><div><div class="blog-author-name">Vikram Nair · Event Director</div><div class="blog-read-time">7 min read</div></div></div>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div class="blog-author-avatar">VN</div>
+                <div class="blog-author-info">
+                  <div class="blog-author-name">Vikram Nair</div>
+                  <div class="blog-read-time">Event Director · 7 min read</div>
+                </div>
+              </div>
+              <a href="blog-details.html" class="btn btn-outline btn-sm blog-card-btn">Read More &rarr;</a>
+            </div>
           </div>
         </article>
+
+        <!-- Article 4 -->
         <article class="blog-card gallery-item reveal" data-delay="0.1" data-category="photo">
-          <div class="blog-card-img-wrap"><img src="../images/photography.jpg" alt="Birthday photography tips" class="blog-card-img" /><span class="blog-card-cat">Photography</span></div>
+          <div class="blog-card-img-wrap">
+            <img src="../images/photography.jpg" alt="Birthday photography tips" class="blog-card-img" />
+            <span class="blog-card-cat">Photography</span>
+          </div>
           <div class="blog-card-body">
             <div class="blog-card-date">August 5, 2026</div>
             <h3 class="blog-card-title"><a href="blog-details.html">7 Photography Secrets for Capturing Pure Birthday Magic</a></h3>
             <p class="blog-card-excerpt">Our lead photographers reveal the golden moments, angles and lighting techniques that transform birthday photos into heirlooms.</p>
-            <div class="blog-card-author"><div class="blog-author-avatar">AP</div><div><div class="blog-author-name">Anand Pillai · Lead Photographer</div><div class="blog-read-time">6 min read</div></div></div>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div class="blog-author-avatar">AP</div>
+                <div class="blog-author-info">
+                  <div class="blog-author-name">Anand Pillai</div>
+                  <div class="blog-read-time">Lead Photographer · 6 min read</div>
+                </div>
+              </div>
+              <a href="blog-details.html" class="btn btn-outline btn-sm blog-card-btn">Read More &rarr;</a>
+            </div>
           </div>
         </article>
+
+        <!-- Article 5 -->
         <article class="blog-card gallery-item reveal" data-delay="0.2" data-category="themes">
-          <div class="blog-card-img-wrap"><img src="../images/jungle-theme.jpg" alt="Jungle safari party ideas" class="blog-card-img" /><span class="blog-card-cat">Themes</span></div>
+          <div class="blog-card-img-wrap">
+            <img src="../images/jungle-theme.jpg" alt="Jungle safari party ideas" class="blog-card-img" />
+            <span class="blog-card-cat">Themes</span>
+          </div>
           <div class="blog-card-body">
             <div class="blog-card-date">July 30, 2026</div>
             <h3 class="blog-card-title"><a href="blog-details.html">Into the Wild: Creating a Breathtaking Jungle Safari Birthday</a></h3>
             <p class="blog-card-excerpt">Lush greenery, exotic animals and tropical feasts — discover how our jungle theme transports guests into an unforgettable wilderness.</p>
-            <div class="blog-card-author"><div class="blog-author-avatar">NR</div><div><div class="blog-author-name">Nisha Reddy · Décor Head</div><div class="blog-read-time">5 min read</div></div></div>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div class="blog-author-avatar">NR</div>
+                <div class="blog-author-info">
+                  <div class="blog-author-name">Nisha Reddy</div>
+                  <div class="blog-read-time">Décor Head · 5 min read</div>
+                </div>
+              </div>
+              <a href="blog-details.html" class="btn btn-outline btn-sm blog-card-btn">Read More &rarr;</a>
+            </div>
           </div>
         </article>
+
+        <!-- Article 6 -->
         <article class="blog-card gallery-item reveal" data-delay="0.3" data-category="planning">
-          <div class="blog-card-img-wrap"><img src="../images/party-activities.jpg" alt="Children's party activities guide" class="blog-card-img" /><span class="blog-card-cat">Planning</span></div>
+          <div class="blog-card-img-wrap">
+            <img src="../images/party-activities.jpg" alt="Children's party activities guide" class="blog-card-img" />
+            <span class="blog-card-cat">Planning</span>
+          </div>
           <div class="blog-card-body">
             <div class="blog-card-date">July 22, 2026</div>
             <h3 class="blog-card-title"><a href="blog-details.html">50 Activity Ideas to Keep Kids Absolutely Enthralled at a Birthday Party</a></h3>
             <p class="blog-card-excerpt">From magic shows to art stations, our entertainment team curates the ultimate list of age-appropriate activities for every birthday crowd.</p>
-            <div class="blog-card-author"><div class="blog-author-avatar">KT</div><div><div class="blog-author-name">Kiran Thomas · Entertainment Head</div><div class="blog-read-time">10 min read</div></div></div>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div class="blog-author-avatar">KT</div>
+                <div class="blog-author-info">
+                  <div class="blog-author-name">Kiran Thomas</div>
+                  <div class="blog-read-time">Entertainment Head · 10 min read</div>
+                </div>
+              </div>
+              <a href="blog-details.html" class="btn btn-outline btn-sm blog-card-btn">Read More &rarr;</a>
+            </div>
           </div>
         </article>
       </div>
-      <div class="text-center" style="margin-top:3rem"><a href="#" class="btn btn-outline btn-lg">Load More Articles</a></div>
+
     </div>
   </section>
 
@@ -209,7 +316,7 @@
       <div class="text-center reveal" style="margin-bottom:3rem"><div class="section-tag">Parent Reviews</div><h2 class="section-title">What Families <em class="italic-heading">Say</em></h2></div>
       <div class="testimonials-grid">
         <div class="testimonial-card reveal" data-delay="0.1"><div class="testimonial-stars"><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><blockquote class="testimonial-quote">"The blog articles were incredibly helpful in planning our daughter's party. We followed the 8-week timeline exactly and everything was seamless!"</blockquote><div class="testimonial-author"><div class="author-avatar">MP</div><div><div class="author-name">Meera Pillai</div><div class="author-detail">Blog Reader & Client</div></div></div></div>
-        <div class="testimonial-card featured-testimonial reveal" data-delay="0.2"><div class="testimonial-stars"><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><blockquote class="testimonial-quote">"I discovered LittleLux through their photography tips article. Booked them immediately after reading. Best decision ever!"</blockquote><div class="testimonial-author"><div class="author-avatar">SG</div><div><div class="author-name">Sunita Gupta</div><div class="author-detail">Blog Reader & Client</div></div></div></div>
+        <div class="testimonial-card reveal" data-delay="0.2"><div class="testimonial-stars"><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><blockquote class="testimonial-quote">"I discovered LittleLux through their photography tips article. Booked them immediately after reading. Best decision ever!"</blockquote><div class="testimonial-author"><div class="author-avatar">SG</div><div><div class="author-name">Sunita Gupta</div><div class="author-detail">Blog Reader & Client</div></div></div></div>
         <div class="testimonial-card reveal" data-delay="0.3"><div class="testimonial-stars"><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="svg-icon icon-gold fill-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><blockquote class="testimonial-quote">"The jungle theme article gave us so much inspiration. We requested the exact setup described in it, and LittleLux delivered it perfectly!"</blockquote><div class="testimonial-author"><div class="author-avatar">DK</div><div><div class="author-name">Deepa Kumar</div><div class="author-detail">Blog Reader & Client</div></div></div></div>
       </div>
     </div>
@@ -225,7 +332,7 @@
         <p class="cta-subtitle">Ready to create your child's most magical birthday? Our team is here to bring every detail to life.</p>
         <div class="cta-actions">
           <a href="dashboard.html" class="btn btn-gold btn-lg">Book Your Party →</a>
-          <a href="contact.html" class="btn btn-ghost btn-lg" style="border-color:rgba(255,255,255,0.3);color:white">Talk to Our Team</a>
+          <a href="contact.html" class="btn btn-ghost btn-lg">Talk to Our Team</a>
         </div>
       </div>
     </div>
