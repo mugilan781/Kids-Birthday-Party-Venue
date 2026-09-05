@@ -468,7 +468,7 @@
 
 .login-social {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--space-3);
   margin-bottom: var(--space-5);
 }
@@ -790,7 +790,7 @@
 
 .signup-social {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--space-3);
   margin-bottom: var(--space-4);
 }
