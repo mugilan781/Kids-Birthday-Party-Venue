@@ -675,7 +675,23 @@
 
 .h2-enquiry-form { display: flex; flex-direction: column; gap: var(--space-4); }
 
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.h2-enquiry-form .form-control {
+  height: 46px;
+  min-height: 46px;
+}
+
+.h2-enquiry-form textarea.form-control {
+  height: auto;
+  min-height: 96px;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); align-items: start; }
+
+#eq-date.form-control,
+#eq-package.form-control {
+  height: 46px !important;
+  min-height: 46px !important;
+}
 
 /* Calendar icon — theme-aware high-contrast with custom SVG */
 .h2-enquiry-form input[type="date"] {
