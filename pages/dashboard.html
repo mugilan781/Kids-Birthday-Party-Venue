@@ -254,25 +254,40 @@
 
         <!-- Step 3: Guest Count -->
         <div class="booking-step-content" id="step-3">
-          <h3 class="dash-subsection-title">Guest & Event Details</h3>
+          <h3 class="dash-subsection-title">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Guest & Event Details
+          </h3>
           <div class="dash-form-grid">
             <div class="form-group">
-              <label class="form-label" for="booking-child-name">Birthday Child's Name *</label>
+              <label class="form-label" for="booking-child-name">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Birthday Child's Name *
+              </label>
               <input type="text" class="form-control" id="booking-child-name" placeholder="e.g. Arya" autocomplete="off" />
               <span class="form-error" id="err-booking-child-name" style="display:none">Please enter the birthday child's name (min 2 characters)</span>
             </div>
             <div class="form-group">
-              <label class="form-label" for="booking-child-age">Child's Age Turning *</label>
+              <label class="form-label" for="booking-child-age">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s2-1 4-1 4 1 4 1 2-1 4-1 4 1 4 1"/><path d="M2 21h20"/><path d="M7 8v3"/><path d="M12 8v3"/><path d="M17 8v3"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg>
+                Child's Age Turning *
+              </label>
               <input type="number" class="form-control" id="booking-child-age" placeholder="e.g. 6" min="1" max="18" />
               <span class="form-error" id="err-booking-child-age" style="display:none">Please enter a valid age between 1 and 18</span>
             </div>
             <div class="form-group">
-              <label class="form-label" for="booking-date-input">Party Date *</label>
+              <label class="form-label" for="booking-date-input">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                Party Date *
+              </label>
               <input type="date" class="form-control" id="booking-date-input" />
               <span class="form-error" id="err-booking-date" style="display:none">Please choose a valid upcoming party date</span>
             </div>
             <div class="form-group">
-              <label class="form-label" for="booking-time-select">Time Slot *</label>
+              <label class="form-label" for="booking-time-select">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Time Slot *
+              </label>
               <select class="form-control" id="booking-time-select">
                 <option value="">Choose a time slot...</option>
                 <option value="10:00 AM – 1:00 PM">10:00 AM – 1:00 PM (Morning Slot)</option>
@@ -284,58 +299,102 @@
             </div>
           </div>
           <div class="guest-counter-section">
-            <h4 style="margin-bottom:1rem">Guest Count</h4>
+            <h4 style="margin-bottom:1rem;display:flex;align-items:center">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Guest Count Breakdown
+            </h4>
             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
               <div>
-                <label class="form-label">Adult Guests</label>
+                <label class="form-label">
+                  <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  Adult Guests
+                </label>
                 <div class="guest-counter" id="counter-adults" data-min="1" data-max="200">
-                  <button type="button" class="counter-minus btn btn-outline btn-sm">−</button>
+                  <button type="button" class="counter-minus btn btn-outline btn-sm" aria-label="Decrease adult count">
+                    <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </button>
                   <span class="counter-value">20</span>
-                  <button type="button" class="counter-plus btn btn-outline btn-sm">+</button>
+                  <button type="button" class="counter-plus btn btn-outline btn-sm" aria-label="Increase adult count">
+                    <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </button>
                 </div>
               </div>
               <div>
-                <label class="form-label">Children Guests</label>
+                <label class="form-label">
+                  <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+                  Children Guests
+                </label>
                 <div class="guest-counter" id="counter-children" data-min="1" data-max="100">
-                  <button type="button" class="counter-minus btn btn-outline btn-sm">−</button>
+                  <button type="button" class="counter-minus btn btn-outline btn-sm" aria-label="Decrease child count">
+                    <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </button>
                   <span class="counter-value">15</span>
-                  <button type="button" class="counter-plus btn btn-outline btn-sm">+</button>
+                  <button type="button" class="counter-plus btn btn-outline btn-sm" aria-label="Increase child count">
+                    <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </button>
                 </div>
               </div>
               <div>
-                <label class="form-label">Infants (0-2 yrs)</label>
+                <label class="form-label">
+                  <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                  Infants (0-2 yrs)
+                </label>
                 <div class="guest-counter" id="counter-infants" data-min="0" data-max="20">
-                  <button type="button" class="counter-minus btn btn-outline btn-sm">−</button>
+                  <button type="button" class="counter-minus btn btn-outline btn-sm" aria-label="Decrease infant count">
+                    <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </button>
                   <span class="counter-value">0</span>
-                  <button type="button" class="counter-plus btn btn-outline btn-sm">+</button>
+                  <button type="button" class="counter-plus btn btn-outline btn-sm" aria-label="Increase infant count">
+                    <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </button>
                 </div>
               </div>
             </div>
             <div id="capacity-warning" style="display:none;margin-top:1rem;font-size:0.8rem;color:var(--color-champagne-gold);font-weight:600"></div>
           </div>
-          <div class="step-actions"><button type="button" class="btn btn-outline" onclick="prevStep()">← Back</button><button type="button" class="btn btn-primary" onclick="nextStep()">Next: Add-Ons →</button></div>
+          <div class="step-actions">
+            <button type="button" class="btn btn-outline" onclick="prevStep()">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back
+            </button>
+            <button type="button" class="btn btn-primary" onclick="nextStep()">
+              Next: Add-Ons <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
         </div>
 
         <!-- Step 4: Add-Ons -->
         <div class="booking-step-content" id="step-4">
-          <h3 class="dash-subsection-title">Optional Add-Ons</h3>
-          <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem">Customize your package with luxury extras. These are optional and can be updated anytime.</p>
+          <h3 class="dash-subsection-title">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Optional Add-Ons
+          </h3>
+          <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem">Customize your package with luxury extras. Click anywhere on any card to select or deselect.</p>
           <div class="addons-grid">
-            <label class="addon-card" data-addon="photo-booth" data-name="Photo Booth" data-price="4000"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div><div class="addon-name">Photo Booth</div><div class="addon-price">₹4,000</div><div class="addon-desc">Floral backdrop + instant prints (2 hrs)</div></label>
-            <label class="addon-card" data-addon="magic-show" data-name="Magic Show" data-price="5000"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 10a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4v-2z"/><circle cx="6" cy="10" r="1" fill="currentColor"/><circle cx="10" cy="10" r="1" fill="currentColor"/><path d="M6 14s1-1 2-1 2 1 2 1"/><path d="M14 8h2a4 4 0 0 1 4 4v2a4 4 0 0 1-4 4h-2"/><circle cx="18" cy="12" r="1" fill="currentColor"/></svg></div><div class="addon-name">Magic Show</div><div class="addon-price">₹5,000</div><div class="addon-desc">45-min professional magic performance</div></label>
-            <label class="addon-card" data-addon="face-painting" data-name="Face Painting" data-price="3000"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div><div class="addon-name">Face Painting</div><div class="addon-price">₹3,000</div><div class="addon-desc">Certified artist, 2-hour session</div></label>
-            <label class="addon-card" data-addon="return-gifts" data-name="Return Gift Sets" data-price="2250"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></div><div class="addon-name">Return Gift Sets</div><div class="addon-price">₹150/pc</div><div class="addon-desc">Luxury personalized gift bags</div></label>
-            <label class="addon-card" data-addon="balloon-arch" data-name="Balloon Arch" data-price="6000"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a6 6 0 0 0-6 6c0 4.42 4 8 6 9 2-1 6-4.58 6-9a6 6 0 0 0-6-6Z"/><path d="M12 17l-1 2h2l-1-2"/><path d="M12 19c-1 2 1 4 0 5"/></svg></div><div class="addon-name">Balloon Arch</div><div class="addon-price">₹6,000</div><div class="addon-desc">Organic premium balloon installation</div></label>
-            <label class="addon-card" data-addon="videography" data-name="Videography" data-price="8000"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></svg></div><div class="addon-name">Videography</div><div class="addon-price">₹8,000</div><div class="addon-desc">4K cinematic highlight video</div></label>
-            <label class="addon-card" data-addon="dance-performance" data-name="Dance Performance" data-price="7000"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="m9 20 3-6-3-4 5-2 3 4-2 3 3 5"/><path d="m6 12 3-2"/></svg></div><div class="addon-name">Dance Performance</div><div class="addon-price">₹7,000</div><div class="addon-desc">Professional themed dance troupe</div></label>
-            <label class="addon-card" data-addon="cake-upgrade" data-name="Cake Upgrade" data-price="3500"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 19h20L12 4 2 19z"/><path d="M2 19v-4l10-8 10 8v4"/><circle cx="12" cy="3" r="1"/></svg></div><div class="addon-name">Cake Upgrade</div><div class="addon-price">₹3,500</div><div class="addon-desc">Custom sculpted themed cake tier</div></label>
+            <div class="addon-card" data-addon="photo-booth" data-name="Photo Booth" data-price="4000" role="checkbox" tabindex="0" aria-checked="false"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div><div class="addon-name">Photo Booth</div><div class="addon-price">₹4,000</div><div class="addon-desc">Floral backdrop + instant prints (2 hrs)</div></div>
+            <div class="addon-card" data-addon="magic-show" data-name="Magic Show" data-price="5000" role="checkbox" tabindex="0" aria-checked="false"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 10a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4v-2z"/><circle cx="6" cy="10" r="1" fill="currentColor"/><circle cx="10" cy="10" r="1" fill="currentColor"/><path d="M6 14s1-1 2-1 2 1 2 1"/><path d="M14 8h2a4 4 0 0 1 4 4v2a4 4 0 0 1-4 4h-2"/><circle cx="18" cy="12" r="1" fill="currentColor"/></svg></div><div class="addon-name">Magic Show</div><div class="addon-price">₹5,000</div><div class="addon-desc">45-min professional magic performance</div></div>
+            <div class="addon-card" data-addon="face-painting" data-name="Face Painting" data-price="3000" role="checkbox" tabindex="0" aria-checked="false"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div><div class="addon-name">Face Painting</div><div class="addon-price">₹3,000</div><div class="addon-desc">Certified artist, 2-hour session</div></div>
+            <div class="addon-card" data-addon="return-gifts" data-name="Return Gift Sets" data-price="2250" role="checkbox" tabindex="0" aria-checked="false"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></div><div class="addon-name">Return Gift Sets</div><div class="addon-price">₹150/pc</div><div class="addon-desc">Luxury personalized gift bags</div></div>
+            <div class="addon-card" data-addon="balloon-arch" data-name="Balloon Arch" data-price="6000" role="checkbox" tabindex="0" aria-checked="false"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a6 6 0 0 0-6 6c0 4.42 4 8 6 9 2-1 6-4.58 6-9a6 6 0 0 0-6-6Z"/><path d="M12 17l-1 2h2l-1-2"/><path d="M12 19c-1 2 1 4 0 5"/></svg></div><div class="addon-name">Balloon Arch</div><div class="addon-price">₹6,000</div><div class="addon-desc">Organic premium balloon installation</div></div>
+            <div class="addon-card" data-addon="videography" data-name="Videography" data-price="8000" role="checkbox" tabindex="0" aria-checked="false"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></svg></div><div class="addon-name">Videography</div><div class="addon-price">₹8,000</div><div class="addon-desc">4K cinematic highlight video</div></div>
+            <div class="addon-card" data-addon="dance-performance" data-name="Dance Performance" data-price="7000" role="checkbox" tabindex="0" aria-checked="false"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="m9 20 3-6-3-4 5-2 3 4-2 3 3 5"/><path d="m6 12 3-2"/></svg></div><div class="addon-name">Dance Performance</div><div class="addon-price">₹7,000</div><div class="addon-desc">Professional themed dance troupe</div></div>
+            <div class="addon-card" data-addon="cake-upgrade" data-name="Cake Upgrade" data-price="3500" role="checkbox" tabindex="0" aria-checked="false"><input type="checkbox" class="addon-checkbox" /><div class="addon-check"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="addon-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 19h20L12 4 2 19z"/><path d="M2 19v-4l10-8 10 8v4"/><circle cx="12" cy="3" r="1"/></svg></div><div class="addon-name">Cake Upgrade</div><div class="addon-price">₹3,500</div><div class="addon-desc">Custom sculpted themed cake tier</div></div>
           </div>
-          <div class="step-actions"><button type="button" class="btn btn-outline" onclick="prevStep()">← Back</button><button type="button" class="btn btn-primary" onclick="nextStep()">Next: Review & Payment →</button></div>
+          <div class="step-actions">
+            <button type="button" class="btn btn-outline" onclick="prevStep()">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back
+            </button>
+            <button type="button" class="btn btn-primary" onclick="nextStep()">
+              Next: Review & Payment <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
         </div>
 
         <!-- Step 5: Payment -->
         <div class="booking-step-content" id="step-5">
-          <h3 class="dash-subsection-title">Review & Advance Payment</h3>
+          <h3 class="dash-subsection-title">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            Review & Advance Payment
+          </h3>
           <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:2rem;align-items:start">
             <div>
               <div class="booking-summary" id="booking-live-summary">
@@ -369,15 +428,263 @@
             </div>
             <div>
               <div class="payment-options">
-                <h4 style="margin-bottom:1rem">Select Payment Method</h4>
-                <label class="payment-option selected"><input type="radio" name="payment" value="UPI / QR Code" checked /><span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span><div><strong>UPI / QR Code</strong><p>Instant payment via any UPI app (GPay, PhonePe, Paytm)</p></div></label>
-                <label class="payment-option"><input type="radio" name="payment" value="Credit / Debit Card" /><span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></span><div><strong>Credit / Debit Card</strong><p>Visa, Mastercard, RuPay, AmEx accepted</p></div></label>
-                <label class="payment-option"><input type="radio" name="payment" value="Net Banking" /><span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span><div><strong>Net Banking</strong><p>All major Indian banks supported</p></div></label>
-                <label class="payment-option"><input type="radio" name="payment" value="EMI" /><span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg></span><div><strong>EMI (0% for 6 months)</strong><p>Available on select credit cards</p></div></label>
+                <h4 style="margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem">
+                  <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                  Select Payment Method
+                </h4>
+                <div class="payment-option selected" data-method="upi" role="button" tabindex="0">
+                  <input type="radio" name="payment" value="UPI / QR Code" checked />
+                  <span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span>
+                  <div>
+                    <strong>UPI / QR Code</strong>
+                    <p>Instant payment via any UPI app (GPay, PhonePe, Paytm, BHIM)</p>
+                  </div>
+                </div>
+                <div class="payment-option" data-method="card" role="button" tabindex="0">
+                  <input type="radio" name="payment" value="Credit / Debit Card" />
+                  <span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></span>
+                  <div>
+                    <strong>Credit / Debit Card</strong>
+                    <p>Visa, Mastercard, RuPay, AmEx accepted with instant OTP</p>
+                  </div>
+                </div>
+                <div class="payment-option" data-method="netbanking" role="button" tabindex="0">
+                  <input type="radio" name="payment" value="Net Banking" />
+                  <span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span>
+                  <div>
+                    <strong>Net Banking</strong>
+                    <p>All major Indian banks supported (SBI, HDFC, ICICI, etc.)</p>
+                  </div>
+                </div>
+                <div class="payment-option" data-method="emi" role="button" tabindex="0">
+                  <input type="radio" name="payment" value="EMI" />
+                  <span class="payment-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg></span>
+                  <div>
+                    <strong>EMI (0% Interest)</strong>
+                    <p>Available on select credit cards with 0% interest for 3 & 6 months</p>
+                  </div>
+                </div>
               </div>
-              <button type="button" class="btn btn-gold btn-lg" id="booking-pay-btn" style="width:100%;margin-top:1.5rem" onclick="onPaymentSuccess()">Pay ₹26,550 Now →</button>
+
+              <!-- DYNAMIC PAYMENT METHOD FIELDS CONTAINER -->
+              <div class="payment-method-container">
+                <!-- 1. UPI PANEL -->
+                <div class="payment-detail-panel" id="panel-payment-upi" style="display:block">
+                  <div class="pay-panel-card">
+                    <div class="pay-panel-header">
+                      <h5>
+                        <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                        Scan QR Code or Enter UPI ID
+                      </h5>
+                      <span class="pay-security-badge"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> NPCI Verified</span>
+                    </div>
+
+                    <!-- UPI Apps -->
+                    <div class="upi-app-badges">
+                      <span class="upi-badge"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Google Pay</span>
+                      <span class="upi-badge"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> PhonePe</span>
+                      <span class="upi-badge"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 2 2 4-4"/></svg> Paytm</span>
+                      <span class="upi-badge"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> BHIM UPI</span>
+                    </div>
+
+                    <!-- UPI Split Layout -->
+                    <div class="upi-split-grid">
+                      <div class="upi-qr-box">
+                        <div class="upi-qr-frame">
+                          <svg class="upi-qr-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="120" height="120" rx="8" fill="white"/>
+                            <rect x="10" y="10" width="30" height="30" rx="4" fill="#1C1329"/>
+                            <rect x="15" y="15" width="20" height="20" rx="2" fill="white"/>
+                            <rect x="19" y="19" width="12" height="12" rx="1" fill="#8E6BC7"/>
+                            <rect x="80" y="10" width="30" height="30" rx="4" fill="#1C1329"/>
+                            <rect x="85" y="15" width="20" height="20" rx="2" fill="white"/>
+                            <rect x="89" y="19" width="12" height="12" rx="1" fill="#8E6BC7"/>
+                            <rect x="10" y="80" width="30" height="30" rx="4" fill="#1C1329"/>
+                            <rect x="15" y="85" width="20" height="20" rx="2" fill="white"/>
+                            <rect x="19" y="89" width="12" height="12" rx="1" fill="#8E6BC7"/>
+                            <rect x="46" y="14" width="8" height="8" fill="#1C1329"/>
+                            <rect x="58" y="14" width="6" height="6" fill="#1C1329"/>
+                            <rect x="46" y="26" width="6" height="6" fill="#8E6BC7"/>
+                            <rect x="66" y="24" width="8" height="8" fill="#1C1329"/>
+                            <rect x="14" y="46" width="8" height="8" fill="#1C1329"/>
+                            <rect x="26" y="56" width="6" height="8" fill="#8E6BC7"/>
+                            <rect x="46" y="46" width="28" height="28" rx="6" fill="#FAF8FF" stroke="#8E6BC7" stroke-width="1.5"/>
+                            <path d="M53 62L55.5 56L60 59L64.5 56L67 62H53Z" fill="#E07A5F"/>
+                            <circle cx="60" cy="54" r="1.5" fill="#E5CA8F"/>
+                            <rect x="80" y="46" width="8" height="6" fill="#1C1329"/>
+                            <rect x="94" y="54" width="10" height="6" fill="#8E6BC7"/>
+                            <rect x="46" y="80" width="8" height="10" fill="#1C1329"/>
+                            <rect x="58" y="88" width="10" height="6" fill="#8E6BC7"/>
+                            <rect x="74" y="80" width="6" height="12" fill="#1C1329"/>
+                            <rect x="86" y="86" width="18" height="6" fill="#1C1329"/>
+                            <rect x="96" y="96" width="8" height="8" fill="#8E6BC7"/>
+                          </svg>
+                        </div>
+                        <div class="upi-qr-meta">
+                          <span class="upi-scan-text">Scan & Pay <strong>50% Advance</strong></span>
+                          <span class="upi-timer"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> QR active for 15 mins</span>
+                        </div>
+                      </div>
+
+                      <div class="upi-input-box">
+                        <label class="form-label" for="upi-vpa-input">
+                          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                          Or Enter UPI ID / VPA
+                        </label>
+                        <div class="upi-input-wrapper">
+                          <input type="text" class="form-control" id="upi-vpa-input" placeholder="e.g. yourname@okhdfcbank" value="sunita.arjun@okaxis" />
+                          <button type="button" class="btn btn-outline btn-sm upi-verify-btn" id="btn-verify-upi">Verified ✓</button>
+                        </div>
+                        <div class="upi-verified-badge" id="upi-status-badge">
+                          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                          <span>Verified: <strong>Sunita Arjun (Axis Bank)</strong></span>
+                        </div>
+                        <p class="form-help-text">A collect notification will be sent to your UPI application upon proceeding.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. CARD PANEL -->
+                <div class="payment-detail-panel" id="panel-payment-card" style="display:none">
+                  <div class="pay-panel-card">
+                    <div class="pay-panel-header">
+                      <h5>
+                        <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                        Credit / Debit Card Details
+                      </h5>
+                      <div class="card-brand-badges">
+                        <span class="brand-pill">VISA</span>
+                        <span class="brand-pill">Mastercard</span>
+                        <span class="brand-pill">RuPay</span>
+                      </div>
+                    </div>
+
+                    <div class="card-fields-form">
+                      <div class="form-group">
+                        <label class="form-label" for="card-number-input">Card Number</label>
+                        <div class="card-input-with-icon">
+                          <input type="text" class="form-control" id="card-number-input" placeholder="4532 •••• •••• 8892" maxlength="19" value="4532 8920 1142 8892" />
+                          <span class="card-type-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></span>
+                        </div>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label class="form-label" for="card-holder-input">Cardholder Name</label>
+                        <input type="text" class="form-control" id="card-holder-input" placeholder="Name as printed on card" value="Sunita Arjun" />
+                      </div>
+
+                      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+                        <div class="form-group">
+                          <label class="form-label" for="card-expiry-input">Expiry Date</label>
+                          <input type="text" class="form-control" id="card-expiry-input" placeholder="MM / YY" maxlength="5" value="08/29" />
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label" for="card-cvv-input">CVV / CVC</label>
+                          <div class="card-input-with-icon">
+                            <input type="password" class="form-control" id="card-cvv-input" placeholder="•••" maxlength="4" value="824" />
+                            <span class="card-type-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <label class="card-save-checkbox">
+                        <input type="checkbox" checked style="accent-color:var(--color-royal-lilac)" />
+                        <span>Save this card securely under RBI guidelines for faster checkout</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. NET BANKING PANEL -->
+                <div class="payment-detail-panel" id="panel-payment-netbanking" style="display:none">
+                  <div class="pay-panel-card">
+                    <div class="pay-panel-header">
+                      <h5>
+                        <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+                        Select Your Bank
+                      </h5>
+                      <span class="pay-security-badge"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Bank Secure</span>
+                    </div>
+
+                    <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.75rem">Popular Banks:</p>
+                    <div class="popular-banks-grid">
+                      <div class="bank-card selected" data-bank="SBI" role="radio" tabindex="0">
+                        <span class="bank-avatar">SBI</span>
+                        <span class="bank-title">State Bank</span>
+                      </div>
+                      <div class="bank-card" data-bank="HDFC" role="radio" tabindex="0">
+                        <span class="bank-avatar">HDFC</span>
+                        <span class="bank-title">HDFC Bank</span>
+                      </div>
+                      <div class="bank-card" data-bank="ICICI" role="radio" tabindex="0">
+                        <span class="bank-avatar">ICICI</span>
+                        <span class="bank-title">ICICI Bank</span>
+                      </div>
+                      <div class="bank-card" data-bank="AXIS" role="radio" tabindex="0">
+                        <span class="bank-avatar">AXIS</span>
+                        <span class="bank-title">Axis Bank</span>
+                      </div>
+                      <div class="bank-card" data-bank="KOTAK" role="radio" tabindex="0">
+                        <span class="bank-avatar">KOTAK</span>
+                        <span class="bank-title">Kotak Mahindra</span>
+                      </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top:0.75rem">
+                      <label class="form-label" for="other-banks-select">Or Choose Other Indian Bank</label>
+                      <select class="form-control" id="other-banks-select">
+                        <option value="">Select from 50+ Other Banks...</option>
+                        <option value="PNB">Punjab National Bank</option>
+                        <option value="BOB">Bank of Baroda</option>
+                        <option value="CANARA">Canara Bank</option>
+                        <option value="INDUSIND">IndusInd Bank</option>
+                        <option value="UNION">Union Bank of India</option>
+                        <option value="YES">Yes Bank</option>
+                        <option value="IDBI">IDBI Bank</option>
+                        <option value="FEDERAL">Federal Bank</option>
+                      </select>
+                    </div>
+                    <p class="form-help-text">You will be redirected to your bank's official portal to complete payment.</p>
+                  </div>
+                </div>
+
+                <!-- 4. EMI PANEL -->
+                <div class="payment-detail-panel" id="panel-payment-emi" style="display:none">
+                  <div class="pay-panel-card">
+                    <div class="pay-panel-header">
+                      <h5>
+                        <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+                        Easy Monthly Installments (EMI)
+                      </h5>
+                      <span class="pay-security-badge" style="background:rgba(224,122,95,0.15);color:var(--color-peach-dark)">0% Interest EMI</span>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom:1rem">
+                      <label class="form-label" for="emi-card-bank">Select Credit Card Bank</label>
+                      <select class="form-control" id="emi-card-bank">
+                        <option value="hdfc">HDFC Bank Credit Cards</option>
+                        <option value="icici">ICICI Bank Credit Cards</option>
+                        <option value="sbi">SBI Credit Cards</option>
+                        <option value="axis">Axis Bank Credit Cards</option>
+                        <option value="amex">American Express</option>
+                      </select>
+                    </div>
+
+                    <div class="emi-plans-container" id="emi-plans-list">
+                      <!-- Live rendered in JS based on advanceDue -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-gold btn-lg" id="booking-pay-btn" style="width:100%;margin-top:1.5rem" onclick="onPaymentSuccess()">Pay 50% Advance (₹26,550) Now →</button>
               <p style="font-size:var(--text-xs);color:var(--text-muted);text-align:center;margin-top:0.75rem"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> 256-bit SSL secured payment</p>
-              <div class="step-actions" style="margin-top:1.25rem"><button type="button" class="btn btn-outline" onclick="prevStep()">← Back to Add-Ons</button></div>
+              <div class="step-actions" style="margin-top:1.25rem">
+                <button type="button" class="btn btn-outline" onclick="prevStep()">
+                  <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back to Add-Ons
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -621,8 +928,22 @@
         if (stepEl) {
           stepEl.classList.toggle('active', i === step);
           stepEl.classList.toggle('completed', i < step);
+
+          const circle = stepEl.querySelector('.step-circle');
+          if (circle) {
+            if (i < step) {
+              circle.innerHTML = `<svg class="svg-icon" style="width:18px;height:18px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>`;
+            } else {
+              circle.textContent = i;
+            }
+          }
         }
       }
+
+      // Update connecting line highlight
+      document.querySelectorAll('.booking-step-line').forEach((line, idx) => {
+        line.classList.toggle('completed-line', step > idx + 1);
+      });
     }
 
     // Validation for each step
@@ -870,7 +1191,57 @@
       if (valBalance) valBalance.textContent = '₹' + balanceDue.toLocaleString('en-IN');
 
       const payBtn = document.getElementById('booking-pay-btn');
-      if (payBtn) payBtn.textContent = `Pay 50% Advance (₹${advanceDue.toLocaleString('en-IN')}) Now →`;
+      const activeMethod = document.querySelector('.payment-option.selected')?.dataset.method || 'upi';
+      if (payBtn) {
+        if (activeMethod === 'upi') {
+          payBtn.textContent = `Pay 50% Advance (₹${advanceDue.toLocaleString('en-IN')}) via UPI Now →`;
+        } else if (activeMethod === 'card') {
+          payBtn.textContent = `Pay 50% Advance (₹${advanceDue.toLocaleString('en-IN')}) with Card →`;
+        } else if (activeMethod === 'netbanking') {
+          payBtn.textContent = `Proceed to Net Banking (₹${advanceDue.toLocaleString('en-IN')}) →`;
+        } else if (activeMethod === 'emi') {
+          payBtn.textContent = `Confirm & Pay Advance EMI (₹${advanceDue.toLocaleString('en-IN')}) →`;
+        } else {
+          payBtn.textContent = `Pay 50% Advance (₹${advanceDue.toLocaleString('en-IN')}) Now →`;
+        }
+      }
+
+      // Dynamic EMI plans rendering
+      const emiContainer = document.getElementById('emi-plans-list');
+      if (emiContainer) {
+        const emi3 = Math.round(advanceDue / 3);
+        const emi6 = Math.round(advanceDue / 6);
+        const emi9 = Math.round((advanceDue * 1.08) / 9);
+        emiContainer.innerHTML = `
+          <div class="emi-plan-card" data-months="3" role="radio" tabindex="0">
+            <div class="emi-plan-left">
+              <span class="emi-tenure">3 Months <span class="emi-tag">0% Interest</span></span>
+              <span class="emi-total-note">Total: ₹${advanceDue.toLocaleString('en-IN')} (No extra charge)</span>
+            </div>
+            <div class="emi-monthly">₹${emi3.toLocaleString('en-IN')}<span style="font-size:0.75rem;font-weight:600;color:var(--text-muted)">/mo</span></div>
+          </div>
+          <div class="emi-plan-card selected" data-months="6" role="radio" tabindex="0">
+            <div class="emi-plan-left">
+              <span class="emi-tenure">6 Months <span class="emi-tag" style="background:rgba(224,122,95,0.15);color:var(--color-peach-dark)">0% No Cost EMI</span></span>
+              <span class="emi-total-note">Total: ₹${advanceDue.toLocaleString('en-IN')} (Most Popular)</span>
+            </div>
+            <div class="emi-monthly">₹${emi6.toLocaleString('en-IN')}<span style="font-size:0.75rem;font-weight:600;color:var(--text-muted)">/mo</span></div>
+          </div>
+          <div class="emi-plan-card" data-months="9" role="radio" tabindex="0">
+            <div class="emi-plan-left">
+              <span class="emi-tenure">9 Months <span class="emi-tag" style="background:rgba(184,165,228,0.15);color:var(--color-royal-lilac)">Low Interest (8%)</span></span>
+              <span class="emi-total-note">Total: ₹${Math.round(advanceDue * 1.08).toLocaleString('en-IN')}</span>
+            </div>
+            <div class="emi-monthly">₹${emi9.toLocaleString('en-IN')}<span style="font-size:0.75rem;font-weight:600;color:var(--text-muted)">/mo</span></div>
+          </div>
+        `;
+        emiContainer.querySelectorAll('.emi-plan-card').forEach(card => {
+          card.addEventListener('click', () => {
+            emiContainer.querySelectorAll('.emi-plan-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+          });
+        });
+      }
 
       currentBookingDetails = {
         pkg, themeName, themeId, childName, childAge, partyDate, formattedDate, timeSlot,
@@ -879,7 +1250,7 @@
       };
     }
 
-    // Capacity checking helper
+    // Capacity checking helper (Clean SVG vector, no emojis)
     function checkCapacityWarning() {
       const selectedPkgEl = document.querySelector('.booking-pkg-card.selected');
       const pkgKey = selectedPkgEl ? selectedPkgEl.dataset.package : 'sparkle';
@@ -890,8 +1261,8 @@
       const warnEl = document.getElementById('capacity-warning');
       if (warnEl) {
         if (total > pkg.capacity) {
-          warnEl.style.display = 'block';
-          warnEl.textContent = `💡 Note: Selected ${pkg.name} package includes up to ${pkg.capacity} guests. Extra guests (${total - pkg.capacity}) can be accommodated with additional catering.`;
+          warnEl.style.display = 'flex';
+          warnEl.innerHTML = `<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span><strong>Capacity Note:</strong> Selected ${pkg.name} includes up to ${pkg.capacity} guests. Extra guests (${total - pkg.capacity}) can be accommodated with additional catering.</span>`;
         } else {
           warnEl.style.display = 'none';
         }
@@ -940,14 +1311,28 @@
       });
     });
 
-    // Add-On Selection
+    // Add-On Selection (Click anywhere on the card)
     document.querySelectorAll('.addon-card').forEach(card => {
       card.addEventListener('click', (e) => {
         const checkbox = card.querySelector('input[type="checkbox"]');
-        if (e.target !== checkbox) {
-          checkbox.checked = !checkbox.checked;
+        if (checkbox) {
+          if (e.target !== checkbox) {
+            checkbox.checked = !checkbox.checked;
+          }
+          card.classList.toggle('selected', checkbox.checked);
+          card.setAttribute('aria-checked', checkbox.checked ? 'true' : 'false');
         }
-        card.classList.toggle('selected', checkbox.checked);
+      });
+      card.addEventListener('keydown', (e) => {
+        if (e.key === ' ' || e.key === 'Enter') {
+          e.preventDefault();
+          const checkbox = card.querySelector('input[type="checkbox"]');
+          if (checkbox) {
+            checkbox.checked = !checkbox.checked;
+            card.classList.toggle('selected', checkbox.checked);
+            card.setAttribute('aria-checked', checkbox.checked ? 'true' : 'false');
+          }
+        }
       });
     });
 
@@ -1030,14 +1415,79 @@
       dateInputEl.min = minDateStr;
     }
 
-    // Payment method selection
+    // Payment method selection & dynamic panels switcher
+    function updatePaymentPanel(methodKey) {
+      document.querySelectorAll('.payment-option').forEach(o => {
+        const isMatch = o.dataset.method === methodKey;
+        o.classList.toggle('selected', isMatch);
+        const radio = o.querySelector('input[type="radio"]');
+        if (radio) radio.checked = isMatch;
+      });
+
+      document.querySelectorAll('.payment-detail-panel').forEach(panel => {
+        panel.style.display = panel.id === `panel-payment-${methodKey}` ? 'block' : 'none';
+      });
+
+      const advance = currentBookingDetails?.advanceDue || 26550;
+      const payBtn = document.getElementById('booking-pay-btn');
+      if (payBtn) {
+        if (methodKey === 'upi') {
+          payBtn.textContent = `Pay 50% Advance (₹${advance.toLocaleString('en-IN')}) via UPI Now →`;
+        } else if (methodKey === 'card') {
+          payBtn.textContent = `Pay 50% Advance (₹${advance.toLocaleString('en-IN')}) with Card →`;
+        } else if (methodKey === 'netbanking') {
+          payBtn.textContent = `Proceed to Net Banking (₹${advance.toLocaleString('en-IN')}) →`;
+        } else if (methodKey === 'emi') {
+          payBtn.textContent = `Confirm & Pay Advance EMI (₹${advance.toLocaleString('en-IN')}) →`;
+        } else {
+          payBtn.textContent = `Pay 50% Advance (₹${advance.toLocaleString('en-IN')}) Now →`;
+        }
+      }
+    }
+
     document.querySelectorAll('.payment-option').forEach(opt => {
       opt.addEventListener('click', () => {
-        document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('selected'));
-        opt.classList.add('selected');
-        const radio = opt.querySelector('input[type="radio"]');
-        if (radio) radio.checked = true;
+        const method = opt.dataset.method || 'upi';
+        updatePaymentPanel(method);
       });
+      opt.addEventListener('keydown', (e) => {
+        if (e.key === ' ' || e.key === 'Enter') {
+          e.preventDefault();
+          const method = opt.dataset.method || 'upi';
+          updatePaymentPanel(method);
+        }
+      });
+    });
+
+    // Popular Banks selection
+    document.querySelectorAll('.bank-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('.bank-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+        const otherSelect = document.getElementById('other-banks-select');
+        if (otherSelect) otherSelect.value = '';
+      });
+    });
+
+    document.getElementById('other-banks-select')?.addEventListener('change', function() {
+      if (this.value) {
+        document.querySelectorAll('.bank-card').forEach(c => c.classList.remove('selected'));
+      }
+    });
+
+    // Verify UPI button interactive behavior
+    document.getElementById('btn-verify-upi')?.addEventListener('click', function() {
+      const vpa = document.getElementById('upi-vpa-input')?.value.trim();
+      const badge = document.getElementById('upi-status-badge');
+      if (vpa && vpa.includes('@')) {
+        this.textContent = 'Verified ✓';
+        this.classList.remove('btn-outline');
+        this.classList.add('btn-primary');
+        if (badge) {
+          badge.style.display = 'flex';
+          badge.innerHTML = `<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Verified VPA: <strong>${vpa}</strong></span>`;
+        }
+      }
     });
 
     // Payment Success & State Synchronization
@@ -1213,9 +1663,13 @@
       document.querySelectorAll('.booking-theme-card').forEach(c => c.classList.remove('selected'));
       document.querySelectorAll('.addon-card').forEach(c => {
         c.classList.remove('selected');
+        c.setAttribute('aria-checked', 'false');
         const chk = c.querySelector('input[type="checkbox"]');
         if (chk) chk.checked = false;
       });
+
+      // Reset payment method to UPI
+      updatePaymentPanel('upi');
 
       // Default Magic Moments
       selectBookingPackage('magic');
