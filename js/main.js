@@ -524,45 +524,117 @@ const Toast = (() => {
 
   const createContainer = () => {
     container = document.createElement('div');
+    container.id = 'littlelux-toast-container';
     container.style.cssText = `
-      position:fixed;top:var(--space-6);right:var(--space-6);z-index:var(--z-toast);
-      display:flex;flex-direction:column;gap:var(--space-3);pointer-events:none;
+      position:fixed;top:var(--space-6, 1.5rem);right:var(--space-6, 1.5rem);z-index:9999;
+      display:flex;flex-direction:column;gap:var(--space-3, 0.75rem);pointer-events:none;
+      max-width:calc(100vw - 2rem);
     `;
     document.body.appendChild(container);
+  };
+
+  // Curated SVG vector representations for emojis commonly used in celebrations & alerts
+  const vectorSvgMap = {
+    '🎉': '<svg class="svg-icon toast-inline-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 11 7 7-9 2z"/><path d="m15 4 5 5"/><path d="m11 2 1 3"/><path d="m18 11 3 1"/><path d="m14 10 6-6"/><path d="m7 17-3 3"/><path d="m17 7 2-2"/></svg>',
+    '🎊': '<svg class="svg-icon toast-inline-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 11 7 7-9 2z"/><path d="m15 4 5 5"/><path d="m11 2 1 3"/><path d="m18 11 3 1"/><path d="m14 10 6-6"/><path d="m7 17-3 3"/><path d="m17 7 2-2"/></svg>',
+    '✨': '<svg class="svg-icon toast-inline-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+    '⭐': '<svg class="svg-icon toast-inline-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+    '🎂': '<svg class="svg-icon toast-inline-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v2"/><path d="M12 8v2"/><path d="M17 8v2"/></svg>',
+    '🍰': '<svg class="svg-icon toast-inline-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2.5-2 4-2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v2"/><path d="M12 8v2"/><path d="M17 8v2"/></svg>',
+    '🎈': '<svg class="svg-icon toast-inline-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 11 7 11s7-6 7-11a7 7 0 0 0-7-7z"/><path d="M12 20v4"/></svg>',
+    '✅': '<svg class="svg-icon toast-inline-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>',
+    '🔔': '<svg class="svg-icon toast-inline-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>'
   };
 
   const show = (message, type = 'success', duration = 4000) => {
     if (!container) createContainer();
 
-    const toast = document.createElement('div');
-    const icons = {
-      success: '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>',
-      error: '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" x2="9" y1="9" y2="15"/><line x1="9" x2="15" y1="9" y2="15"/></svg>',
-      warning: '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>',
-      info: '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>'
-    };
-    const colors = {
-      success: 'rgba(168,216,200,0.95)',
-      error: 'rgba(243,168,143,0.95)',
-      warning: 'rgba(216,181,106,0.95)',
-      info: 'rgba(142,107,199,0.95)',
+    // 1. Process message: Replace common emojis with crisp SVG vector icons
+    let processedMessage = String(message || '');
+    for (const [emojiChar, svgStr] of Object.entries(vectorSvgMap)) {
+      if (processedMessage.includes(emojiChar)) {
+        processedMessage = processedMessage.split(emojiChar).join(svgStr);
+      }
+    }
+    // 2. Strip any remaining unsupported unicode emojis so NO raw emojis ever display
+    processedMessage = processedMessage.replace(/[\u{1F300}-\u{1F9FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]|[\u{1F600}-\u{1F64F}]|[\u{1F680}-\u{1F6FF}]|[\u{1F1E0}-\u{1F1FF}]|[\u{1F900}-\u{1F9FF}]|[\u{1FA70}-\u{1FAFF}]/gu, '').trim();
+
+    // Default primary vector badges for each toast alert type
+    const defaultIcons = {
+      success: '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>',
+      error: '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" x2="9" y1="9" y2="15"/><line x1="9" x2="15" y1="9" y2="15"/></svg>',
+      warning: '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>',
+      info: '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>'
     };
 
+    let iconHtml = defaultIcons[type] || defaultIcons.info;
+    let textHtml = processedMessage;
+
+    // If message starts with an inline SVG, extract it as the primary badge to prevent double icons
+    if (processedMessage.startsWith('<svg')) {
+      const closingSvgIndex = processedMessage.indexOf('</svg>');
+      if (closingSvgIndex !== -1) {
+        iconHtml = processedMessage.substring(0, closingSvgIndex + 6);
+        textHtml = processedMessage.substring(closingSvgIndex + 6).trim();
+      }
+    }
+
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+
+    // Theme-conscious colors with high contrast for both dark & light modes
+    const themeStyles = {
+      light: {
+        success: { bg: 'rgba(236, 253, 245, 0.98)', border: 'rgba(16, 185, 129, 0.4)', text: '#064E3B', iconBg: 'rgba(16, 185, 129, 0.15)', iconColor: '#059669' },
+        error:   { bg: 'rgba(254, 242, 242, 0.98)', border: 'rgba(239, 68, 68, 0.4)',  text: '#7F1D1D', iconBg: 'rgba(239, 68, 68, 0.15)',  iconColor: '#DC2626' },
+        warning: { bg: 'rgba(255, 251, 235, 0.98)', border: 'rgba(245, 158, 11, 0.4)', text: '#78350F', iconBg: 'rgba(245, 158, 11, 0.15)', iconColor: '#D97706' },
+        info:    { bg: 'rgba(245, 243, 255, 0.98)', border: 'rgba(139, 92, 246, 0.4)', text: '#4C1D95', iconBg: 'rgba(139, 92, 246, 0.15)', iconColor: '#7C3AED' }
+      },
+      dark: {
+        success: { bg: 'rgba(6, 78, 59, 0.95)',    border: 'rgba(52, 211, 153, 0.5)',  text: '#ECFDF5', iconBg: 'rgba(52, 211, 153, 0.22)', iconColor: '#6EE7B7' },
+        error:   { bg: 'rgba(127, 29, 29, 0.95)',   border: 'rgba(248, 113, 113, 0.5)', text: '#FEF2F2', iconBg: 'rgba(248, 113, 113, 0.22)',iconColor: '#FCA5A5' },
+        warning: { bg: 'rgba(120, 53, 15, 0.95)',   border: 'rgba(251, 191, 36, 0.5)',  text: '#FFFBEB', iconBg: 'rgba(251, 191, 36, 0.22)', iconColor: '#FCD34D' },
+        info:    { bg: 'rgba(76, 29, 149, 0.95)',   border: 'rgba(167, 139, 250, 0.5)', text: '#F5F3FF', iconBg: 'rgba(167, 139, 250, 0.22)',iconColor: '#C4B5FD' }
+      }
+    };
+
+    const currentPalette = (isDark ? themeStyles.dark : themeStyles.light)[type] || (isDark ? themeStyles.dark.info : themeStyles.light.info);
+
+    const toast = document.createElement('div');
+    toast.className = `littlelux-toast toast-${type}`;
     toast.style.cssText = `
-      background:${colors[type]};backdrop-filter:blur(20px);padding:var(--space-4) var(--space-5);
-      border-radius:var(--border-radius-lg);box-shadow:var(--shadow-xl);pointer-events:all;
-      display:flex;align-items:center;gap:var(--space-3);min-width:280px;max-width:400px;
-      font-family:var(--font-body);font-size:var(--text-sm);font-weight:600;color:var(--color-deep-berry);
-      animation:slide-up 0.3s ease;border:1px solid rgba(255,255,255,0.4);
+      background:${currentPalette.bg};backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+      padding:0.85rem 1.25rem;border-radius:var(--border-radius-lg, 14px);
+      box-shadow:0 10px 25px -5px rgba(0,0,0,0.15), 0 8px 10px -6px rgba(0,0,0,0.1);
+      pointer-events:all;display:flex;align-items:center;gap:0.75rem;
+      min-width:280px;max-width:440px;font-family:var(--font-body, inherit);
+      font-size:var(--text-sm, 0.9rem);font-weight:600;color:${currentPalette.text};
+      animation:slide-up 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border:1px solid ${currentPalette.border};line-height:1.45;
     `;
-    toast.innerHTML = `<span class="toast-icon-wrap" style="display:inline-flex;align-items:center">${icons[type]}</span><span>${message}</span>`;
+
+    toast.innerHTML = `
+      <span class="toast-icon-wrap" style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:${currentPalette.iconBg};color:${currentPalette.iconColor};flex-shrink:0">
+        ${iconHtml}
+      </span>
+      <span class="toast-content" style="flex:1;word-break:break-word">${textHtml}</span>
+    `;
+
+    // Ensure svg icons inside toast are properly sized
+    const toastSvgs = toast.querySelectorAll('svg');
+    toastSvgs.forEach(s => {
+      s.style.width = '18px';
+      s.style.height = '18px';
+      s.style.display = 'inline-block';
+      s.style.verticalAlign = 'middle';
+    });
+
     container.appendChild(toast);
 
     setTimeout(() => {
-      toast.style.transition = 'all 0.3s ease';
+      toast.style.transition = 'all 0.35s ease';
       toast.style.opacity = '0';
       toast.style.transform = 'translateX(100%)';
-      setTimeout(() => toast.remove(), 300);
+      setTimeout(() => toast.remove(), 350);
     }, duration);
   };
 
