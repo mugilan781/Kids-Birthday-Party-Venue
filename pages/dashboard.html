@@ -47,8 +47,7 @@
     </nav>
 
     <div class="dash-sidebar-footer">
-      <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" style="width:auto;padding:0 1rem;gap:0.5rem;border-radius:var(--border-radius-md)"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg> Toggle Theme</button>
-      <a href="login.html" class="btn btn-outline btn-sm" style="width:100%;margin-top:0.75rem">Sign Out</a>
+      <a href="login.html" class="btn btn-outline btn-sm" style="width:100%">Sign Out</a>
     </div>
   </aside>
 
@@ -143,15 +142,56 @@
         <div class="dash-avail-layout">
           <div class="dash-calendar-wrap">
             <div class="availability-calendar"></div>
-            <div class="time-slots-container"><p style="color:var(--text-muted);text-align:center;padding:2rem">Select a date to view time slots</p></div>
+            <div class="time-slots-container">
+              <div class="slots-placeholder">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <p>Select any available date on the calendar above to view open time slots</p>
+              </div>
+            </div>
           </div>
           <div class="dash-avail-info">
-            <div class="dash-info-card"><h4><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg> Booking Info</h4><p>Green dates have open slots. Yellow dates are partially booked. Red dates are fully booked.</p><a href="#" class="btn btn-primary btn-sm" style="margin-top:1rem" onclick="showSection('booking');return false">Book Selected Date →</a></div>
-            <div class="dash-info-card"><h4><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l2-2 2 2v2h2V7l2-2 2 2v2h2V7l2-2 2 2v14"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/><path d="M9 11h1"/><path d="M14 11h1"/></svg> Hall Options</h4>
-              <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:0.75rem">
-                <label style="display:flex;align-items:center;gap:0.75rem;cursor:pointer"><input type="radio" name="hall" value="grand" checked style="accent-color:var(--color-royal-lilac)" /> <span><strong>Grand Ballroom</strong> · up to 200</span></label>
-                <label style="display:flex;align-items:center;gap:0.75rem;cursor:pointer"><input type="radio" name="hall" value="garden" style="accent-color:var(--color-royal-lilac)" /> <span><strong>Garden Pavilion</strong> · up to 80</span></label>
-                <label style="display:flex;align-items:center;gap:0.75rem;cursor:pointer"><input type="radio" name="hall" value="sky" style="accent-color:var(--color-royal-lilac)" /> <span><strong>Sky Lounge</strong> · up to 60</span></label>
+            <div class="dash-info-card">
+              <h4>
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+                Booking Info
+              </h4>
+              <p>Green dates have open slots. Yellow dates are partially booked. Red dates are fully booked.</p>
+              <div class="avail-selected-badge" id="avail-selected-badge" style="display:none">
+                <span class="badge-label">Selected:</span>
+                <strong id="avail-selected-text">None</strong>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm" id="book-selected-date-btn" style="margin-top:1rem;width:100%;text-align:center;justify-content:center" onclick="handleBookSelectedDate()">Book Selected Date →</button>
+            </div>
+            <div class="dash-info-card">
+              <h4>
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l2-2 2 2v2h2V7l2-2 2 2v2h2V7l2-2 2 2v14"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/><path d="M9 11h1"/><path d="M14 11h1"/></svg>
+                Hall Options
+              </h4>
+              <div class="dash-hall-options-list">
+                <label class="dash-hall-option selected">
+                  <input type="radio" name="hall" value="grand" checked />
+                  <div class="hall-option-info">
+                    <span class="hall-option-name">Grand Ballroom</span>
+                    <span class="hall-option-meta">Up to 200 guests · Main Banquet Hall</span>
+                  </div>
+                  <span class="hall-option-badge">200 max</span>
+                </label>
+                <label class="dash-hall-option">
+                  <input type="radio" name="hall" value="garden" />
+                  <div class="hall-option-info">
+                    <span class="hall-option-name">Garden Pavilion</span>
+                    <span class="hall-option-meta">Up to 80 guests · Glasshouse & Lawn</span>
+                  </div>
+                  <span class="hall-option-badge">80 max</span>
+                </label>
+                <label class="dash-hall-option">
+                  <input type="radio" name="hall" value="sky" />
+                  <div class="hall-option-info">
+                    <span class="hall-option-name">Sky Lounge</span>
+                    <span class="hall-option-meta">Up to 60 guests · Rooftop Panoramic</span>
+                  </div>
+                  <span class="hall-option-badge">60 max</span>
+                </label>
               </div>
             </div>
           </div>
@@ -210,9 +250,9 @@
           <div class="dash-form-grid">
             <div class="form-group"><label class="form-label">Birthday Child's Name *</label><input type="text" class="form-control" placeholder="e.g. Arya" /></div>
             <div class="form-group"><label class="form-label">Child's Age *</label><input type="number" class="form-control" placeholder="e.g. 6" min="1" max="15" /></div>
-            <div class="form-group"><label class="form-label">Party Date *</label><input type="date" class="form-control" /></div>
+            <div class="form-group"><label class="form-label">Party Date *</label><input type="date" class="form-control" id="booking-date-input" /></div>
             <div class="form-group"><label class="form-label">Time Slot *</label>
-              <select class="form-control"><option>10:00 AM – 1:00 PM</option><option>2:00 PM – 5:00 PM</option><option>4:00 PM – 7:00 PM</option><option>6:00 PM – 9:00 PM</option></select>
+              <select class="form-control" id="booking-time-select"><option>10:00 AM – 1:00 PM</option><option>2:00 PM – 5:00 PM</option><option>4:00 PM – 7:00 PM</option><option>6:00 PM – 9:00 PM</option></select>
             </div>
           </div>
           <div class="guest-counter-section">
@@ -466,6 +506,13 @@
       const titles = { overview:'Dashboard Overview', availability:'Hall Availability', booking:'New Booking', 'my-bookings':'My Bookings', 'party-details':'Party Details', 'day-logistics':'Day of Event', notifications:'Notifications', profile:'My Profile', settings:'Settings' };
       document.getElementById('current-section-title').textContent = titles[sectionId] || 'Dashboard';
       
+      if (sectionId === 'availability') {
+        const cal = document.querySelector('.availability-calendar');
+        if (cal && !cal.querySelector('.cal-header') && window.LittleLux && window.LittleLux.AvailabilityCalendar) {
+          window.LittleLux.AvailabilityCalendar.init('.availability-calendar');
+        }
+      }
+
       if (window.innerWidth < 1024) closeSidebar();
       window.scrollTo(0,0);
     }
@@ -555,6 +602,54 @@
       opt.addEventListener('click', () => {
         document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('selected'));
         opt.classList.add('selected');
+      });
+    });
+
+    // Availability Calendar & Booking Interactivity
+    let currentSelectedDate = null;
+    let currentSelectedTime = null;
+
+    document.addEventListener('dateSelected', (e) => {
+      currentSelectedDate = e.detail.date;
+      updateAvailSelection();
+    });
+
+    document.addEventListener('timeSelected', (e) => {
+      currentSelectedTime = e.detail.time;
+      updateAvailSelection();
+    });
+
+    function updateAvailSelection() {
+      const badge = document.getElementById('avail-selected-badge');
+      const text = document.getElementById('avail-selected-text');
+      if (!badge || !text) return;
+      
+      if (currentSelectedDate) {
+        badge.style.display = 'flex';
+        const dateObj = new Date(currentSelectedDate + 'T00:00:00');
+        const formatted = isNaN(dateObj.getTime()) ? currentSelectedDate : dateObj.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+        text.textContent = formatted + (currentSelectedTime ? ` · ${currentSelectedTime}` : '');
+      }
+    }
+
+    function handleBookSelectedDate() {
+      showSection('booking');
+      if (currentSelectedDate) {
+        const dateInput = document.getElementById('booking-date-input');
+        if (dateInput) {
+          dateInput.value = currentSelectedDate;
+          dateInput.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      }
+    }
+
+    // Hall option selection
+    document.querySelectorAll('.dash-hall-option').forEach(opt => {
+      opt.addEventListener('click', () => {
+        document.querySelectorAll('.dash-hall-option').forEach(o => o.classList.remove('selected'));
+        opt.classList.add('selected');
+        const radio = opt.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
       });
     });
 
