@@ -859,13 +859,15 @@
   .signup-social { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 375px) {
-  .signup-card { padding: 24px 16px; }
+@media (max-width: 360px) {
+  .signup-card { padding: 22px 16px; }
+  .signup-title { font-size: 1.4rem; }
 }
 
 @media (max-width: 320px) {
-  .signup-page { padding: 12px; }
-  .signup-card { padding: 20px 14px; }
+  .signup-page { padding: 10px; }
+  .signup-card { padding: 18px 12px; }
+  .signup-title { font-size: 1.25rem; }
 }
 
 /* Responsive */
@@ -897,18 +899,24 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 360px) {
   .login-card {
-    padding: 24px 16px;
+    padding: 22px 16px;
+  }
+  .login-title {
+    font-size: 1.4rem;
   }
 }
 
 @media (max-width: 320px) {
   .login-page {
-    padding: 12px;
+    padding: 10px;
   }
   .login-card {
-    padding: 20px 14px;
+    padding: 18px 12px;
+  }
+  .login-title {
+    font-size: 1.25rem;
   }
 }
 

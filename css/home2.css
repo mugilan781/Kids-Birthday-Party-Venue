@@ -788,14 +788,37 @@
   .h2-gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 768px) {
-  .h2-hero-left { padding: var(--space-10) var(--space-6); }
-  .h2-hero-right { height: 280px; }
+@media (max-width: 760px) {
+  .h2-hero-left { padding: var(--space-8) var(--space-4); }
+  .h2-hero-right { height: 260px; }
   .time-slots-grid { grid-template-columns: repeat(2, 1fr); }
   .form-row { grid-template-columns: 1fr; }
+  .availability-calendar { padding: var(--space-4); }
+  .time-slots-container { padding: var(--space-4); }
 }
 
 @media (max-width: 480px) {
-  .h2-gallery-grid { grid-template-columns: 1fr 1fr; }
+  .h2-hero-title { font-size: clamp(1.85rem, 7vw, 2.35rem); }
+  .h2-hero-left { padding: var(--space-6) var(--space-3); }
+  .h2-gallery-grid { grid-template-columns: 1fr; }
   .h2-team-stats { flex-direction: column; gap: var(--space-3); }
+  .time-slots-grid { grid-template-columns: 1fr; }
+  .h2-enquiry-form { padding: var(--space-4); }
+}
+
+@media (max-width: 360px) {
+  .h2-hero-title { font-size: 1.7rem; }
+  .availability-calendar { padding: 0.75rem; }
+  .calendar-day { min-width: 30px; height: 32px; font-size: 0.8rem; }
+  .time-slots-container { padding: 0.75rem; }
+  .time-slot-btn { padding: 0.5rem 0.75rem; font-size: 0.82rem; }
+}
+
+@media (max-width: 320px) {
+  .h2-hero-title { font-size: 1.5rem; line-height: 1.15; }
+  .h2-hero-subtitle { font-size: 0.84rem; }
+  .availability-calendar { padding: 0.5rem; border-radius: var(--border-radius-lg); }
+  .calendar-day { min-width: 28px; height: 28px; font-size: 0.75rem; }
+  .time-slot-btn { font-size: 0.78rem; padding: 0.45rem 0.6rem; }
+  .h2-enquiry-form { padding: 0.85rem 0.65rem; border-radius: var(--border-radius-lg); }
 }
