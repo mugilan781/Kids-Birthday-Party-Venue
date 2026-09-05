@@ -614,6 +614,16 @@
   overflow: hidden;
   text-decoration: none;
   display: block;
+  cursor: zoom-in;
+  border: none;
+  padding: 0;
+  background: transparent;
+  text-align: left;
+}
+
+.theme-card:focus-visible {
+  outline: 2px solid var(--color-royal-lilac);
+  outline-offset: 2px;
 }
 
 .theme-img {
@@ -636,6 +646,7 @@
   justify-content: flex-end;
   padding: var(--space-4);
   transition: background var(--transition-base);
+  pointer-events: none;
 }
 
 .theme-card:hover .theme-overlay {
@@ -726,7 +737,6 @@
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-elegant);
-  cursor: zoom-in;
 }
 
 .venue-main:hover .venue-main-img {
@@ -869,7 +879,6 @@
   width: 100%;
   aspect-ratio: 16/10;
   object-fit: cover;
-  cursor: zoom-in;
   transition: transform var(--transition-elegant);
 }
 
@@ -1051,16 +1060,18 @@
 .gi-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(36, 26, 50, 0.82);
+  background: linear-gradient(180deg, rgba(36,26,50,0.06) 0%, rgba(36,26,50,0.22) 50%, rgba(36,26,50,0.55) 100%);
   display: flex;
   align-items: flex-end;
   padding: var(--space-4);
   opacity: 0;
-  transition: opacity var(--transition-base);
+  transition: opacity var(--transition-base), background var(--transition-base);
+  pointer-events: none;
 }
 
 .gallery-item:hover .gi-overlay {
   opacity: 1;
+  background: linear-gradient(180deg, rgba(36,26,50,0.10) 0%, rgba(36,26,50,0.32) 50%, rgba(36,26,50,0.65) 100%);
 }
 
 .gi-overlay span {
@@ -1182,6 +1193,19 @@
   color: white;
   line-height: 1.15;
   margin-bottom: var(--space-3);
+}
+
+.cta-title .italic-heading {
+  color: var(--color-champagne-gold);
+}
+
+[data-theme="dark"] .cta-title .italic-heading {
+  color: var(--color-champagne-gold);
+}
+
+[data-theme="light"] .cta-title .italic-heading {
+  color: var(--color-champagne-gold);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.25);
 }
 
 .cta-subtitle {
