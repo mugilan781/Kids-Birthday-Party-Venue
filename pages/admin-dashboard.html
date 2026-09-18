@@ -171,7 +171,7 @@
             </h2>
             <p style="color:var(--text-muted);font-size:var(--text-sm)">Live operational pulse of LittleLux Birthday Venue, Jubilee Hills.</p>
           </div>
-          <div style="display:flex;gap:0.75rem">
+          <div class="dash-header-actions">
             <button class="btn btn-outline btn-sm" onclick="showSection('calendar')"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> View Today's Slots</button>
             <button class="btn btn-primary btn-sm" onclick="exportOverviewReport()"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg> Export Daily Briefing</button>
           </div>
@@ -402,7 +402,7 @@
             </h2>
             <p style="color:var(--text-muted);font-size:var(--text-sm)">Click on any slot to toggle its booking or maintenance lock status.</p>
           </div>
-          <div style="display:flex;gap:0.75rem">
+          <div class="dash-header-actions">
             <button class="btn btn-outline btn-sm" onclick="LittleLux.Toast.show('Syncing with live Google Calendar and WhatsApp bookings...', 'info')"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> Sync Calendar</button>
             <button class="btn btn-primary btn-sm" onclick="lockAllWeekendSlots()"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Lock Maintenance Slots</button>
           </div>
@@ -411,14 +411,14 @@
         <!-- DATE SELECTOR -->
         <div class="dash-info-card" style="margin-bottom:1.5rem">
           <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
-            <div style="display:flex;align-items:center;gap:0.75rem">
+            <div class="admin-date-nav">
               <button class="btn btn-action" onclick="changeCalendarDay(-1)">← Prev Day</button>
               <span id="current-calendar-date" style="font-family:var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary)">
                 Saturday, September 27, 2026 (Peak Weekend)
               </span>
               <button class="btn btn-action" onclick="changeCalendarDay(1)">Next Day →</button>
             </div>
-            <div style="display:flex;gap:0.5rem">
+            <div class="admin-badge-row">
               <span class="status-badge available">● Available (Click to Book)</span>
               <span class="status-badge confirmed">● Booked (Click to View)</span>
               <span class="status-badge blocked">● Maintenance / Blocked</span>
@@ -430,7 +430,7 @@
         <div style="display:flex;flex-direction:column;gap:2rem">
           <!-- Hall 1 -->
           <div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem">
               <h3 style="font-family:var(--font-display);font-weight:700;color:var(--text-primary);font-size:var(--text-lg)">
                 <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--color-royal-lilac)"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l2-4h14l2 4M5 21V10.85M19 21V10.85M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/></svg> Grand Ballroom (Capacity: Up to 150 Guests)
               </h3>
@@ -468,7 +468,7 @@
 
           <!-- Hall 2 -->
           <div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem">
               <h3 style="font-family:var(--font-display);font-weight:700;color:var(--text-primary);font-size:var(--text-lg)">
                 <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--color-royal-lilac)"><polygon points="12 2 2 22 22 22 12 2"/><line x1="12" x2="12" y1="2" y2="22"/></svg> Fairy Tale Pavilion (Capacity: Up to 80 Guests)
               </h3>
@@ -506,7 +506,7 @@
 
           <!-- Hall 3 -->
           <div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem">
               <h3 style="font-family:var(--font-display);font-weight:700;color:var(--text-primary);font-size:var(--text-lg)">
                 <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--color-royal-lilac)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Starlight Terrace (Capacity: Up to 100 Guests)
               </h3>
@@ -840,7 +840,7 @@
             </h2>
             <p style="color:var(--text-muted);font-size:var(--text-sm)">Payment gateways reconciliation, invoice logs and revenue streams.</p>
           </div>
-          <div style="display:flex;gap:0.75rem">
+          <div class="dash-header-actions">
             <button class="btn btn-outline btn-sm" onclick="exportFinancialsCSV()"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg> Download Ledger CSV</button>
             <button class="btn btn-primary btn-sm" onclick="LittleLux.Toast.show('Generating GST Audit Package...', 'info')"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></svg> GST Invoices Zip</button>
           </div>
