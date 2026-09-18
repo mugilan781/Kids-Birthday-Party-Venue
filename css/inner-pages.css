@@ -465,7 +465,7 @@
 
 .about-value-card {
   background: var(--gradient-card);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border-light);
   border-radius: var(--border-radius-xl);
   padding: 0;
   transition: all var(--transition-elegant);
@@ -490,7 +490,11 @@
 }
 
 .about-value-card:hover::before { transform: scaleX(1); }
-.about-value-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-gloss-card-hover); }
+.about-value-card:hover { 
+  transform: translateY(-6px); 
+  border-color: var(--border-primary);
+  box-shadow: var(--shadow-gloss-card-hover); 
+}
 
 .value-card-img-wrap {
   position: relative;
@@ -498,6 +502,7 @@
   aspect-ratio: 16/10;
   overflow: hidden;
   background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .value-card-img {
