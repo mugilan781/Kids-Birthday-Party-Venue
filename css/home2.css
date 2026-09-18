@@ -260,6 +260,133 @@
 .leg-dot.partial { background: var(--color-champagne-gold); }
 .leg-dot.booked { background: var(--color-peach-sorbet); }
 
+/* Booking Perks in Section 2 Left Column */
+.h2-avail-perks {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.avail-perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.95rem;
+  padding: 0.95rem 1.15rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-xl);
+  box-shadow: 0 4px 16px rgba(42, 29, 61, 0.04);
+  transition: all var(--transition-base);
+}
+
+.avail-perk-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-primary);
+  box-shadow: 0 8px 24px rgba(102, 79, 149, 0.1);
+}
+
+.avail-perk-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--border-radius-lg);
+  background: linear-gradient(135deg, rgba(142, 125, 190, 0.16), rgba(102, 79, 149, 0.08));
+  color: var(--color-royal-lilac);
+  border: 1px solid rgba(142, 125, 190, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.avail-perk-icon .svg-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.avail-perk-item:hover .avail-perk-icon {
+  background: var(--gradient-magic);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: scale(1.08);
+}
+
+.avail-perk-text {
+  flex: 1;
+}
+
+.avail-perk-title {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.avail-perk-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.avail-perk-help {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-glass-dark);
+  border: 1px dashed var(--border-primary);
+  border-radius: var(--border-radius-lg);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.avail-perk-help .svg-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-royal-lilac);
+  flex-shrink: 0;
+}
+
+.avail-perk-help a {
+  color: var(--color-royal-lilac);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.avail-perk-help a:hover {
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .avail-perk-item {
+  background: linear-gradient(180deg, rgba(35, 25, 50, 0.9) 0%, rgba(27, 19, 39, 0.96) 100%);
+  border-color: rgba(184, 165, 228, 0.16);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .avail-perk-item:hover {
+  border-color: rgba(184, 165, 228, 0.4);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .avail-perk-icon {
+  background: rgba(184, 165, 228, 0.14);
+  border-color: rgba(184, 165, 228, 0.25);
+  color: #D1C4EF;
+}
+
+[data-theme="dark"] .avail-perk-help {
+  background: rgba(184, 165, 228, 0.08);
+  border-color: rgba(184, 165, 228, 0.25);
+}
+
+[data-theme="dark"] .avail-perk-help .svg-icon,
+[data-theme="dark"] .avail-perk-help a {
+  color: #D1C4EF;
+}
+
 /* Calendar Styles */
 .availability-calendar {
   background: var(--gradient-card);
