@@ -1201,6 +1201,13 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+img.author-avatar {
+  object-fit: cover;
+  padding: 0;
+  display: block;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
 .author-name {
   font-weight: 700;
   color: var(--text-primary);
