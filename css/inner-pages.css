@@ -1620,6 +1620,35 @@
 }
 
 /* SERVICES SPECIFIC */
+.services-themes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.services-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: var(--space-8);
+}
+
+.services-catering-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-addons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: var(--space-8);
+}
+
 .services-rules-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1740,6 +1769,7 @@
   .about-awards-grid { grid-template-columns: repeat(3, 1fr); }
   .team-roles-grid { grid-template-columns: repeat(3, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-addons-grid { grid-template-columns: repeat(2, 1fr); }
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-channels-grid { grid-template-columns: repeat(2, 1fr); }
   .services-rules-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1774,6 +1804,8 @@
   .contact-layout { grid-template-columns: 1fr; }
   .contact-location-card { grid-template-columns: 1fr; }
   .decoration-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-themes-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-split-layout { grid-template-columns: 1fr; gap: 2rem; }
   .blog-featured {
     grid-template-columns: 1fr;
     max-height: none;
@@ -1797,6 +1829,9 @@
   .team-roles-grid { grid-template-columns: repeat(2, 1fr); }
   .about-awards-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
+  .services-themes-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-addons-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-split-layout { grid-template-columns: 1fr; gap: 1.75rem; }
   .blog-grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
   .blog-card-title { min-height: auto; }
   .blog-card-excerpt { min-height: auto; margin-bottom: 1rem; }
@@ -1818,6 +1853,10 @@
   .team-roles-grid { grid-template-columns: 1fr; }
   .about-awards-grid { grid-template-columns: 1fr 1fr; }
   .decoration-grid { grid-template-columns: 1fr; }
+  .services-themes-grid { grid-template-columns: 1fr; }
+  .services-catering-options { grid-template-columns: 1fr; }
+  .services-addons-grid { grid-template-columns: 1fr; }
+  .service-card-body { padding: 1.25rem 1rem; }
   .vision-stat-card { padding: var(--space-4); }
   .contact-location-info { padding: 1.25rem 1rem; }
   .contact-info-card { padding: 1.25rem 1rem; }
@@ -1888,6 +1927,9 @@
   .about-stat-number { font-size: 2.2rem; }
   .about-awards-grid { grid-template-columns: 1fr; }
   .decoration-card-body { padding: 1rem; }
+  .service-card-body { padding: 1.1rem 0.85rem; }
+  .service-card-title { font-size: 1.05rem; flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+  .service-card-title span { margin-left: 0; text-align: left; }
   .blog-featured-title { font-size: 1.3rem; }
   .blog-featured-img-wrap { min-height: 180px; height: 190px; }
   .blog-featured-content { padding: 1.25rem 1rem; }
@@ -1908,6 +1950,10 @@
   .about-stat { padding: 1rem 0.75rem; }
   .about-stat-number { font-size: 1.9rem; }
   .vision-stat-card { padding: 0.75rem; }
+  .service-card-body { padding: 0.95rem 0.75rem; }
+  .service-card-title { font-size: 1rem; }
+  .service-card-desc { font-size: 0.82rem; }
+  .services-rules-grid .about-value-card { padding: 1.25rem 0.85rem; }
   .blog-featured-title { font-size: 1.12rem; }
   .blog-featured-excerpt { font-size: 0.82rem; }
   .blog-featured-img-wrap { min-height: 150px; height: 160px; }

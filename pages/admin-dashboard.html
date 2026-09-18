@@ -262,7 +262,7 @@
             <button class="btn btn-outline btn-sm" onclick="showSection('staff')">Check Staff on Duty →</button>
           </div>
 
-          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1rem">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(240px, 100%), 1fr));gap:1rem">
             <!-- Event 1 -->
             <div style="background:var(--bg-secondary);padding:1rem;border-radius:var(--border-radius-lg);border-left:4px solid var(--color-mint-dark)">
               <div style="display:flex;justify-content:space-between;margin-bottom:0.25rem">
@@ -1730,7 +1730,7 @@
 
       document.getElementById('vb-title').textContent = `Booking Details: ${b.childName}'s Birthday (${b.id})`;
       document.getElementById('vb-body').innerHTML = `
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem">
+        <div class="form-row-2" style="margin-bottom:1.5rem">
           <div>
             <h4 style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--color-royal-lilac);margin-bottom:0.75rem">Child & Event Info</h4>
             <div class="detail-row"><span>Child Name:</span><strong>${b.childName}</strong></div>

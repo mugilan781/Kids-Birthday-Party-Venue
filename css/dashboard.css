@@ -1333,6 +1333,40 @@
   line-height: 1;
 }
 
+.guest-counter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.booking-review-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.booking-assure-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.dash-profile-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.dash-settings-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
 /* ADD-ONS */
 .addons-grid {
   display: grid;
@@ -2655,6 +2689,19 @@
   .admin-search-input {
     width: 100%;
   }
+  .booking-review-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .booking-assure-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .dash-profile-layout,
+  .dash-settings-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 /* ===== 760px: Tablet Portrait / Large Mobile ===== */
@@ -2758,6 +2805,7 @@
   .step-label {
     font-size: 0.68rem;
   }
+  .booking-step-line,
   .progress-line {
     min-width: 12px;
   }
@@ -2778,6 +2826,10 @@
   .form-row-2 {
     grid-template-columns: 1fr;
     gap: var(--space-3);
+  }
+  .guest-counter-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
@@ -2899,8 +2951,9 @@
   .step-label {
     font-size: 0.64rem;
   }
+  .booking-step-line,
   .progress-line {
-    min-width: 10px;
+    min-width: 8px;
   }
   .guest-counter-section {
     padding: 1rem 0.85rem;
@@ -3038,9 +3091,12 @@
   .step-label {
     display: none;
   }
+  .booking-step-line,
   .progress-line {
-    min-width: 8px;
+    min-width: 6px;
     flex: 1;
+    margin-bottom: 0;
+    align-self: center;
   }
   .counter-control {
     gap: 0.35rem;
@@ -3133,9 +3189,12 @@
     height: 26px;
     font-size: 0.7rem;
   }
+  .booking-step-line,
   .progress-line {
-    min-width: 5px;
+    min-width: 4px;
     flex: 1;
+    margin-bottom: 0;
+    align-self: center;
   }
   .payment-method-tabs {
     grid-template-columns: 1fr;
