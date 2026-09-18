@@ -467,14 +467,12 @@
   background: var(--gradient-card);
   border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--border-radius-xl);
-  padding: var(--space-8);
+  padding: 0;
   transition: all var(--transition-elegant);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   height: 100%;
   box-shadow: var(--shadow-gloss-card);
 }
@@ -488,19 +486,69 @@
   transform: scaleX(0);
   transition: transform var(--transition-base);
   transform-origin: left;
+  z-index: 3;
 }
 
 .about-value-card:hover::before { transform: scaleX(1); }
 .about-value-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-gloss-card-hover); }
 
-.value-card-icon {
-  font-size: 2.2rem;
-  margin-bottom: var(--space-3);
-  display: inline-flex;
+.value-card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+}
+
+.value-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.about-value-card:hover .value-card-img {
+  transform: scale(1.06);
+}
+
+.value-card-icon-badge {
+  position: absolute;
+  bottom: var(--space-3);
+  right: var(--space-3);
+  width: 42px;
+  height: 42px;
+  border-radius: var(--border-radius-full);
+  background: rgba(42, 29, 61, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--color-champagne-gold);
+  display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-royal-lilac);
-  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-fast);
+  z-index: 2;
+}
+
+.value-card-icon-badge .svg-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.about-value-card:hover .value-card-icon-badge {
+  background: var(--gradient-gold);
+  color: #201530;
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.08);
+}
+
+.value-card-body {
+  padding: var(--space-5) var(--space-6) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
 }
 
 .value-card-title {
@@ -509,10 +557,15 @@
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: var(--space-2);
-  text-align: center;
+  text-align: left;
 }
 
-.value-card-desc { font-size: var(--text-sm); color: var(--text-muted); line-height: var(--leading-relaxed); text-align: center; }
+.value-card-desc { 
+  font-size: var(--text-sm); 
+  color: var(--text-muted); 
+  line-height: var(--leading-relaxed); 
+  text-align: left; 
+}
 
 /* TEAM */
 .about-team-section { background: var(--bg-primary); }
