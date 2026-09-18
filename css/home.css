@@ -149,6 +149,68 @@
   width: 100%;
 }
 
+/* Hero secondary CTA (btn-ghost) — high contrast & hover fix for light and dark modes */
+.hero .btn-ghost,
+.hero-cta .btn-ghost {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.35), 0 4px 16px rgba(0, 0, 0, 0.22);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  transition: all var(--transition-fast);
+}
+
+.hero .btn-ghost:hover,
+.hero-cta .btn-ghost:hover {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #201530;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.3), 0 0 18px rgba(255, 255, 255, 0.35);
+  text-shadow: none;
+}
+
+.hero .btn-ghost:focus-visible,
+.hero-cta .btn-ghost:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 2px;
+}
+
+[data-theme="light"] .hero .btn-ghost,
+[data-theme="light"] .hero-cta .btn-ghost {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.95);
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] .hero .btn-ghost:hover,
+[data-theme="light"] .hero-cta .btn-ghost:hover {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #201530;
+  text-shadow: none;
+}
+
+[data-theme="dark"] .hero .btn-ghost,
+[data-theme="dark"] .hero-cta .btn-ghost {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.85);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .hero .btn-ghost:hover,
+[data-theme="dark"] .hero-cta .btn-ghost:hover {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #140E1D;
+  text-shadow: none;
+}
+
 .hero-stats {
   display: flex;
   align-items: center;
