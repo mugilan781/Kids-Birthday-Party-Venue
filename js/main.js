@@ -168,6 +168,28 @@ const Navbar = (() => {
     });
 
     setActiveLink();
+
+    // Auto-close mobile nav when the viewport grows back to desktop size
+    // (e.g. DevTools device toolbar toggled off, window resized, tablet rotated).
+    // Without this, .mobile-nav.open + body scroll-lock would linger on desktop.
+    const DESKTOP_QUERY = '(min-width: 1101px)';
+    const closeOnDesktopViewport = () => {
+      if (window.matchMedia(DESKTOP_QUERY).matches) closeMobile();
+    };
+    if (window.matchMedia) {
+      const desktopMq = window.matchMedia(DESKTOP_QUERY);
+      const handleMqChange = (e) => { if (e.matches) closeMobile(); };
+      if (typeof desktopMq.addEventListener === 'function') {
+        desktopMq.addEventListener('change', handleMqChange);
+      } else if (typeof desktopMq.addListener === 'function') {
+        desktopMq.addListener(handleMqChange);
+      }
+    }
+    let navResizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(navResizeTimer);
+      navResizeTimer = setTimeout(closeOnDesktopViewport, 150);
+    }, { passive: true });
   };
 
   return { init, closeMobile };

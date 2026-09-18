@@ -389,6 +389,17 @@
   transform: translateX(0);
 }
 
+/* Safety net: mobile nav must never appear on desktop view, even if .open
+   lingers after a viewport resize (Navbar auto-close in main.js handles state) */
+@media (min-width: 1101px) {
+  .mobile-nav,
+  .mobile-nav.open {
+    transform: translateX(-100%);
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
 .mobile-nav-link {
   display: flex;
   align-items: center;
