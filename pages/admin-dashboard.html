@@ -752,29 +752,31 @@
             </h2>
             <p style="color:var(--text-muted);font-size:var(--text-sm)">Inbound enquiries from Contact page, website forms, and consultation requests.</p>
           </div>
-          <button class="btn btn-primary btn-sm" onclick="exportEnquiriesCSV()">
-            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> Export All Leads CSV
-          </button>
+          <div class="dash-header-actions">
+            <button class="btn btn-primary btn-sm" onclick="exportEnquiriesCSV()">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> Export All Leads CSV
+            </button>
+          </div>
         </div>
 
         <div class="admin-cards-grid" id="enquiries-list">
           <!-- Enquiry 1 -->
           <div class="admin-card" id="enquiry-card-1">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start">
-              <div>
-                <h4 style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--text-primary)">Dr. Rajeshwari Patel</h4>
-                <div style="font-size:var(--text-xs);color:var(--text-muted)">+91 98490 12345 · rajeshwari.p@gmail.com</div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem">
+              <div style="min-width:0;flex:1 1 180px">
+                <h4 style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--text-primary);word-break:break-word">Dr. Rajeshwari Patel</h4>
+                <div style="font-size:var(--text-xs);color:var(--text-muted);word-break:break-word">+91 98490 12345 · rajeshwari.p@gmail.com</div>
               </div>
-              <span class="status-badge pending">New Lead</span>
+              <span class="status-badge pending" style="flex-shrink:0">New Lead</span>
             </div>
-            <p style="font-size:var(--text-xs);color:var(--text-primary);background:var(--bg-secondary);padding:0.6rem;border-radius:var(--border-radius-md)">
+            <p style="font-size:var(--text-xs);color:var(--text-primary);background:var(--bg-secondary);padding:0.6rem;border-radius:var(--border-radius-md);word-break:break-word">
               "Planning a 1st birthday milestone for our twins in November. We expect around 80 guests. Interested in the Grand Royale package with Jungle theme."
             </p>
-            <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--text-light)">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.35rem 0.75rem;font-size:0.72rem;color:var(--text-light)">
               <span>Received: Today, 10:15 AM</span>
               <span>Preferred: Nov 15, 2026</span>
             </div>
-            <div class="btn-action-group" style="justify-content:flex-end">
+            <div class="btn-action-group">
               <button class="btn btn-action-primary" onclick="openReplyModal('Dr. Rajeshwari Patel', 'rajeshwari.p@gmail.com', 'Booking Enquiry for Twins 1st Birthday')">Reply</button>
               <button class="btn btn-action" onclick="convertToBookingPrompt('Dr. Rajeshwari Patel', '80 Guests')">Convert to Booking</button>
               <button class="btn btn-action-danger" onclick="resolveEnquiry(1)">Resolve</button>
@@ -783,21 +785,21 @@
 
           <!-- Enquiry 2 -->
           <div class="admin-card" id="enquiry-card-2">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start">
-              <div>
-                <h4 style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--text-primary)">Vikram Singhania</h4>
-                <div style="font-size:var(--text-xs);color:var(--text-muted)">+91 99887 76655 · vikram.s@singhania.co</div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem">
+              <div style="min-width:0;flex:1 1 180px">
+                <h4 style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--text-primary);word-break:break-word">Vikram Singhania</h4>
+                <div style="font-size:var(--text-xs);color:var(--text-muted);word-break:break-word">+91 99887 76655 · vikram.s@singhania.co</div>
               </div>
-              <span class="status-badge confirmed">Responded</span>
+              <span class="status-badge confirmed" style="flex-shrink:0">Responded</span>
             </div>
-            <p style="font-size:var(--text-xs);color:var(--text-primary);background:var(--bg-secondary);padding:0.6rem;border-radius:var(--border-radius-md)">
+            <p style="font-size:var(--text-xs);color:var(--text-primary);background:var(--bg-secondary);padding:0.6rem;border-radius:var(--border-radius-md);word-break:break-word">
               "Need full venue buyout for Sunday afternoon. Can we bring a celebrity guest performer and external videography team?"
             </p>
-            <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--text-light)">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.35rem 0.75rem;font-size:0.72rem;color:var(--text-light)">
               <span>Received: Yesterday, 4:40 PM</span>
               <span>Preferred: Oct 12, 2026</span>
             </div>
-            <div class="btn-action-group" style="justify-content:flex-end">
+            <div class="btn-action-group">
               <button class="btn btn-action-primary" onclick="openReplyModal('Vikram Singhania', 'vikram.s@singhania.co', 'Re: Full Venue Buyout Query')">Follow Up</button>
               <button class="btn btn-action" onclick="convertToBookingPrompt('Vikram Singhania', '120 Guests')">Convert</button>
               <button class="btn btn-action-danger" onclick="resolveEnquiry(2)">Resolve</button>
@@ -806,21 +808,21 @@
 
           <!-- Enquiry 3 -->
           <div class="admin-card" id="enquiry-card-3">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start">
-              <div>
-                <h4 style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--text-primary)">Anupama Nair</h4>
-                <div style="font-size:var(--text-xs);color:var(--text-muted)">+91 94455 66778 · anupama.nair@hotmail.com</div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem">
+              <div style="min-width:0;flex:1 1 180px">
+                <h4 style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--text-primary);word-break:break-word">Anupama Nair</h4>
+                <div style="font-size:var(--text-xs);color:var(--text-muted);word-break:break-word">+91 94455 66778 · anupama.nair@hotmail.com</div>
               </div>
-              <span class="status-badge pending">New Lead</span>
+              <span class="status-badge pending" style="flex-shrink:0">New Lead</span>
             </div>
-            <p style="font-size:var(--text-xs);color:var(--text-primary);background:var(--bg-secondary);padding:0.6rem;border-radius:var(--border-radius-md)">
+            <p style="font-size:var(--text-xs);color:var(--text-primary);background:var(--bg-secondary);padding:0.6rem;border-radius:var(--border-radius-md);word-break:break-word">
               "Would love to schedule an in-person showroom visit this Friday evening around 5:30 PM. Daughter loves Princess theme."
             </p>
-            <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--text-light)">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.35rem 0.75rem;font-size:0.72rem;color:var(--text-light)">
               <span>Received: 3 hours ago</span>
               <span>Visit Request: Friday 5:30 PM</span>
             </div>
-            <div class="btn-action-group" style="justify-content:flex-end">
+            <div class="btn-action-group">
               <button class="btn btn-action-primary" onclick="openReplyModal('Anupama Nair', 'anupama.nair@hotmail.com', 'Confirming Friday Showroom Tour')">Confirm Tour</button>
               <button class="btn btn-action-danger" onclick="resolveEnquiry(3)">Resolve</button>
             </div>
