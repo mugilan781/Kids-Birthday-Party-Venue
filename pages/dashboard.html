@@ -55,6 +55,7 @@
       <a href="login.html" class="btn btn-outline btn-sm" style="width:100%">Sign Out</a>
     </div>
   </aside>
+  <div class="dash-sidebar-overlay" id="dash-sidebar-overlay"></div>
 
   <!-- DASHBOARD MAIN -->
   <main class="dash-main" id="dash-main">
@@ -887,6 +888,8 @@
       if (section) section.classList.add('active');
       if (navLink) navLink.classList.add('active');
       
+      if (typeof closeSidebar === 'function') closeSidebar();
+      
       const titles = { overview:'Dashboard Overview', availability:'Hall Availability', booking:'New Booking', 'my-bookings':'My Bookings', 'party-details':'Party Details', 'day-logistics':'Day of Event', notifications:'Notifications', profile:'My Profile', settings:'Settings' };
       document.getElementById('current-section-title').textContent = titles[sectionId] || 'Dashboard';
       
@@ -1705,12 +1708,22 @@
     const sidebar = document.getElementById('dash-sidebar');
     const menuBtn = document.getElementById('dash-menu-btn');
     const closeBtn = document.getElementById('dash-sidebar-close');
+    const sidebarOverlay = document.getElementById('dash-sidebar-overlay');
 
-    function openSidebar() { sidebar?.classList.add('open'); menuBtn?.setAttribute('aria-expanded','true'); }
-    function closeSidebar() { sidebar?.classList.remove('open'); menuBtn?.setAttribute('aria-expanded','false'); }
+    function openSidebar() {
+      sidebar?.classList.add('open');
+      sidebarOverlay?.classList.add('active');
+      menuBtn?.setAttribute('aria-expanded','true');
+    }
+    function closeSidebar() {
+      sidebar?.classList.remove('open');
+      sidebarOverlay?.classList.remove('active');
+      menuBtn?.setAttribute('aria-expanded','false');
+    }
 
     menuBtn?.addEventListener('click', openSidebar);
     closeBtn?.addEventListener('click', closeSidebar);
+    sidebarOverlay?.addEventListener('click', closeSidebar);
 
     // Nav links
     document.querySelectorAll('.dash-nav-link[data-section]').forEach(link => {

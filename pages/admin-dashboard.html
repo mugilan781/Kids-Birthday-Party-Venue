@@ -120,6 +120,7 @@
       <a href="login.html" class="btn btn-outline btn-sm" style="width:100%">Sign Out</a>
     </div>
   </aside>
+  <div class="dash-sidebar-overlay" id="dash-sidebar-overlay"></div>
 
   <!-- ===== MAIN CONTENT ===== -->
   <main class="dash-main" id="dash-main">
@@ -131,13 +132,13 @@
           <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
         </button>
         <h1 class="dash-page-title" id="current-section-title">Venue Overview</h1>
-        <span class="status-badge confirmed" style="margin-left:0.5rem">● Venue Live (3 Events Active)</span>
+        <span class="status-badge confirmed topbar-venue-status" style="margin-left:0.5rem">● Venue Live (3 Events Active)</span>
       </div>
 
       <div class="dash-topbar-right">
-        <button class="btn btn-primary btn-sm" onclick="openNewBookingModal()">
+        <button class="btn btn-primary btn-sm admin-new-booking-btn" onclick="openNewBookingModal()" title="Add New Booking">
           <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
-          New Booking
+          <span class="btn-text">New Booking</span>
         </button>
 
         <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode">
@@ -2065,6 +2066,7 @@
 
       // Close mobile sidebar if open
       sidebar.classList.remove('open');
+      document.getElementById('dash-sidebar-overlay')?.classList.remove('active');
       window.location.hash = sectionId;
     }
 
@@ -2072,9 +2074,18 @@
     const sidebar = document.getElementById('dash-sidebar');
     const menuBtn = document.getElementById('dash-menu-btn');
     const closeBtn = document.getElementById('dash-sidebar-close');
+    const sidebarOverlay = document.getElementById('dash-sidebar-overlay');
 
-    menuBtn?.addEventListener('click', () => sidebar.classList.add('open'));
-    closeBtn?.addEventListener('click', () => sidebar.classList.remove('open'));
+    menuBtn?.addEventListener('click', () => {
+      sidebar.classList.add('open');
+      sidebarOverlay?.classList.add('active');
+    });
+    const closeSidebar = () => {
+      sidebar.classList.remove('open');
+      sidebarOverlay?.classList.remove('active');
+    };
+    closeBtn?.addEventListener('click', closeSidebar);
+    sidebarOverlay?.addEventListener('click', closeSidebar);
 
     // Nav link click events
     document.querySelectorAll('.dash-nav-link[data-section]').forEach(link => {

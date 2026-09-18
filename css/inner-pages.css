@@ -1749,6 +1749,21 @@
   .page-hero-title { font-size: clamp(2.35rem, 5vw, 3rem); }
   .contact-location-info { padding: 2rem; }
   .contact-form-card { padding: var(--space-6); }
+  .blog-featured {
+    grid-template-columns: 1fr;
+    max-height: none;
+    overflow: visible;
+  }
+  .blog-featured-img-wrap {
+    min-height: 240px;
+    max-height: 320px;
+    height: 280px;
+  }
+  .blog-featured-content {
+    padding: 2rem 1.75rem;
+    overflow: visible;
+    height: auto;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1759,9 +1774,21 @@
   .contact-layout { grid-template-columns: 1fr; }
   .contact-location-card { grid-template-columns: 1fr; }
   .decoration-grid { grid-template-columns: repeat(2, 1fr); }
-  .blog-featured { grid-template-columns: 1fr; }
-  .blog-featured-img-wrap { min-height: 260px; max-height: 320px; }
-  .blog-featured-content { padding: 2rem 1.75rem; }
+  .blog-featured {
+    grid-template-columns: 1fr;
+    max-height: none;
+    overflow: visible;
+  }
+  .blog-featured-img-wrap {
+    min-height: 240px;
+    max-height: 300px;
+    height: 260px;
+  }
+  .blog-featured-content {
+    padding: 1.75rem 1.5rem;
+    overflow: visible;
+    height: auto;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1771,6 +1798,8 @@
   .about-awards-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
   .blog-grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
+  .blog-card-title { min-height: auto; }
+  .blog-card-excerpt { min-height: auto; margin-bottom: 1rem; }
   .services-rules-grid { grid-template-columns: 1fr; }
   .contact-location-info { padding: 1.5rem; }
   .contact-info-card { padding: 1.5rem; }
@@ -1796,9 +1825,57 @@
   .contact-form-card { padding: 1.25rem 1rem; }
   .policy-card, .services-rules-grid .about-value-card { padding: 1.75rem 1.4rem; min-height: auto; }
   .contact-channel-card { padding: 1.75rem 1.35rem 1.6rem; min-height: auto; }
+  .blog-featured {
+    max-height: none;
+    overflow: visible;
+  }
+  .blog-featured-img-wrap {
+    min-height: 200px;
+    height: 220px;
+  }
+  .blog-featured-content {
+    padding: 1.5rem 1.25rem;
+    overflow: visible;
+    height: auto;
+  }
   .blog-featured-footer { flex-direction: column; align-items: stretch; gap: var(--space-3); }
   .blog-featured-btn { width: 100%; text-align: center; justify-content: center; }
-  .blog-card-footer { flex-wrap: wrap; gap: var(--space-2); }
+  .blog-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+  .blog-card-footer .blog-card-btn {
+    width: 100% !important;
+    justify-content: center;
+    text-align: center;
+  }
+  .blog-filter-bar {
+    gap: 0.45rem;
+    margin-bottom: 2rem;
+  }
+  .blog-filter-bar .filter-btn {
+    padding: 0.38rem 0.85rem;
+    font-size: 0.78rem;
+  }
+  .blog-category-tags {
+    gap: 0.45rem;
+    margin-top: var(--space-4);
+  }
+  .blog-category-tags .btn-ghost {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8rem;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .newsletter-form input {
+    width: 100%;
+  }
+  .newsletter-form .btn {
+    width: 100%;
+  }
 }
 
 @media (max-width: 360px) {
@@ -1811,11 +1888,19 @@
   .about-stat-number { font-size: 2.2rem; }
   .about-awards-grid { grid-template-columns: 1fr; }
   .decoration-card-body { padding: 1rem; }
+  .blog-featured-title { font-size: 1.3rem; }
+  .blog-featured-img-wrap { min-height: 180px; height: 190px; }
+  .blog-featured-content { padding: 1.25rem 1rem; }
+  .blog-card-body { padding: 1.25rem 1rem; }
+  .blog-category-tags .btn-ghost {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 320px) {
-  .page-hero-title { font-size: 1.5rem; line-height: 1.15; }
-  .page-hero-subtitle { font-size: 0.85rem; }
+  .page-hero-title { font-size: 1.45rem; line-height: 1.15; }
+  .page-hero-subtitle { font-size: 0.82rem; }
   .contact-location-info { padding: 0.85rem 0.65rem; }
   .contact-info-card { padding: 0.85rem 0.65rem; border-radius: var(--border-radius-lg); }
   .contact-info-card .social-btn { width: 32px; height: 32px; }
@@ -1823,5 +1908,16 @@
   .about-stat { padding: 1rem 0.75rem; }
   .about-stat-number { font-size: 1.9rem; }
   .vision-stat-card { padding: 0.75rem; }
+  .blog-featured-title { font-size: 1.12rem; }
+  .blog-featured-excerpt { font-size: 0.82rem; }
+  .blog-featured-img-wrap { min-height: 150px; height: 160px; }
+  .blog-featured-content { padding: 1rem 0.75rem; }
+  .blog-card-body { padding: 1rem 0.75rem; }
+  .blog-card-title { font-size: 1.05rem; }
+  .blog-card-excerpt { font-size: 0.82rem; }
+  .blog-filter-bar { gap: 0.3rem; }
+  .blog-filter-bar .filter-btn { padding: 0.32rem 0.65rem; font-size: 0.72rem; }
+  .blog-category-tags .btn-ghost { padding: 0.35rem 0.65rem; font-size: 0.72rem; }
 }
+
 
