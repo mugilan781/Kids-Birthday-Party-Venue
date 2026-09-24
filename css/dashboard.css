@@ -1189,7 +1189,14 @@
 .booking-step-content { display: none; }
 .booking-step-content.active { display: block; animation: slide-up 0.4s ease; }
 
-.step-actions { display: flex; gap: var(--space-3); margin-top: var(--space-6); flex-wrap: wrap; }
+.step-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  flex-wrap: wrap;
+}
 
 /* PACKAGE CARDS (BOOKING) */
 .booking-packages-grid {
@@ -3041,13 +3048,16 @@
   .bank-title {
     font-size: 0.68rem;
   }
+  .step-actions,
   .step-nav-buttons {
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     gap: 0.65rem;
   }
+  .step-actions .btn,
   .step-nav-buttons .btn {
-    width: 100%;
     justify-content: center;
   }
   .admin-tabs {
